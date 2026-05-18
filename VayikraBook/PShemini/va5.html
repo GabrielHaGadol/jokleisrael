@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../documentStyleSplit.css">
+    <link rel="stylesheet" href="../../Pdocument/documentStyleHebreoSplit.css">
+    <title>va1</title>
+
+
+
+
+
+    <style>
+        /* Nav superior */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 10px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        #backButton {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #backButton a {
+            color: #551A8B;
+            text-decoration: underline;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Header parasha compacto */
+        .wrapperHeader { padding: 4px 0 2px 0; text-align: center; }
+        #bookHeader p { margin: 2px 0; line-height: 1.3; }
+        /* Botones de idioma */
+        #langBar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        .langBtn {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: bold;
+            width: 56px;
+            height: 36px;
+            border: 1.5px solid #999;
+            border-radius: 6px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .langBtn.active {
+            background-color: #720026;
+            color: white;
+            border-color: #720026;
+        }
+        /* Ocultar paneles */
+        div.wrap.hide { display: none !important; }
+    </style>
+                                <script>
+        function setLang(mode) {
+            var src = document.querySelector('.splitScreen');
+            var tgt = document.querySelector('.splitScreen2');
+
+            if (mode === 'he') {
+                if (src) { src.style.height = '86vh'; src.style.minHeight = '86vh'; src.style.overflow = 'scroll'; }
+                if (tgt) { tgt.style.height = '0px'; tgt.style.minHeight = '0px'; tgt.style.overflow = 'hidden'; tgt.style.padding = '0'; tgt.style.margin = '0'; }
+            } else if (mode === 'es') {
+                if (src) { src.style.height = '0px'; src.style.minHeight = '0px'; src.style.overflow = 'hidden'; src.style.padding = '0'; src.style.margin = '0'; }
+                if (tgt) { tgt.style.height = '86vh'; tgt.style.minHeight = '86vh'; tgt.style.overflow = 'scroll'; }
+            } else {
+                if (src) { src.style.height = '49vh'; src.style.minHeight = ''; src.style.overflow = 'scroll'; src.style.padding = ''; src.style.margin = ''; }
+                if (tgt) { tgt.style.height = '49vh'; tgt.style.minHeight = ''; tgt.style.overflow = 'scroll'; tgt.style.padding = ''; tgt.style.margin = ''; }
+            }
+
+            var btns = document.querySelectorAll('.langBtn');
+            for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+            var btn = document.getElementById('btn-' + mode);
+            if (btn) btn.classList.add('active');
+            try { localStorage.setItem('jokLang', mode); } catch(e) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var saved = 'both';
+            try { saved = localStorage.getItem('jokLang') || 'both'; } catch(e) {}
+            setLang(saved);
+        });
+    </script>
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+        <li id="backButton"><a href="../../days/vayikra/vaDiasPageShemini.html">DIAS</a></li>
+        <li id="backButton"><a href="../../index.html">INICIO</a></li>
+    </div>
+    <!--------book header-------->
+    <div class="wrapperHeader">
+        <section id="bookHeader">
+            <p>Sheminí para el día Jueves</p>
+            <p>Pentateuco</p>
+            <p>Levítico 9:22-24 y 10:1-2</p>
+
+    </div>
+</div>
+    </div>
+
+        <div id="langBar">
+        <button class="langBtn active" id="btn-es"   onclick="setLang('es')">a</button>
+        <button class="langBtn"        id="btn-both" onclick="setLang('both')">a&#x2192;&#x05D0;</button>
+        <button class="langBtn"        id="btn-he"   onclick="setLang('he')">&#x05D0;</button>
+    </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+    <!--------------hebreo pantalla 1--------------->
+
+    <div class="wrap">
+        <div id="source" class="splitScreen">
+            <div>
+                <div>
+                    <section class="wrapperParentHe">
+
+                        <p id="textMainHe">
+
+                            xxxxxxxxxxxx
+
+
+
+
+                        </p>
+
+                    </section>
+                </div>
+    
+                        <div>
+                            <section class="wrapperParentHe">
+                                <h3>רש"י</h3>
+
+                                <p id="textSecondHe">
+
+                                    xxxx
+
+
+
+
+                                 </p>
+
+
+                            </section>
+                        </div>
+
+
+
+
+    <!----------book header--------->
+    <div class="wrapperHeaderHe">
+        <section id="bookHeaderHe">
+            <h3>נביאים </h3>
+            <p>יחזקאל - פרק כח</p>
+        </section>
+    </div>
+    <!-----------------content---------------->
+
+    <div>
+        <section class="wrapperParentHe">
+            <p id="textMainHe">
+
+
+               xxxxx
+
+            </p>
+
+
+        </section>
+    </div>
+               
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+
+                    xxxxx
+
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>כתובים</h3>
+                        <p> משלי - פרק יב </p>
+                    </section>
+                </div>
+
+            
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                          xxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                      xxxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>משנה</h3>
+                        <p >   פאה פרק ה      </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                      xxxxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>ר' עובדיה מברטנורה</h3>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textSecondHe">
+
+                        xxxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>גמרא</h3>
+                        <p>  ברכות דף ו' ע''ב        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+                          
+                           xxxxxx
+                           
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                            xxxxxx
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                          <h3>   זוהר וארא דף כ''ו ע''א  </h3>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textSecondHe">
+
+                           xxxxx
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>תרגום הגמרא</h3>
+                        <p id="textSecondHe">
+
+                           xxxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+                
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>   הלכה פסוקה   </h3>
+                        <p >       הרמב''ם ההלכות תשובה פ''ג       </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                          xxxx
+
+                        </p>
+                    </section>
+                </div>
+
+                 
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>מוסר</h3>
+                        <p>   מהזה''ק ח''ב דף ב' ע''א (ונכתב בלה''ק)        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            xxxx
+
+
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+
+        </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+
+
+
+    <!-----------español pantalla 2------------->
+    <div class="wrap">
+        <div id="target" class="splitScreen2">
+            <div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-autospace:none;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><strong>(22)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>&nbsp;</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong>Aharón alzó su mano hacia el pueblo y los bendijo, habiendo descendido de realizar el servicio de la ofrenda de pecado, de la ofrenda de ascensión y de las ofrendas de paz.&nbsp;</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><strong>(23)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>&nbsp;</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong>Moshé y Aharón entraron a la Tienda de la Cita; luego salieron y bendijeron al pueblo, y la gloria del Eterno se manifestó a todo el pueblo.</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><strong>(24)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>&nbsp;</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong>Un fuego surgió de delante del Eterno y consumió sobre el Altar la ofrenda de ascensión y los sebos; todo el pueblo lo vio y cantaron loores, y cayeron sobre sus rostros.</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><strong>(1)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>&nbsp;</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong>Los hijos de Aharón, Nadab y Abihú, cada uno tomó su incensario y pusieron fuego en ellos y colocaron sahumerio sobre ellos; y ofrecieron delante del Eterno un fuego extraño que Él no les había ordenado.</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><strong>(2)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>&nbsp;</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong>Surgió un fuego de delante del Eterno que los consumió, y murieron delante del Eterno.</strong></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                          <p style="line-height:normal;margin:0cm;text-align:justify;text-autospace:none;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>22. </strong><span lang="HE" dir="RTL"><strong>וַיְבָרְכֵם</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / Y LOS BENDIJO.</strong> Aharón los bendijo con la Bendición de los kohanim [birkat kohanim]: “Que el Eterno los bendiga... que el Eterno ilumine Su Semblante hacia ustedes... que el Eterno eleve Su semblante hacia ustedes...”<span>&nbsp;</span><span lang="HE" dir="RTL"><strong>וַיֵּרֶד</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / HABIENDO DESCENDIDO.</strong> De encima del Altar.<span>&nbsp; </span><strong>23. </strong><span lang="HE" dir="RTL"><strong>וַיָּבֹא מֹשֶׁה וְאַהֲרֹן וְגוֹ'</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / MOSHÉ Y AHARÓN ENTRARON, ETC.</strong> ¿Por qué razón entraron a la Tienda de la Cita? En el midrash Torat Kohanim, en la sección que trata acerca de la inauguración del Tabernáculo, en una baraitá adicional a nuestra edición de Torat kohanim hallé escrito lo siguiente: ¿Por qué razón entró Moshé junto con Aharón? Con el propósito de enseñarle el procedimiento de la quema del incienso. ¿O quizás no fue por ello, sino que entró para otra cosa? Para responder a esta pregunta, he aquí que puedo inferir que entró para enseñarle sobre la quema del incienso del siguiente modo: tanto el descenso del Altar por parte de Aharón como la entrada de Moshé y Aharón a la Tienda de la Cita fueron acompañadas por una bendición al pueblo. Ahora bien, así como el descenso del Altar estaba relacionado con el servicio sacerdotal, así también la entrada a la Tienda de la Cita debe estar relacionada con el servicio sacerdotal. Por consiguiente, de ahí aprendes que la razón por la que Moshé entró junto con Aharón fue para enseñarle sobre el procedimiento para quemar el incienso. Según otra explicación, cuando Aharón vio que ya habían sido ofrecidas todas las ofrendas y se habían llevado a cabo todos los actos correspondientes, pero aun así la Presencia Divina no había descendido sobre Israel, se afligió y dijo: “Yo sé que el Santo –bendito es– está enojado conmigo y que por causa mía no ha descendido la Presencia Divina sobre Israel.” Por lo tanto, le dijo a Moshé: “Moshé, hermano mío, esto es lo que me has hecho: he ingresado al servicio sacerdotal y he quedado en vergüenza, ya que la Presencia Divina no ha descendido.” De inmediato, Moshé entró junto con él a la Tienda de la Cita y ambos suplicaron misericordia, y entonces la Presencia Divina descendió sobre Israel.<span>&nbsp; </span><span lang="HE" dir="RTL"><strong>וַיֵּצְאוּ וַיְבָרְכוּ אֶת הָעָם</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / LUEGO SALIERON Y BENDIJERON AL PUEBLO.</strong> Recitaron el versículo: “Que el agrado del Eterno, nuestro Di-s, esté sobre nosotros.” Con ello querían decir: “Que sea Su voluntad que Su Presencia resida sobre la obra de sus manos.” Puesto que durante todos los siete días que duró la iniciación, en los cuales Moshé erigía el Tabernáculo y oficiaba en él como kohén, desmantelándolo cada día al concluir el servicio del día, aun así la Presencia Divina no residió en el Tabernáculo, por eso los israelitas se avergonzaban y decían a Moshé: “Moshé, nuestro maestro, toda esta tarea en la que nos fatigamos para llevarla a cabo fue para que la Presencia Divina residiese entre nosotros y supiéramos que habíamos obtenido la expiación por el pecado del Becerro de Oro. Pero ahora vemos que no ha servido de nada.” Por esta razón, Moshé les dijo: “Esto es lo que el Eterno ha ordenado; háganlo y la gloria del Eterno se manifestará a ustedes.” Con ello quería decirles: “Mi hermano Aharón es más digno e importante que yo, ya que por medio de sus ofrendas y de su servicio la Presencia Divina residirá en ustedes y sabrán que el Omnipresente lo ha escogido.”<span>&nbsp; </span><strong>24. </strong><span lang="HE" dir="RTL"><strong>וַיָּרֹנּוּ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / Y CANTARON LOORES.</strong> Este verbo debe ser entendido como lo traduce el Targum de Onkelós.<span>&nbsp; </span><strong>2. </strong><span lang="HE" dir="RTL"><strong>וַתֵּצֵא אֵשׁ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / SURGIÓ UN FUEGO.</strong> Rabí Eliézer dijo: Los hijos de Aharón murieron solamente porque emitieron un dictamen halájico en presencia de su maestro Moshé. Por su parte, Rabí Ishmael dijo: Ellos habían entrado al Santuario embriagados con vino. Sabrás que de ello murieron por el hecho de que después de su muerte Di-s advirtió a los kohanim restantes que no entraran embriagados con vino al Santuario. Esto es comparable a un rey que tenía un miembro de su casa, etc.”, como se declara en el midrash Vayikrá Rabá.</span></p>
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+                <!----------book header--------->>
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Profetas</p>
+                        <p>Samuel II 6:22-23 y 7:1-3</p>
+                    </section>
+                </div>
+                <!-----------------content---------------->
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(22)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:11pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Y me rebajaré aún más y me humillaré ante mis propios ojos; y junto a las criadas de los cuales hablaste, ¡entre ellas seré honrado!</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(23)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Y Mijal, hija de Shaúl, nunca tuvo hijos, hasta el día de su muerte.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(1)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Y sucedió que cuando el rey se hubo asentado en su casa y el Eterno le hubo concedido tranquilidad de sus enemigos alrededor,</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(2)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">el rey dijo a Natán el profeta: “Mira ahora; yo habito en una casa de madera de cedro, pero el Arca de Di-s habita dentro de una cortina.”</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(3)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Natán dijo al rey: “Todo lo que esté en tu corazón, hazlo, pues el Eterno está contigo.”</span></p>
+                            
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>22. ME REBAJARÉ.&nbsp;</strong>En su presencia, más de lo que hice hasta ahora.<span>&nbsp;</span><strong>ENTRE ELLAS.&nbsp;</strong>Me he revalorizado entre ellas por esto que hice.<span>&nbsp; </span><strong>23. NUNCA TUVO HIJOS.&nbsp;</strong>Desde ese día en adelante.<span>&nbsp; </span><strong>1. TRANQUILIDAD. </strong>Dijo: Siendo que se cumplió la promesa del Eterno <i>(Deuteronomio 12:10)</i>: “Y os hará descansar el Eterno de vuestros enemigos”, y seguidamente está escrito: “Y será el lugar que el Eterno, vuestro Di-s, escoja para hacer residir Su Nombre en él” <i>(Ibíd. 11)</i>, entiendo que debemos construir para Él una morada.</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Escritos</h3>
+                        <p>Proverbios 23:28-32</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(28)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> Ella también, tal cual raptora, te acechará, y, traidores, entre los hombres, incrementará.<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(29)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> ¿Quién dice ¡ay!? ¿Quién dice ¡guay!? ¿Quién desea los pleitos? ¿Quién es parlanchín? ¿Quién padece de heridas sin motivo? ¿Quién tiene los ojos enrojecidos?<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(30)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> Los que se demoran con el vino, los que buscan las mezcolanzas.<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(31)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> No mires el vino cuando enrojezca, porque quien pone su ojo en la copa, todo le parece recto.<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(32)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> En su final, como víbora morderá, y, como cobra picará.</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span lang="ES-TRAD" dir="ltr"><strong>28. RAPTORA.&nbsp;</strong>Repentinamente. <strong>TRAIDORES.&nbsp;</strong>Hacen aumentar el número de traidores del Eterno.&nbsp;&nbsp;</span><strong>29. ¡AY!&nbsp;</strong>Expresión que indica lamento.<span>&nbsp;</span><strong>¿QUIÉN DESEA LOS PLEITOS?&nbsp;</strong>¿Quién suele contender con la gente?<span>&nbsp; </span><strong>¿QUIÉN ES PARLANCHÍN?</strong> Conversaciones superfluas, puesto que las conversaciones prolongadas conducen a excesiva iniquidad.<span>&nbsp; </span><strong>ENROJECIDOS.&nbsp;</strong>Ojos rojos.<span>&nbsp; </span><strong>30. LOS QUE SE DEMORAN.&nbsp;</strong>Ellos mismos con el vino.<span>&nbsp; </span><strong>LOS QUE BUSCAN LAS MEZCOLANZAS.&nbsp;</strong>Investigan dónde se vende el buen vino.<span>&nbsp; </span><strong>31. MIRES EL VINO.&nbsp;</strong>No pongas tu mirada en él. <strong>TODO LE PARECE RECTO.&nbsp;</strong>Cuando la persona pone su mirada sobre la copa, todos los pecados le parecen rectos.<span>&nbsp;</span><strong>PICARÁ.</strong> Morderá. Otros interpretan esta palabra como “quitar la vida”.</span></p>
+<p style="line-height:normal;margin:0cm;"><span style="color:#212121;font-family:Calibri, sans-serif;font-size:11pt;"><span style="font-family:&quot;Times New Roman&quot;,serif;"></span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Mishná</p>
+                        <p>Tratado Menajot, capítulo 12</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                           <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span lang="ES-AR" dir="ltr">(</span>1)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:11pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Las Ofrendas Minjá y las Libaciones, que se impurificaron antes de consagrarse en el recipiente (del Templo), pueden ser redimidas. Si ya fueron consagradas en el recipiente, no se pueden redimir. Las aves, la leña, el incienso y los recipientes del servicio, no se pueden rescatar. Eso sólo se da en los animales.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(2)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Quien dice: Prometo una ofrenda (Minjá) de Sartén estrecha, y llevó una de Sartén honda; de Sartén honda, y llevó una de Sartén estrecha; lo que hizo, hecho está, pero no cumplió con</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">su obligación. (Si dijo: Prometo) Ésta, en una Sartén estrecha, y la llevó en una honda; en una honda, y la llevó en una estrecha, se invalida. Prometo llevar dos décimas (de una Efá de harina de flor) en un recipiente y lo llevó en dos; en dos recipientes, y los llevó en uno, lo hecho, hecho está, pero no cumplió con su obligación. (Si dijo: Prometo) Ésta (Minjá), en un recipiente, y llevó (dos Menajot) en dos recipientes; (o dijo) dos (Menajot) en dos recipientes, y llevó (una sola Minjá) en un solo recipiente, se invalidan. (Quien dice:) Prometo llevar dos décimas (de una Efá de harina de flor) en un solo recipiente, y los llevó en dos, si le advierten: ¡Prometiste que lo ibas a traer en uno! Si (rectifica y) lo lleva en uno, es válido; en dos, se invalidan. (Si dijera:) Prometo llevar dos décimas en dos recipientes, y los llevó en uno, y le advierten: ¡Prometiste traerlos en uno! Si (rectifica y) los lleva en dos recipientes, son válidos; en un solo recipiente, se los conceptúa como dos Menajot que se mezclaron.&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(3)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">(Aunque diga:) Prometo llevar una Minjá de cebada, la llevará de trigo. Harina (simple), la llevará de harina de flor. Sin aceite y sin incienso, la llevará con aceite e incienso. Medio Isarón, la llevará de uno. Un Isarón y medio, la llevará de dos. Rabí Shimón los exonera (a todos de llevar una Minjá), ya que no prometieron correctamente.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(4)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Un hombre que promete un Minjá de sesenta Isarón, puede llevarlos en un solo recipiente. Si dijera: Prometo una de sesentaiuno, llevará sesenta en un recipiente, y uno en otro recipiente ya que, siendo que la congregación ofrenda una Minjá de sesentaiuno el primer día de Sucot que coincide con Shabat, es suficiente con que un particular pueda ofrendar uno menos que la congregación. Preguntó Rabí Shimón: ¿Acaso no se dividen esos (los de Sucot) en vacas y en corderos, y no se ofrendan juntos? (La razón para limitarlos a sesenta) Es porque hasta sesenta se pueden mezclar bien. Le replicaron (los sabios) a Rabí Shimón: ¿Sesenta se pueden mezclar con facilidad, y sesentaiuno no? Les respondió: ¡Así ocurre con todas las medidas establecidas por los sabios! (Por ejemplo) ¡En cuarenta Seá, sirve la Tebilá, pero no en cuarenta menos un Kortob! No está permitido donar un Log, ni dos, ni cinco, pero sí se puede donar tres, cuatro o seis, y de seis en adelante.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(5)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Se permite donar vino, pero no se permite donar aceite, según la opinión de Rabí Akibá. Dijo Rabí Tarfón: También se permite donar aceite. Agregó Rabí Tarfón: Al igual que el vino, a veces se ofrenda por obligación y a veces como donación, también el aceite, se ofrenda por obligación y como donación. Le respondió Rabí Akibá: ¡No los podemos comparar, ya que el vino, cuando se ofrenda por obligación, no admite acompañamiento! En cambio, el aceite, cuando se lo ofrenda por obligación, ¡sí va acompañado! Dos personas no pueden ofrendar un solo Isarón, pero sí pueden ofrendar un sacrificio de Ascensión o de Paz. Respecto de las aves, se permite incluso cuando se ofrenda un solo pichón.&nbsp;</span></p>
+
+                        </p>
+                    </section>
+                </div>
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Rabí Ovadia de Bartenura</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textSecond">
+
+
+                          <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>1. ANTES DE CONSAGRARSE…&nbsp;</strong>En este caso, dichas ofrendas o libaciones no tienen santidad, pero sí la adquieren las monedas con las que son redimidas. Sólo se pueden redimir después de ser consagradas pero antes de introducirlas en el recipiente ritual. Sin embargo, si no se impurificaron y tampoco fueron colocadas en el recipiente, nunca podrán ser redimidas.<span>&nbsp; </span><strong>NO SE PUEDEN RESCATAR.&nbsp;</strong>La Torá sólo habló de rescate cuando se trata de algo que adquiere santidad en sí mismo, por ejemplo, un animal que adquirió un defecto, tal como versa <i>(Levítico 27:11-12)</i>: “Y si es cualquier animal impuro del cual no se puede ofrecer una ofrenda al Eterno... El Cohén lo evaluará…”. Estos versículos se refieren a animales que adquirieron defectos y después fueron redimidos, porque si se tratara efectivamente de un animal impuro de nacimiento, a estos ya se refirió al Torá cuando dijo <i>(Ibíd. 27:27)</i>: “Y si es del ganado impuro, lo redimirá según la evaluación y le añadirá un quinto”. La Mishná nos enseña que a pesar de que existen cosas que después de que fueron consagradas y adquirieron un defecto, pueden ser redimidas, las aves, la leña, el incienso y el recipiente del servicio, si se consagraron y después se impurificaron, no pueden ser redimidos.&nbsp;<span> </span><strong>2. LO QUE HIZO, HECHO ESTÁ.&nbsp;</strong>Es decir, no lo ofrendó con este propósito, sino con otro distinto.<span>&nbsp; </span><strong>ÉSTA, EN UNA SARTÉN ESTRECHA.&nbsp;</strong>Tenía un Isarón de harina de flor delante de él, y dijo: Ésta la voy a ofrendar en una sartén estrecha.<span>&nbsp; </span><strong>SE INVALIDA.&nbsp;</strong>Siendo que decidió ofrendarla en un determinado recipiente, no lo puede cambiar por otro.<span>&nbsp; </span><strong>ÉSTA, EN UN RECIPIENTE.&nbsp;</strong>Esta que se encontraba delante de él.<span>&nbsp; </span><strong>SE INVALIDAN.&nbsp;</strong>Siendo que prometió ofrendarla en un solo recipiente y la ofrendó en dos, debe extraer dos puñados, cuando él prometió que iba a extraer uno sólo. Además, la Minjá estará incompleta en ambos recipientes. Igualmente, si prometió ofrendarla en dos, y la ofrendó en uno, Por un lado, la Minjá estará sobrada, y por otro, extraerá un puñado menos, ya que aseguró que iba a extraer dos puñados, y al final, sólo extrajo uno.<span>&nbsp;</span><strong>PROMETISTE EN UNO.&nbsp;</strong>Si no hizo caso y los ofrendó en dos recipientes, se invalidan., incluso si no dijo que los iba a ofrendar en un solo recipiente, ya que no cabe decir ahora que los ofrendó con otra intención diferente. Si ya le dijeron “prometiste ofrendarlo en uno”, él tendría que responder: “¡Lo estoy ofrendando con otra intención!”.&nbsp;<span> </span><strong>DOS MENAJOT QUE SE MEZCLARON.&nbsp;</strong>En la Guemará, en el capítulo “Hakomets”, se dijo: Si pudiera extraer de una por sí sola, y de la otra por sí sola, se aceptan, y si no, se invalidan. Aunque anteriormente estudiamos: “(o dijo) dos (Menajot) en dos recipientes, y llevó (una sola Minjá) en un solo recipiente, se invalidan”, eso es cuando no puede extraer un puñado de cada una por separado.&nbsp;<span> </span><strong>3. LA LLEVARÁ DE TRIGO.&nbsp;</strong>Porque las ofrendas Minjá voluntarias forzosamente deben ser de trigo. Aquí hablamos de un caso en el que dijo: “Si hubiese sabido que no se puede ofrendar de cebada, la hubiese ofrendado de trigo”. Sin embargo, si dijera: “De haber sabido que no se puede ofrendar de cebada, no hubiese prometido nada”, no se le obliga a llevar nada.<span>&nbsp;</span><strong>HARINA DE FLOR.&nbsp;</strong>Tal como versa <i>(Levítico 2:1)</i>: “Su ofrenda será de harina de flor”. <strong>LOS EXONERA.&nbsp;</strong>Rabí Shimón opina que hay que juzgar a las personas según lo que dijeron en última instancia, y siendo que lo que prometió no coincide con esta Minjá, no debe llevar nada. La Halajá no coincide con dicha opinión de Rabí Shimón.<span>&nbsp;</span><strong>4. LA CONGREGACIÓN OFRENDA.&nbsp;</strong>Tres Isarón por cada vaca, multiplicado por trece vacas, hacen un total de treintainueve Isarón. Por cada cordero se ofrendaba un Isarón, multiplicado por catorce corderos, hacen un total de catorce Isarón. Dos Isarón por cada carnero, multiplicado por dos carneros, suman cuatro Isarón. La suma total de Isarón nos da cincuentaisiete. Si le sumamos otros dos Isarón por las dos ofrendas diarias Tamid, y los dos correspondientes al Musaf de Shabat, no dan un total de sesentaiuno. Les preguntó Rabí Shimón: ¿Acaso todos los Isarón de un solo día se ofrendaban en un mismo recipiente? ¡No, sino que unos eran para las vacas, otros para los carneros y otros para los corderos, y si los junta, los invalida! La ofrenda Minjá que acompaña al sacrificio de las vacas, son difíciles de mezclar, pues constan de dos Log de aceite por cada Isarón de harina de flor, o sea, un Hin por cada tres Isarón. La ofrenda de Minjá que acompaña a los corderos es de fácil mezcla, puesto que consistía en un cuarto de Hin por cada Isarón, es decir, tres Log. Si mezclara unas con otras, a unas les sobraría y a otras les faltaría. Entonces, ¿por qué una ofrenda particular no puede contener sesentaiún Isarón en un solo recipiente? Porque hasta sesenta Isarón sí es posible mezclarlos con un solo Log de aceite, pero no más. Esté Taná era de la misma opinión que Rabí Eliézer Ben Yaacob, quien enseñó en el capítulo “Sheté Midot”: ¡Incluso una Minjá que contenga sesenta Isarón de Harina de trigo, se puede mezclar con un Log de aceite! Aunque no la mezcle toda, siendo que lo puede hacer, la mezcla no supone un inconveniente. Así estudiamos: Siempre que se pueda mezclar, la mezcla no supone un inconveniente, pero cuando no se pueda mezclar, la mezcla sí supone un inconveniente.&nbsp;<span> </span>¿<strong>SESENTAIUNO NO?&nbsp;</strong>Se pregunta con sorpresa.<span>&nbsp; </span><strong>KORTOB.&nbsp;</strong>Es la cuarta parte de la cuarta parte (de una cuarta parte) de un Log (1/64).<span>&nbsp; &nbsp;</span><strong>DONAR UN LOG.&nbsp;</strong>De vino para las Libaciones, pues nunca vimos que hubiera libaciones de uno, dos o cinco Log.&nbsp;<span> </span><strong>PUEDE DONAR TRES.&nbsp;</strong>Log, porque se usa en los sacrificios de corderos. Cuatro, se usan con los carneros. Seis Log, o sea, medio Hin, se usan con las vacas. Más de seis también se pueden libar porque, siete Log valdrían para repartirlos tres para un cordero y cuatro para un carnero. Ocho: Serían para dos carneros. Nueve: Para un cordero y una vaca. Diez: Un carnero y una vaca. Once: Dos carneros y un cordero. Y así sucesivamente.<span>&nbsp; </span><strong>5. SE PERMITE DONAR VINO.&nbsp;</strong>Sin harina de flor ni aceite, y lo vierten por los conductos del altar en solitario.<span>&nbsp; </span><strong>PERO NO ACEITE.&nbsp;</strong>Si vino ni harina de flor.<span>&nbsp; </span><strong>SE PERMITE DONAR ACEITE.&nbsp;</strong>Le extrae un puñado y lo quema, y el resto se puede consumir.<span>&nbsp; </span><strong>NO ADMITE ACOMPAÑAMIENTO.&nbsp;</strong>Cuando lo ofrenda obligatoriamente, puede ir solo. Aunque se ofrenda solo con la Minjá, si no está, se puede aun así ofrendar la Minjá.<span>&nbsp;</span><strong>EN CAMBIO, EL ACEITE…&nbsp;</strong>Siendo que nunca puede ofrendarse en un recipiente por sí solo, ahora tampoco lo puede ofrendar.<span>&nbsp; </span><strong>UN SOLO PICHÓN.&nbsp;</strong>Un pichón de tórtola o un pichón de paloma pueden ser ofrendados por dos personas a la vez. La Ley permite ofrendar vino o aceite de forma individual. Asimismo podrán ofrendar libaciones que acompañan a las vacas, a los corderos o a los carneros. Todos los sacrificios pueden ser ofrendados entre dos o más personas en calidad de donación, con la excepción de la ofrenda Minjá, porque con relación a ella, se dijo: “Por persona”, tal como versa <i>(Levítico 2:1)</i>: “La persona que ofrende una Minjá”.&nbsp;</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Guemará</p>
+                        <p>Tratado Menajot 110a</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                         <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"><span style="line-height:115%;" lang="ES-AR" dir="ltr">“En todo lugar se quema incienso y se sacrifica (animales) en Mi Nombre” </span><i><span style="line-height:115%;" lang="ES-AR" dir="ltr">(Malají 1:11)</span></i><span style="line-height:115%;" lang="ES-AR" dir="ltr">. ¿Tú crees que “en todo lugar”? Respondió Ribí Shemuel Bar Najmaní en nombre de Ribí Yonatán: Se refiere a los Talmidé Jajamim (Sabios) que se ocupan en el estudio de la Torá en todo lugar. Yo los considero (dice el Eterno) como si estuvieran quemando incienso y sacrificando animales en Mi Nombre. (Ibíd.:) “Ofrenda Minjá pura”: Alude a quien estudia Torá con pureza, o sea, se casa y después estudia Torá. “Cántico de las gradas. ¡Bendigan al Eterno todos los siervos del Eterno, aquellos que permanecen de pie por las noches en la Casa del Eterno!” </span><i><span style="line-height:115%;" lang="ES-AR" dir="ltr">(Salmos 134:1)</span></i><span style="line-height:115%;" lang="ES-AR" dir="ltr"> ¿Qué significa “Por las noches”? Respondió Ribí Yojanán: Se refiere a los Talmidé Jajamim que se afanan en el estudio de la Torá por las noches. El Texto (de la Torá) los conceptúa como si se hubiesen dedicado al Servicio Divino (Sacrificar animales en el Templo). </span><i><span style="line-height:115%;" lang="ES-AR" dir="ltr">(Crónicas II 2:3)</span></i><span style="line-height:115%;" lang="ES-AR" dir="ltr"> “Eternamente, esto es (un mérito) de Israel”: Dijo Rab Guidel en nombre de Rab: Este versículo significa que hay un Altar (celestial) construido, y (el ángel) Mijael, el Gran Príncipe, se halla de pie junto a él para ofrecer sacrificios. Dijo Rabí Yojanán: Se refiere a los Talmidé Jajamim que se ocupan en el estudio de las leyes de los Sacrificios, y a quienes el Texto les considera como si construyeran el Templo en sus días. Enseñó Resh Lakish: ¿Qué significa el versículo </span><i><span style="line-height:115%;" lang="ES-AR" dir="ltr">(Levítico 7:37)</span></i><span style="line-height:115%;" lang="ES-AR" dir="ltr">: “Esta es la Ley por el (sacrificio) de Ascensión, por la Minjá, por el (sacrificio de) Pecado, y por el (sacrificio) de Culpa”? Que todo aquel que estudia Torá, es como si ofrendara sacrificios de Ascensión, Minjá, Pecado y Culpa. Preguntó Rabá: ¿Por qué está escrito: “Por el de Ascensión, por la Minjá…”? ¡Debería estar escrito: “Del de ascensión, de la Minjá…”! Respondió el mismo Rabá: Para enseñarnos que quien estudia Torá no necesita ni “Ascensión”, ni “Pecado”, ni “Minjá”, ni “Culpa”. Enseñó Ribí Yitzjak: ¿Qué significan&nbsp;</span><span style="line-height:115%;">los versículos </span><i><span style="line-height:115%;">(Ibíd. 6:18)</span></i><span style="line-height:115%;">: “Esta es la Ley del (sacrificio de) “Pecado”, y </span><i><span style="line-height:115%;">(Ibíd. 7:1)</span></i><span style="line-height:115%;"> “Esta es la Ley del (sacrificio de) “Culpa”? Que todo aquel que se dedica al estudio de las Leyes del (sacrificio de) “Pecado”, es como si ofrendara un sacrificio de “Pecado”, y quien se dedica al estudio de las Leyes del (sacrificio de) “Culpa”, es como si ofrendara un sacrificio de “Culpa”.</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"><span style="line-height:115%;">&nbsp;</span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>QUIEN ESTUDIA TORÁ CON PUREZA.&nbsp;</strong>Sobre él se dijo: “En Mi Nombre” y “Minjá Pura”.&nbsp;<span> </span>“<strong>ESTO ES DE ISRAEL”.&nbsp;</strong>Esto es un versículo de Crónicas en el que se dice que los sacrificios de Paz y otros, siempre perdurarán. ¿Cómo puede ser? Porque existe un Altar en los Cielos, sobre el cual, el Ángel Mijael quema incienso.<span>&nbsp;</span><strong>“ESTA ES LA LEY…”&nbsp;</strong>La llama Ley, cuando debería estar escrito: “Fuero”.&nbsp;<span> </span><span lang="ES-AR" dir="ltr"><strong>“DEL DE ASCENSIÓN, DE LA MINJÁ…”&nbsp;</strong>Tal como está escrito se entiende que la Torá en sí es un sacrificio de Ascensión, una Minjá…&nbsp; <strong>NO NECESITA NI…&nbsp;</strong>De cómo está escrito, se entiende que el estudio de la Torá reemplaza a los sacrificios de Ascensión, a la Ofrenda de Minjá, o dicho de otra forma, el estudio de la Torá expía todos nuestros pecados.&nbsp; <strong>SE DEDICA AL ESTUDIO…&nbsp;</strong>Estudia cómo se procedía en los diferentes trabajos del Templo. </span></span><span style="color:#212121;font-family:Calibri, sans-serif;font-size:11pt;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:10.0pt;"></span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3> Zóhar </h3>
+                        <p> Sheminí 41b </p>
+                        <p> (Comentario sobre el Zóhar) </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Ribí Yosé comenzó su disertación así: <i>(Eclesiastés 6:7)</i> “Todo el esfuerzo del hombre es para su boca”. He observado en las palabras del rey Shelomó que todas están imbuidas de una suprema sabiduría. El versículo: “Todo el esfuerzo del hombre es para su boca”, se refiere al momento en el que juzgan a la persona en ese mundo. Está escrito que todo aquel juicio, todo lo que sufre en aquel mundo y la venganza eterna que recibe en él, es por culpa de su boca. Por no haber cuidado su boca impurificó su alma y no se apegó a la Vida, al Lado Derecho. Asimismo, su alma no se completa, ya que su juicio nunca termina. Otra explicación: “No se completa”, quiere decir que nunca llega a su lugar por cuanto que se impurificó y se apegó al Otro Lado. Explicó Ribí Yitzjak: Aquel que se impurifica con ellos se le considera como si hubiese practicado la idolatría, que es algo que el Eterno detesta. Está escrito <i>(Deuteronomio 14:3)</i>: “No comas cosas detestables”. Quien practica la idolatría sale del Lado de la Vida, sale del dominio de la Santidad y penetra en otro dominio. Igualmente, quien se impurifica con estos alimentos (prohibidos), se sale del Lado de la Vida, se sale del dominio de la Santidad y penetra en otro dominio. Además, se impurifica en este mundo</span></p>
+                            <p style="text-align:justify;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"><span style="line-height:115%;">en el Mundo Venidero. Por esto está escrito </span><i><span style="line-height:115%;">(Levítico 11:43)</span></i><span style="line-height:115%;"> “Os impurificaréis en ellos”, sin la letra Alef. Y está escrito </span><i><span style="line-height:115%;">(Ibíd. 20:25)</span></i><span style="line-height:115%;"> “No hagáis abominables vuestras almas con animales, aves, y todo lo que se arrastre sobre la tierra, que separé para impurificar”. ¿Qué significa para impurificar? Sí, para impurificar a los pueblos idólatras. Son impuros porque provienen del lado de la impureza, y cada cual se apega al lado del que proviene. Rabí Elazar se hallaba sentado junto a Rabí Shimón, su padre, y le preguntó: Aquello que estudiamos: En el futuro el Santo, Bendito Él, purificará al Pueblo de Israel, ¿cómo los purificará? Le respondió: Está escrito </span><i><span style="line-height:115%;">(Yejezquel 36:25)</span></i><span style="line-height:115%;"> “Arrojaré sobre vosotros aguas puras y os purificaréis”. Cuando se purifiquen, se santificarán. El Pueblo de Israel, por apegarse al Todopoderoso, se denomina Santo, tal como versa </span><i><span style="line-height:115%;">(Yirmiyahu 2:3)</span></i><span style="line-height:115%;"> “Santo es Israel para el Eterno, es la primicia de Su cosecha”. También está escrito </span><i><span style="line-height:115%;">(Éxodo 22:30)</span></i><span style="line-height:115%;"> “Os convertiréis en hombres santos para Mí”. Bienaventurado Israel, pues el Santo, Bendito Él, dice sobre ellos </span><i><span style="line-height:115%;">(Levítico 11:44)</span></i><span style="line-height:115%;"> “Seréis santos porque Yo, el Eterno, soy Santo”. Y porque está escrito </span><i><span style="line-height:115%;">(Deuteronomio 10:20)</span></i><span style="line-height:115%;"> “Te apegarás a Él”. Y también </span><i><span style="line-height:115%;">(Salmos 147:20)</span></i><span style="line-height:115%;"> “No hizo lo mismo con todas las naciones, no les enseñó las leyes. Haleluyá”</span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Halajá</h3>
+
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+
+                        <p>Rambam, Leyes sobre las Ofrendas, capítulo 3</p>
+
+                        <p id="textMain">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:22px;">1. Si un israelita se declara apóstata en favor de la idolatría o profana el Shabat en público, no se le permite que ofrende nada. Aun la ofrenda de Ascensión que sí se le acepta a un gentil, no se le acepta a un apóstata, tal como versa <i>(Levítico 1:2)</i> “El hombre de entre vosotros que ofrende”. De aquí se aprende: “De entre vosotros” y no de “todos vosotros”, para excluir al apóstata. No obstante, si cometió herejía en el resto de los preceptos, sí se le aceptan todas sus ofrendas, con la intención de que se arrepienta de su mal comportamiento. Si fue apóstata en una sola transgresión, y es conocido y famoso por ello, y suele hacerlo para irritar al Creador, o por vicio, no se le aceptarán ofrendas para expiar dicha transgresión. ¿Qué quiere decir?&nbsp;Por ejemplo: Si suele consumir sebo para irritar al Creador, o por vicio, y en cierta ocasión ingiere sebo por error y quiere ofrendar un sacrificio de Pecado, no se le acepta.<span>&nbsp; </span>2. Las ofrendas de Ascensión que ofrecen los gentiles no van acompañadas de libación, tal como versa <i>(Números 15:13)</i> “Sólo los nativos lo harán así”. No obstante, si la ofrenda de los gentiles es pública, sí irá acompañada de sus respectivas libaciones, como está escrito <i>(Ibíd. 12)</i> “Así les haréis por cada uno, según el número que sea”. Además, no se requiere que apoyen sus manos sobre la ofrenda, porque “apoyar las manos” sólo se practica cuando lo hace un israelita, y sólo cuando son varones y no hembras.&nbsp;</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Moral</h3>
+                        <p>Séfer Shaaré Kedushá, parte 2, capítulo 7</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;text-justify:inter-ideograph;" dir="LTR"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:20px;">(Con respecto a las trasgresiones graves) Si no se arrepintió sobre ellas y murió, se le condena al Guehinam. Después, silbará y subirá, será readmitido y podrá acceder a la Resurrección de los Muertos y al Mundo Venidero. Por encima de ellos se encuentran los israelitas que pecan con sus cuerpos, aquellas cabezas que nunca se colocaron los Tefilín <i>(T. Rosh Hashaná 17a)</i>. Por pereza no se los colocaron, cuando podrían haberlo hecho. Si lo hubiesen hecho con la intención de irritar al creador, serían llamados herejes o, al menos, renegados. Éste, si muere sin haber hecho penitencia, será condenado durante doce meses al Guehinam. Después, su cuerpo será extinguido y su alma será quemada, convirtiéndose en ceniza bajo las palmas de los pies de los Justos en el Mundo Venidero. Por encima de estos se encuentran aquellos que no tendrán parte en el Mundo Venidero. El Guehinam tendrá fin, pero ellos aún no terminarán de pagar, si no hacen penitencia y mueren, aunque posean en su haber estudio de Torá y buenas acciones, tal como le ocurrió a Doeg el edomita, el jefe del Tribunal. Estos son: Los herejes, o sea, los alumnos que convierten las palabras de la Torá como fuente de su herejía. También: Aquel que apostató sólo con la idolatría, aunque acepte el resto de todos los preceptos y los cumplió siempre. Los apóstatas. Igualmente aquel que es sospechoso de transgredir un determinado precepto para irritar al Creador o por vicio. Por último: Quien reniega de la creencia más importante, es decir, aquel que dice que Di-s no existe.</span><span style="color:#212121;font-family:Calibri, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"></span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <script src="../../Pdocument/scroll.js"></script>
+    </div>
+</body>
+
+</html>

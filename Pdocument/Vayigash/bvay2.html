@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="google" content="notranslate">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../documentStyleSplit.css">
+    <link rel="stylesheet" href="../../Pdocument/documentStyleHebreoSplit.css">
+    <title>bvay2</title>
+
+
+
+
+    <style>
+        /* Nav superior */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 10px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        #backButton {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #backButton a {
+            color: #551A8B;
+            text-decoration: underline;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Header parasha compacto */
+        .wrapperHeader { padding: 4px 0 2px 0; text-align: center; }
+        #bookHeader p { margin: 2px 0; line-height: 1.3; }
+        /* Botones de idioma */
+        #langBar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        .langBtn {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: bold;
+            width: 56px;
+            height: 36px;
+            border: 1.5px solid #999;
+            border-radius: 6px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .langBtn.active {
+            background-color: #720026;
+            color: white;
+            border-color: #720026;
+        }
+        /* Ocultar paneles */
+        div.wrap.hide { display: none !important; }
+    </style>
+                                <script>
+        function setLang(mode) {
+            var src = document.querySelector('.splitScreen');
+            var tgt = document.querySelector('.splitScreen2');
+
+            if (mode === 'he') {
+                if (src) { src.style.height = '86vh'; src.style.minHeight = '86vh'; src.style.overflow = 'scroll'; }
+                if (tgt) { tgt.style.height = '0px'; tgt.style.minHeight = '0px'; tgt.style.overflow = 'hidden'; tgt.style.padding = '0'; tgt.style.margin = '0'; }
+            } else if (mode === 'es') {
+                if (src) { src.style.height = '0px'; src.style.minHeight = '0px'; src.style.overflow = 'hidden'; src.style.padding = '0'; src.style.margin = '0'; }
+                if (tgt) { tgt.style.height = '86vh'; tgt.style.minHeight = '86vh'; tgt.style.overflow = 'scroll'; }
+            } else {
+                if (src) { src.style.height = '49vh'; src.style.minHeight = ''; src.style.overflow = 'scroll'; src.style.padding = ''; src.style.margin = ''; }
+                if (tgt) { tgt.style.height = '49vh'; tgt.style.minHeight = ''; tgt.style.overflow = 'scroll'; tgt.style.padding = ''; tgt.style.margin = ''; }
+            }
+
+            var btns = document.querySelectorAll('.langBtn');
+            for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+            var btn = document.getElementById('btn-' + mode);
+            if (btn) btn.classList.add('active');
+            try { localStorage.setItem('jokLang', mode); } catch(e) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var saved = 'both';
+            try { saved = localStorage.getItem('jokLang') || 'both'; } catch(e) {}
+            setLang(saved);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <li id="backButton"><a href="../../days/bereshit/brDiasPageVayigash.html">DIAS</a></li>
+        <li id="backButton"><a href="../../parashot/bereshit/prPageBr.html">INICIO</a></li>
+    </div>
+    <div class="wrapperHeader">
+        <section id="bookHeader">
+            <p>Vayigash para el día Lunes</p>
+            <p>Pentateuco</p>
+            <p>Génesis 44:24-27</p>
+        </section>
+    </div>
+        <div id="langBar">
+        <button class="langBtn active" id="btn-es"   onclick="setLang('es')">a</button>
+        <button class="langBtn"        id="btn-both" onclick="setLang('both')">a&#x2192;&#x05D0;</button>
+        <button class="langBtn"        id="btn-he"   onclick="setLang('he')">&#x05D0;</button>
+    </div>
+
+    <div class="whiteSpaceChild">
+
+    </div>
+
+
+    <div class="wrap">
+        <div id="source" class="splitScreen">
+            <div>
+                <div>
+                    <section class="wrapperParentHe">
+
+                        <p></p>
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כד</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַֽיְהִי֙ כִּ֣י עָלִ֔ינוּ אֶֽל־עַבְדְּךָ֖ אָבִ֑י וַנַּ֨גֶּד־ל֔וֹ אֵ֖ת דִּבְרֵ֥י אֲדֹנִֽי:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַהֲוָה כַּד סְלֵיקְנָא לְעַבְדָּךְ אַבָּא וְחַוֵּינָא לֵהּ יָת פִּתְגָּמֵי רִבּוֹנִי: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כה</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיֹּ֖אמֶר אָבִ֑ינוּ שֻׁ֖בוּ שִׁבְרוּ־לָ֥נוּ מְעַט־אֹֽכֶל:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַאֲמַר אָבוּנָא תּוּבוּ זְבוּנוּ לָנָא זְעֵיר עִיבוּרָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כו</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַנֹּ֕אמֶר לֹ֥א נוּכַ֖ל לָרֶ֑דֶת אִם־יֵשׁ֩ אָחִ֨ינוּ הַקָּטֹ֤ן אִתָּ֨נוּ֙ וְיָרַ֔דְנוּ כִּי־לֹ֣א נוּכַ֗ל לִרְאוֹת֙ פְּנֵ֣י הָאִ֔ישׁ וְאָחִ֥ינוּ הַקָּטֹ֖ן אֵינֶ֥נּוּ אִתָּֽנוּ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַאֲמַרְנָא לָא נִכּוּל לְמֵיחָת אִם אִית אָחוּנָא זְעֵירָא עִמָּנָא וְנֵחוֹת אֲרֵי לָא נִכּוּל לְמֶחֱזֵי אַפֵּי גַבְרָא וְאָחוּנָא זְעֵירָא לֵיתוֹהִי עִמָּנָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כז</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיֹּ֛אמֶר עַבְדְּךָ֥ אָבִ֖י אֵלֵ֑ינוּ אַתֶּ֣ם יְדַעְתֶּ֔ם כִּ֥י שְׁנַ֖יִם יָֽלְדָה־לִּ֥י אִשְׁתִּֽי: </span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וַאֲמַר עַבְדָּךְ אַבָּא לָנָא אַתּוּן יְדַעְתּוּן אֲרֵי תְרֵין יְלִידַת לִי אִתְּתִי</span></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+
+
+
+
+
+
+
+                            <!---bubble-->
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+
+                <!----------book header--------->
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>נביאים </h3>
+                        <p>יחזקאל פרק ל"ז</p>
+                    </section>
+                </div>
+                <!-----------------content---------------->
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">כא</span> וְדַבֵּ֣ר אֲלֵיהֶ֗ם כֹּֽה־אָמַר֘ אֲדֹנָ֣י יֱהֹוִה֒ הִנֵּ֨ה אֲנִ֤י לֹקֵ֨חַ֙ אֶת־בְּנֵ֣י יִשְׂרָאֵ֔ל מִבֵּ֥ין הַגּוֹיִ֖ם אֲשֶׁ֣ר הָֽלְכוּ־שָׁ֑ם וְקִבַּצְתִּ֤י אֹתָם֙ מִסָּבִ֔יב וְהֵֽבֵאתִ֥י אוֹתָ֖ם אֶל־אַדְמָתָֽם: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וְאִתְנַבֵּי לְהוֹן כִּדְנַן אֲמַר יְיָ אֱלֹהִים הָא אֲנָא מְקָרֵיב יַת בְּנֵי יִשְׂרָאֵל מִבֵּינֵי עַמְמַיָּא דְּאִתְגְּלִיאוּ לְתַמָּן וְאֱכְנוֹשׁ יַתְהוֹן מִסְּחוֹר</span></span><strong> </strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">סְחוֹר וְאָעֵיל יַתְהוֹן לְאַרְעֲהוֹן: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">כב</span> וְעָשִׂ֣יתִי אֹ֠תָ֠ם לְג֨וֹי אֶחָ֤ד בָּאָ֨רֶץ֙ בְּהָרֵ֣י יִשְׂרָאֵ֔ל וּמֶ֧לֶךְ אֶחָ֛ד יִֽהְיֶ֥ה לְכֻלָּ֖ם לְמֶ֑לֶךְ וְלֹ֤א יִֽהְיוּ עוֹד֙ לִשְׁנֵ֣י גוֹיִ֔ם וְלֹ֨א יֵחָ֥צוּ ע֛וֹד לִשְׁתֵּ֥י מַמְלָכ֖וֹת עֽוֹד: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וְאֶעֱבֵּיד יַתְהוֹן לְעַמָּא חָד בְּאַרְעָא בְּטוּר קוּדְשָׁא דְּיִשְׂרָאֵל וּמַלְכָּא חָד יְהֵי לְכֻלְּהוֹן לְמֶהֱוֵי מַלְכָּא וְלָא יְהוֹן עוֹד לִתְרֵין עַמְמִין וְלָא יִתְפַּלְגּוּן עוֹד לְתַרְתֵּין מַלְכְּוָון עוֹד: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">כג</span> וְלֹ֧א יִֽטַּמְּא֣וּ ע֗וֹד בְּגִלּֽוּלֵיהֶם֙ וּבְשִׁקּ֣וּצֵיהֶ֔ם וּבְכֹ֖ל פִּשְׁעֵיהֶ֑ם וְהֽוֹשַׁעְתִּ֣י אֹתָֽ֗ם מִכֹּ֤ל מֽוֹשְׁבֹֽתֵיהֶם֙ אֲשֶׁ֣ר חָֽטְא֣וּ בָהֶ֔ם וְטִֽהַרְתִּ֤י אוֹתָם֙ וְהָֽיוּ־לִ֣י לְעָ֔ם וַֽאֲנִ֕י אֶֽהְיֶ֥ה לָהֶ֖ם לֵֽאלֹהִֽים: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וְלָא יִסְתַּאֲבוּן עוֹד בְּטַעֲוַתְהוֹן וּבְשִׁקּוּצֵיהוֹן וּבְכֹל מֵרְדֵּיהוֹן וְאֶפְרוֹק יַתְהוֹן מִכֹּל מוֹתְבָנֵיהוֹן דְּחָבוּ קֳדָמַי בְּהוֹן וְאֶדַכֵּי יַתְהוֹן וִיהוֹן קֳדָמַי לְעַם וַאֲנָא אֶהְוֵי לְהוֹן לֵאלָהָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">כד</span> וְעַבְדִּ֤י דָוִד֙ מֶ֣לֶךְ עֲלֵיהֶ֔ם וְרוֹעֶ֥ה אֶחָ֖ד יִֽהְיֶ֣ה לְכֻלָּ֑ם וּבְמִשְׁפָּטַ֣י יֵלֵ֔כוּ וְחֻקּוֹתַ֥י יִשְׁמְר֖וּ וְעָשׂ֥וּ אוֹתָֽם: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וְעַבְדִּי דָוִד מַלְכָּא עֲלֵיהוֹן וּפַרְנֵס חָד יְהֵי לְכֻלְּהוֹן וּכְדִינַי יְהָכוּן וּקְיָמַי יִטְּרוּן וְיַעְבְדוּן יַתְהוֹן</span></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>כתובים </h3>
+                        <p>משלי י</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">יא</span> מְק֣וֹר&nbsp;</span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">חַיִּים פִּ֣י צַדִּ֑יק וּפִ֥י רְשָׁעִ֗ים יְכַסֶּ֥ה חָמָֽס: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">מַבּוּעָא דְחַיֵּי פּוּמָא דְצַדִיקֵי וּפוּמְהוֹן דְּרַשִּׁיעֵי נְכַסָא חֲטוֹפָא: </span></span><strong><span style="font-size:16px"><span style="font-family:&quot;Times New Roman&quot;,serif">יב&nbsp;</span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">שִׂנְאָה תְּעֹרֵ֣ר מְדָנִ֑ים וְעַ֥ל כָּל־֜פְּשָׁעִ֗ים תְּכַסֶּ֥ה אַהֲבָֽה: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">סְנִיאֲתָא תְגָרֵג תִּגְרֵי וְעַל כֻּלְהוֹן סוּרְחָנֵי מְכַסָּא רַחֲמוּתָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">יג</span> בְּשִׂפְתֵ֣י&nbsp;</span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">נָבוֹן תִּמָּצֵ֣א חָכְמָ֑ה וְשֵׁ֗בֶט לְגֵ֣ו חֲסַר־לֵֽב: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">בְּשִּׂפְוָתֵי דְסוּכְלְתָנָא תִשְׁכַּח חָכְמְתָא וְשִׁבְטָא לְפַגְרָא דַחֲסַר רַעְיָנָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">יד</span> חֲכָמִ֥ים יִצְפְּנוּ־דָ֑עַת וּפִֽי־֜אֱוִיל מְחִתָּ֥ה קְרֹבָֽה: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">חַכִּימֵי נִטְשׁוּן יְדִיעֲתָא וּפוּמֵיהּ דְּשַׁטְיָא שֵׁצְיָא קָרִיב</span></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                           <p style="text-align:justify"><span style="font-size:8px"><span style="color:#ecf0f1"><span style="font-family:&quot;Times New Roman&quot;,serif">י</span></span></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black">(יא) מְקוֹר חַיִּים פִּי צַדִּיק וּפִי רְשָׁעִים יְכַסֶּה חָמָס.</span></span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black"> פִּיהֶם יְכַסֶּה חָמַס שֶׁבְּלִבָּם שֶׁמַחְלִיקִין אֶת שִׂפְתֵיהֶם וְשִׂנְאָה טְמוּנָה בְּלִבָּם וְאֵין פִּתְרוֹן מִקְרָא זֶה דּוֹמֶה לַפִּתְרוֹן הַעֶלְיוֹן (פסוק ו&#39;) וְהָעִנְיָן יוֹרֶה עֲלֵיהֶם: </span></span><strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black">(יב) שִׂנְאָה תְּעוֹרֵר מְדָנִים.</span></span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black"> אֲפִלּוּ עֲבֵרָה שֶׁנִּתְנָה לְשִּׁכְחָה נִזְכֶּרֶת עַל יֵדֵי מַרְבִּית עָווֹנוֹת בָּאָה שִׂנְאָה אַחֲרוֹנָה וּמְעוֹרָרְתַן, שֶׁכֵּן יְחֶזְקֵאל הוֹכִיחַ אֶת יִשְׂרָאֵל עַל עֲבֵירוֹת מִצְרַיִם, וְאוֹמֵר לָהֶם (יְחֶזְקֵאל כ ז) אִישׁ אֶת שִׁקוּצֵי עֵינָיו הַשְׁלִיכוּ וגו&#39;. כַּמָּה (שָׁנִים הָיְתָה) שִׂנְאָה זוֹ כְּבוּשָׁה, וְלֹא הִזְכִּירָהּ לָהֶם הקב&#39;&#39;ה עַד עַכְשָׁו שֶׁהִרְבּוּ עֲבֵירוֹת עַל פִּשְׁעֵיהֶם: </span></span><strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black">וְעַל כָּל פְּשָׁעִים תְּכַסֶּה אָהֲבָה.</span></span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black"> כְּשֶׁיִּשְׂרָאֵל מְטִיבִים מַעֲשֵׂיהֶם, הקב&#39;&#39;ה מְכַסֶּה עַל פִּשְׁעֵיהֶם: </span></span><strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black">(יג) בְּשִׂפְתֵי נָבוֹן תִּמָּצֵא חָכְמָה.</span></span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black"> כְּשֶׁאָדָם מוֹכִיחַ לְנָבוֹן, מֵשִׁיב לוֹ חָטָאתִי, כְּגוֹן: דָּוִד שֶׁאָמַר לְנָתָן (שְׁמוּאֵל ב יב יג) חָטָאתִי: </span></span><strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black">וְשֵׁבֶט לְגֵו חֲסַר לֵב.</span></span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black"> אֲבָל חָסֵר לֵב אֵינוֹ שׁוֹמֵעַ עַד שְׁיִלְקֶה, כְּמוֹ פַּרְעֹה: </span></span><strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black">(יד) חֲכָמִים יִצְפְּנוּ דָעַת.</span></span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="color:black"> יִשְׁמְרוּהוּ בְּלִבָּם שֶׁלֹּא יִשְׁכְּחוּהוּ</span>:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>משנה </h3>
+                        <p>שבת פרק יא</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">א</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַזּוֹרֵק מֵרְשׁוּת הַיָּחִיד לִרְשׁוּת הָרַבִּים, מֵרְשׁוּת הָרַבִּים לִרְשׁוּת הַיָּחִיד, חַיָּב. מֵרְשׁוּת הַיָּחִיד לִרְשׁוּת הַיָּחִיד וּרְשׁוּת הָרַבִּים בָּאֶמְצַע, רַבִּי עֲקִיבָא מְחַיֵּב. וַחֲכָמִים פּוֹטְרִין: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ב</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> כֵּיצַד. שְׁתֵּי גְזֻזְטְרָאוֹת זוֹ כְנֶגֶד זוֹ בִּרְשׁוּת הָרַבִּים, הַמּוֹשִׁיט וְהַזּוֹרֵק מִזּוֹ לָזוֹ, פָּטוּר. הָיוּ שְׁתֵּיהֶן בִּדְיוּטָא אַחַת, הַמּוֹשִׁיט חַיָּב, וְהַזּוֹרֵק פָּטוּר, שֶׁכָּךְ הָיְתָה עֲבוֹדַת הַלְוִיִּם, שְׁתֵּי עֲגָלוֹת זוֹ אַחַר זוֹ בִּרְשׁוּת הָרַבִּים, מוֹשִׁיטִין הַקְרָשִׁים מִזּוֹ לָזוֹ, אֲבָל לֹא זוֹרְקִין. חֻלְיַת הַבּוֹר וְהַסֶּלַע שֶׁהֵן גְּבוֹהִין עֲשָׂרָה וְרָחְבָּן אַרְבָּעָה, הַנּוֹטֵל מֵהֶן וְהַנּוֹתֵן עַל גַּבָּן, חַיָּב, פָּחוֹת מִכֵּן, פָּטוּר: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ג</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַזּוֹרֵק אַרְבַּע אַמּוֹת בַּכֹּתֶל, לְמַעְלָה מֵעֲשָׂרָה טְפָחִים, כְּזוֹרֵק בָּאֲוִיר, לְמַטָה מֵעֲשָׂרָה טְפָחִים, כְּזוֹרֵק בָּאָרֶץ. הַזּוֹרֵק בָּאָרֶץ אַרְבַּע אַמּוֹת, חַיָּב. זָרַק לְתוֹךְ אַרְבַּע אַמּוֹת וְנִתְגַּלְגֵּל חוּץ לְאַרְבַּע אַמּוֹת, פָּטוּר, חוּץ לְאַרְבַּע אַמּוֹת, וְנִתְגַּלְגֵּל לְתוֹךְ אַרְבַּע אַמּוֹת, חַיָּב: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ד</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַזּוֹרֵק בַּיָּם אַרְבַּע אַמּוֹת, פָּטוּר. אִם הָיָה רְקָק מַיִם וּרְשׁוּת הָרַבִּים מְהַלֶּכֶת בּוֹ, הַזּוֹרֵק לְתוֹכוֹ אַרְבַּע אַמּוֹת, חַיָּב. וְכַמָּה הוּא רְקָק מַיִם. פָּחוֹת מֵעֲשָׂרָה טְפָחִים. רְקָק מַיִם וּרְשׁוּת הָרַבִּים מְהַלֶּכֶת בּוֹ, הַזּוֹרֵק בְּתוֹכוֹ אַרְבַּע אַמּוֹת, חַיָּב: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ה</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַזּוֹרֵק מִן הַיָּם לַיַּבָּשָׁה וּמִן הַיַּבָּשָׁה לַיָּם, וּמִן הַיָּם לַסְּפִינָה וּמִן הַסְּפִינָה לַיָּם, וּמִן הַסְּפִינָה לַחֲבֶרְתָּהּ, פָּטוּר. סְפִינוֹת קְשׁוּרוֹת זוֹ בָזוֹ, מְטַלְטְלִין מִזּוֹ לָזוֹ. אִם אֵינָן קְשׁוּרוֹת, אַף עַל פִּי שֶׁמֻּקָּפוֹת, אֵין מְטַלְטְלִין מִזּוֹ לָזוֹ: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ו</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַזּוֹרֵק וְנִזְכַּר לְאַחַר שֶׁיָּצְתָה מִיָּדוֹ, קְלָטָהּ אַחֵר, קְלָטָהּ כֶּלֶב, אוֹ שֶׁנִּשְׂרְפָה, פָטוּר. זָרַק לַעֲשׂוֹת חַבּוּרָה, בֵּין בָּאָדָם בֵּין בַּבְּהֵמָה, וְנִזְכַּר עַד שֶׁלֹּא נַעֲשֵׂית חַבּוּרָה, פָּטוּר. זֶה הַכְּלָל, כָּל חַיָּבֵי חַטָאוֹת אֵינָן חַיָּבִין עַד שֶׁתְּהֵא תְחִלָּתָן וְסוֹפָן שְׁגָגָה. תְּחִלָּתָן שְׁגָגָה וְסוֹפָן זָדוֹן, תְּחִלָּתָן זָדוֹן וְסוֹפָן שְׁגָגָה, פְּטוּרִין, עַד שֶׁתְּהֵא תְחִלָּתָן וְסוֹפָן שְׁגָגָה</span></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>ר' עובדיה מברטנורא</h3>
+
+                        <p id="textSecondHe">
+
+                           <p style="text-align:justify"><span style="font-size:16px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">א</span></strong></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הזורק מרשות היחיד לרשות הרבים.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> רשות היחיד הוא מקום שהוקף ד&#39; מחיצות גבוהות עשרה טפחים וביניהן ד&#39; טפחים על ד&#39; טפחים או יותר, על כן אפילו יש בו כמה מילין, אם הוקף לדירה כגון מדינה שמוקפת חומה ודלתותיה נעולות בלילה. ומבואות שיש להן ג&#39; כתלין ולחי ברוח רביעית. וכן תל גבוה עשרה ורחב ד&#39;, או חריץ שהוא עמוק עשרה ורחב ד&#39;. ואפילו כלים, כגון ספינה ומגדל של עץ וכיוצא בהם, אם יש בהם ד&#39; על ד&#39; בגובה עשרה כל אלו רשות היחיד הן. ואויר רשות היחיד כרשות היחיד עד לרקיע. ועובי הכתלים של רשות היחיד נדון כרשות היחיד. ורשות הרבים הוא כגון השווקים והרחובות, המדברות והדרכים המפולשים להם, והוא שיהיה רוחב הדרך ט&quot;ז אמה ולא יהיה עליו תקרה, ואיכא למאן דאמר שצריך נמי שיהיו בוקעים בהם ששים רבוא בכל יום כדגלי מדבר. ואויר רשות הרבים אינו כרשות הרבים אלא עד י&#39; טפחים, ולמעלה מי&#39; ברשות הרבים מקום פטור הוא. ומקום שאין בו ד&#39; על ד&#39;, וגבוה מג&#39; טפחים ולמעלה הוא מקום פטור, אפילו קוצים וברקנים וגללין ברשות הרבים גבוהים משלשה ולמעלה ואין בהם ד&#39; על ד&#39; הרי הן מקום פטור, וכן מקום המוקף מחיצות ואין בו ד&#39; על ד&#39;, או חריץ שאין בו ד&#39; על ד&#39; ועמקו משלשה ועד התהום הרי זה מקום פטור. ומקום שהוקף ד&#39; מחיצות גובהן מג&#39; ועד עשרה ויש בו ד&#39; על ד&#39; או יותר, או תל שיש בו ארבעה על ארבעה או יותר גבוה מג&#39; ועד עשרה, או חריץ שיש בו ד&#39; על ד&#39; עמוק מג&#39; ועד עשרה, ומבוי סתום משלש רוחותיו שאין לו לחי או קורה ברוח רביעית, והים והבקעה, כל אלו כרמלית הן. ופירוש כרמלית, כארמלית, כלומר כמו אלמנה שאינה בתולה ולא נשואה לבעל, כך רשות זו אינה לא רשות היחיד ולא רשות הרבים. ואויר כרמלית ככרמלית עד עשרה, ומעשרה ולמעלה בכרמלית הוי מקום פטור. והמוציא מרשות היחיד לרשות הרבים, או המכניס מרשות הרבים לרשות היחיד, חייב חטאת. מרשות היחיד לכרמלית, או מרשות הרבים לכרמלית, ומכרמלית לשתיהן פטור אבל אסור. מרשות היחיד או מרשות הרבים למקום פטור או ממקום פטור לשניהן, מותר לכתחלה. ואינו צריך לומר מכרמלית למקום פטור, או ממקום פטור לכרמלית, שהוא מותר. והמעביר מתחלת ד&quot;א לסוף ד&quot;א ברשות הרבים, חייב חטאת. בכרמלית, פטור אבל אסור. ברשות היחיד ובמקום פטור, מותר לכתחלה לטלטל ולהעביר בכל הרשות כולו ואפילו הוא כמה מילין:<strong> ר&quot;ע מחייב.</strong> דס&quot;ל מכי עבר החפץ באויר רשות הרבים בתוך עשרה הרי הוא כאילו נח. ורבנן סברי קלוטה בתוך עשרה באויר רשות הרבים לאו כמי שהונחה דמיא. אבל למעלה מעשרה שהוא מקום פטור כולי עלמא לא פליגי דפטור.&nbsp; והלכה כחכמים: </span></span><span style="font-size:16px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ב</span></strong></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif"> כיצד.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> רבנן קאמרי ליה:<strong> שתי גזוזטראות.</strong> והן נסרים יוצאים מכותל העליה ולחוץ על רשות הרבים, והגזוזטראות עצמן הן רשות היחיד, וכשהן זו כנגד זו בשני צדי רשות הרבים המושיט והזורק מזו לזו פטור, שלא מצינו זריקה והושטה במלאכת המשכן מרשות היחיד לרשות היחיד ורחב רשות הרבים מפסיק ביניהן:<strong> היו שתיהן בדיוטא אחת.</strong> כלומר בעליה אחת באורך רשות הרבים, ויש הפסק רשות הרבים ביניהן:<strong> הזורק פטור.</strong> הואיל ולמעלה מעשרה הוא, ולא מצינו זריקה מרשות היחיד לרשות היחיד דרך רשות הרבים במשכן, והמושיט חייב, ואע&quot;פ שמושיט למעלה מעשרה, שמצינו הושטה כיוצא בה במשכן מרשות היחיד לרשות היחיד ואורך רשות הרבים מפסיק ביניהן:<strong> שכן היתה עבודת הלוים.</strong> מושיטים מזה לזה למעלה מעשרה ואורך רשות הרבים באמצע, כיצד [שתי] עגלות זו אחר זו ברשות הרבים ופורקי המשכן היו מושיטין לאותם שעל העגלות שאצלן הן סמוכות וקרובות והן מושיטין לאלו שלפניהם, וכל אחת מהעגלות רשות היחיד הן:<strong> אבל לא זורקים.</strong> שאין הקרשים נזרקין מפני כובדן:<strong> חוליית הבור.</strong> עפר שמוציאין מחפירת הבור רגילין ליתן סביבות פי הבור כמין חומה להיקף, ואשמעינן דבור וחולייתו מצטרפין לעשרה, ותני בור לעמקו ותני סלע לגבהו:<strong> הנוטל מהן.</strong> ומניח ברשות הרבים, או הנוטל מרשות הרבים ונותן על גבן, חייב: </span></span><span style="font-size:16px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ג</span></strong></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הזורק ד&#39; אמות בכותל.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מתחלת ד&#39; לסוף ד&#39; ונח בכותל הסמוך לרשות הרבים, למעלה מעשרה טפחים, כגון שהיתה דבלה שמנה ונדבקה בכותל למעלה מעשרה באויר רשות הרבים, פטור, דכל למעלה מעשרה ברשות הרבים מקום פטור הוא:<strong> למטה מעשרה כזורק בארץ.</strong> מתחלת ארבע לסוף ארבע ברשות הרבים, וחייב אע&quot;פ שאין ממקום עקירת החפץ לכותל אלא ד&#39; אמות מצומצמות לא אמרינן דעובי הדבלה ממעט בד&quot;א ואין כאן מתחלת ד&#39; לסוף ד&#39;, דכיון שאינו מבטל את הדבילה בכותל אין עביה ממעט כלום:<strong> ונתגלגל חוץ לארבע אמות פטור.</strong> שהרי לא נתכוין לזריקה של חיוב:<strong> ונתגלגל לתוך ארבע אמות חייב.</strong> והוא דנח משהו חוץ לד&quot;א קודם שנתגלגל לפנים: </span></span><span style="font-size:16px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ד</span></strong></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הזורק בים.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מתחלת ד&#39; לסוף ד&#39; פטור, דכרמלית הוא:<strong> רקק מים.</strong> שאינם גבוהים מן הארץ ויש בהם רפש וטיט נקראים רקק:<strong> ורשות הרבים מהלכת בו.</strong> שרבים מהלכים בו:<strong> וכמה הוא רקק.</strong> כמה הוא עמקו דנימא אכתי רשות הרבים הוא ולא נעשה כרמלית:<strong> ורקק מים ורשות הרבים מהלכת בו</strong>. האי דכפליה תנא למלתיה, לאשמועינן דאפילו רקק רחב ארבעה הואיל והוא פחות מעשרה נדון כרשות הרבים. וכפל נמי ורשות הרבים מהלכת בו, לאשמעינן דאע&quot;ג דאין מהלכים בו רבים אלא ע&quot;י הדחק, הלוך ע&quot;י הדחק שמיה הלוך: </span></span><span style="font-size:16px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ה</span></strong></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מן הים ליבשה.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מכרמלית לרשות הרבים:<strong> מן הים לספינה.</strong> מכרמלית לרשות היחיד:<strong> מטלטלין מזו לזו.</strong> אם הן של שני בני אדם מטלטלים ע&quot;י עירוב דהוי להו כשתי חצירות:<strong> מוקפות.</strong> סמוכות זו לזו, כמו אין מקיפין בבועי:<strong> אין מטלטלין מזו לזו.</strong> דכי מפרשי מהדדי, כרמלית מפסקת ביניהן ובטל העירוב: </span></span><span style="font-size:16px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ו</span></strong></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הזורק.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> בשבת בשוגג, ונזכר שהוא שבת לאחר שיצאת האבן מתחת ידו קודם שתנוח, אפילו לא קלטה אחר אלא שנחה כדרכה פטור, דהכי תנן לקמן עד שתהא תחלתן וסופן בשגגה, והאי תחלתו בשגגה וסופו מזיד, הואיל ונזכר שהוא שבת קודם שתנוח. ומתניתין הכי מיפרשא הזורק ונזכר לאחר שיצאה מתחת ידו, אי נמי לא נזכר אלא שקלטה אחר וכו&#39; פטור, דהוה ליה שנים שעשאוה פטורים, הא נחה חייב חטאת, במה דברים אמורים כשחזר ושכח, אבל לא חזר ושכח פטור שכל חייבי וכו&#39;:<strong> זה הכלל.</strong> לאתויי נמי מעביר חפץ ממקום למקום, שאם עקר בשגגה ונזכר שהוא שבת קודם שיניח, פטור:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>גמרא </h3>
+                        <p>שבת דף קי"ג ע"ב</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">אָמַר</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> רַבִּי אַחָא בַר אַבָּא אָמַר רַבִּי יוֹחָנָן מְנַיִן לְשִׁנּוּי בְּגָדִים מִן הַתּוֹרָה שֶׁנֶּאֱמַר (ויקרא ו&#39;) וּפָשַׁט אֶת בְּגָדָיו וְלָבַשׁ בְּגָדִים אֲחֵרִים וְתָנָא דְבֵי רַבִּי יִשְׁמָעֵאל לִמְּדָךְ תּוֹרָה דֶרֶךְ אֶרֶץ בְּגָדִים שֶׁבִּשֵּׁל בָּהֶם קְדֵרָה לְרַבּוֹ אַל יִמְזוֹג בָּהֶם כּוֹס לְרַבּוֹ. אָמַר רַבִּי חִיָּיא בַר אַבָּא אָמַר רַבִּי יוֹחָנָן גְּנַאי הוּא לְתַלְמִיד חָכָם שֶׁיֵּצֵא בְּמַנְעָלִין הַמְטֻלָּאִין לַשּׁוּק. וְהָא רַבִּי אַחָא בַר חֲנִינָא נָפִיק. אָמַר רַבִּי אַחָא בְּרֵיהּ דְרַב נַחְמָן בִּטְלָאִי עַל גַּבֵּי טְלָאִי. וְאָמַר רַבִּי חִיָּיא בַר אַבָּא אָמַר רַבִּי יוֹחָנָן כָּל תַּלְמִיד חָכָם שֶׁנִּמְצָא רְבַב עַל בִּגְדּוֹ חַיָּיב מִיתָה שֶׁנֶּאֱמַר (משלי ח&#39;) כָּל מְשַׂנְאַי אָהֲבוּ מָוֶת אַל תִּקְרֵי מְשַׂנְאַי אֶלָּא מַשְׂנִיאַי. רְבִינָא אָמַר רְבַד אִתְמָר וְלָא פְלִיגֵי הָא בִּגְלִימָא הָא בִלְבוּשָׁא. וְאָמַר רַבִּי יוֹחָנָן אֵיזֶהוּ תַּלְמִיד חָכָם שֶׁמְּמַנִּין אוֹתוֹ פַּרְנֵס עַל הַצִּבּוּר זֶה שֶׁשּׁוֹאֲלִין אוֹתוֹ דְבַר הֲלָכָה בְּכָל מָקוֹם וְאוֹמֵר וַאֲפִילוּ בְּמַסֶּכֶת כַּלָּה. וְאָמַר רַבִּי יוֹחָנָן אֵיזֶהוּ תַלְמִיד חָכָם שֶׁבְּנֵי עִירוֹ מְצֻוִּים לַעֲשׂוֹת לוֹ מְלַאכְתּוֹ זֶה שֶׁמַּנִּיחַ חֲפָצָיו וְעוֹסֵק בְּחֶפְצֵי שָׁמַיִם.&nbsp; וְהַנֵּי מִילֵי לְמִטְרַח בְּרִפְתֵּיהּ. וְאָמַר רַבִּי יוֹחָנָן אֵיזֶהוּ תַּלְמִיד חָכָם כָּל שֶׁשּׁוֹאֲלִין אוֹתוֹ הֲלָכָה בְּכָל מָקוֹם וְאוֹמְרָהּ לְמָאי נַפְקָא מִינָהּ לִמַנּוּיֵיהּ פַּרְנֵס עַל הַצִּיבּוּר אִי בְּחָדָא מַסֶּכְתָּא בְּאַתְרֵיהּ וְאִי בְּכֻלֵּיהּ תַנּוּיָא בְּרֵישׁ מְתִיבְתָּא</span></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>תרגום הגמרא</h3>
+                        <p id="textSecondHe">
+
+                            אמר רבי אחא בר אבא משמו של רבי יוחנן: מנין למדים אנו בתורה ששינוי והחלפת בגדים הוא דרל כבוד לפני ה'? שנאמר (ויקרא ו') "ופשט את בגדיו ולבש בגדים אחרים" ולמדו בבית מדרשו של רבי ישמעאל: לימדה אותך תורה דרך ארץ- בגדים שבישל בהם קדרה (סיר בישול) לרבו, אל ימזוג
+                            בהם כוס לרבו. כלומר, הכהן לאחר הוצאת הדשן מעל המזבח היה מחליף את בגדיו וכך גם חשובה לפני ה' החלפת בגדים לכבוד שבת. אמר רבי חייא בר אבא משמו של רבי יוחנן: גנאי הוא לתלמיד חכם שיצא לשוק כשמנעליו מטולאים, ושואלים על כך: והרי רבי
+                            אחא בר חנינא היה יוצא כך לשוק? אמר רבי אחא בנו של רב נחמן: רק בטלאי על גבי טלאי הוא מגונה. ואמר רבי חייא בר אבא משמו של רבי יוחנן: כל תלמיד חכם שנמצא רבב (כתם) על בגדו חייב מיתה, שנאמר (משלי ח') "כל משנאי אהבו מות", אל תקרא
+                            "משנאי" אלא "משניאי"- כלומר שהם ממאיסים ומשניאים את עצמם על הבריות ובכך משניאים את התורה עליהם כי הבריות אומרים שלומדי התורה מאוסים הם. רבינא אמר: אין מדובר כאן בכתם לכלוך סתם אלא ברבד (שכבת זרע). ואין מחלוקת בין רבינא לרבי
+                            יוחנן. לפי שרבי יוחנן שאמר בכתם לכלוך- מדבר בבגד עליון הנראה לעין כל, ואילו רבינא מדבר בבגד מוסתר, ועל כן אמר- רבד. ואמר רבי יוחנן: מי הוא תלמיד חכם הראוי שימנו אותו פרנס (מנהיג) על הציבור? זה ששואלים אותו דבר הלכה בכל מקום
+                            בש"ס ויודע לענות, ואפילו במסכת כלה שלא רבים לומדים אותה. ואמר רבי יוחנן: איזהו תלמיד חכם כה חשוב עד שבני עירו מצווים לעשות מלאכתו ולשחרר אותו מעול הפרנסה? זה שמניח את כל עיסוקיו ועוסק אך ורק בחפצי שמים, כלומר בתורה ועבודת ה'.
+                            ודבר זה אמור באשר לפרנסתו הבסיסית, כי הוא עוסק בתורה ואנו יכול להתפנות לכך וחייו תלוים בזה. ואמר רבי יוחנן: מי נחשב לתלמיד חכם? זה ששואלים אותו הלכה בכל מקום בש"ס ויודע לענות עליה. ושואלים: למאי נפקא מינה? (כלומר מה יוצא לנו
+                            ומה למדים אנו ממאמר זה?) ומתרצים: זו אמת מידה לקבוע אם ראוי הוא שימנו אותו פרנס על הציבור. אם יודע להשיב במסכת שהוא עוסק בה עתה, ממנים אותו פרנס בעירו. ואם יודע להשיב דבר הלכה בכל מקום בש"ס, גם במסכת שאינו עוסק בה עתה- ממנים
+                            אותו לריש מתיבתא (ראש ישיבה).
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+
+                        <p id="textSecondHe">
+
+                          <p style="text-align:justify"><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">מנין לשנוי בגדים </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">שהוא דרך כבוד לפני המקום: <strong>ולבש בגדים אחרים </strong>והוציא את הדשן הזקיקו הכתוב ללבוש בגדים פחותים בשעת הוצאת הדשן שאינה עבודה חשובה כדי שלא ימאסו בגדיו החשובים שעובד בהן עבודת אכילה ושתיה כגון קיטור וניסוך: <strong>ותנא דבי רבי ישמעאל </strong>בדרשא דהאי קרא: <strong>בגדים שבישל בהם קדרה לרבו </strong>דומיא דהוצאת הדשן: <strong>אל ימזוג בהן כוס לרבו </strong>לפיכך הוזקק ללבוש בגדים פחותים: <strong>רבב</strong> שומן וחלב: <strong>חייב מיתה </strong>שצריך להיות חשוב והגון לכבוד תורתו: <strong>משניאי</strong> שממאסין עצמן בעיני הבריות והבריות אומרים אוי להם לומדי התורה שהם מאוסים ומגונים נמצא זה משניא את התורה: <strong>רבד אתמר </strong>שכבת זרע ל&#39; מרבדים רבדתי ערשי רפדתיו וקשטתיו בבשמים מינים המכניסים תאוה ותזקק לי: <strong>בגלימא</strong> שהוא עליון אפילו רבב: <strong>בלבושא</strong> שהוא תחתון רבד אין רבב לא: <strong>בכל מקום </strong>בכל הש&quot;ס אפילו במסכת כלה דלא רגילי בה אינשי וזה נתן לבו וגרסה. מסכת כלה ברייתא היא כלה בלא ברכה אסורה לבעלה כנדה: <strong>תלמיד חכם </strong>שבני עירו מצווין לעשות מלאכתו. כדאמר בפרק ז&#39; דיומא וכו&#39;: <strong>למטרח ברפתיה </strong>דבר שאינו יכול לטרוח בו וחייו תלויין בו: <strong>ואי בחדא </strong>אם יודע להשיב במסכת שהוא עוסק בה ממנין אותו פרנס באתריה: <strong>ואם בכוליה תנויא </strong>דקאי בהא מסכת ומהדר במס&#39; אחריתי:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+        
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <p>זוהר </p>
+                        <p>ויגש דף ר"ז ע"ב</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">פָּתַח רַבִּי אֶלְעָזָר וְאָמַר (תהלים פט) יְיָ אֱלֹהֵי יְשׁוּעָתִי יוֹם צָעַקְתִּי בַּלַּיְלָה נֶגְדֶּךָ תָּא חָזֵי דָוִד מַלְכָּא הֲוָה קָם בְּפַלְגּוּת לֵילְיָא וְאִשְׁתְּדַל בְּאוֹרַיְיתָא בְשִׁירִין וְתוּשְׁבְּחָן לְחֶדְוָה דְמַלְכָּא וּמַטְרוֹנִיתָא וְדָא הֲוָה חֶדְוָה דִמְהֵימְנוּתָא בְּאַרְעָא בְּגִין דְּהָאי אִיהוּ שְׁבָחָא דִמְהֵימְנוּתָא דְאִתְחֲזֵי בְאַרְעָא. דְּהָא לְעֵילָא פַּתְחֵי בְחֶדְוָה שִׁירָתָא כַמָּה מַלְאֲכִין עִילָאִין בְּכַמָּה זִינִין דְּקָא מְשַׁבְּחָן בְּלֵילְיָא בְּכָל סִטְרִין וְכִי הָאי גוֹוָנָא לְתַתָּא בְאַרְעָא מָאן דִּמְשַׁבַּח לֵיהּ לְקֻדְשָׁא בְּרִיךְ הוּא בְאַרְעָא בְלֵילְיָא רָעֵי בֵיהּ (בָּעֵי) קֻדְשָׁא בְּרִיךְ הוּא וְכָל אִינוּן מַלְאֲכִין קַדִּישִׁין דְּקָא מְשַׁבְּחָן לֵיהּ לְקֻדְשָׁא בְּרִיךְ הוּא כֻלְּהוּ צַיְיתִין לְהַהוּא דְקָא מְשַׁבַּח לֵיהּ בְּלֵילְיָא בְאַרְעָא. דְּהָאי תוּשְׁבַּחָתָּא אִיהוּ בִּשְׁלִימוּ לְסַלְקָא יְקָרֵיהּ דְקֻדְשָׁא בְּרִיךְ הוּא מִתַּתָּא וּלְזַמְּרָא בְחֶדְוָה דִיחוּדָא. תָּא חָזֵי דָוִד מַלְכָּא כָּתַב יְיָ אֱלֹהֵי יְשׁועָתִי וְגוֹמֵר. יְיָ אֱלֹהֵי יְשׁוּעָתִי אֵימָתַי אִיהוּ יְשׁוּעָתִי בְהַהוּא יוֹמָא דְאַקְדָּמִית תּוּשְׁבַּחְתָּא בְלֵילְיָא לְגַבָּךְ כְּדֵין אִיהוּ יְשׁוּעָתִי בִימָמָא. וְתָא חָזֵי דְּהָא בְלֵילְיָא מָאן דִּמְשַׁבַּח לְמָארֵיהּ בְּתוּשְׁבַּחְתָּא דְאוֹרַיְיתָא כְּדֵין אִתְתְּקַף בִּתְקִיפוּ בִּימָמָא בְסִטְרָא דִימִינָא דְּהָא חוּטָא חָד נַפְקָא מִסִּטְרָא דִימִינָא וּכְדֵין אִתְמְשָׁךְ עֲלֵיהּ וְאִתְתְּקַף בֵּיהּ וְעַל דָּא אָמַר יְיָ אֱלֹהֵי יְשׁוּעָתִי יוֹם צָעַקְתִּי וְגוֹמֵר. וּבְגִין כַּךְ אָמַר (שם קטו) לֹא הַמֵּתִים יְהַלְלוּ יָהּ לֹא הַמֵּתִים בְּגִין דְּאִצְטְרִיךְ לְשַׁבְּחָא חַי לְחַי וּמֵת לְחַי לָאו הָכִי דִכְתִיב לֹא הַמֵּתִים יְהַלְלוּ יָהּ. וַאֲנַחְנוּ נְבָרֵךְ יָהּ דְּהָא אֲנָן חַיִּין וְלֵית לָן חוּלָקָא בְסִטְרָא דְמוֹתָא כְלָל. חִזְקִיָּהוּ אָמַר (ישעיה לח) חַי חַי הוּא יוֹדֶךָ כָּמוֹנִי בְּגִין דְּחַי אִתְקְרַב לְחַי דָוִד מַלְכָּא אִיהוּ חַי וְקוּרְבָא דִילֵיהּ לְחַי הָעוֹלָמִים. וּמָאן דְּאִתְקְרִיב לְגַבֵּיהּ אִיהוּ חַי דִּכְתִיב (דברים ד) וְאַתֶּם הַדְּבֵקִים בַּייָ אֱלֹהֵיכֶם חַיִּים כֻּלְּכֶם הַיּוֹם וּכְתִיב (שמואל ב&#39; כג) וּבְנָיָהוּ בֶּן יְהוֹיָדָע בֶּן אִישׁ חַי רַב פְּעָלִים מִקַּבְצְאֵל:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>יוסף לחוק</h3>
+                        <p>הלכה פסוקה</p>
+
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p>הרמב"ם הלכות תשובה פרק א</p>
+                        <p id="textMainHe">
+
+<p style="text-align:justify"><span style="font-size:16px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">א</span></strong></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif"> שָׂעִיר הַמִּשְׁתַּלֵּחַ לְפִי שֶׁהוּא כַפָּרָה עַל כָּל יִשְׂרָאֵל כֹּהֵן גָּדוֹל מִתְוַדֶּה עָלָיו עַל לָשׁוֹן כָּל יִשְׂרָאֵל שֶׁנֶּאֱמַר וְהִתְוַדָּה עָלָיו אֶת כָּל עֲוֹנוֹת בְּנֵי יִשְׂרָאֵל: </span></span><span style="font-size:16px"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong>ב</strong></span></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif"> שָׂעִיר הַמִּשְׁתַּלֵּחַ מְכַפֵּר עַל כָּל עֲבֵירוֹת שֶׁבַּתּוֹרָה הַקַּלּוֹת וְהַחֲמוּרוֹת בֵּין שֶׁעָבַר בְּזָדוֹן בֵּין שֶׁעָבַר בִּשְׁגָגָה בֵּין שֶׁהוֹדַע לוֹ בֵּין שֶׁלֹּא הוֹדַע לוֹ הַכֹּל מִתְכַּפֵּר בְּשָׂעִיר הַמִּשְׁתַּלֵּחַ וְהוּא שֶׁעָשָׂה תְשׁוּבָה. אֲבָל אִם לֹא עָשָׂה תְשׁוּבָה אֵין הַשָׂעִיר מְכַפֵּר לוֹ אֶלָּא עַל הַקַּלּוֹת. וּמַה הֵן הַקַּלּוֹת וּמַה הֵן הַחֲמוּרוֹת. הַחֲמוּרוֹת הֵן שֶׁחַיָּיבִין עֲלֵיהֶם מִיתַת בֵּית דִּין אוֹ כָרֵת ושְׁבוּעַת שָׁוְא וְשֶׁקֶר אַף עַל פִּי שֶׁאֵין בָּהֶם כָּרֵת הֲרֵי הֵן מִן הַחֲמוּרוֹת. וּשְׁאָר מִצְּוַת לֹא תַעֲשֶׂה וּמִצְוַת עֲשֵׂה שֶׁאֵין בָּהֶם כָּרֵת הֵם הַּקַּלּוֹת: </span></span><span style="font-size:16px"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong>ג</strong></span></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif"> בִּזְמַן הַזֶּה שֶׁאֵין בֵּית הַמִּקְדָּשׁ קַיָּים וְאֵין לָנוּ מִזְבֵּחַ כַּפָּרָה אֵין שָׁם אֶלָּא תְשׁוּבָה. הַתְּשׁוּבָה מְכַפֶּרֶת עַל כָּל הָעֲבֵירוֹת אֲפִילוּ רָשָׁע כָּל יָמָיו וְעָשָׂה תְשׁוּבָה בָּאַחֲרוֹנָה אֵין מַזְכִּירִין לוֹ שׁוּם דָּבָר מֵרִשְׁעוֹ שֶׁנֶּאֱמַר (יחזקאל לג) וְרִשְׁעַת הָרָשָׁע לֹא יִכָּשֶׁל בָּהּ בְּיוֹם שׁוּבוֹ מֵרִשְׁעוֹ עֲצוּמוֹ שֶׁל יוֹם הַכִּפּוּרִים מְכַפֵּר לַשָּׁבִים שֶׁנֶּאֱמַר (ויקרא טז) כִּי בַיּוֹם הַזֶּה יְכַפֵּר עֲלֵיכֶם:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <p>מוסר</p>
+                        <p>מספר חרדים דף ס"ט ע"ב</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">בֶּן אָדָם הֲלֹא יָדַעְתָּ כִּי ה&#39; מוֹדֵד מִדָּה כְּנֶגֶד מִדָּה הֲטוֹב בְּעֵינֶיךָ כְּשֶׁתִּקְרָאֵהוּ בְּצָרָתְךָ שֶׁיִּפְנֶה לִבּוֹ מִמָּךְ כַּבְיָכוֹל גַּם אַתָּה כְּשֶׁתִּתְפַּלֵּל תְּפַנֶּה לִבָּךְ מֶעִסְקֶיךָ וְהַיְינוּ קָרוֹב ה&#39; לְכָל קוֹרְאָיו לְכֹל אֲשֶׁר יִקְרָאוּהוּ בֶאֱמֶת עַל דֶּרֶךְ (שופטים יא) וּמַדּוּעַ בָּאתֶם אֵלַי עַתָּה כַּאֲשֶׁר צַר לָכֶם אוֹקִיר לְאַסְיָא עַד לֹא תִּצְטְרִיךְ לֵיהּ. בֶּן אָדָם בְּרַח מֵהָעוֹלָם כִּי יָדַעְתָּ כִּי פִּתְאוֹם אָדָם יִשָּׁבֵר וְאִשָּׁה לֹא תִשְׁמוֹר אַהֲבַת אַלּוּף נְעוּרִים לָכֵן רְאֵה הָעוֹלָם הַקַּיָּים וְהָבֵן לוֹ בֶּן אָדָם כַּמָּה בְנֵי אָדָם רוֹדְפֵי כָבוֹד גַּם אַתָּה תִּרְדּוֹף כָּבוֹד כִּי מָחָר יוֹשִׁיבוּךָ בֵּין קְטַנֵי אֶרֶץ זֶה תָּשִׁיב לְיִצְרָךְ בְּרוֹדְפוֹ הַכָּבוֹד וְכֵן בְרוֹדְפוֹ הָעוֹשֶׁר תֹּאמַר לוֹ כִּי הַצְּדָקָה הַלְוָאָה בְּרִבִּית לַבּוֹרֵא כִּי הוּא נָתַן רְשׁוּת שֶׁנֶּאֱמַר (משלי יט) מַלְוֵה ה&#39; חוֹנֵן דָּל וְגוֹ&#39; וּלְפִי הָאֶמֶת הַכֹּל לַעֲשׂוֹת נַחַת רוּחַ לְיוֹצְרָךְ יִתְבָּרַךְ. הֵעִירוּנִי (שם כז) מַצְרֵף לַכֶּסֶף וְכוּר לַזָהָב וְאִישׁ לְפִי מַהֲלָלוֹ כְּלוֹמַר לְפִי כַוָּונָתוֹ בִּתְפִלָּתוֹ דְהַיְינוּ מַהֲלָלוֹ שֶׁאִם בָּאִים לוֹ מַחֲשָׁבוֹת מֵהָעוֹלָם נִרְאֶה כִּי הוּא כֶסֶף מָלֵא סִיגִים לֹא יִטְהַר לְבָבוֹ וְרָחוֹק הוּא לָכֵן יִשְׁתַּדֵּל בְּאוֹמֶץ לְהִתְרַחֵק מֵהַקְלִיפּוֹת וּלְהִטָּהֵר וּלְהִדָּבֵק בְּיוֹצְרוֹ יִתְבָּרַךְ:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+    <div class="whiteSpace"></div>
+    </div>
+
+
+
+
+
+    <!---------español------------------->
+    <div class="wrap">
+        <div id="target" class="splitScreen2">
+            <div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+                            (24) Y sucedió que cuando subimos ante tu siervo, mi padre, le relatamos las palabras de mi señor. (25) Y nuestro padre dijo: “Regresen, compren un poco de alimento para nosotros”. (26) Nosotros dijimos: ‘No podemos descender allá; si nuestro hermano
+                            menor está con nosotros, entonces descenderemos. Pues no podremos ver el rostro del varón sin que nuestro hermano menor esté con nosotros’. (27) Y tu siervo, mi padre, nos dijo: ‘Ustedes saben que mi esposa me dio a luz dos
+                            hijos.
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Profetas</p>
+                        <p>Ezequiel 37:21-24 </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+                            (21) Luego les dirás: Así dijo el Eterno Di-s: “He aquí que Yo he de tomar a los Hijos de Israel de entre las naciones a las que ellos fueron y los reuniré de alrededor y los traeré a su suelo. (22) Los convertiré en una sola nación en la tierra en los
+                            montes de Israel, y un solo rey será rey de todos ellos, y ya no serán dos naciones ni se dividirán más en dos reinos. (23) Y ya no se contaminarán con sus ídolos ni con sus cosas abominables ni con todos sus delitos. Yo los
+                            salvaré de todos sus lugares de habitación en los que ellos habían pecado y los purificaré, y serán Mi pueblo y Yo seré su Di-s. (24) Y mi siervo David será rey sobre ellos, y habrá un solo pastor para todos; y andarán en Mis
+                            leyes y guardarán Mis decretos y los llevarán a cabo”.
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Escritos</p>
+                        <p>Proverbios10:11-14</p>
+                    </section>
+                </div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            (11) La boca del justo es fuente de vida, pero la boca del malvado encubre su violencia. (12) El odio engendra peleas, mientras que los pecados son cubiertos con amor. (13) En los labios del entendido se halla la sabiduría, pero una vara es para el cuerpo
+                            del falto de conciencia. (14) Los sabios acumulan conocimientos, mientras que la boca del insensato anuncia penuria.
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rashí</p>
+                        <p id="textSecond">
+                            11. ENCUBRE SU VIOLENCIA. Sus bocas ocultan la malicia que albergan en sus corazones, endulzan sus bocas mientras el odio se esconde en sus corazones. La interpretación de este versículo no es igual a la del párrafo 6, cada cual va por derroteros diferentes.
+                            12. EL ODIO ENGENDRA PELEAS. Incluso una falta que merece ser olvidada se recuerda entre las demás faltas, pues al final aparece algo que despierta el rencor sobre lo ya acontecido y olvidado. Así vemos como Ezequiel recuerda
+                            a Israel las transgresiones cometidas en Egipto, y les dice: “Cada cual extirpe de sus ojos lo abominable” (Ezequiel 20:7). Durante años este motivo de odio estaba oculto, y el Eterno se los recuerda ahora, después de que redundaron
+                            en sus pecados. CUBIERTOS CON AMOR. Cuando Israel mejora su comportamiento, entonces, el Todopoderoso encubre sus faltas. 13. EN LOS LABIOS DEL ENTENDIDO. Cuando alguien reprende al sabio, este le responde: He pecado, tal cual
+                            lo hizo el rey David, con el profeta Natán: “Pequé” (Samuel II 12:13). PERO UNA VARA. El desprovisto de entendimiento no escucha hasta que no recibe un golpe, como en el caso del Faraón. 14. LOS SABIOS... En sus corazones para
+                            no olvidar.
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Mishná</p>
+                        <p>Tratado Shabat. Capítulo 11</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+                            (1) Aquel que lanza algo desde un dominio privado a un dominio público, o de un dominio público a un dominio privado, está condenado. Desde un dominio privado a otro dominio privado, habiendo un dominio público entremedio, Rabí Akivá lo condena y los
+                            Sabios lo exculpan. (2) ¿Cómo es el caso? Dos balcones, uno frente al otro, en el dominio público. El que extiende o lanza algo de uno al otro, está exento. Si se encontraban en la misma línea, el que extiende es culpable y
+                            el que lanza, inocente, pues este era el trabajo de los levitas: Había dos carros, uno tras otro, en el dominio público. Extendían los tablones de uno al otro pero no los lanzaban. El montículo de tierra que rodea un pozo,
+                            o una piedra, si llegan a una altura de diez puños y anchura de cuatro, tanto quien toma algo de allí, como quien deposita algo allí, es condenado. Menos de esas medidas, exento. (3) Quien lanza algo, recorriendo una distancia
+                            de cuatro codos en el dominio público, impactando en un muro, si supera los diez puños de altura, es como si hubiese sido lanzado al aire. Por debajo de diez puños, como si lo lanzara a tierra, donde, el que lanza algo a tierra
+                            a una distancia de cuatro codos, está condenado. Si lo lanzó a una distancia inferior a cuatro codos, y rodó hasta superar cuatro codos, queda exento. Lo lanzó a más de cuatro codos y rodó hasta quedar dentro de los cuatro,
+                            es culpable. (4) Quien arroja algo al mar a una distancia de cuatro codos, queda exento. Si hubiese una marisma dentro del mar, y en ella un dominio público, y alguien lanzara allí un objeto a cuatro codos de distancia, estaría
+                            condenado. ¿Cuál es la medida de esta marisma? Menor de diez puños. Una marisma cruzada por un dominio público, si alguien arroja algo en ella a una distancia de cuatro codos, es culpable. (5) El que lanza un objeto, desde
+                            el mar a tierra, o de tierra al mar; o bien, desde el mar a un barco, o desde un barco al mar; o bien, desde un barco a otro, está exento. Dos barcos unidos, se permite transportar de uno al otro. Si no están unidos, aún estando
+                            muy cerca, no se permite transportar entre ellos. (6) El que lanza algo y se percata de su error después que salió de su mano, si otro lo atrapa, o lo atrapa un perro, o se quema, queda exento. Lo arrojó para ocasionar una
+                            herida, a una persona o a un animal, y se percató de su error antes de causar la herida, queda exento. Esta es la regla: Todos los condenados a traer un sacrificio Jatat no son culpables, mientras el principio y el final del
+                            acto no son intencionados. Si el comienzo fue sin intención y el final con intención, o el comienzo con intención y el final sin ella, están exentos, hasta que el comienzo o el final sean sin intención.
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rabí Ovadiá de Bartenura</p>
+                        <p id="textSecond">
+                            1. AQUEL QUE LANZA. Un dominio privado se denomina a aquel rodeado por cuatro paredes más altas de diez puños, a una distancia, unas de otras, de cuatro puños o más. Por tanto, aunque mida varias millas, si dicho lugar fue rodeado de muros con la intención
+                            de ser habitado, como una Medina o ciudad, rodeada por murallas y con portones que se cierran en las noches, o patios, rodeados por tres muros y un cuarto, con una tabla; o bien, un montículo de una altura de diez puños y un
+                            anchura de cuatro; o una hendidura con una profundidad de diez y una anchura de cuatro; o, incluso, un barco o una torre de madera, si miden cuatro por cuatro con una altura de diez, todos estos lugares son considerados dominios
+                            privados. También, el espacio superior de este dominio es considerado privado, hasta, incluso, si llega a los cielos. La achura de las paredes de este dominio privado se conceptúa como parte del dominio. Los dominios públicos
+                            son, por ejemplo, los zocos, las calles, los desiertos, y los caminos que los cruzan. Dichos caminos deben tener una anchura mínima de dieciséis codos y no estar techados. Hay quien opina que, además, deben pasar asiduamente
+                            por ellos seiscientas mil personas por día, como los que acompañaron a las banderas durante la travesía del desierto. El espacio del dominio público no se conceptúa como tal, sino, hasta una altura de diez puños. Por encima
+                            de estos diez, se llama lugar neutro. Un lugar que no mide cuatro por cuatro y una altura de tres puños o más, también es designado como lugar neutro. Incluso, si se encuentran espinos o cardos, o estiércol, con una altura
+                            de más de tres, pero no miden cuatro por cuatro, son considerados lugares neutros. Asimismo, un lugar rodeado por paredes pero a una distancia inferior a cuatro por cuatro, o una hendidura de cuatro por cuatro, aunque tengan
+                            una altura de más de tres, desde allí hasta el abismo, todo es considerado como lugar neutro. Un lugar rodeado por cuatro paredes, con una altura de tres a diez, y que la distancia entre ellas es de cuatro por cuatro o más;
+                            o un montículo de cuatro por cuatro o más, con una altura de tres a diez; o una hendidura de cuatro por cuatro, con una profundidad de tres hasta diez; o un patio cerrado por tres lados, que no tienen ninguna tabla en el cuarto
+                            lado; o el mar, o un valle, todos ellos son dominios denominados Karmelit. El significado de este término proviene de la expresión Ke-Armelit, o sea, “como una viuda”, en el sentido de que no es una mujer virgen ni está actualmente
+                            casada. Asimismo, este dominio no pertenece ni a un individuo ni a una colectividad. El espacio superior de un Karmelit está conceptuado, igualmente, como Karmelit hasta una altura de diez puños. De allí en adelante se considera
+                            lugar neutro. Quien saca algo de un dominio privado a uno público, o introduce algo de un dominio público a uno privado, está condenado a ofrecer un sacrificio de pecado o Jatat. Desde un dominio público o desde uno privado,
+                            a Karmelit, o desde Karmelit hacia un dominio público o uno privado, quedaría exento de ofrecer dicho sacrificio, pero, aún así, está prohibido. Desde un dominio público o uno privado, hacia un lugar neutro, o desde un lugar
+                            neutro hacia uno público o uno privado, está permitido, a priori. Ni que decir tiene, que desde un Karmelit a uno neutro y desde uno neutro a un Karmelit está totalmente permitido. Asimismo, quien transporta algo dentro de
+                            un recinto privado a lo largo de cuatro codos, está obligado a ofrecer un sacrificio Jatat. En Karmelit estaría exento de aportar el sacrifico pero, aún así, está prohibido. En un dominio privado o en un lugar neutro, está
+                            permitido transportar un objeto a priori, a lo largo de dicho lugar, aunque se trate de varias millas. RABÍ AKIBÁ LO CONDENA. Él opina que al pasar el objeto por el espacio del dominio público, dentro de los diez puños inferiores,
+                            se considera como si se posara en él. Los sabios, por otro lado, opinan que, pasar sobre el espacio de un dominio público a menos de diez puños de altura no se conceptúa como si se posara en él. Por encima de diez puños, o
+                            sea, un dominio neutro, todos están de acuerdo que queda exento. La Halajá concuerda con la opinión de los Sabios. 2. ¿CÓMO ES EL CASO? Con respecto a la opinión de los Sabios. DOS BALCONES. Se refiere a dos tablones que sobresalen
+                            del muro del piso superior hacia fuera sobre el dominio público. Dichos tablones son conceptuados como pertenecientes al dominio privado. Aquí hablamos de dos balcones en dos lados del dominio público. EL QUE EXTIENDE O LANZA.
+                            No encontramos nada relacionado con lanzar ni extender en los trabajos efectuados en el Mishkán o Tabernáculo, desde un dominio privado a otro, cuando están cruzados por un dominio público. SI SE ENCONTRABAN EN LA MISMA LÍNEA.
+                            Esto es, en el mismo piso a lo largo del dominio público con un espacio intermedio dentro del mismo. EL QUE EXTIENDE ES CULPABLE. Aunque extienda su mano por encima de diez puños, ya que esta acción sí se encuentra en las labores
+                            hechas en el Mishkán, desde un dominio privado a otro, a través de uno público. Encontramos cómo los levitas extendían objetos por encima de diez puños, a través de un dominio público. ¿Cómo? EL QUE LANZA, INOCENTE. Por cuanto
+                            que se trata de una altura superior a diez puños, donde no encontramos el concepto de “lanzar” desde un dominio privado a otro, a través de uno público, en relación con el Mishkán. DOS CARROS... Los desmontadores del Mishkán
+                            pasaban las tablas a los de los carros, y estos, a su vez, lo extendían hacia otro carro, donde, cada uno de los carros se conceptúa como dominio privado, en medio de un dominio público. PERO NO LOS LANZABAN. No los lanzaban
+                            debido al peso que tenían. EL MONTÍCULO DE TIERRA. La tierra extraída al cavar un pozo se acostumbraba a colocarla alrededor de la boca de dicho pozo, en forma de muralla que lo circunvalaba. Tanto la tierra como la boca del
+                            pozo se suman a la medida en cuestión. Se estudió el tema del pozo, con relación a la profundidad, y la piedra, con relación a su altura. QUIEN TOMA ALGO DE ALLÍ. Y lo deposita en el dominio público, o lo toma del dominio público
+                            y lo deposita allí, ambos son culpables. 3. QUIEN LANZA ALGO. Desde el inicio de los cuatro hasta el final de los cuatro, pero no a la pared pegada al dominio público. SI SUPERA... Por ejemplo: Quien lanza un higo grasoso contra
+                            una pared, quedándose pegado en ella por encima de diez puños de altura en el espacio del dominio público, queda exento. Todo espacio, por encima de diez puños en el dominio público se considera lugar neutro. POR DEBAJO DE
+                            DIEZ PUÑOS. Desde el principio de los cuatro hasta el final de los cuatro en el dominio público es culpable. Aunque desde donde se lanzó el objeto hasta la pared haya cuatro codos de distancia justos, no consideramos el grosor
+                            del higo hasta el punto de restarlo de dicha medida. RODÓ HASTA SUPERAR... Esto quiere decir, que no tenía la intención de hacer un lanzamiento donde hay condena. RODÓ HASTA QUEDAR DENTRO. Hablamos del caso que el objeto descansó
+                            algo fuera de los cuatro codos antes de rodar hacia dentro. 4. QUIEN ARROJA ALGO AL MAR. Desde el principio hacia el final de los cuatro codos. QUEDA EXENTO. Por ser Karmelit. MARISMA. Son lugares poco elevados sobre el nivel
+                            del suelo y que contienen barro y lodo. UNA MARISMA CRUZADA... La razón por la cual el Tanaíta duplicó este concepto es para mostrarnos que, incluso una marisma de cuatro codos de ancho, siendo que es menor de diez puños de
+                            alto, se conceptúa como un dominio público. También repitió el concepto de “una marisma cruzada por un dominio público”, para enseñarnos que, a pesar de que asiduamente la gente no camina por encima de ella, aún así, es considerada
+                            como lugar de paso del dominio público. 5. DESDE EL MAR A TIERRA. Desde un Karmelit hacia un dominio público. DESDE EL MAR A UN BARCO. Desde un Karmelit hacia un dominio privado. TRANSPORTAR DE UNO A OTRO. Si pertenecen a dos
+                            personas diferentes pueden transportar haciendo previamente un Eruv, pues son considerados como dos patios. ESTANDO MUY CERCA. Uno del otro. Este término también aparece en el Tratado de Julín 46b: “No se acercan las ampollas”.
+                            TRANSPORTAR ENTRE ELLOS. Siendo que se pueden alejar uno del otro, el Karmelit los separa y se anula el Eruv. 6. EL QUE LANZA. En Shabat, sin intención, y se percata que es Shabat después de haber salido la piedra de su mano
+                            y antes de que se haya posado, aunque otro no la interceptó sino que cayó con normalidad, queda exento. Así se estudia más adelante: Hasta que el principio y el final sean sin intención. Sin embargo, en este caso, el principio
+                            no fue deliberado pero sí el final, siendo que recordó que era Shabat antes de que aterrizara la piedra. La Mishná así lo expresa: El que lanza algo y se percata de su error después que salió de su mano... Asimismo, si no se
+                            percató pero alguien la interceptó, también queda exento, porque en este caso son dos personas diferentes las que ejecutaron la acción y, por esto, quedan exentos. Por otro lado, si la piedra ya hubo aterrizado, queda penalizado
+                            a ofrendar un sacrificio Jatat. Todo esto que hablamos se refiere al caso que volvió y se olvidó, pero si no volvió y se olvidó, queda exento, pues todos los que están obligados a aportar un Jatat, sólo lo hacen cuando el principio
+                            y el final de la acción fueron sin intención. ESTA ES LA REGLA. También se incluye en ella a aquel que transporta un objeto de un lugar a otro en el dominio público, que si empezó sin intención y se percató posteriormente que
+                            era Shabat antes de soltarlo, queda exento.
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Guemará</p>
+                        <p>Tratado Shabat 113b</p>
+                    </section>
+                </div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            Dijo Rabí Jiyá Bar-Abá en nombre de Rabí Yojanán: ¿De dónde aprendemos en la Torá que hay que cambiarse asiduamente de ropa? Está dicho: “Y se quitó sus vestimentas y vistió otras ropas” (Levítico 6:4). Se estudió en la Casa de Estudios de Ribí Yishmael:
+                            La Torá te enseñó normas de buena conducta. Las ropas que uno viste a la hora de cocinar para su Rab, no las debe utilizar para templar la copa de vino de este. Dijo Ribí Jiyá Bar-Abá en nombre de Ribí Yojanán: No se ve bien
+                            que un Talmid-Jajam (Aprendiz de Sabio) salga al mercado con zapatos remendados. ¿Acaso no salía así Ribí Ajá Bar-Janiná? Dijo Ribí Ajá hijo de Rab Najmán: Se refería a un remiendo sobre otro remiendo. Y dijo también Rabí Jiyá
+                            Bar-Abá en nombre de Ribí Yojanán: Cualquier Talmid-Jajam en el que se encuentre una mancha (REBAB) sobre sus ropas es reo de muerte, pues así está dicho: “Todos los que me odian (en hebreo MESAN-AY) aman la muerte” (Proverbios
+                            8:36). No leas “los que me odian” sino “mis aborrecibles”(MASNIAY). Rabiná dijo: se refiere a una mancha de semen (REBAD). No se contradicen, sino que el primero habla de la capa y el segundo, de las prendas interiores. Y dijo
+                            asimismo Ribí Yojanán: ¿Cómo debe ser un Talmid-Jajam para que sea digno de ser nombrado dirigente de una congregación? Aquel a quien preguntan espontáneamente sobre cualquier tema y sabe responder incluso a preguntas del Tratado
+                            Kalá. Y comentó también Ribí Yojanán: ¿Cómo debe ser de importante un Talmid-Jajam para que sus conciudadanos tengan la obligación de preocuparse en sustentarlo económicamente? Aquel que se despreocupa de su propia manutención
+                            para dedicarse a cosas espirituales. No obstante, esto se refiere solo a sus necesidades más básicas. Además, dijo Ribí Yojanán: ¿A quién denominamos como Talmid-Jajam? A aquél a quien preguntan sobre un detalle de la Ley (Halajá)
+                            en cualquier lugar y sabe responder. ¿Qué nos agrega este último dicho? Nos enseña qué cargo otorgarle sobre la congregación: Si sabe responder sobre un sólo Tratado, lo podemos nombrar dirigente en su ciudad; si sabe responder
+                            preguntas de cualquier Tratado, entonces podremos nombrarlo Rosh-Yeshivá (Director de una Academia de estudios).
+                        </p>
+                    </section>
+                </div>
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rashí</p>
+                        <p id="textSecond">
+                            ¿DE DÓNDE APRENDEMOS...? Que es algo honroso a Ojos del Eterno? Y VISTIÓ OTRAS ROPAS. Para sacar afuera las cenizas. De donde se colige que la Torá obligó al Cohén a vestir prendas de menor importancia para efectuar un trabajo de poca importancia. De
+                            esta forma, las ropas más importantes con las cuales realizaba otros trabajos como Quemar el incienso o la Libación, no perdían calidad e importancia. SE ESTUDIÓ EN LA CASA DE ESTUDIOS... Cuando interpretaban este versículo.
+                            LAS ROPAS QUE UNO VISTE... Esto es una analogía a “sacar las cenizas”. TEMPLAR LA COPA... Por esto debía vestir prendas de menor importancia. MANCHA (REBAB). De grasa o sebo. REO DE MUERTE. Porque debe mostrar una presencia
+                            solemne y digna en honor de la Torá que representa. MIS ABORRECIBLES. Muestran ser personas despreciables a ojos de la gente. Asimismo, los que los ven dicen: Pobre de aquellos estudiantes de la Torá aborrecibles e indignos.
+                            Esto provoca que la Torá sea odiada. MANCHA DE SEMEN (REBAD). Su etimología proviene de “He tendido mi lecho con bellas colchas” (Proverbios 7:16). Preparé el lecho y lo adorné con diferentes aromas que provocan deseo para
+                            que me busques... CAPA. Prenda que se viste por encima. Sobre ella, incluso una mancha simple. PRENDAS INTERIORES. Sobre ellas, sólo una mancha de semen es indigna, no cualquier mancha. SOBRE CUALQUIER TEMA. Sobre cualquier
+                            lugar de todos los Tratados de Guemará, incluso sobre el Tratado Kalá, el cual no se estudia con asiduidad. No obstante, él se preocupó y lo aprendió. El Tratado de Kalá es una Baraita: “Una novia sin la correspondiente bendición
+                            queda prohibida para su esposo como una mujer Nidá. UN TALMID-JAJAM... Para que sus conciudadanos tengan la obligación de preocuparse en sustentarlo económicamente... Así se estudia en el capítulo 7 del Tratado Yomá, 72b...
+                            NECESIDADES MÁS BÁSICAS. Algo a lo que no se puede dedicar y que es vital. UN SOLO TRATADO. Si sabe responder sobre el tratado que estudia actualmente, lo nombran dirigente en su ciudad. CUALQUIER TRATADO. Tanto del que estudia
+                            en la actualidad como de cualquier otro.
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Zóhar</p>
+                        <p>Vayigash, 207b</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+
+                        <p id="textMain">
+
+                            Empezó Rabí Elazar diciendo: “Eterno, el Todopoderoso de mi salvación, de día Te clamo, y de noche me presento ante Ti” (Salmos 88:2). Ven y observa: El Rey David se levantaba a medianoche y se afanaba en el estudio de la Torá, en cánticos y alabanzas,
+                            para alegrar al Rey y a la Reina. Y esta es la alegría de la Fe terrestre, pues esta es la alabanza de la Fe, aquella que se manifiesta en la tierra. En las Alturas empiezan con alegría, con cánticos, muchos ángeles superiores
+                            de muchos tipos, ellos alaban por las noches en todos lados. Asimismo ocurre abajo en la tierra, aquel que alaba al Santo, Bendito Él, por las noches, es amado por Él, y todos aquellos ángeles sagrados que alaban al Santo,
+                            Bendito Él, atienden a aquel que alaba al Santo, Bendito Él, en la tierra por las noches. Este cántico es perfecto para agrandar el Honor del Santo, Bendito Él, desde abajo, y para entonar canciones por el gozo de la Unidad.
+                            Ven y observa. El rey David escribió: “Eterno, el Todopoderoso de mi salvación...”. ¿Cuándo es mi salvación? Aquel día que presente mi cántico hacia Ti por la noche, entonces será mi salvación de día. Y ven y observa. Por las
+                            noches, quien alaba a su Amo con la alegría de la Torá, se fortalece su poder de día desde el Lado Derecho, porque un Hilo (de Bondad) sale del Lado Derecho, lo atrae y lo fortalece. Por esto dijo David: “Eterno, el Todopoderoso
+                            de mi salvación, de día Te clamo...”. Por esto dijo: “Los muertos no pueden alabar al Eterno...” (Salmos 115:17). Los muertos no, porque debe ser un vivo el que alabe a Otro Vivo. Un muerto a un Vivo, no, por eso está escrito:
+                            “Los muertos no pueden alabar al Eterno...”. “Y nosotros bendeciremos al Eterno... “(ibíd.). Porque nosotros estamos vivos y no tenemos, absolutamente, nada que ver con la muerte. Jizquiyá dijo: “Sólo el vivo te agradecerá
+                            como yo lo hago” (Isaías 38:19), porque sólo el vivo se acerca al Vivo. Igualmente, David vive, y su acercamiento es con el que Vive Eternamente eterno. Quien se acerca a Él, al que Vive eternamente, vive, tal como versa. “Y
+                            vosotros, los que os apegáis al Eterno, vuestro Di-s, vivís todos hoy” (Deuteronomio 4:4). Y está escrito: “Y Benayahu Ben-Yehoyadá es hijo de un hombre vivo de grandes hechos, de Kabtseel (Samuel II 23:20).
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+
+                    <section id="bookHeader">
+
+                        <p>Halajá</p>
+
+                    </section>
+                </div>
+
+
+                <div>
+
+                    <section class="wrapperParent">
+                        <p>Rambam, Leyes sobre el Arrepentimiento, capítulo 1</p>
+                        <p id="textMain">
+                            (1) El chivo expiatorio siendo que sirve para expiar a todo Israel, el Cohén Gadol se confiesa sobre él en nombre de todo Israel, tal como versa: “Y confesará sobre él todos los pecados de los Hijos de Israel” (Levítico 16:21). (2) El chivo que se envía
+                            al desierto expía todas las transgresiones de la Torá, tanto ligeras como graves, deliberadamente o por error, consciente o inconscientemente - el chivo expía todos los pecados, a condición de que la persona se arrepienta.
+                            Pero cuando la persona no se arrepiente, el chivo solo expía los pecados menores. ¿Cuáles son considerados pecados mayores y cuáles menores? Los pecados mayores son aquellos por los cuales el Tribunal decreta pena de muerte
+                            o Karet (exterminación del alma). También se consideran pecados mayores, aunque no tienen pena de Karet, los juramentos falsos y en vano. Los pecados menores son los demás mandamientos negativos y positivos que no tienen pena
+                            de Karet. (3) Actualmente, que no existe el Templo, y no tenemos el altar donde expiar los pecados, solo queda el arrepentimiento que borra todos los pecados. Hasta el que ha pecado toda su vida, pero se arrepiente al final
+                            de sus días, no se le menciona ni una palabra de su maldad, como dice: “La maldad del impío no será obstáculo para él en el día en que se arrepienta de su maldad” (Ezequiel 33:12). El Día del Juicio en sí, expía a todos lo
+                            que se arrepienten, como dice: “Por cuanto en ese día ustedes serán expiados de sus pecados” (Levítico 16:30).
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Moral</p>
+                        <p>Sefer Hajaredim, 69b</p>
+
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+                            Hijo de Adam, ¿acaso no sabes que el Eterno mide, con la misma medida que uno utiliza? ¿Te parecería bien que cuando Lo requieras en tu sufrimiento se aparte de ti? Tú también, cuando estés rezando, aparta tu mente de tus ocupaciones. Este es el sentido
+                            de: “Cerca está el Eterno de todos los que le claman, de todos los que le claman con sinceridad” (Salmos 145:18), siguiendo el sentido de Jueces 11:7: “¿Por qué acudís ahora a Mí, cuando os va mal? Como el dicho: Honra al médico
+                            antes de necesitarlo (Talmud Jerosolimitano, Taanit 3:5). Hijo de Adam, huye del mundo, pues debes saber que un hombre se puede quebrar de repente, y que una mujer no conserva el amor de su juventud, por tanto, observa el mundo
+                            existente y entiéndelo. Hijo de Adam, ¿cuántas personas persiguen el honor?, ¿tú también lo persigues? ¡Mañana te pueden colocar entre los más insignificantes de la tierra! Contesta esto a tu instinto cuando veas que persigue
+                            el honor. Igualmente, cuando persiga riquezas, dile que la caridad es como un préstamo con intereses que se le hace al Eterno. Él dio permiso, tal como versa: “Como prestar al Eterno hace el que se apiada del indigente” (Proverbios
+                            19:17). En honor a la verdad, todo lo debes hacer para agradar a tu Creador, Bendito Él. “Como el crisol para la plata y como el horno para el oro, así son las alabanzas para el hombre” (ibíd. 27:21), o sea, según la concentración
+                            que imprima a su plegaria, eso lo alaba. Si le llegan pensamientos mundanos, se asemeja a la plata llena de escoria, impuro de corazón y distante. Por esto, intentará esforzarse en alejarse de las cáscaras de impureza para
+                            purificarse y apegarse a su Creador, Bendito Él.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <script src="../../Pdocument/scroll.js"></script>
+    </div>
+</body>
+
+</html>

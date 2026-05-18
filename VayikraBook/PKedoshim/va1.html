@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../documentStyleSplit.css">
+    <link rel="stylesheet" href="../../Pdocument/documentStyleHebreoSplit.css">
+    <title>va1</title>
+
+
+
+
+
+    <style>
+        /* Nav superior */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 10px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        #backButton {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #backButton a {
+            color: #551A8B;
+            text-decoration: underline;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Header parasha compacto */
+        .wrapperHeader { padding: 4px 0 2px 0; text-align: center; }
+        #bookHeader p { margin: 2px 0; line-height: 1.3; }
+        /* Botones de idioma */
+        #langBar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        .langBtn {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: bold;
+            width: 56px;
+            height: 36px;
+            border: 1.5px solid #999;
+            border-radius: 6px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .langBtn.active {
+            background-color: #720026;
+            color: white;
+            border-color: #720026;
+        }
+        /* Ocultar paneles */
+        div.wrap.hide { display: none !important; }
+    </style>
+                                <script>
+        function setLang(mode) {
+            var src = document.querySelector('.splitScreen');
+            var tgt = document.querySelector('.splitScreen2');
+
+            if (mode === 'he') {
+                if (src) { src.style.height = '86vh'; src.style.minHeight = '86vh'; src.style.overflow = 'scroll'; }
+                if (tgt) { tgt.style.height = '0px'; tgt.style.minHeight = '0px'; tgt.style.overflow = 'hidden'; tgt.style.padding = '0'; tgt.style.margin = '0'; }
+            } else if (mode === 'es') {
+                if (src) { src.style.height = '0px'; src.style.minHeight = '0px'; src.style.overflow = 'hidden'; src.style.padding = '0'; src.style.margin = '0'; }
+                if (tgt) { tgt.style.height = '86vh'; tgt.style.minHeight = '86vh'; tgt.style.overflow = 'scroll'; }
+            } else {
+                if (src) { src.style.height = '49vh'; src.style.minHeight = ''; src.style.overflow = 'scroll'; src.style.padding = ''; src.style.margin = ''; }
+                if (tgt) { tgt.style.height = '49vh'; tgt.style.minHeight = ''; tgt.style.overflow = 'scroll'; tgt.style.padding = ''; tgt.style.margin = ''; }
+            }
+
+            var btns = document.querySelectorAll('.langBtn');
+            for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+            var btn = document.getElementById('btn-' + mode);
+            if (btn) btn.classList.add('active');
+            try { localStorage.setItem('jokLang', mode); } catch(e) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var saved = 'both';
+            try { saved = localStorage.getItem('jokLang') || 'both'; } catch(e) {}
+            setLang(saved);
+        });
+    </script>
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+        <li id="backButton"><a href="../../days/vayikra/vaDiasPageKedoshim.html">DIAS</a></li>
+        <li id="backButton"><a href="../../index.html">INICIO</a></li>
+    </div>
+    <!--------book header-------->
+    <div class="wrapperHeader">
+        <section id="bookHeader">
+            <p>Kedoshim para el día Domingo</p>
+            <p>Pentateuco</p>
+            <p>Levítico 19:1-6</p>
+
+    </div>
+</div>
+    </div>
+
+        <div id="langBar">
+        <button class="langBtn active" id="btn-es"   onclick="setLang('es')">a</button>
+        <button class="langBtn"        id="btn-both" onclick="setLang('both')">a&#x2192;&#x05D0;</button>
+        <button class="langBtn"        id="btn-he"   onclick="setLang('he')">&#x05D0;</button>
+    </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+    <!--------------hebreo pantalla 1--------------->
+
+    <div class="wrap">
+        <div id="source" class="splitScreen">
+            <div>
+                <div>
+                    <section class="wrapperParentHe">
+
+                        <p id="textMainHe">
+
+                            xxxxxxxxxxxx
+
+
+
+
+                        </p>
+
+                    </section>
+                </div>
+    
+                        <div>
+                            <section class="wrapperParentHe">
+                                <h3>רש"י</h3>
+
+                                <p id="textSecondHe">
+
+                                    xxxx
+
+
+
+
+                                 </p>
+
+
+                            </section>
+                        </div>
+
+
+
+
+    <!----------book header--------->
+    <div class="wrapperHeaderHe">
+        <section id="bookHeaderHe">
+            <h3>נביאים </h3>
+            <p>יחזקאל - פרק כח</p>
+        </section>
+    </div>
+    <!-----------------content---------------->
+
+    <div>
+        <section class="wrapperParentHe">
+            <p id="textMainHe">
+
+
+               xxxxx
+
+            </p>
+
+
+        </section>
+    </div>
+               
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+
+                    xxxxx
+
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>כתובים</h3>
+                        <p> משלי - פרק יב </p>
+                    </section>
+                </div>
+
+            
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                          xxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                      xxxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>משנה</h3>
+                        <p >   פאה פרק ה      </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                      xxxxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>ר' עובדיה מברטנורה</h3>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textSecondHe">
+
+                        xxxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>גמרא</h3>
+                        <p>  ברכות דף ו' ע''ב        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+                          
+                           xxxxxx
+                           
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                            xxxxxx
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                          <h3>   זוהר וארא דף כ''ו ע''א  </h3>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textSecondHe">
+
+                           xxxxx
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>תרגום הגמרא</h3>
+                        <p id="textSecondHe">
+
+                           xxxxxx
+
+
+                        </p>
+                    </section>
+                </div>
+                
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>   הלכה פסוקה   </h3>
+                        <p >       הרמב''ם ההלכות תשובה פ''ג       </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                          xxxx
+
+                        </p>
+                    </section>
+                </div>
+
+                 
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>מוסר</h3>
+                        <p>   מהזה''ק ח''ב דף ב' ע''א (ונכתב בלה''ק)        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            xxxx
+
+
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+
+        </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+
+
+
+    <!-----------español pantalla 2------------->
+    <div class="wrap">
+        <div id="target" class="splitScreen2">
+            <div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(1)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> El Eterno habló a Moshé, para decir:&nbsp;</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(2)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> Habla a toda la asamblea de los Hijos de Israel, y les dirás: Santos serán, porque Santo soy Yo, el Eterno, su Di-s.</strong><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(3)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> Cada hombre deberá respetar a su madre y a su padre, y deberán guardar Mis Shabatot; Yo soy el Eterno, su Di-s.</strong><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(4)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> No se dirijan a los ídolos, y dioses de fundición no harán para ustedes; Yo soy el Eterno, su Di-s.</strong><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(5)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> Y cuando degüellen un sacrificio de ofrenda de paz al Eterno, lo degollarán para beneplácito hacia ustedes.</strong><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(6)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> Deberá ser comido en su día de degüello y al día siguiente, y lo que sobre hasta el tercer día lo quemarán al fuego.</strong></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                          <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>2. </strong><span lang="HE" dir="RTL"><strong>דַּבֵּר אֶל כָּל עֲדַת בְּנֵי יִשְׂרָאֵל</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / HABLA A TODA LA ASAMBLEA DE LOS HIJOS DE ISRAEL.</strong> Esta frase enseña que este parashá fue revelada ante la convención de todo el Pueblo de Israel, ya que la mayor parte de las leyes esenciales de la Torá dependen de ella.<span>&nbsp; </span><span dir="RTL"></span><span dir="RTL"></span><strong><span dir="RTL"></span><span dir="RTL"></span></strong><span lang="HE" dir="RTL"><strong> קְדֹשִׁים תִּהְיוּ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>/ SANTOS SERÁN</strong>. Quiere decir: apártense de la promiscuidad sexual y del pecado. Pues siempre que en la Torá hallas el concepto de apartarse de la promiscuidad sexual, también hallas yuxtapuesto el concepto de santidad. Por ejemplo, justo después del versículo donde la Torá prohíbe al kohén la relación con “una mujer ilícita o una mujer profanada” se declara: “Yo, el Eterno quien los santifica.” Asimismo, después de declarar que un kohén “no profanará su descendencia”, la Torá dijo que es porque “Yo, el Eterno, lo santifico”. Y también, después de que la Torá afirma que los kohanim “santos serán”, prohíbe que se casen con “una mujer ilícita o profanada”.<span>&nbsp; </span><strong>3.</strong><span lang="HE" dir="RTL"><strong>אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>/ CADA HOMBRE DEBERÁ RESPETAR A SU MADRE Y A SU PADRE.</strong> Esta frase significa: cada uno de ustedes debe respetar a su padre y a su madre. Este es el sentido simple de la frase. Pero su exégesis midráshica es la siguiente: basándome en esta frase, sólo sé que un varón debe respetar a sus padres; pero ¿de dónde aprendo que esto también se aplica a una mujer? Cuando la Torá declara <span lang="HE" dir="RTL"><strong>תִּירָאוּ</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> en plural, aquí está implicando a dos individuos: el hombre y la mujer. Siendo así, ¿por qué sólo se enuncia explícitamente al “hombre”? Porque, por regla general, el varón dispone del poder para llevar a cabo este mandamiento, pero sobre la mujer recae la autoridad de otros.<span>&nbsp;</span><span lang="HE" dir="RTL"><strong>אִמּוֹ וְאָבִיו תִּירָאוּ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>/ DEBERÁ RESPETAR A SU MADRE Y A SU PADRE</strong>. En este versículo Di-s antepuso la madre al padre, ya que revelado es ante Él que el hijo por naturaleza siente más respeto o temor [<span lang="HE" dir="RTL"><strong>יִרְאָה</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>] hacia su padre que hacia su madre. Pero en cuanto al mandamiento de honrar a los padres, Di-s antepuso el padre a la madre, ya que revelado es ante Él que el hijo por naturaleza honra más a su madre que a su padre, ya que ella lo convence más con palabras dulces.&nbsp;<span><strong> </strong></span><strong><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span></strong><span lang="HE" dir="RTL"><strong> וְאֶת שַׁבְּתֹּתַי תִּשְׁמֹרו</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span></strong><span lang="HE" dir="ltr"><strong> ּ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>/ Y DEBERÁN GUARDAR MIS SHABATOT.</strong> Di-s yuxtapuso el concepto de guardar al Shabat al respeto por el padre con el propósito de enfatizar lo siguiente: A pesar de que Yo les he ordenado acerca del respeto por el padre, en caso de que tu padre te diga: “Profana el Shabat”, no le obedezcas. Y lo mismo se aplica a todos los demás mandamientos.<span>&nbsp; </span><span lang="HE" dir="RTL"><strong>אֲנִי ה' אֱלֹהֵיכֶם</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / YO SOY EL ETERNO, SU DI-S</strong>. Lo cual implica: tanto tú como tu padre están obligados a honrarme. Por consiguiente, no le obedezcas para anular –es decir, transgredir Mis palabras. Ahora bien, ¿cuál es el respeto que se debe al progenitor? No sentarse en su lugar, no hablar en lugar de él y no contradecir sus palabras. ¿Y cuál es la honra que se le debe? Alimentarlo, darle de beber, vestirlo, ponerle sus zapatos, escoltarlo al entrar y escoltarlo al salir.<span>&nbsp; </span><strong>4. </strong><span lang="HE" dir="RTL"><strong>אַל תִּפְנוּ אֶל הָאֱלִילִם</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / NO SE DIRIJAN A LOS ÍDOLOS.</strong> Para rendirles culto. La palabra <span lang="HE" dir="RTL"><strong>אֱלִילִם</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> se deriva de <span lang="HE" dir="RTL"><strong>אַל</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>, vocablo que indica “negación”, con ello implicando que un dios pagano es considerado como un ente que no existe.<span>&nbsp; </span><span lang="HE" dir="RTL"><strong>וְאלֹהֵי מַסֵּכָה</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / Y DIOSES DE FUNDICIÓN</strong>. Al principio son entes inexistentes, pero si te diriges tras ellos, eventualmente los harás dioses.<span>&nbsp; </span><span lang="HE" dir="RTL"><strong>לֹא תַעֲשׂוּ לָכֶם</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / NO HARÁN PARA USTEDES</strong>. Esta frase implica dos cosas: primero, “no hacerlos” para otros y, segundo, que otros no los hagan “para ustedes”. Y si dices que esta frase solamente implica que ustedes no deberán hacerlos para ustedes mismos, pero que otros sí podrán hacerlos para ustedes, esa lectura es incorrecta, puesto que ya se ha declarado: “No tendrás dioses ajenos en Mi presencia”, lo cual implica que no deberás tener dioses falsos ni tuyos ni de otros.&nbsp;<span> </span><span dir="RTL"></span><span dir="RTL"></span><strong><span dir="RTL"></span><span dir="RTL"></span></strong><span lang="HE" dir="RTL"><strong>5</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span></strong><span lang="HE" dir="ltr"><strong> וְכִי תִזְבְּחוּ וְגוֹ'</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / Y CUANDO DEGÜELLEN, ETC.</strong> Esta sección únicamente fue enunciada para enseñar que el degüello de las ofrendas de paz [shelamim] sólo deberá ser con la intención de que sean ingeridas dentro del tiempo mencionado en el versículo siguiente. Pues si este pasaje hubiera sido enunciado para fijarles el tiempo de su ingestión, sería redundante, puesto que ya ha sido enunciado: “Y si su ofrenda de sacrificio es por un voto o una donación, etc.”<span>&nbsp; </span><span lang="HE" dir="RTL"><strong>לִרְצֹנְכֶם תִּזְבָּחֻהוּ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / LO DEGOLLARÁN PARA BENEPLÁCITO HACIA USTEDES.</strong> Esto quiere decir que el inicio mismo de su degüello deberá ser con la intención de dar satisfacción a Di-s porque se ha cumplido cabalmente con Su precepto, para que haya “beneplácito” de Di-s hacia ustedes. Pues si lo degüellan abrigando un pensamiento inválido no servirá de apaciguamiento para ustedes ante Mí.&nbsp;<span><strong> </strong></span><span lang="HE" dir="RTL"><strong>לִרְצֹנְכֶם</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / PARA BENEPLÁCITO HACIA USTEDES.</strong> Este vocablo significa lo mismo que apaiment en francés antiguo. Así es según su sentido simple. Pero nuestros Maestros aprendieron de aquí con respecto al que realiza un acto sin propósito en las ofrendas consagradas, que su acto es inválido, ya que para que su ofrenda sea válida debe tener el propósito de degollar la ofrenda con plena conciencia de lo que está haciendo.<span>&nbsp; </span><strong>6. </strong><span lang="HE" dir="RTL"><strong>בְּיוֹם זִבְחֲכֶם יֵאָכֵל</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> / EN SU DÍA DE DEGÜELLO.</strong> Esto quiere decir que cuando lo degüellen deberán hacerlo con la intención de ingerirlo dentro de este periodo de tiempo que Yo ya les he fijado.</span></p>
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+                <!----------book header--------->>
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Profetas</h3>
+                        <p>Ezequiel 20:2-7</p>
+                    </section>
+                </div>
+                <!-----------------content---------------->
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;">(2)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:14.0pt;">La palabra del Eterno vino a mí, para decir:</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"> (3)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:14.0pt;">Hijo de hombre, habla a los ancianos de Israel y diles: Así dijo el Señor Di-s: ¿Para inquirir de Mí han venido ustedes? ¡Vivo Yo, que no me dejaré inquirir por ustedes!, declaró el Señor Di-s.<span>&nbsp;&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span> </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;">(4)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:14.0pt;">¿Acaso no has de de juzgarlos, acaso no has juzgar, hijo de hombre? Infórmales de las abominaciones de sus ancestros.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;">(5)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:14.0pt;">Y diles Así dijo el Señor Di-s: el día que Yo escogí a Israel, alcé mi mano por la descendencia de Yaacob, y me di a conocer a ellos en la tierra de Mitzráim. Alcé mi mano por ellos diciendo: “Yo soy el Eterno, Di-s de ustedes.”</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;">(6)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:14.0pt;">En ese día alcé mi mano por ellos que los sacaría de la tierra de Mitzráim hacia una tierra que Yo había explorado para ellos, [una tierra] que mana leche y miel, que es el esplendor para todas las tierras.<span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;">(7)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:14.0pt;">Y les dije: Que cada hombre arroje las asquerosidades de sus ojos, y no se contaminen con los ídolos de Mitzráim; Yo soy el Eterno, Di-s de ustedes.</span></p>
+                            
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                            <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>4. ACASO NO HAS DE DE JUZGARLOS.&nbsp;</strong>En tono de discusión. <strong>6. EXPLORADO.</strong> Proviene de la raíz <i>(Números 13:2)</i>: “Y exploraron”.<span>&nbsp; </span><strong>EL ESPLENDOR.&nbsp;</strong>La más bella entre todas las demás tierras.&nbsp;</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Escritos</h3>
+                        <p>Proverbios 26:14-19</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(14)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> Como la puerta gira sobre sus bisagras, así el perezoso lo hace sobre su cama.<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(15)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> Tanto introduce el holgazán su mano en el caldero que, finalmente, se cansa para llevarla a su boca.<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(16)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> Es más sabio el haragán ante sus propios ojos que siete consejeros.<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(17)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> Como el que agarra las orejas a un perro, así saldrá el que se enoja en una riña ajena.<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(18)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> Como quien se cansa arrojando centellas, flechas y muerte,&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(19)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;"> así es el hombre que engañó a su amigo diciendo: ¿Acaso no estaba bromeando?</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                            <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>15. CALDERO.&nbsp;</strong>Para protegerse del frío.&nbsp;<span><strong> </strong></span><strong>16. CONSEJEROS.&nbsp;</strong>Sabios.<span>&nbsp; </span><strong>17. COMO EL QUE AGARRA..&nbsp;</strong>Es quien se mete en una pelea que no le atañe.<span>&nbsp; </span><strong>18. COMO QUIEN SE CANSA.&nbsp;</strong>Como quien se cansa de arrojar centellas encendidas.<span>&nbsp; </span><strong>19. ASÍ ES EL HOMBRE QUE ENGAÑÓ.&nbsp;</strong>Incita a su amigo a transgredir, y cuando su amigo se da cuenta que lo quiere equivocar, dice: “Estaba bromeando”.&nbsp;</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Mishná</h3>
+                        <p>Tratado Kiláim, capítulo 6</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                           <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(1)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">¿Qué es una empalizada (que se conceptúa como viñedo)? Aquella que consta de una hilera de cinco vides a un lado de la valla, de una altura de diez puños, o a un lado de una zanja con una profundidad de diez puños, que mide de ancho cuatro puños, y que posee un espacio de cuatro codos para poderla cultivar. La Escuela de Shamai dice: Se miden cuatro codos desde donde se encuentran las vides en dirección al campo. La Escuela de Hilel dice: Desde la valla hacia el campo. Dijo Rabí Yojanán Ben-Nurí: Todos los que opinan así se equivocan, pues sólo cuando hay una distancia de cuatro codos desde las vides hasta la valla, es posible guardar la distancia requerida para ser cultivada y así poder sembrar desde allí. ¿Cuál es la distancia necesaria para cultivar una vid? Seis puños por cada lado. Dijo Rabí Akibá: Tres.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(2)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Aquella empalizada que sobresale de su escalón, Rabí Eliézer Ben-Yaacob dice: Si el vendimiador se coloca debajo del escalón y puede vendimiarla enteramente, se prohíbe sembrar otra cosa a menos de cuatro codos desde ella. En caso contrario, sólo estaría prohibido sembrar justo debajo de ella.<span>&nbsp; </span>Dijo Ribí Eliézer: Incluso cuando se planta una fila en la tierra y otra en el escalón, si éste mide diez puños desde la tierra, no se suman; En caso contrario, se suman.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(3)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Si se cuelga una parra sobre una parte del enrejado superior, no podrá colocar semillas bajo el resto. Aun así, si lo hizo, no se prohíbe. No obstante, si se extendieron nuevas ramas, se prohíbe (lo que haya debajo). Igualmente ocurre cuando se sube la parra sobre parte de un “árbol vacío”.<span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(4)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Si se sube una parra sobre parte de un árbol frutal se permite sembrar debajo del resto del árbol. Si se extendieran nuevas ramas, podrá hacerlas retroceder a su lugar inicial. Cierta vez visitó Rabí Yehoshúa a Rabí Yishmael en la aldea de Aziz, quien le mostró una parra colgada sobre parte de una higuera. Le preguntó: ¿Se me permite sembrar debajo del resto? Le respondió: Se permite. Entonces lo llevó a Bet Hamaganya, donde le mostró una parra colgada sobre parte de una rama que salía del tronco de una higuera del desierto, y del cual brotaban otras muchas ramas. Le dijo: debajo de dicha rama se prohíbe, pero se permite debajo del resto.<span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(5)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">¿Qué es un “árbol vacío”? Aquel que no da frutos. Dijo Rabí Meir: Todos los árboles se denominan “vacíos”, excepto el olivo y la higuera. Enseñó Rabí Yosé: Aquellos árboles que no se plantan masivamente en los campos son los llamados “vacíos”.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(6)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Una empalizada se considera dividida cuando se crea en ella una separación de ocho codos y un poco más. Todas las medidas que dieron nuestros sabios con relación a las viñas no contemplan este “poco más”, sólo se habla de esa adición con relación a las empalizadas. ¿Cómo se crea la división en las empalizadas? Cuando los frutos de la parte central de la empalizada se secan, quedando cinco vides por un lado y cinco por el otro. Si hubiera un vacío de ocho codos, no podrá sembrar en aquel lugar. Si se tratase de ocho codos y un poco más, deberá dejar un espacio para poder cultivarla, y podrá sembrar a partir de dicho espacio.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(7)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Si una empalizada sobresale del muro, desde la esquina, se deberá dejar un espacio para poder cultivarla y se podrá sembrar el resto. Dijo Rabí Yosé: Si dicho espacio no abarca cuatro codos, no se podrá sembrar allí.</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp; </span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(8)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Si hay cañas que sobresalen de la empalizada y no tiene intención de cortarlas, se permite sembrar debajo de ellas. Si las deja para que trepen por ellas los nuevos sarmientos, se prohíbe.&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span>&nbsp;</span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;">(9)</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;">&nbsp;</span><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Los vástagos que sobresalen de la empalizada, deben ser conceptuados como si pendiesen de ellos una plomada, y se prohíbe sembrar debajo de ellos. Igualmente ocurre con las vides plantadas individualmente. Quien extiende un racimo desde una vid hasta otra, debajo de él se prohíbe plantar. Si lo ata a una cuerda o a una goma, se podrá sembrar debajo de ellas. Sin embargo, si las colocó paras que se extiendan por ellas los nuevos vástagos, se prohíbe.</span></p>
+
+                        </p>
+                    </section>
+                </div>
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Rabí Ovadia de Bartenura</h3>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textSecond">
+
+
+                          <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><strong>1. ¿QUÉ ES UNA EMPALIZADA…? </strong>La cual requiere un espacio vacío para ser cultivada al igual que ocurre con los viñedos, a pesar de que sólo consta de una sola fila? Una empalizada se construye entrelazando cañas, como se fabrican las camas, y sobre las cañas se pasa el ramaje de la vid. Fue la Escuela de Hilel quien fijó, en el capítulo cuarto, que un viñedo es considerado como tal, cuando consta de, al menos, dos hileras. Con relación a una empalizada sólo se exige una hilera para ser conceptuada como viñedo.<span>&nbsp; </span><strong>DESDE LA VALLA HACIA EL CAMPO.&nbsp;</strong>Por ejemplo: Si las vides estaban plantadas al este de una valla y las ramas se suben a la misma, y deseara sembrar por el lado oeste de la valla, no se mide cuatro codos desde las base de las viñas que se encuentran al otro lado de la valla, sino que debe contar cuatro codos desde la valla sobre la cual se hallan las ramas de dichas vides. Esta es una de las contadas leyes donde el veredicto de la Escuela de Hilel es más exigente que el de la Escuela de Shamai.<span>&nbsp; </span><strong>SE EQUIVOCAN.&nbsp;</strong>Puesto que la Escuela de Hilel nunca dijo que la empalizada de una hilera de vides se considera como un viñedo para exigir un ancho de cuatro codos para su cultivo, sólo se mencionó esta ley de los cuatro codos en una empalizada en el caso siguiente: Si hay cuatro codos desde la base de las vides hasta la valla donde se montan sus ramas, hay que dejar un espacio de seis puños tal como ocurre con una vid solitaria.<span>&nbsp; </span><strong>PODRÁ SEMBRAR DESDE ALLÍ.&nbsp;</strong>Hasta la valla. Si no hubiese una separación de cuatro codos desde la base de las vides hasta la valla, no podrá sembrar en aquel lugar. Este caso sería similar a plantar en un hoyo o en una zanja, sobre lo cual ya expresó Rabí Yosé en el capítulo anterior que de no haber un espacio de cuatro codos no podrá sembrar allí. Según aparece claramente en el Talmud Yerushalmi, tanto Rabí Yosé como Rabí Yojanán Ben-Nurí expresan una misma idea.<span>&nbsp;</span><strong>RABÍ AKIBÁ DIJO: TRES.&nbsp;</strong>Se requiere sólo un espacio de tres puños para cultivar una vid solitaria. La Halajá no concuerda con esta opinión de Rabí Akibá.<span>&nbsp; </span><strong>2. DE SU ESCALÓN.&nbsp;</strong>Se refiere a una colina alta formada por varias terrazas o escalones.<span>&nbsp; </span><strong>SI…&nbsp;</strong>Cuando se encuentra abajo, en la tierra, puede recolectar las uvas colgadas en la empalizada, se considera dicha empalizada como la base de las raíces de las vides, lo que ocasionaría no poder sembrar en un ancho de cuatro codos en el campo, en todas direcciones, desde el borde de la empalizada hacia el exterior. No obstante, sólo a priori estaría prohibido sembrar allí, pero si ya lo hizo, a posteriori, sólo se prohíbe lo sembrado en los primeros seis puños, y el resto se consideraría como parte de una empalizada dividida, tal como se verá en el próximo capítulo séptimo.<span>&nbsp; </span><strong>EN CASO CONTRARIO…&nbsp;</strong>Es decir, si no puede vendimiar todas las uvas mientras no se suba a la terraza o a una escalera, sólo se prohibiría sembrar debajo justo de la empalizada, mientras que por fuera estaría permitido, incluso dentro del espacio de cuatro codos desde la base de las vides de la empalizada, siendo que se encuentra encima del escalón o terraza. Así es la Ley.<span>&nbsp; </span><strong>INCLUSO CUANDO SE PLANTA.&nbsp;</strong>Una hilera en la tierra y otra en el escalón, pues se necesitan dos filas para que un viñedo se conceptúe como tal. Aquí no se está hablando de una empalizada sino de una viña con dos filas de vides, de forma que hayan dos vides frente a otras dos y una sobresalga como si fuera una cola.<span>&nbsp; </span><strong>SI ÉSTE MIDE.&nbsp;</strong>Si el escalón mide diez puños de alto, las dos filas no se suman para que sean denominadas como “Viñedo”, sino que cada vid se consideraría aislada en su fila. La Ley no coincide con esta opinión de Rabí Eliézer.<span>&nbsp;</span><strong>3. ENREJADO SUPERIOR.&nbsp;</strong>Se refiere a cañas entrelazadas en forma de trama y urdimbre, sobre las que cuelgan las ramas de las vides, y sobre las que se acuestan cuando éstas son demasiado largas. Si se cuelgan las ramas sólo sobre una parte de dicho enrejado, estaría prohibido sembrar debajo del resto del enrejado, a pesar que no hay racimos pendidos de él. No obstante, si sembró, no se prohíbe lo sembrado.<span>&nbsp; </span><strong>NUEVAS RAMAS.&nbsp;</strong>Es decir, creció la vid y brotaron nuevos sarmientos que invadieron todo el enrejado.<span>&nbsp; </span><strong>SE PROHÍBE.&nbsp;</strong>El fruto que brotó de aquello que sembró debajo del resto del enrejado se prohibiría si crece una doscientasava (0,5%) parte del total, después que se extendió la vid del enrejado.<span>&nbsp; </span><strong>IGUALMENTE OCURRE…&nbsp;</strong>Este caso sigue la misma regla que del enrejado, ya que la gente tiende a considerar nulo un árbol no frutal, con respecto a las ramas de vid que colocó encima, y lo considera todo como si fuera una vid. Sin embargo, cuando se trata de un árbol frutal, no pierde importancia si le colocan sobre una parte de él ramas de vid. Aquella parte que no carga ramas de vid se considera importante por sí misma, no se conceptúa como “vid”, y por lo tanto, se permite sembrar debajo de dicha parte.<span>&nbsp;</span><strong>4. RETROCEDER.&nbsp;</strong>Al lugar original y podrá sembrar en el resto.<span>&nbsp; </span><strong>AZIZ.&nbsp;</strong>Nombre de lugar.<span>&nbsp; </span><strong>SE PERMITE.&nbsp;</strong>Porque nadie anula la importancia de una higuera frente a una vid.<span>&nbsp; </span><strong>BET HAMAGANYA.&nbsp;</strong>Nombre de una localidad.<span>&nbsp; </span><strong>TRONCO DE HIGUERA.&nbsp;</strong>Se refiere a la raíz de una higuera que crece en los bosques del cual sacan vigas para la construcción.<span>&nbsp; </span><strong>PERO SE PERMITE…&nbsp;</strong>Porque se conceptúa cada viga como si fuera un árbol por sí mismo.<span>&nbsp; </span><strong>5. TODOS LOS ÁRBOLES.&nbsp;</strong>Rabí Meir opina que todo el mundo resta importancia a un árbol en comparación con una vid, mientras que Rabí Yosé opina que un árbol que se planta llenando huertos enteros es valioso, y nadie le resta importancia en comparación con la vid. La Halajá coincide con el primer exponente de la Mishná, a saber: Sólo un árbol que no da frutos pierde su valor en comparación con una vid.<span>&nbsp; </span><strong>6. EMPALIZADA DIVIDIDA.&nbsp;</strong>Enseguida explica a qué se refiere.<span>&nbsp; </span><strong>UN POCO MÁS.&nbsp;</strong>Se agrega un poco más a los ocho codos, o sea, un sexto de un codo, equivalente a un puño.<span>&nbsp; </span><strong>PARTE CENTRAL. </strong>Por ejemplo, cuando se plantan once vides a un lado de una valla y se seca la vid del centro, se transforma en dos empalizadas, ya que una empalizada no puede constar de menos de cinco vides.<span>&nbsp; </span><strong>VACÍO DE OCHO CODOS.&nbsp;</strong>Rabí Yojanán Ben-Nurí, siendo que no considera que una empalizada se pueda llamar “Viñedo”, le da un espacio de seis puños para cada una y siembra en el resto. Para aquel que considera que es un viñedo, deberán dejar un espacio de cuatro codos para cada una, no pudiendo sembrar dicho espacio y un poco más. Sin embargo, para aquel que considera que una empalizada es un viñedo, no opina que sea en todos los aspectos, ya que no se requieren dieciséis codos de espacio en el centro de una empalizada dividida, tal como ocurre cuando se crea una “calva” dentro de un viñedo. Además, quien siembra un espacio de cuatro codos dentro de un viñedo, lo invalida completamente, mientras que quien siembra en una empalizada dividida, desde los seis puños en adelante, no invalida el resto de la vendimia, tal como se estudiará más adelante <i>(Cap. 7, Mishná 3)</i>.<span>&nbsp; </span><strong>7. SOBRESALE DEL MURO.&nbsp;</strong>Por ejemplo: Hay cinco vides plantadas a un lado de una valla sin ocuparla completamente, donde tres de ellas se encuentran en una esquina por un lado, y otras dos en la misma esquina por el otro lado. En medio de la valla no hay ninguna vid, sino sólo en los dos lados de una misma esquina.<span>&nbsp; </span><strong>DEJAR UN ESPACIO.&nbsp;</strong>Seis puños por un lado y otros seis por el otro, pudiendo sembrar a lo largo de todo el resto del muro. Esto es así mismo cuando el muro no alcanza los cuatro codos de largo.<span>&nbsp; </span><strong>DIJO RABÍ YOSÉ.&nbsp;</strong>Rabí Yosé continúa con su línea de pensamiento reflejada en el capítulo anterior, con respecto a un hoyo o una zanja que no alcanza los cuatro codos de largo. De aquí aprendemos que no sólo cuando se trata de una zanja o un hoyo, que son espacios cerrados por todos lados, Rabí Yosé exige que midan al menos cuatro codos de largo, sino también cuando se trata de un muro que no está cerrado por todas partes. Por otro lado, si Rabí Yosé sólo hubiese expresado su parecer con respecto al muro, podría haber dicho: Aquí Rabí Yosé exige más de cuatro codos porque hay cinco vides en total entre ambos lados de la esquina del muro, pero no lo exige si se trata de una única vid que se halla dentro de una zanja o un hoyo. Por esto, fue necesario que Rabí Yosé mostrara su parecer en ambos casos. Ya dijimos anteriormente que la Halajá no coincide con la opinión de Rabí Yosé.<span>&nbsp; </span><strong>8. CAÑAS QUE SOBRESALEN.&nbsp;</strong>Que sobrepasan la línea que conforma la empalizada.<span>&nbsp;</span><strong>NO TIENE INTENCIÓN.&nbsp;</strong>Es decir, no las mantiene porque desea enredar en ellas ramas de la vid, sino sólo no desea cortarlas.<span>&nbsp; </span><strong>SE PERMITE DEBAJO.&nbsp;</strong>Pues no son más valiosas que un enrejado, y por ende, se permite sembrar por debajo.<span>&nbsp; </span><strong>PARA QUE TREPEN.&nbsp;</strong>Para colgar sobre ellas los sarmientos que vayan brotando y creciendo.<span>&nbsp;</span><strong>9. LOS VÁSTAGOS.&nbsp;</strong>La palabra hebrea “vástago”, “Péraj”, procede de la raíz que aparece en el versículo (Cantares 6:11): “¿Ha florecido la vid?”. Es decir, lo que crece en la vid sobresale fuera de la empalizada.<span>&nbsp; </span><strong>PLOMADA.&nbsp;</strong>Se refiere a un trozo de plomo que los albañiles hacen bajar agarrado a una cuerda a sobre la superficie de una muralla para comprobar si es recta. De esta forma, también se calcula si lo que fue sembrado se encuentra justamente debajo de los vástagos. Aquí se habla de un caso en que los racimos crecieron más de lo esperado y sobresalen por fuera de la empalizada, porque dentro del espacio reservado, aunque no hayan crecido vástagos, se prohíbe.<span>&nbsp; </span><strong>VIDES INDIVIDUALES.&nbsp;</strong>Se debe calcular asimismo, cuando se planta una vid en solitario sobre palos que no conforman una empalizada, si es que sobresalió del espacio de seis puños requeridos para su cultivo.<span>&nbsp; </span><strong>DEBAJO DE ÉL.&nbsp;</strong>Se refiere a racimo, sin embargo, a ambos lados se permite.<span>&nbsp; </span><strong>LO ATA A UNA CUERDA.&nbsp;</strong>Siendo que el sarmiento no era suficientemente largo como para llegar desde una vid hasta la siguiente, ató en un extremo una cuerda o una goma para alargarlo de forma que pueda llegar. Debajo del racimo se prohíbe, debajo de la cuerda se permite. No obstante, si ató la cuerda para que treparan por ella los racimos nuevos, también se prohíbe sembrar debajo de ella.</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Guemará</h3>
+                        <p>Tratado Berajot 27a</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                         <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Rab se presentó en la casa de estudios de Guenibá, y rezó la oración correspondiente al Shabat noche en la víspera de Shabat. Tras él se encontraba rezando Ribí Yirmiyá Bar-Abá. Rab, que finalizó su rezo antes que Ribí Yirmiyá, esperó en su lugar para no pasar delante de él. De aquí aprendió tres cosas: Que se permite rezar la oración de Shabat en la víspera, que está permitido que un alumno rece detrás de su maestro, y que se prohíbe pasar delante de la gente que se encuentra rezando. Esto apoya aquello que enseñó Ribí Yehoshúa Ben-Leví, pues así dijo Rabí Yehoshúa Ben-Leví: Se prohíbe pasar delante de la gente que reza. ¿Acaso eso es correcto? ¡Yo vi cómo tanto Ribí Amé como Ribí Asé lo hicieron! ¡Ribí Amé y Rabí Asé efectivamente pasaron, pero a partir de una distancia de cuatro codos! Y Ribí Yirmiyá, ¿cómo hizo eso? ¿Acaso no enseñó Rab Yehudá, en nombre de Rab, que está prohibido rezar tanto delante de su rabino como detrás de él? Además, se estudió en una Baraita: Dijo Ribí Eliézer: Quien reza detrás de su rabino, quien saluda a su rabino, quien responde al saludo de su rabino, quien comparte su asiento con su rabino, y quien enseña algo que no aprendió de su rabino, provocan que la Presencia Divina se aparte de la Congregación de Israel. (Se responde) El caso de Ribí Yirmiyá Bar Abá es diferente, ya que era a la vez su alumno y su compañero de estudios. Esto es posible constatarlo a través de la conversación que mantuvieron: Le dijo Ribí Yirmiyá Bar-Abá a Rab: ¿Ya finalizaste los trabajos que se prohíben en Shabat? Le respondió: Sí, efectivamente, lo hice. Vemos que no&nbsp;<span lang="ES-TRAD" dir="ltr">le preguntó: ¿Sé apartó usted…? ¿Pero acaso Rab se apartaba del trabajo cuando rezaba antes de tiempo? Fíjense lo que dijo Ribí Abín: ¡Cierta vez rezó Ribí la oración de Shabat en la víspera, después entró a la casa de baños, salió y comenzó a enseñarnos la lección, y esto, antes de oscurecer! Respondió Rabá: Entró sólo para sudar, y lo hizo antes de que los sabios lo prohibieran.&nbsp;</span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                            <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span><strong>VÍSPERA DE SHABAT.</strong> Quiere decir que recibió al Shabat aun siendo de día.&nbsp; <strong>APRENDIÓ TRES COSAS</strong>: Coincidiendo con la opinión de Rabí Yehudá quien dijo que desde “Peleg Haminjá”, termina el tiempo para rezar Minjá y comienza el de Arbit. <strong>NO PASAR DELANTE.</strong> O sea, no pasó entre Rabí Yirmiyá y la pared para llegar a su asiento, sino que permaneció de pie.&nbsp; <strong>DELANTE DE SU RABINO.&nbsp;</strong>Cerca de él, demostrando que están en el mismo nivel.<strong>&nbsp;</strong>&nbsp;<strong>DETRÁS DE ÉL.</strong> Pues se toma como una arrogancia.&nbsp; <strong>QUIEN SALUDA A SU RABINO. </strong>Tal como hace con cualquier otra persona, o sea, “Shalom”, a secas, en lugar de “Shalom señor rabino”.&nbsp; <strong>LA CONVERSACIÓN QUE MANTUVIERON.&nbsp;</strong>&nbsp;Aquel mismo día que Rab rezó la oración de Shabat en la víspera, le dijo Ribí Yirmiyá: Seguro que ya finalizaste los trabajos que se prohíben en Shabat, pues veo que ya recibiste el Shabat con tu oración. Fijémonos que no le dijo: “Seguro que el señor rabino ya finalizó…” De aquí se desprende que además, eran compañeros de estudio.&nbsp;</span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Zóhar</h3>
+                        <p>Kedoshim 80a</p>
+                        <p>(Comentario sobre el Zóhar)</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                          <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:14.0pt;">Está escrito: <i>(Levítico 19:1-2)</i> “Y el Eterno habló a Moshé diciendo: Habla a toda la Congregación de los Hijos de Israel y diles: Sed santos, pues Yo, el Eterno, vuestro Di-s, soy Santo”. Rabí Elazar comenzó su explicación así: “No seáis como el caballo o como la mula que no tienen entendimiento” <i>(Salmos 32:9)</i>. ¡Cuántas veces la Torá testificó y cuántas veces alzó su voz por todos lados para despertarlos, mientras que ellos permanecen dormidos por culpa de sus pecados! No se fijan ni se percatan de qué forma se levantarán en el Día del Juicio Supremo, cuando el Rey Altísimo les reproche el oprobio provocado a la Torá y que ella les reclama gritando. Mas ellos no se dan la vuelta hacia ella, están todos infectados, y desconocen la fidelidad que deben tener con el Rey Supremo. ¡Desdichados son ellos y desdichadas son sus almas! La Torá testifica en su contra y dice: “Quien sea simple, que vuelva aquí” <i>(Proverbios 9:4)</i>. A los faltos de inteligencia, les dijo: ¿Quiénes son “los faltos de inteligencia”? Aquellos que no tienen fe, pues quien no se ocupa en el estudio de la Torá no tiene fe, y además, posee todo tipo de defectos. “Les dijo”, tenía que haber estado escrito: “Les dice”, tal como versa: “Le dice al Todopoderoso, a Mi Roca” <i>(Salmos 42:10)</i>. ¿Por qué está escrito entonces “Les dijo”? Porque con esto se quiere incluir y agregar a la Torá de las Alturas, que también&nbsp;<span lang="ES-TRAD" dir="ltr">los llama “Faltos de inteligencia”, faltos de fe. Así estudiamos: A todo aquel que no se dedica al estudio de la Torá está prohibido acercarse, asociarse y hacer negocios con él, y más aún, viajar con él, pues no tiene fe. También estudiamos: Todo aquel que viaja y no habla de Torá, se condena a muerte. ¡Cuánto más aquel que acompaña en un viaje a alguien que no tiene fe! No tiene en cuenta el Honor de su Señor, y tampoco el propio, no siente piedad por sí mismo. Dijo Rabí Yehudá: Si uno no siente piedad de sí mismo, ¿cómo le va a dar un alma digna a su hijo? Dijo Rabí Elazar: ¡Me sorprendo al ver esta generación! Sobre esto se dijo:&nbsp;</span>“No seáis como el caballo o como la mula que no tienen entendimiento”. Bienaventurados sean los justos que se ocupan en el estudio de la Torá y conocen los caminos del Santo, Bendito Él, aquellos que se santifican con la Santidad del Rey, y se comportan siempre con santidad. Por todo esto, son capaces de absorber un espíritu de santidad desde las Alturas. Sus hijos serán todos verdaderos hombres justos, y serán denominados “Hijos del Rey”, hijos santos.&nbsp;</span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Halajá</h3>
+
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rambam, Leyes sobre Relaciones Prohibidas, capítulo 22</p>
+                        <p id="textMain">
+
+                            <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">1. No se debe disertar sobre las leyes que tratan las relaciones prohibidas, en presencia de tres personas, porque mientras uno pregunta los otros dos comentan sobre ello y no prestan atención a todo lo que se habla. Siendo que todo ser humano se siente tentado por este tipo de cosas, si duda sobre algo de lo que escuchó, inmediatamente lo dará por permitido. Por esto, es conveniente disertar sólo en presencia de dos, para que el que escucha pueda atender bien aquello que el rabino enseña.<span>&nbsp; </span>2. No hay en la Torá cosa más difícil para la mayoría del Pueblo que alejarse de las mujeres prohibidas y de las relaciones prohibidas. Dijeron los sabios: En el momento que Israel recibió la orden de no mantener relaciones con mujeres prohibidas, lloró y aceptó este precepto con resentimiento y llanto, tal como versa <i>(Números 11:10)</i>: “Y oyó Moshé cómo el Pueblo lloraba según sus familias”, es decir, debido a que ya no podrían tener relaciones con los familiares.&nbsp;</span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Moral</h3>
+                        <p>Shaaré Kedushá, Rabenu Yoná, capítulo 1</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                         <p style="direction:ltr;margin:0cm;text-align:justify;unicode-bidi:embed;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;">Es conveniente investigar, saber y conocer los castigos que corresponden a cada una de las transgresiones. Cuál de ellas conlleva azotes, cuál de ellas se castiga con Karet, cuál de ellas se sanciona con la muerte decretada por un Tribunal Rabínico… De esta forma sabrá el tamaño del pecado una vez que lo confiese, e irrumpirá en llanto por haber irritado amargamente al Creador. De esta forma se someterá con más facilidad y sentirá más temor por sus pecados, porque las transgresiones más graves se expían con el arrepentimiento y se limpias a través de los sufrimientos. Así está escrito <i>(Yirmiyahu 2:23)</i>: “Observa tu sendero en el valle, conoce lo que has hecho”. Asimismo, ante sus ojos se verán las transgresiones leves como si fueran graves, desde cuatro puntos de vista. Primeramente, que no perciba el pecado como insignificante, sino que se fijará en la grandeza de Quien dio la orden. En segundo lugar, el Mal Instinto suele imponerse cuando se trata de transgresiones leves. Quizás por eso se acostumbre a transgredirlas, por lo cual es conveniente considerarlas como graves, además de saber que si las comete pagará por ello. Fue comparado esto con un hilo de seda, el cual es débil y delicado, pero que si lo dobla muchas veces se convierte en una fuerte soga. El tercero, se trata de la sensación de permitido que se percibe cuando se transgrede un pecado de forma continuada, provocando que se desentienda del Yugo de la Ley, nunca más se cuidará de ella, y finalmente, se unirá al grupo de los herejes. En cuarto lugar: Si el Mal Instinto lo vence hoy en algo sin mucha importancia, mañana hará lo propio cuando se trate de una Ley mucho más importante, tal como enseñaron nuestros sabios, de bendita memoria <i>(T. Shabat 105b)</i>: “Si ves a alguien romper cosas porque está furioso, considéralo como un idolatra”, pues así se comporta el Mal Instinto, hoy te dice haz así, y mañana te dice, “Ve a adorar ídolos”. También está dicho <i>(Génesis 4:7)</i>: “Si te mejoraras, ¿no serías perdonado?” Quiere decir: ¿Por qué estás cabizbajo? Si haces bien las cosas y regresas a Mí, ¡te voy a perdonar! El origen hebreo de esta expresión aparece en Job <i>(11:15)</i>: “Entonces podrás levantar la cara sin problema”, es decir, serás perdonado. “Pero si no mejoras tus actos, el pecado estará acechando en la puerta” (<i>Génesis 4:7).</i> Quiere decir: Si no te arrepientes de los pecados que cometiste, no sólo vas a tener que soportar dicho pecado, sino que al acecharte el Mal Instinto en la puerta, intentará hacer que vuelvas a pecar una y otra vez. Te vencerá siempre, y te volverá a tentar, y te vencerá una vez más, pues te atrapó y no te arrepentiste. “Y hacia ti será su deseo” <i>(Ibíd.)</i>, es decir, desea desviarte y te ataca en todo momento. “Pero tú puedes dominarlo”, si lo deseas, podrás vencerlo. Por eso serás castigado por tu pecado, pues te di la posibilidad de vencer a tu instinto y no lo hiciste. Sobre esto dijo el rey Salomón, descanse en paz <i>(Proverbios 13:13)</i>: “Quien desprecia aún una Palabra se perjudica, pero quien teme al Mandamiento se verá recompensado”. Dijo esto por aquellos que desprecian las transgresiones leves, pues se verá perjudicado por ello. “Pero quien teme al Mandamiento”, es decir quien siente temor por perder la posibilidad de realizar un precepto, tanto como quien siente miedo por transgredir un grave pecado. “Se verá recompensado”, está destinado a recibir una gran recompensa. Dijeron nuestros Sabios, de bendita memoria <i>(T. Avot 2,1)</i>: “Ten cuidado de un precepto leve tanto como de uno grave”.&nbsp;<span> </span>Otra cosa que nos enseñaron: “Pues la realización de un precepto conlleva otro, y la transgresión de un pecado conlleva otro. La recompensa por un precepto es otro precepto, y el pago por una transgresión es otra transgresión” <i>(Ibíd.)</i>.</span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <script src="../../Pdocument/scroll.js"></script>
+    </div>
+</body>
+
+</html>

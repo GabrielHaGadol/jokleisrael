@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html translate="no" lang="he">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>JokLeisrael</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4A148C">
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="JokLeIsrael">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png">
+</head>
+<body>
+
+<section>
+  <div class="box1">
+    <h1 id="header1">Jok LeIsrael</h1>
+    <h1 id="header2">Jok LeIsrael</h1>
+  </div>
+</section>
+
+<div class="wrapper">
+  <ul>
+    <div>
+      <li class="linkBoxBt">
+        <a class="buttonBox" id="button" href="#">
+          <span id="fechaHebrea" style="display:block; font-size:14px; font-weight:bold; padding-top:6px; color:black; text-align:center;"></span>
+          <span id="fechaGregoriana" style="display:block; font-size:13px; padding-top:2px; color:#720026; text-align:center;"></span>
+          <span id="parashaHoy" style="display:block; font-size:16px; font-weight:bold; padding-top:3px; color:#555555; text-align:center;"></span>
+        </a>
+      </li>
+    </div>
+    <li class="linkBoxChild">
+      <a class="linkBox" href="parashot/bereshit/prPageBr.html">Bereshit
+        <p>(Génesis בראשית)</p>
+      </a>
+    </li>
+    <li class="linkBoxChild">
+      <a class="linkBox" href="parashot/shemot/prPageSh.html">Shemot
+        <p>(Exodo שמות)</p>
+      </a>
+    </li>
+    <li class="linkBoxChild">
+      <a class="linkBox" href="parashot/vayikra/prPageVA.html">Vayikra
+        <p>(Levítico ויקרא)</p>
+      </a>
+    </li>
+    <li class="linkBoxChild">
+      <a class="linkBox" href="parashot/bamidbar/prPageBA.html">Bamidbar
+        <p>(Números במדבר)</p>
+      </a>
+    </li>
+    <li class="linkBoxChild">
+      <a class="linkBox" href="parashot/devarim/prPageDE.html">Devarim
+        <p>(Deuteronomio דברים)</p>
+      </a>
+    </li>
+    <script src="process.js"></script>
+  </ul>
+</div>
+
+<script>
+  var dias  = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+               'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  var hoy = new Date();
+
+  // Fecha gregoriana
+  document.getElementById('fechaGregoriana').textContent =
+    dias[hoy.getDay()] + ', ' + meses[hoy.getMonth()] + ' ' + hoy.getDate() + ', ' + hoy.getFullYear();
+
+  // Funciones calendario hebreo
+  function isHebLeap(y) { return ((7*y+1)%19)<7; }
+  function hebElapsed(y) {
+    var m=Math.floor((235*y-234)/19), p=12084+13753*m, d=29*m+Math.floor(p/25920);
+    if((3*(d+1))%7<3) d++; return d;
+  }
+  function hebYearStart(y) {
+    var e=hebElapsed(y), e1=hebElapsed(y+1), e0=hebElapsed(y-1), jd=e+347997, d=jd%7;
+    if(d==2||d==4||d==6) jd++;
+    if(d==0&&(e1-e)==356&&!isHebLeap(y)) jd+=2;
+    if(d==5&&(e-e0)==382&&isHebLeap(y-1)) jd++;
+    return jd;
+  }
+  function gToJD(y,m,d) {
+    if(m<=2){y--;m+=12;}
+    var A=Math.floor(y/100), B=2-A+Math.floor(A/4);
+    return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524-1;
+  }
+  function toHebDate(dt) {
+    var jd=gToJD(dt.getFullYear(),dt.getMonth()+1,dt.getDate());
+    var hy=Math.floor((jd-347998)/365.25)+1;
+    while(hebYearStart(hy+1)<=jd) hy++;
+    while(hebYearStart(hy)>jd) hy--;
+    var leap=isHebLeap(hy);
+    var L=leap?[30,29,30,29,30,29,30,29,30,29,30,30,29]:[30,29,30,29,30,29,30,29,30,29,30,29];
+    var NL=['Tishrei','Jeshván','Kislev','Tevet','Shvat','Adar I','Adar II','Nisan','Iyar','Siván','Tamuz','Av','Elul'];
+    var NN=['Tishrei','Jeshván','Kislev','Tevet','Shvat','Adar','Nisan','Iyar','Siván','Tamuz','Av','Elul'];
+    var doy=jd-hebYearStart(hy)+1, mi=0;
+    while(doy>L[mi]){doy-=L[mi];mi++;}
+    return doy+' '+(leap?NL[mi]:NN[mi])+' '+hy;
+  }
+
+  // Fecha hebrea
+  document.getElementById('fechaHebrea').textContent = toHebDate(hoy);
+
+  // Parasha de la semana
+  function getParasha(dt) {
+    var isIsrael=true;
+    try{ var s=localStorage.getItem('enIsrael'); if(s!==null) isIsrael=(s==='true'); }catch(e){}
+    var P=['Bereshit','Noaj','Lej Lejá','Vayerá','Jayé Sará','Toldot','Vayetzé','Vayishlaj','Vayeshev','Mikets','Vayigash','Vayejí','Shemot','Vaerá','Bó','Beshalaj','Itró','Mishpatim','Terumá','Tetzavé','Ki Tisá','Vayakhel-Pekudei','Vayicrá','Tzav','Sheminí','Tazriá-Metzorá','Ajaré-Kedoshim','Emor','Behar-Bejukotai','Bamidbar','Nasó','Behaalotjá','Shlaj','Koraj','Jukat','Balak','Pinjás','Matot-Masé','Devarim','Vaetjanán','Ekev','Reé','Shoftim','Ki Tetzé','Ki Tavó','Nitzavim-Vayelej','Haazinu','Vezot Habrajá'];
+    var jd=gToJD(dt.getFullYear(),dt.getMonth()+1,dt.getDate());
+    var hy=Math.floor((jd-347998)/365.25)+1;
+    while(hebYearStart(hy+1)<=jd) hy++;
+    while(hebYearStart(hy)>jd) hy--;
+    var stOff=isIsrael?22:23;
+    var bsh=hebYearStart(hy)+stOff+1;
+    while(bsh%7!==5) bsh++;
+    var dow=jd%7;
+    var shabat=(dow===5)?jd:jd-((dow-5+7)%7);
+    var idx=Math.round((shabat-bsh)/7);
+    idx=Math.max(0,Math.min(idx,P.length-1));
+    return P[idx];
+  }
+  document.getElementById('parashaHoy').textContent = getParasha(hoy);
+
+  // Abrir EstudioDiario al presionar el botón de fechas
+  document.getElementById('button').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'estudio.html';
+  });
+</script>
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js');
+    });
+  }
+</script>
+
+</body>
+</html>

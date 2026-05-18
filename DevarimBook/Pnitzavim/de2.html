@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../documentStyleSplit.css">
+    <link rel="stylesheet" href="../../Pdocument/documentStyleHebreoSplit.css">
+    <title>va1</title>
+
+
+
+
+
+    <style>
+        /* Nav superior */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 10px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        #backButton {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #backButton a {
+            color: #551A8B;
+            text-decoration: underline;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Header parasha compacto */
+        .wrapperHeader { padding: 4px 0 2px 0; text-align: center; }
+        #bookHeader p { margin: 2px 0; line-height: 1.3; }
+        /* Botones de idioma */
+        #langBar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        .langBtn {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: bold;
+            width: 56px;
+            height: 36px;
+            border: 1.5px solid #999;
+            border-radius: 6px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .langBtn.active {
+            background-color: #720026;
+            color: white;
+            border-color: #720026;
+        }
+        /* Ocultar paneles */
+        div.wrap.hide { display: none !important; }
+    </style>
+                                <script>
+        function setLang(mode) {
+            var src = document.querySelector('.splitScreen');
+            var tgt = document.querySelector('.splitScreen2');
+
+            if (mode === 'he') {
+                if (src) { src.style.height = '86vh'; src.style.minHeight = '86vh'; src.style.overflow = 'scroll'; }
+                if (tgt) { tgt.style.height = '0px'; tgt.style.minHeight = '0px'; tgt.style.overflow = 'hidden'; tgt.style.padding = '0'; tgt.style.margin = '0'; }
+            } else if (mode === 'es') {
+                if (src) { src.style.height = '0px'; src.style.minHeight = '0px'; src.style.overflow = 'hidden'; src.style.padding = '0'; src.style.margin = '0'; }
+                if (tgt) { tgt.style.height = '86vh'; tgt.style.minHeight = '86vh'; tgt.style.overflow = 'scroll'; }
+            } else {
+                if (src) { src.style.height = '49vh'; src.style.minHeight = ''; src.style.overflow = 'scroll'; src.style.padding = ''; src.style.margin = ''; }
+                if (tgt) { tgt.style.height = '49vh'; tgt.style.minHeight = ''; tgt.style.overflow = 'scroll'; tgt.style.padding = ''; tgt.style.margin = ''; }
+            }
+
+            var btns = document.querySelectorAll('.langBtn');
+            for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+            var btn = document.getElementById('btn-' + mode);
+            if (btn) btn.classList.add('active');
+            try { localStorage.setItem('jokLang', mode); } catch(e) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var saved = 'both';
+            try { saved = localStorage.getItem('jokLang') || 'both'; } catch(e) {}
+            setLang(saved);
+        });
+    </script>
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+        <li id="backButton"><a href="../../days/devarim/deDiasPageNitzavim.html">DIAS</a></li>
+        <li id="backButton"><a href="../../index.html">INICIO</a></li>
+    </div>
+    <!--------book header-------->
+    <div class="wrapperHeader">
+        <section id="bookHeader">
+            <p>Nitzavim para el día Lunes</p>
+            <p>Pentateuco</p>
+            <p>Deuteronomio 29:15-18</p>
+
+    </div>
+</div>
+    </div>
+
+        <div id="langBar">
+        <button class="langBtn active" id="btn-es"   onclick="setLang('es')">a</button>
+        <button class="langBtn"        id="btn-both" onclick="setLang('both')">a&#x2192;&#x05D0;</button>
+        <button class="langBtn"        id="btn-he"   onclick="setLang('he')">&#x05D0;</button>
+    </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+    <!--------------hebreo pantalla 1--------------->
+
+    <div class="wrap">
+        <div id="source" class="splitScreen">
+            <div>
+                <div>
+                    <section class="wrapperParentHe">
+
+                        <p id="textMainHe">
+
+                           <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>שלישי (טו)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>כִּי אַתֶּם יְדַעְתֶּם אֵת אֲשֶׁר יָשַׁבְנוּ בְּאֶרֶץ מִצְרָיִם וְאֵת אֲשֶׁר עָבַרְנוּ בְּקֶרֶב הַגּוֹיִם אֲשֶׁר עֲבַרְתֶּם:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">אֲרֵי אַתּוּן יְדַעְתּוּן יָת דִיתֵבְנָא בְּאַרְעָא דְמִצְרָיִם וְיָת דִי עֲבַרְנָא בְּגוֹ עַמְמַיָא דִי עֲבַרְתּוּן:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong> (טז)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>וַתִּרְאוּ אֶת שִׁקּוּצֵיהֶם וְאֵת גִּלֻּלֵיהֶם עֵץ וָאֶבֶן כֶּסֶף וְזָהָב אֲשֶׁר עִמָּהֶם:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">וַחֲזֵיתוּן יָת שִׁקוּצֵיהוֹן וְיָת טַעֲוָתְהוֹן אָעָא וְאַבְנָא כַּסְפָּא וְדַהֲבָא דִי עִמְהוֹן:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong> (יז)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>פֶּן יֵשׁ בָּכֶם אִישׁ אוֹ אִשָּׁה אוֹ מִשְׁפָּחָה אוֹ שֵׁבֶט אֲשֶׁר לְבָבוֹ פֹנֶה הַיּוֹם מֵעִם יְהוָה אֱלֹהֵינוּ לָלֶכֶת לַעֲבֹד אֶת אֱלֹהֵי הַגּוֹיִם הָהֵם פֶּן יֵשׁ בָּכֶם שֹׁרֶשׁ פֹּרֶה רֹאשׁ וְלַעֲנָה:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">דִילְמָא אִית בְּכוֹן גְבַר אוֹ אִתְּתָא אוֹ זַרְעִית אוֹ שִׁבְטָא דִי לִבֵּהּ פָּנֵי יוֹמָא דֵין מִדַחַלְתָּא דַייָ אֱלָהָנָא לִמְהַךְ לְמִפְלַח יָת טַעֲוַת עַמְמַיָא הָאִנוּן דִילְמָא אִית בְּכוֹן גְבַר מְהַרְהַר חֶטְאִין אוֹ זָדוֹן:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong> (יח)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>וְהָיָה בְּשָׁמְעוֹ אֶת דִּבְרֵי הָאָלָה הַזֹּאת וְהִתְבָּרֵךְ בִּלְבָבוֹ לֵאמֹר שָׁלוֹם יִהְיֶה לִּי כִּי בִּשְׁרִרוּת לִבִּי אֵלֵךְ לְמַעַן סְפוֹת הָרָוָה אֶת הַצְּמֵאָה:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">וִיהֵי בְּמִשְׁמְעֵהּ יָת פִּתְגָמֵי מוֹמָתָא הָדָא וִיחַשַׁב בְּלִבֵּהּ לְמֵימַר שְׁלָמָא יְהֵי לִי אֲרֵי בְּהַרְהוֹר לִבִּי אֲנָא אָזֵל בְּדִיל לְאוֹסָפָא לֵהּ חֶטְאֵי שָׁלוּתָא עַל זְדָנוּתָא</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+
+                        </p>
+
+                    </section>
+                </div>
+    
+                        <div>
+                            <section class="wrapperParentHe">
+                                <h3>רש"י</h3>
+
+                                <p id="textSecondHe">
+
+                                   <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>כי אתם ידעתם וגו' ותראו את שקוציהם.&nbsp;</strong>לפי שראיתם האמות עובדי עבודה זרה ושמא השיא לב אחד מכם אותו ללכת אחריהם, פן יש בכם וגו'</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">(פסוק יז)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">לפיכך אני צריך להשביעכם:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>ותראו את שקוציהם.</strong> על שם שהם מאוסים כשקצים: <strong>גלליהם.</strong> שמסרחים ומאוסין כגלל: <strong>עץ ואבן.</strong> אותן של עצים ושל אבנים ראיתם בגלוי, לפי שאין הגוים יראים שמא יגנבו, אבל של כסף וזהב, עמהם, בחדרי משכיתם הם, לפי שהם יראים שמא יגנבו:<strong> פן יש בכם וגו'.&nbsp;</strong>לפיכך אני צריך להשביעכם:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>פן יש בכם.</strong> שמא יש בכם: <strong>אשר לבבו פנה היום.</strong> מלקבל עליו הברית: <strong>שרש פרה ראש ולענה.</strong> שרש מגדל עשב מר כגידין, שהם מרים, כלומר מפרה ומרבה רשע בקרבכם:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>והתברך בלבבו.</strong> לשון ברכה, יחשב בלבו ברכת שלום לעצמו לאמר, לא יבואוני קללות הללו, אך שלום יהיה לי: <strong>והתברך.</strong> בינדיר''א שי''י בלע''ז [יברך את עצמו], כמו והתגלח והתפלל: <strong>בשררות לבי אלך.</strong> במראית לבי, כמו</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">(במדבר כד, יז)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">אשורנו ולא קרוב, כלומר מה שלבי רואה לעשות: למען ספות הרוה. לפי שאוסיף לו פרענות על מה שעשה עד הנה בשוגג והייתי מעביר עליהם, וגורם עתה שאצרפם עם המזיד ואפרע ממנו הכל. וכן תרגם אנקלוס בדיל לאוספא ליה חטאי שלותא על זדנותא, שאוסיף לו אני השגגות על הזדונות: הרוה. שוגג שהוא עושה כאדם שכור שלא מדעת: <strong>צמאה.</strong> שהוא עושה מדעת ובתאוה</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+
+                                 </p>
+
+
+                            </section>
+                        </div>
+
+
+
+
+    <!----------book header--------->
+    <div class="wrapperHeaderHe">
+        <section id="bookHeaderHe">
+            <h3>נביאים </h3>
+            <p> ישעיה - פרק סב  </p>
+        </section>
+    </div>
+    <!-----------------content---------------->
+
+    <div>
+        <section class="wrapperParentHe">
+            <p id="textMainHe">
+
+
+               <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>(ה) כִּי יִבְעַל בָּחוּר בְּתוּלָה יִבְעָלוּךְ בָּנָיִךְ וּמְשׂוֹשׂ חָתָן עַל כַּלָּה יָשִׂישׂ עָלַיִךְ אֱלֹהָיִךְ:</strong> אֲרֵי כְּמָא דְמִתְיַתַּב עוּלֵים עִם בְּתוּלְתָא כֵּן יִתְיַתְבוּן בְּנַוַכִי בְּגַוַיכִי וּכְמָא דְחָדֵי חֲתָנָא עִם כַּלָּתָא יֶחְדֵי עֲלָךְ אֱלָהָיִךְ:<strong> (ו) עַל חוֹמֹתַיִךְ יְרוּשָׁלִַם הִפְקַדְתִּי שֹׁמְרִים כָּל הַיּוֹם וְכָל הַלַּיְלָה תָּמִיד לֹא יֶחֱשׁוּ הַמַּזְכִּרִים אֶת יְהוָה אַל דֳּמִי לָכֶם:</strong> הָא עוֹבָדֵי אֲבָהָתָךְ צַדִּיקַיָּא קַרְתָּא דִירוּשְׁלֵם מְתַקְּנִין נַטְרִין קֳדָמַי כָּל יְמָמָא וְכָל לֵילְיָא תְּדִירָא לָא פָסְקִין מִתְאֲמַר דָּוּכְרָן טַבְוָתַיִךְ קֳדָם יְיָ לָא פָסֵיק:<strong> (ז) וְאַל תִּתְּנוּ דֳמִי לוֹ עַד יְכוֹנֵן וְעַד יָשִׂים אֶת יְרוּשָׁלִַם תְּהִלָּה בָּאָרֶץ:</strong> וְלָא יִפְסוֹק דָּוּכְרַנְהוֹן מִן קֳדָמוֹהִי עַד דִּיתַקֵּן וְעַד דִּישַׁוֵי יַת יְרוּשְׁלֵם תּשְׁבַּחְא בְּאַרְעָא : <strong>(ח) נִשְׁבַּע יְהוָה בִּימִינוֹ וּבִזְרוֹעַ עֻזּוֹ אִם אֶתֵּן אֶת דְּגָנֵךְ עוֹד מַאֲכָל לְאֹיְבַיִךְ וְאִם יִשְׁתּוּ בְנֵי נֵכָר תִּירוֹשֵׁךְ אֲשֶׁר יָגַעַתְּ בּוֹ:</strong> קַיָּים יְיָ בְּיַמִינֵיהּ וּבִדְרַע תּוּקְפֵיהּ אִם אֶתֵּין יַת עִבּוּרִיךְ עוֹד מֵיכַל לְבַעֲלֵי דְּבָבֵיךְ וְאִם יִשְׁתּוּן בְּנֵי עַמְמַיָּא חַמְרִיךְ דִּלְאֵית בֵּהּ</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+            </p>
+
+
+        </section>
+    </div>
+               
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+
+                   <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>כי יבעל וגו'.</strong> ארי כמה דמתיתב עולם עם בתולתא כן יתייתבין בגוייכי בנייכי:&nbsp;<strong>על חומותיך ירושלים.</strong> רבותינו דרשוהו כמשמעו מלאכי' המזכירים את ה' על חורבנה לבנותה מאי אמרי אתה תקום תרחם ציון&nbsp;(תהלים קב)&nbsp;כי בחר ה' בציון&nbsp;(שם קלב)&nbsp;כדאיתא במסכת מנחות וי''ת חומותיך אבות הראשונים המגינים עלינו כחומה:&nbsp;<strong>הפקדתי שומרים.</strong> לכתוב ספר זכרונות שלא ישתכח זכותם מלפני: <strong>לא יחשו.</strong> מלהזכיר זכותם לפני: <strong>המזכירים את ה'.</strong> את זכות האבות: <strong>אל דמי לכם.</strong> אל תחרישו</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>כתובים</h3>
+                        <p>תהילים - פרק מה</p>
+                    </section>
+                </div>
+
+            
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                         <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>(יז) תַּחַת אֲבֹתֶיךָ יִהְיוּ בָנֶיךָ תְּשִׁיתֵמוֹ לְשָׂרִים בְּכָל הָאָרֶץ:</strong> בַּאֲתַר אַבְהָתָךְ יֶהֱוְיָן צַדִיקַיָא בְּנָךְ תְּמַנֵנוּן לְרַבְרְבַיָא בְּכָל אַרְעָא:<strong> (יח) אַזְכִּירָה שִׁמְךָ בְּכָל דֹּר וָדֹר עַל כֵּן עַמִּים יְהוֹדֻךָ לְעֹלָם וָעֶד:</strong> בְּעִידָנָא הַהִיא תֵימְרוּן נִדְכַּר שְׁמָךְ בְּכָל דָר וְדָר מְטוּל הֵיכְנָא עַמְמַיָא דְמִתְגַיְרִין יְהוֹדוּן שְׁמָךְ לַעֲלָם וּלְעָלְמֵי עָלְמִין:<strong> מו (א) לַמְנַצֵּחַ לִבְנֵי קֹרַח עַל עֲלָמוֹת שִׁיר:</strong> לְשַׁבָּחָא עַל יְדֵיהוֹן דִבְנֵי קֹרַח בְּרוּחַ נְבוּאָה בִּזְמַן דְאִתְכַּסֵי אֲבוּהוֹן מִנְהוֹן וְהִנוּן אִשְׁתֵּזְבוּ וַאֲמַרוּ שִׁירָתָא:<strong> (ב) אֱלֹהִים לָנוּ מַחֲסֶה וָעֹז עֶזְרָה בְצָרוֹת נִמְצָא מְאֹד:</strong> אֱלָהָא לָנָא רוּחֲצָנָא וְעוּשְׁנָא סִיעֲתָא בְּעָקְתָא נִשְׁתַּכַּח לַחֲדָא</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                     <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>תחת אבותיך וגו'.</strong> לכל אחד מישראל אמר:&nbsp;<strong>אזכירה שמך.</strong> כלפי הקב''ה אמרו המשורר:&nbsp;<strong>על עלמות.</strong> שם של כלי שיר בדברי הימים</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>משנה</h3>
+                        <p >  ביצה פרק ד    </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                     <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>א.</strong> הַמֵּבִיא כַדֵּי יַיִן מִמָּקוֹם לְמָקוֹם, לֹא יְבִיאֵם בַּסַל וּבַקֵּפָּה, אֲבָל מֵבִיא הוּא עַל כְּתֵפוֹ אוֹ לְפָנָיו. וְכֵן הַמּוֹלִיךְ אֶת הַתֶּבֶן, לֹא יַפְשִׁיל אֶת הַקֵּפָּה לַאֲחוֹרָיו, אֲבָל מְבִיאָהּ הוּא בְיָדוֹ. וּמַתְחִילִין בַּעֲרֵמַת הַתֶּבֶן, אֲבָל לֹא בְעֵצִים שֶׁבַּמֻּקְצֶה:<strong> ב.</strong> אֵין נוֹטְלִין עֵצִים מִן הַסֻכָּה, אֶלָּא מִן הַסָמוּךְ לָהּ. מְבִיאִין עֵצִים מִן הַשָּׂדֶה מִן הַמְכֻנָּס, וּמִן הַקַּרְפָּף אֲפִלּוּ מִן הַמְפֻזָּר. אֵיזֶהוּ קַרְפָּף, כָּל שֶׁסָמוּךְ לָעִיר, דִּבְרֵי רַבִּי יְהוּדָה. רַבִּי יוֹסֵי אוֹמֵר, כָּל שֶׁנִּכְנָסִין לוֹ בַפּוֹתַחַת, וַאֲפִלּוּ בְתוֹךְ תְּחוּם שַׁבָּת:<strong> ג.</strong> אֵין מְבַקְּעִין עֵצִים, לֹא מִן הַקּוֹרוֹת, וְלֹא מִן הַקּוֹרָה שֶׁנִּשְׁבְּרָה בְיוֹם טוֹב. וְאֵין מְבַקְּעִין לֹא בַקַּרְדֹּם וְלֹא בַמְּגֵרָה וְלֹא בַמַּגָּל, אֶלָּא בַקּוֹפִיץ. בַּיִת שֶׁהוּא מָלֵא פֵרוֹת, סָתוּם וְנִפְחַת, נוֹטֵל מִמְּקוֹם הַפְּחָת. רַבִּי מֵאִיר אוֹמֵר, אַף פּוֹחֵת לְכַתְּחִלָּה וְנוֹטֵל:<strong> ד.</strong> אֵין פּוֹחְתִין אֶת הַנֵּר, מִפְּנֵי שֶׁהוּא עוֹשֶׂה כֶלִי. וְאֵין עוֹשִׂין פֶּחָמִין בְּיוֹם טוֹב, וְאֵין חוֹתְכִין אֶת הַפְּתִילָה לִשְׁנָיִם. רַבִּי יְהוּדָה אוֹמֵר, חוֹתְכָהּ בָּאוּר לִשְׁתֵּי נֵרוֹת:<strong> ה.</strong> אֵין שׁוֹבְרִין אֶת הַחֶרֶס, וְאֵין חוֹתְכִין אֶת הַנְּיָר לִצְלוֹת בּוֹ מָלִיחַ, וְאֵין גּוֹרְפִין תַּנּוּר וְכִירַיִם, אֲבָל מְכַבְּשִׁין, וְאֵין מַקִּיפִין שְׁתֵּי חָבִיּוֹת לִשְׁפֹּת עֲלֵיהֶן אֶת הַקְּדֵרָה, וְאֵין סוֹמְכִין אֶת הַקְּדֵרָה בַבַּקַּעַת, וְכֵן בַּדֶּלֶת, וְאֵין מַנְהִיגִין אֶת הַבְּהֵמָה בַמַּקֵּל בְּיוֹם טוֹב וְרַבִּי אֶלְעָזָר בְּרַבִּי שִׁמְעוֹן מַתִּיר: <strong>ו.</strong> רַבִּי אֱלִיעֶזֶר אוֹמֵר, נוֹטֵל אָדָם קִיסָם מִשֶּׁלְּפָנָיו לַחֲצֹץ בּוֹ שִׁנָּיו, וּמְגַבֵּב מִן הֶחָצֵר וּמַדְלִיק, שֶׁכָּל מַה שֶּׁבֶּחָצֵר מוּכָן הוּא. וַחֲכָמִים אוֹמְרִים, מְגַבֵּב מִשֶּׁלְּפָנָיו וּמַדְלִיק: <strong>ז.</strong> אֵין מוֹצִיאִין אֶת הָאוּר לֹא מִן הָעֵצִים וְלֹא מִן הָאֲבָנִים וְלֹא מִן הֶעָפָר וְלֹא מִן הַמַּיִם, וְאֵין מְלַבְּנִין אֶת הָרְעָפִים לִצְלוֹת בָּהֶן. וְעוֹד אָמַר רַבִּי אֱלִיעֶזֶר, עוֹמֵד אָדָם עַל הַמֻּקְצֶה עֶרֶב שַׁבָּת בַּשְּׁבִיעִית, וְאוֹמֵר, מִכָּאן אֲנִי אוֹכֵל לְמָחָר. וַחֲכָמִים אוֹמְרִים, עַד שֶׁיִּרְשׁוֹם וְיֹאמַר, מִכָּאן וְעַד כָּאן</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>ר' עובדיה מברטנורה</h3>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textSecondHe">
+
+                       <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>(א) המביא. ממקום למקום.</strong> בתוך התחום:<strong> לא יביאם וכו'.</strong> לתת שלש וארבע כדות לתוך סל או קופה וישאם, משום דנראה כמעשה חול לשאת משאות. ואם אי אפשר לו לשנות מותר:<strong> אבל מביא הוא על כתפו.</strong> אחת או שתים, דמוכח דלצורך יום טוב:<strong> או לפניו.</strong> בידו:<strong> וכן המוליך את התבן.</strong> להיסק או לבהמה:<strong> לא יפשיל הקופה לאחוריו.</strong> שנראה כדרך חול:<strong> ומתחילין בערמת התבן.</strong> ואף שלא זימנה מבעוד יום ולא היה רגיל להסיק ממנה, דלית ליה להאי תנא מוקצה:<strong> אבל לא בעצי' [שבמוקצה].</strong> רחבה שאחורי הבתים קרויה מוקצה על שם שהיא מוקצה לאחור ואין נכנסים ויוצאים לה תדיר, והנך עצים דאיירי בהו הכא הן קורות גדולות של ארזים העומדות לבנין, דמוקצה מחמת חסרון כיס נינהו שדמיהן יקרים. ובהא אפילו ר' שמעון דלית ליה מוקצה מודה:<strong> (ב) אין נוטלים עצים מן הסוכה.</strong> אפילו סוכה שאינה של מצוה כגון בפסח או בעצרת אין נוטלים ממנה עצים ביום טוב, משום סתירת אהל:<strong> אלא מן הסמוך לה.</strong> כגון קנים הזקופים סמוך לדפנות ולא נארגו עם הדופן דלא בטלי לגבי דופן לפיכך נוטלין מהן ביום טוב:<strong> מביאין עצים.</strong> תלושים:<strong> מן השדה.</strong> שבתוך התחום מן המכונס:<strong> מן הקרפף.</strong> אפילו מן המפוזר. מתניתין יחידאה היא ואינה הלכה, אלא הלכתא אין מביאין עצים אלא מן המכונסים שבקרפף, ומן השדה לא יביא כלל ואפילו מן המכונסים דלאו דעתיה עלויהו הואיל ואינן משתמרים שם, אבל מן הקרפף שהוא משתמר ומוקף סביב כשהן מכונסין דעתיה עלויהו:<strong> כל שסמוך לעיר.</strong> ממש. והוא דאית ליה פותחת מפתח שמשתמר, דר' יהודה תרתי בעי סמוך לעיר ופותחת. ומשום דקסבר סתם קרפיפות יש להם פותחת משום הכי לא חש להזכירה: ר' יוסי אומר כל שנכנסין לו בפותחת ואפילו בתוך תחום שבת. כיון דאית ליה פותחת לא בעינן סמוך, אלא אפילו רחוק עד קרוב לסוף תחום שבת. ואם הוא סמוך לא בעינן פותחת. ובסמוך בלא פותחת או פותחת בלא סמוך שרי. והלכה כר' יוסי:&nbsp;<strong>(ג) אין מבקעין עצים מן הקורות.</strong> הסדורות בארץ כדי שלא יתעקמו, ועומדות לבנין:<strong> ואין מבקעין לא בקרדום.</strong> מתניתין חסורי מחסרא והכי קתני, אבל מבקעין מן הקורה שנשברה מערב יום טוב. וכשהן מבקעין אין מבקעין לא בקרדום:<strong> ולא במגירה.</strong> כעין סכין ארוך מלא פגימות וקוצצין בו עצים עבים, וכלי אומן הוא:<strong> במגל.</strong> אף הוא כלי אומן, ונראה כרוצה לעשות מלאכה:<strong> אלא בקופיץ.</strong> סתם קופיץ הוא סכין של קצבים ואינו כלי אומן. ויש מהן שיש לה שני ראשין, ראש אחד רחב ונקרא צד נקבות, וראש אחד צר ונקרא צד זכרות, ואין מבקעין בו אלא בצד זכרות שלו:<strong> נוטל ממקום הפחת.</strong> ולא אמרינן מוקצים מחמת איסור הן דאין יכול לפחתו ביום טוב ואסח דעתיה מנייהו, דבית דתנן במתניתין מיירי שאינו בנוי בטיט ובסיד, אלא סידור של לבנים זו על זו בלא טיט, והשתא אין בפחיתתו איסורא דאורייתא הלכך לאו מוקצין נינהו, כי היכי דאמרינן גבי טבל דלאו מוקצה הוא שאם עבר ותקנו מתוקן:<strong> אף פוחת לכתחלה.</strong> דהואיל ואין שם טיט אלא לבנים סדורין זו על זו לא הוי סותר ושרי לפחות לכתחלה. ואין הלכה כר' מאיר:&nbsp;<strong>(ד) אין פוחתין את הנר.</strong> ליטול אחת מן הביצים של יוצר חרש ולתחוב אגרופו לתוכה לחקוק נר, מפני שעושה כלי:<strong> ואין עושין פחמין.</strong> דאינהו נמי כלי נינהו לצורפי זהב, ופתיחה נמי כלי היא להדלקה שצריכה עשיה ותקון:<strong> ואין חותכין אותה לשנים.</strong> לפי שהוא מתקן כלי. ולמעכה ביד מותר:<strong> חותכה באור.</strong> נותן שני ראשי הפתילה בפי שתי נרות שצריך להדליקן כאחת, ומדליק באמצע, דהשתא לא מוכח דלתקוני מנא מכוין אלא להדלקה בעלמא. והלכה כרבי יהודה:&nbsp;<strong>(ה) ואין חותכין את הנייר.</strong> שנותנין בו שמן, ועומד בפני האש כל זמן שהשמן בתוכו, ואינו נשרף:<strong> מליח.</strong> דג:<strong> אין גורפין תנור וכירים.</strong> אם נפל לתוכן מטפולה של תנור ומן הטיח, אין גורפין אותן, דמתקן מנא הוא ואתיא כרבנן דאמרי מכשירי אוכל נפש אסירי:<strong> מכבשין.</strong> משכיבין את האפר ואת העפר כדי שיהיה חלק. ואם אי אפשר לו לאפות אלא אם כן גרף מותר:<strong> מקיפין.</strong> מקרבין זו אצל זו. כמו אין מקיפין בריאה:<strong> לשפות.</strong> לערוך ולהושיב עליהם קדירה, והאור בין שתי החביות. ואסר לה משום דדמי לבנין:<strong> [ואין סומכין] את הקדירה בבקעת.</strong> דלא ניתנו עצים אלא להסקה. ובקעת, עצים שנתבקעו:<strong> וכן הדלת.</strong> אין סומכין אותה בבקעת, דעצים מוקצים הם אצל כל תשמיש חוץ מן ההסקה:<strong> ואין מנהיגים את הבהמה במקל.</strong> משום דנראה כמוליכה למכור בשוק: <strong>(ו) משלפניו.</strong> ממה שלפניו בבית:<strong> לחצוץ בו שיניו.</strong> ליטול בשר החוצץ בין שיניו. ומשלפניו לאו דוקא, דלרבי אליעזר אף מן החצר נמי מותר ליטול, דקאמר כל מה שבחצר מוכן הוא. והא דנקט משלפניו, משום רבנן דפליגי דאפילו משלפניו להדליק אין, לחצוץ לא, דסברי לא ניתנו עצים אלא להסקה: וחכמים אומרים מגבב משלפניו ומדליק. אבל מן החצר לא, דהואיל וקסמין דקין הן וטורח לקוששן ולגבבן, מאתמול לאו להכי קיימי. ודקאמרת נוטל קיסם לחצוץ בו שיניו, אנן אית לן דאף משלפניו לא יטול אלא להדליק, דלא ניתנו עצים אלא להסקה. ובתרתי פליגי. והלכה כחכמים. ואין מותר לטול קיסם לחצוץ בו שיניו אלא מאבוס של בהמה, ולא יחתכנו ויתקננו לכך, אלא אם כן היה לח וראוי למאכל בהמה, שכל דבר הראוי למאכל בהמה מותר לחתכו בין ביום טוב בין בשבת ואין בהם משום תקון כלי:&nbsp;<strong>(ז) אין מוציאין את האור.</strong> משום דמוליד ודמי למלאכה, שבורא האש הזה ביום טוב:<strong> מן העפר.</strong> יש קרקע כשחופרין אותה מוציאה אור ממקום מחפורת שלה:<strong> ולא מן המים.</strong> נותנין מים בכלי זכוכית לבנה ונותנו בחמה כשהשמש חם מאד והזכוכית מוציאה שלהבת, ומביאים נעורת ומגיעים בזכוכית והיא בוערת:<strong> רעפים.</strong> כלי חרס חלולים באמצען שמכסים בהן הגגות:<strong> ואין מלבנין.</strong> באור:<strong> את הרעפים.</strong> דוקא ברעפים חדשים, משום דמשוי ליה מנא בהיסק זה, שהן מתחסמין ומתחזקים על ידי האור:<strong> ועוד אמר ר' אליעזר.</strong> משום דתני אחת לקולא גבי מוקצה והדר אמר אחריתי, קאמר ועוד:<strong> עומד אדם על המוקצה.</strong> הצריך הזמנה, והזמנה מועלת לו:<strong> ערב שבת בשביעית.</strong> שאין מעשר נוהג בה ואין מחוסר אלא הזמנה. והוא הדין במעושר ובשאר שני השבוע. אלא אורחא דמלתא נקט, דסתם מוקצה לאו מעושר הוא, דגרוגרות וצימוקים הן סתם מוקצה, ואין רגילין לעשר קודם גמר מלאכה:<strong> מכאן אני נוטל למחר.</strong> וסגי בהכי:<strong> עד שירשום.</strong> בסימן, דאין ברירה והלכה כחכמים</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>גמרא</h3>
+                        <p>  ביצה דף לב ע''א       </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+                          
+                         <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">וְאֵין עוֹשִׂין פֶּחָמִים פְּשִׁיטָא לְמַאי חָזֵי תָּנֵי רִבִּי חִיָּיא לֹא נִצְרָכָה אֶלָּא לְמוֹסְרָן לְאוּלַיְירִין לְבוֹ בַּיּוֹם. וּבוֹ בַּיּוֹם מִי שָׁרֵי כִּדְאָמַר רָבָא לְהַזִּיעַ וְקוֹדֶם גְּזֵרָה הָכָא נָמֵי לְהַזִּיעַ וְקוֹדֶם גְּזֵרָה. וְאֵין חוֹתְכִין אֶת הַפְּתִילָה לִשְׁנַיִם. מַאי שְׁנָא בְּסַכִּין דְּלָא דְּקָמְתַקֵּן מָנָא בָּאוּר נָמֵי קָא מְתַקֵּן מָנָא תָּנֵי רִבִּי חִיָּיא חוֹתְכָהּ בָּאוּר בְּפִי שְׁתֵּי נֵרוֹת. אָמַר רַב נָתָן בַּר אַבָּא אָמַר רַב: מוֹחֲטִין אֶת הַפְּתִילָה בְּיוֹם טוֹב. מַאי מוֹחֲטִין. אָמַר רַב חֲנִינָא בַּר שְׁלֶמְיָה מִשְּׁמֵיהּ דְּרַב לְעִדּוּיֵי חוּשְׁכָא. תָּנֵי בַּר קַפָּרָא: שִׁשָּׁה דְּבָרִים נֶאֶמְרוּ בַּפְּתִילָה שְׁלשָׁה לְהַחְמִיר וּשְׁלשָׁה לְהָקֵל. לְהַחְמִיר אֵין גּוֹדְלִין אוֹתָהּ לְכַתְּחִלָּה בְּיוֹם טוֹב. וְאֵין מְהַבְהֲבִין אוֹתָהּ בָּאוּר וְאֵין חוֹתְכִין אוֹתָהּ לִשְׁנַיִם. לְהָקֵל מְמַעֲכָהּ בְּיַד וְשׁוֹרָהּ בְּשֶׁמֶן וְחוֹתְכָהּ בָּאוּר בְּפִי שְׁתֵּי נֵרוֹת. וְאָמַר רַב נָתָן בַּר אַבָּא, אָמַר רַב: עֲתִירֵי בָּבֶל יוֹרְדֵי גֵּיהִנָּם הֵם כִּי הָא דְּשַׁבְּתָאי בַּר מְרִינוּס אִקְלַע לְבָבֶל בָּעָא מִינַיְיהוּ עִסְקָא וְלָא יַהֲבוּ לֵהּ מְזוֹנֵי מֵיזָן נָמֵי לָא זַיְינוּהוּ. אָמַר הָנֵי מֵעֵרֶב רַב קָא אָתוּ דִּכְתִיב&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">(דברים ג)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"> וְנָתַן לְךָ רַחֲמִים וְרִחַמְךָ. כָּל הַמְרַחֵם עַל הַבְּרִיּוֹת בְּיָדוּעַ שֶׁהוּא מִזַּרְעוֹ שֶׁל אַבְרָהָם אָבִינוּ. וְכָל מִי שֶׁאֵינוֹ מְרַחֵם עַל הַבְּרִיּוֹת בְּיָדוּעַ שֶׁאֵינוֹ מִזַּרְעוֹ שֶׁל אַבְרָהָם אָבִינוּ. וְאָמַר רַב נָתָן בַּר אַבָּא, אָמַר רַב: כָּל הַמְצַפֶּה עַל שֻׁלְחַן אֲחֵרִים עוֹלָם חָשַׁךְ בַּעֲדוֹ שֶׁנֶּאֱמַר&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">(איוב טו)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"> נוֹדֵד הוּא לַלֶּחֶם אַיֵּה יָדַע כִּי נָכוֹן בְּיָדוֹ יוֹם חשֶךְ. רַב חַסְדָּא אָמַר: אַף חַיָּיו אֵינָם חַיִּים. תָּנוּ רַבָּנָן: שְׁלשָׁה חַיֵּיהֶם אֵינָם חַיִּים וְאֵלּוּ הֵן: הַמְצַפֶּה לְשֻׁלְחַן חֲבֵרוֹ וּמִי שֶׁאִשְׁתּוֹ מוֹשֶׁלֶת עָלָיו וּמִי שֶׁיִּסּוּרִין מוֹשְׁלִין בְּגוּפוֹ. וְיֵשׁ אוֹמְרִים: אַף מִי שֶׁאֵין לוֹ אֶלָּא חָלוּק אֶחָד. וְתַנָּא קַמָּא אֶפְשָׁר דִּמְעַיֵּין בְּמָאנֵיהּ</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                          <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>לאוליירין.</strong> מחמי חמין ומרחצאו' ואף על גב דלצורך יום טוב הן עושין:<strong> מי שרו.</strong> להחם והלא גזרו על הרחיצה במסכת שבת ואפילו הוחמו מבעוד יום וכ''ש להחם חמין לא הותר מעולם:<strong> להזיע.</strong> מכניס הפחמים לתוכו ובני אדם נכנסין ומזיעין וקודם שגזרו על הזיעה נשנית משנה זו:<strong> דקמתקן מנא.</strong> אחת היתה ועושה אותה שתים:<strong> בפי שתי נרות.</strong> נותן שני ראשיה בתוך שני נרות אם צריך להדליקן כאחת ומדליק באמצע דלא מוכח דלתקוני מנא מכוין אלא להדלקה בעלמא:<strong> לעדויי חושכא.</strong> כשהיא נעשית בראשה פחם מעבירה:<strong> לעדויי.</strong> להסיר:<strong> חושכא.</strong> פחם המחשיך אורה:<strong> נאמרו בפתילה.</strong> ביום טוב:<strong> ממעכה ביד.</strong> תקון כלאחר יד הוא:<strong> יורדי גהינם הן.</strong> שאינן מרחמין לעשות צדקה:<strong> עסק.</strong> סחורה להשתכר למחצית שכר:<strong> מזוני.</strong> שאל להם מזונו' מיזן נמי לא זינוהו:<strong> ונתן לך רחמי'.</strong> שתרחם על הבריות:<strong> כאשר נשבע לאבותיך.</strong> מי שיש לו רחמים הוא מזרעו של אבות:<strong> בעדו.</strong> כנגדו כמו סכת בעדו כלומר חשך פרוס לפניו הכל עליו נחשך:<strong> נכון בידו.</strong> מזומן אצלו:<strong> מי שאין לו אלא חלוק אחד.</strong> אין יכול לכבסו וכנים מצערים אותו:<strong> דמעיין במאניה.</strong> מפלא את כליו מן הכנים</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                          <h3>   זוהר ויקרא דף ריח ע''ב </h3>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textSecondHe">
+
+                           <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">זַכָּאָה חוּלָקְהוֹן דְּצַדִּיקַיָּא דְּיַדְּעִין לְכַוְּנָא רְעוּתָא לְקָמֵּי מָארֵיהוֹן וְיַדְּעִין לְתַקְּנָא עָלְמָא בְּהַאי יוֹמָא בְּקַל שׁוֹפָרָא וְעַל דָּא כְּתִיב&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">(תהלים פ''ט)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"> אַשְׁרֵי הָעָם יוֹדְעֵי תְרוּעָה יוֹדְעֵי וְלָא תּוֹקְעֵי בְּהַאי יוֹמָא בָּעוּ עַמָּא לְאִסְתַּכָּלָא בְּבַר נַשׁ שְׁלִים מִכֹּלָּא דְּיָדַע אָרְחוֹי דְּמַלְכָּא קַדִּישָׁא דְּיָדַע בִּיקָרָא דְּמַלְכָּא דְּיִבְעֵי עֲלַיְהוּ בָּעוּתָא בְּהַאי יוֹמָא וּלְזַמְּנָא קַל שׁוֹפָרָא בְּכֻלְּהוּ עָלְמִין בְּכַוָּנָא דְּלִבָּא בְּחָכְמָתָא בִּרְעוּתָא בִּשְׁלִימוּ בְּגִין דְּיִסְתַּלַּק דִּינָא עַל יְדוֹי מִן עָלְמָא וַוי לְאִנּוּן דִּשְׁלִיחָא דִּלְהוֹן לָא אִשְׁתַּכַּח כִּדְקָא יָאוּת דְּהָא חוֹבֵי עָלְמָא&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">(נ''א עַמָא)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"> אַתְיָן לְאַדְכָּרָא בְּגִנֵּיהּ הֲדָא הוּא דִּכְתִיב אִם הַכֹּהֵן הַמָּשִׁיחַ יֶחֱטָא דְּהוּא שְׁלִיחָא דְּכָל יִשְׂרָאֵל לְאַשְׁמַת הָעָם הוּא בְּגִין דְּדִינָא שַׁרְיָא עֲלַיְהוּ וְכַד שְׁלִיחָא הוּא זַכָּאָה כִּדְקָא יָאוּת זַכָּאִין אִנּוּן עַמָּא דְּכָל דִּינִין מִסְתַּלְּקִין מִנַּיְהוּ עַל יְדֵיהּ כָּל שֶׁכֵּן כַּהֲנָא דַּעֲלֵיהּ מִתְבָּרְכָאן עִלָּאֵי וְתַתָּאֵי. אָמַר רַבִּי אֶלְעָזָר וְעַל דָּא כֹּהֵן וְלֵוִי עַד לָא יְסַלַּק לְפוּלְחָנָא בָּדְקִין אַבַּתְרֵיהּ וְיַדְּעוּן אָרְחוֹי וְעוֹבָדוֹי וְאִי לָא לָא סָלִיק לְפוּלְחָנָא וְכֵן בְּסַנְהֶדְרִין לְמֵידָן דִּינָא וְאִי אִשְׁתַּכַּח כִּדְקָא יָאוּת יָהֲבִין עֲלֵיהּ חוּמְרָא דְּמַקְדְּשָׁא וְאִי לָא לָא סָלִיק לְפוּלְחָנָא הֲדָא הוּא דִּכְתִיב&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">(דברים לג)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL"> וּלְלֵוִי אָמַר תֻּמֶּיךָ וְאוּרֶיךָ לְאִישׁ חֲסִידֶיךָ. מִפְּנֵי מַה זָּכָה (אַהֲרֹן) לְאוּרִים וְתוּמִים וּלְמִפְלָח פּוּלְחָנָא הֱוֵי אוֹמֵר אֲשֶׁר נִסִיתוֹ וְגוֹ' הָאוֹמֵר לְאָבִיו וּלְאִמּוֹ לֹא רְאִיתִיו וְגוֹמֵר. וְכֵיוָן דְּאִשְׁתַּכָּחוּ בְּאִלֵּין דַּרְגִין כְּדֵין יוֹרוּ מִשְׁפָּטֶיךָ לְיַעֲקֹב וְגוֹמֵר. יָשִׂימוּ קְטוֹרָה וְגוֹמֵר לְשַׁכְּכָא רֻגְזָא וּלְזַמְּנָא שְׁלָמָא. וְכָלִיל עַל מִזְבְּחֶךָ בְּגִין דְּיִתְבַּסְמוּן כֹּלָּא וְיִשְׁתַּכְּחוּן בִּרְכָאָן בְּכֻלְּהוּ עָלְמִין כְּדֵין בָּרֵךְ יְיָ חֵילוֹ וְגוֹ'</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3> תרגום הזוהר </h3>
+                        <p id="textSecondHe">
+
+                         <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL">אַשְׁרֵי חֶלְקָם שֶׁל הַצַדִיקִים שֶׁיּוֹדְעִים לְכַוֵן רְצוֹנָם אֶל בּוֹרְאָם, וְיוֹדְעִים לְתַקֵן הָעוֹלָם בַּיּוֹם הַזֶּה בְּקוֹל הַשּׁוֹפָר, וְלָכֵן כָּתוּב&nbsp;(תהלים פ''ט) אַשְׁרֵי הָעָם יוֹדְעֵי תְרוּעָה יוֹדְעֵי וְלָא תּוֹקְעֵי. בַּיּוֹם הַזֶּה צָרִיךְ הָעוֹלָם לִרְאוֹת, שֶׁאָדָם שָׁלֵם בַּכֹּל, הַיּוֹדֵעַ דְּרָכָיו שֶׁל מֶלֶךְ הַקָּדוֹשׁ, וְיוֹדֵעַ יְקָרוֹ שֶׁל הַמֶּלֶךְ, שֶׁיִּתְפַּלֵּל עֲלֵיהֶם אֶת הַתְּפִלָּה בַּיּוֹם הַזֶּה, וְשֶׁיְּזַמֵּן קוֹל שׁוֹפָר בְּכָל הָעוֹלָמוֹת בְּכַוָּנַת הַלֵּב, בְּחָכְמָה, בְּרָצוֹן, בִּשְׁלֵמוּת, כְּדֵי שֶׁיִּסְתַּלֵּק הַדִּין עַל יָדוֹ מִן הָעוֹלָם. אוֹי לָאֵלּוּ, אֲשֶׁר הַשָּׁלִיחַ שֶׁלָּהֶם לֹא נִמְצָא כָּרָאוּי, כִּי עֲוֹנוֹת הָעוֹלָם יָבֹאוּ לְהַזְכִּיר בִּשְׁבִילוֹ. זֶה שֶׁאָמַר אִם הַכֹּהֵן הַמָּשִׁיחַ יֶחֱטָא, שֶׁהוּא שָׁלִיחַ כָּל יִשְׂרָאֵל, הוּא לְאַשְׁמַת הָעָם. מִשּׁוּם שֶׁהַדִּין שׁוֹרֶה עַל הָעָם. וְכַאֲשֶׁר שָׁלִיחַ הַצִבּוּר, הוּא זַכַּאי כָּרָאוּי, אַשְׁרֵיהֶם הָעָם, שֶׁכָּל הַדִּינִים מִסְתַּלְּקִים מֵהֶם עַל יָדוֹ. וְכָל שֶׁכֵּן הַכֹּהֵן, שֶׁבִּשְׁבִילוֹ מִתְבָּרְכִים הָעֶלְיוֹנִים וְהַתַּחְתּוֹנִים. אָמַר רַבִּי אֶלְעָזָר, וְעַל כֵּן, כֹּהֵן וְלֵוִי מִטֶּרֶם שֶׁעוֹלֶה לַעֲבוֹדָה בּוֹדְקִים אַחֲרָיו, וְרוֹאִים דְּרָכָיו וּמַעֲשָׂיו. וְאִם לֹא אֵינוֹ עוֹלֶה לַעֲבוֹדָה. וְכֵן בְּסַנְהֶדְרִין לָדוּן דִּין. וְאִם, הַכֹּהֵן אוֹ הַלֵּוִי, נִמְצָא כָּרָאוּי, נוֹתְנִים עָלָיו חֹמֶר הַמִּקְדָּשׁ, וְאִם לֹא, אֵינוֹ עוֹלֶה לַעֲבוֹדָה. זֶה שֶׁאָמַר וּלְלֵוִי אָמַר תּוּמֶיךְ וְאוּרֶיךְ לְאִישׁ חֲסִידֶךְ. מִפְּנֵי מַה זָּכָה לְאוּרִים וְתוּמִים וְלַעֲבֹד עֲבוֹדָה, הֱוֵי אוֹמֵר, אֲשֶׁר נִסִּיתוֹ וְגוֹ'. הָאוֹמֵר לְאָבִיו וּלְאִמּוֹ לֹא רְאִיתִיו וְגוֹ', וְכֵיוָן שֶׁנִּמְצָא בְּאֵלּוּ הַמַּדְרֵגוֹת, אָז, יוֹרוּ מִשְׁפָּטֶיךְ לְיַעֲקֹב וְגוֹ', יָשִׂימוּ קְטוֹרָה וְגוֹ', שֶׁיַּקְרִיבוּ קְטֹרֶת לְשַׁכֵּךְ הַכַּעַס וּלְזַמֵּן אֶת הַשָּׁלוֹם. וְכָלִיל עַל מִזְבָּחֶךְ, כְּדֵי שֶׁיִּתְבַּשֵׂם הַכֹּל, וְהַבְּרָכוֹת תִּמָּצֶאנָה בְּכָל הָעוֹלָמוֹת. אָז בָּרֵךְ ה' חֵילוֹ וְגוֹ'</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">.</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+
+                        </p>
+                    </section>
+                </div>
+                
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>   הלכה פסוקה   </h3>
+                        <p >      הרמב''ם הלכות ברכות פרק ה   </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                          <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL"><strong>א.</strong> שְׁלֹשָׁה בְּנֵי אָדָם שֶׁבָּאוּ מִשָּׁלשׁ חֲבוּרוֹת שֶׁל שְׁלשָׁה שְׁלשָה אֵינָן רַשָּׁאִין לֵחָלֵק. וְאִם כְּבָר זִמֵּן כָּל אֶחָד וְאֶחָד מֵהֶן בַּחֲבוּרָה שֶׁלּוֹ רַשָּׁאִין לֵחָלֵק וְאֵינָן חַיָּבִין בְּזִמּוּן שֶׁכְּבָר זִמְּנוּ עֲלֵיהֶן. שְׁלשָה שֶׁיָּשְׁבוּ לֶאֱכֹל פַּת אַף עַל פִּי שֶׁכָּל אֶחָד וְאֶחָד אוֹכֵל מִשֶּׁלּוֹ אֵינָן רַשָּׁאִין לֵיחָלֵק: <strong>ב.</strong> שְׁתֵּי חֲבוּרוֹת שֶׁהָיוּ אוֹכְלִין בְּבַיִת אֶחָד בִּזְמַן שֶׁמִּקְּצָתָן רוֹאִין אֵלּוּ אֶת אֵלּוּ מִצְטָרְפִין לְזִמּוּן אֶחָד. וְאִם לָאו אֵלּוּ מְזַמְּנִין לְעַצְמָן וְאֵלּוּ מְזַמְּנִין לְעַצְמָן. וְאִם יֵשׁ שַׁמָּשׁ אֶחָד בֵּינֵיהֶם שֶׁהוּא הוֹלֵךְ וּמְשַׁמֵּשׁ מֵחֲבוּרָה זוֹ לַחֲבוּרָה זוֹ מִצְטָרְפִין לְזִמּוּן אֶחָד אַף עַל פִּי שֶׁאֵין מִקְּצַת אֵלּוּ רוֹאִין אֶת אֵלּוּ וְהוּא שֶׁיִּשְׁמְעוּ שְׁתֵּיהֶן כָּל דִּבְרֵי הַמְבָרֵךְ בְּבֵאוּר</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+                 
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>מוסר</h3>
+                        <p>  שערי תשובה דף כט עב     </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                           <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:115%;" dir="RTL"></span><span style="line-height:115%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:115%;" lang="HE" dir="RTL">הַמִּתְלוֹצֵץ בִּדְבַר שְׂפָתַיִם עַל הַמַּעֲשִׂים וְהַדְּבָרִים לֹא שֶׁיָּבוֹז לָהֶם בְּלִבּוֹ אַךְ מִדֶּרֶךְ הַשְּׂמֵחִים לְלֹא דָּבָר וְחֹק הַשְּׂחוֹק וּפְעָמִים שֶׁגּוֹרֵם לָזֶה מִשְׁתֵּה הַיַּיִן וְהַשִּׁכְרוּת שֶׁנֶּאֱמַר:&nbsp;(משלי כ)&nbsp;לֵץ הַיַּיִן הוֹמֶה שֵׁכָר כָּל שׁוֹגֶה בּוֹ לֹא יֶחְכָּם. פֵּרוּשׁ לֵץ אִישׁ הַיַּיִן הוֹמֶה אִישׁ שֵׁכָר כָּל שׁוֹגֶה בּוֹ לֹא יֶחְכָּם, כְּמוֹ&nbsp;(תהלים קט) וַאֲנִי תְּפִלָּה. אִישׁ תְּפִלָּה. וּרְצוֹנוֹ לוֹמַר כִּי מִשְׁתֵּה הַיַּיִן גּוֹרֵם לְשָׁלשׁ דְּבָרִים רָעִים, הָאֶחָד לִהְיוֹת אִישׁ מִתְלוֹצֵץ וְהַשֵּׁנִי לִהְיוֹת הוֹמֶה וּבַעַל דְּבָרִים. וְאָמְרוּ זִכְרוֹנָם לִבְרָכָה: כָּל הַמַּרְבֶּה דְּבָרִים מֵבִיא לִידֵי חֵטְא. וְנֶאֱמַר&nbsp;(קהלת ה) וְקוֹל כְּסִיל בְּרֹב דְּבָרִים. וְהַשְּׁלִישִׁי כָּל שׁוֹגֶה בּוֹ לֹא יֶחְכָּם. וְדַע כִּי לֹא יִהְיֶה מִנְהַג הַלֵּיצָנוּת קָבוּעַ בְּנֶפֶשׁ הָאָדָם עַד שֶׁהוּא פּוֹרֵק עֹל שָׁמַיִם מֵעָלָיו. עַל כֵּן יֵעָנֵשׁ לָתֵת עָלָיו עֹל הַיִּסּוּרִין מִדָּה כְּנֶגֶד מִידָּה, שֶׁנֶּאֱמַר&nbsp;(ישעיה כח) וְעַתָּה אַל תִּתְלוֹצְצוּ פֶּן יֶחֶזְקוּ מוֹסְרֵיכֶם. וְהַחֲכָמִים הָיוּ מַזְהִירִים לְתַלְמִידֵיהם שֶׁלֹּא לְהִתְלוֹצֵץ גַּם עַל דֶּרֶךְ מִקְרֶה וַעֲרַאי וְעַל הַחֵלֶק הַזֶּה הֻצְרְכוּ לְהַזְהִיר כִּי רַבִּים יִכָּשְׁלוּ בּוֹ עַל דֶּרֶךְ מִקְרֶה</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+
+        </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+
+
+
+    <!-----------español pantalla 2------------->
+    <div class="wrap">
+        <div id="target" class="splitScreen2">
+            <div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                           <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr">(15)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr">Pues ustedes han conocido que habitamos en la tierra de Mitzráim y que hemos pasado en medio de las naciones a través de las que ustedes pasaron.&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr">(16)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr"> Y ustedes vieron sus abominaciones y sus ídolos fétidos, de madera y piedra, plata y oro que había con ellos.&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr">(17)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr"> Quizá haya entre ustedes un hombre o una mujer, familia o tribu, cuyo corazón se vuelve hoy del Eterno, nuestro Di-s, para ir y rendir culto a los dioses de esas naciones; quizás haya entre ustedes raíz que florece con hiel y ajenjo.&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr">(18)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES" dir="ltr">Y [quizá] sucederá que, cuando escuche las palabras de esta maldición, se bendiga a sí mismo en su corazón, diciendo: “La paz estará conmigo, pues marcharé según las apariencias de mi corazón”, a fin de añadir la embriaguez a la sed.</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                         <p style="line-height:normal;margin:0cm;text-align:justify;text-autospace:none;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">15.&nbsp;</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="RTL"></span><span dir="RTL"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL" lang="HE">&nbsp;כִּי אַתֶּם יְדַעְתֶּם וְגוֹ'</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">/ PUES USTEDES HAN CONOCIDO, ETC. Puesto que ustedes han visto las prácticas de las naciones del mundo, que adoran ídolos, y quizá el corazón de alguno de ustedes lo incite a seguir tras ellas, es por eso que yo, Moshé, necesito hacer que ustedes hagan un juramento al respecto.&nbsp; 16.&nbsp;</span><span lang="HE" dir="RTL">וַתִּרְאוּ אֶת שִׁקּוּצֵיהֶם</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">/ Y USTEDES VIERON SUS ABOMINACIONES. Se da este nombre a los ídolos porque son repugnantes como las alimañas.&nbsp; </span><span lang="HE" dir="RTL">גִּלֻּלֵיהֶם</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / ÍDOLOS FÉTIDOS. Se da este nombre a los ídolos porque son corruptas y repugnantes como el excremento.&nbsp; </span><span lang="HE" dir="RTL">עֵץ וָאֶבֶן</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">&nbsp; / MADERA Y PIEDRA. Ustedes vieron públicamente los ídolos de madera y de piedra, ya que los gentiles dueños de ellos no tenían miedo de que se los robaran. Pero los ídolos de plata y oro están “con ellos”, en el interior de sus residencias, ya que sus dueños tenían miedo de que se los robaran.&nbsp; 17.&nbsp;</span><span lang="HE" dir="RTL">פֶּן יֵשׁ בָּכֶם</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / QUIZÁ HAYA ENTRE USTEDES. Esta frase significa: tal vez haya entre ustedes.&nbsp; </span><span lang="HE" dir="RTL">אֲשֶׁר לְבָבוֹ פֹנֶה הַיּוֹם</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / CUYO CORAZÓN SE VUELVE HOY. Es decir, que se vuelve de aceptar sobre sí el pacto con Di-s.&nbsp; </span><span lang="HE" dir="RTL">שֹׁרֶשׁ פֹּרֶה רֹאשׁ וְלַעֲנָה</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / RAÍZ QUE FLORECE CON HIEL Y AJENJO. Una raíz que hace crecer hierba amarga, como la planta llamada guidín, que es amarga. La frase quiere decir: ese individuo genera e incrementa la maldad en el interior de ustedes.&nbsp; 18.&nbsp;</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="RTL"></span><span dir="RTL"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL" lang="HE">&nbsp;וְהִתְבָּרֵךְ בִּלְבָבוֹ</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">/ SE BENDIGA A SÍ MISMO EN SU CORAZÓN. Esta frase implica bendición. Ese individuo pensará en su corazón una bendición de paz para sí mismo, diciendo: “Esas maldiciones no vendrán sobre mí, sino que estaré en paz”.&nbsp; </span><span lang="HE" dir="RTL">וְהִתְבָּרֵךְ</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / SE BENDIGA A SÍ MISMO. Esto significa lo mismo que bendirei en francés antiguo. Es semejante a los verbos&nbsp;</span><span lang="HE" dir="RTL">וְהִתְגַּלָח</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">, “se rasurará”, y&nbsp;</span><span lang="HE" dir="RTL">וְהִתְּפַּלֵל</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">, “rezará”.&nbsp; </span><span lang="HE" dir="RTL">בִּשְׁרִירוּת לִבִּי אֵלֵךְ</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / MARCHARÉ SEGÚN LAS APARIENCIAS DE MI CORAZÓN. La frase&nbsp;</span><span lang="HE" dir="RTL">בִּשְׁרִרוּת&nbsp;</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="HE" dir="ltr">&nbsp;</span><span dir="RTL"><span lang="HE" dir="ltr">לִבִּי&nbsp;</span></span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">&nbsp;significa: la visión de mi corazón. La palabra </span><span lang="HE" dir="RTL">בִּשְׁרִרוּת</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> es similar en significado a&nbsp;</span><span lang="HE" dir="RTL">אֲשׁוּרֵנוּ</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> en la frase: “Lo veré [</span><span lang="HE" dir="RTL">אֲשׁוּרֵנוּ</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">], mas no ahora”. La frase quiere decir: Haré lo que mi corazón considera conveniente hacer.&nbsp; </span><span lang="HE" dir="RTL">לְמַעַן סְפוֹת הָרָוָה</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / A FIN DE AÑADIR LA EMBRIAGUEZ. Pues Yo, Di-s, le añadiré castigo por lo que hizo hasta ahora sin intención. Y eso –el pecado no intencional– Yo lo hubiera pasado por alto, pero él ahora, con su obstinación, ha provocado que lo agregue al pecado intencional, y Yo, Di-s, le cobraré todo junto. Y de igual modo, el Targum de Onkelós tradujo esta frase por&nbsp;</span><span lang="HE" dir="RTL">בְּדִיל לְאוֹסָפָא לֵהּ חֵטְאֵי שָׁלוּתָא עַל זְדָנוּתָא</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr">, frase que significa que Yo le añadiré las faltas no intencionales a las intencionales.&nbsp; </span><span lang="HE" dir="RTL">הָרָוָה</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / EMBRIAGUEZ. Esto se refiere al pecado no intencional. El versículo habla del que actúa como un hombre ebrio, {actuando} sin conciencia.&nbsp; </span><span lang="HE" dir="RTL">הַצְּמֵאָה</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span dir="LTR"></span><span dir="LTR"></span><span lang="ES" dir="ltr"> / A LA SED. Esto se refiere al pecado intencional. El versículo habla del que actúa con conciencia y deseo.</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+                <!----------book header--------->>
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Profetas</h3>
+                        <p>Isaías 62:5-8</p>
+                    </section>
+                </div>
+                <!-----------------content---------------->
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                          <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span lang="ES" dir="ltr">(5)&nbsp;Así como el novio posee a la novia, de igual modo tus hijos te poseerán; e igual al gozo del novio con la novia será el gozo de tu Di-s contigo.&nbsp; (6) En aras de tus murallas, oh Yerushalayim, he designado guardianes; todo el día y toda la noche, continuamente, no&nbsp;permanecerán en silencio. ¡Ustedes que recuerdan al Eterno, no se callen!&nbsp; (7) No lo dejen en silencio hasta que Él la establezca, hasta que Él haga que Yerushalayim sea alabanza en la tierra.&nbsp; (8) El Eterno ha jurado por Su diestra y por Su brazo poderoso: “Ya no volveré a entregar tu grano como alimento para tus enemigos y los hijos de extraños ya no beberán el vino por el que tú te has esforzado”.</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+                            
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+                       <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">5. POSEE. (Traducción del arameo:) Así como habita el novio con la novia así habitarán junto a ti tus hijos.&nbsp;6. MURALLAS. Nuestros Sabios explican que este versículo hay que entenderlo tal como suena: Los ángeles recuerdan al Eterno lo destruido para que lo reconstruya. ¿Qué dicen? </span><i><span lang="ES" dir="ltr">(Salmos 102:14)</span></i><span lang="ES" dir="ltr">: “Levántate y apiádate de Tzión”, </span><i><span lang="ES" dir="ltr">(Ibíd. 132:13)</span></i><span lang="ES" dir="ltr"> “Porque el Eterno a escogido a Tzión”, tal como se estudia en el Tratado de Menajot </span><i><span lang="ES" dir="ltr">(87a)</span></i><span lang="ES" dir="ltr">. Yonatán tradujo las palabras “Tus murallas”: Los patriarcas, aquellos que nos protegen como murallas.&nbsp; GUARDIANES. Para escribir un libro de crónicas para que no olvide nunca sus méritos.&nbsp; SILENCIO. Deben recordar sus méritos en Mi presencia.&nbsp; RECUERDAN. Los méritos de los patriarcas.&nbsp; NO SE CALLEN. No guarden silencio.</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Escritos</ph3>
+                        <p>Salmos 45:17-18 y 46:1-2</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                           <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">(17)&nbsp;En el lugar de tus padres estarán tus hijos, los nombrarás príncipes en toda la tierra.&nbsp; (18) Rememoraré Tu Nombre en cada generación, y por eso los pueblos Te lo agradecerán eternamente.&nbsp; (1) Al director: Para los hijos de Kóraj. Cántico con liras.&nbsp; (2) El Todopoderoso es para nosotros protección y poderío, la ayuda que se necesita en las desgracias, siempre Se encuentra.</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Rashí</h3>
+                      
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                          <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span lang="ES" dir="ltr">17. EN LUGAR… Esto se le dice a cada uno de Israel.&nbsp; 18. TU NOMBRE. Esto lo dijo el salmista por el Santo, Bendito Él.&nbsp; 1. LIRAS. Nombre de un instrumento musical que aparece en el Libro de las Crónicas I </span><i><span lang="ES" dir="ltr">(15:20)</span></i><span lang="ES" dir="ltr">.</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:22px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+
+               
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Mishná</ph3>
+                        <p>Tratado Betsá, capítulo 4</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                           <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">(1)&nbsp;El que transporta vasijas de vino de un lugar a otro, no las llevará en una cesta o en un cesto, pero sí las puede transportar sobre su hombro, o por delante. Igualmente, quien transporta heno que no arroje el cesto hacia atrás, pero sí la puede llevar en la mano. Se permite usar el heno de la parva, pero no la leña del trastero.&nbsp; (2) No se permite retirar las maderas de una cabaña, pero sí de lo que está junto a ella. Está permitido traer leña del campo, de la amontonada, y si es de la leñera, incluso si está esparcida. ¿Qué es una leñera? Aquella que se encuentra cerca de la ciudad, según Rabí Yehudá. Rabí Yosé dice: Aquella que requiere abrirse con una llave, incluso si se encuentra en la zona limítrofe de Shabat.&nbsp; (3) No se permite cortar leña, ni de las vigas de la construcción, ni de una viga que se partió en Yom Tov. No se permite cortarla ni con un hacha, ni con una sierra, ni con una hoz, pero sí con un machete. Una casa llena de fruta cuya entrada estaba tapiada, si la tapia cayó por sí sola, podrá sacarla a través de la puerta. Rabí Meir dice: Incluso podrá deshacer la tapia para coger de ella.&nbsp; (4) No se permite abrir un candil, porque con ello está creando un utensilio. Tampoco se permite crear brasas en Yom Tov. Tampoco se puede dividir en dos una mecha. Rabí Yehudá dice: Puede cortarla con fuego para dos candiles.&nbsp; (5) No se permite romper la arcilla, ni cortar papel para asar salados. No se puede evacuar un horno o un hornillo, pero sí se permite aplanarlo. No se permite juntar dos vasijas para colocar sobre ellas la olla. No se puede arrastrar la olla con una rama o con un trozo de leña, y tampoco conducir con un palo a un animal en Yom Tov. Rabí Elazar, el hijo de Rabí Shimón, lo permite.&nbsp; (6) Rabí Eliézer dice: Se permite coger un mondadientes, si lo tiene delante, para limpiarse los dientes, y puede recoger lo que hay en el patio y prenderlo, porque todo lo que se halla en el patio se considera preparado. Los Sabios dicen: sólo podrá recoger lo que tenga delante.&nbsp;(7) No se permite crear fuego con los leños, ni con las piedras, ni con la tierra, ni con agua. No se permite calentar con fuego las tejas para asar en ellas. Otra cosa enseñó Rabí Eliézer: Una persona podría situarse en el lugar donde se secan los higos la víspera de Shabat, en el año séptimo, y decir: De esta parte comeré mañana. Los Sabios dicen: Hasta que señale y diga: Desde aquí hasta aquí.</span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Rabí Ovadia de Bartenura</h3>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textSecond">
+
+
+                          <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">1. DE UN LUGAR A OTRO. Dentro de las líneas limítrofes de la ciudad.&nbsp; NOLAS LLEVARÁ. No meterá en un cesto o en una cesta tres o cuatro vasijas para transportarlas, porque se asemeja a un trabajo de día laborable, donde se cargan bultos de acá para allá. Sin embargo, si no pudiera hacerlo de otra forma, se le permite.&nbsp; HOMBRO. Sólo una o dos, pues se ve que las necesita para la festividad.&nbsp; POR DELANTE. En las manos.&nbsp; QUIEN TRANSPORTA HENO. Para usarlo como combustible o para darlo de comer a los animales.&nbsp; HACIA ATRÁS. Porque se parece a lo que hace en los días laborables.&nbsp; SE PERMITE EL HENO. Aunque no fue apartada la víspera y no solía usarla como combustible, porque este Tanaíta no opina que sea Muktse. &nbsp;TRASTERO. El espacio que se encuentra por la parte de atrás de las casas se denomina trastero, por cuanto se encuentra en un lugar apartado en la parte de atrás, y no se suele entrar y salir de él con asiduidad. Las maderas que se encuentran regularmente allí son las vigas necesarias para la construcción, que se consideran Muktse porque se teme que se pierden, debido a su alto valor. Rabí Shimón, que no contempla las cosas Muktse aquí coincidiría en que no se pueden tocar.&nbsp;2. CABAÑA. Incluso aquella con la que no se cumple la Mitzvá, por ejemplo, en Pésaj o Shavuot, en Yom Tov no se puede sacar maderas de ella, porque con ello estaría incurriendo en “Demolición de una cabaña”.&nbsp; JUNTO A ELLA. Como por ejemplo, las cañas que se colocan cerca de las paredes y que no están atadas a la pared, con lo cual no se conceptúan parte de esta, y por esto se permite usarlas en Yom Tov.&nbsp; TRAER LEÑA. Ya arrancada del árbol.&nbsp; DEL CAMPO. Dentro de los límites de la ciudad, si estaba amontonada.&nbsp; LEÑERA. Incluso si estaba desperdigada. Esta Mishná es única y no concuerda con la Halajá. Esta es la Ley: Sólo se puede coger leña de la amontonada en la leñera. Del campo no se puede coger en ningún caso porque, siendo que allí no se encuentran guardadas, no puso su atención en ella con anterioridad. Sin embargo, la de la leñera que sí está guardada y está cercada, si está amontonada se dice que pensó en ella con anterioridad.&nbsp; CERCA DE LA CIUDAD. Muy cerca, pero siempre que tenga llave con la que quede guardada, puesto que Rabí Yehudá requiere estas dos cosas: Que esté cerca de la ciudad y que tenga llave. Siendo que la mayoría de las leñeras se cierran con llave, no hubo necesidad de mencionarlo.&nbsp; ZONA LIMÍTROFE. Siendo que tiene llave no se requiere que esté cerca, e incluso si se encuentra lejos hasta casi llegar al límite de la ciudad, se permite. E igualmente, si está cerca, no se requiere que tenga llave. Cerca sin llave, o lejos con llave, se permite. La Halajá concuerda con Rabí Yosé.&nbsp; 3. CORTAR LEÑA. De las que se usa para construcción y se halla ordenada sobre el suelo, para que no se doble.&nbsp; SE PARTIÓ. Aunque ahora si vale para usarla como combustible, ya que en el crepúsculo del día anterior no estaba así.&nbsp; HACHA. Esta Mishná está incompleta, así tenía que estar escrita: Pero sí se puede cortar leña de la viga que se partió la víspera de Yom Tov, pero no lo hará con un hacha…&nbsp; UN INA SIERRA. Especie de cuchillo largo lleno de dientes que sirve para cortar maderas gruesas. Este es un utensilio profesional.&nbsp; HOZ. También ésta es una herramienta profesional, y se ve que quiere realizar con ella un trabajo.&nbsp; MACHETE. Regularmente, el machete es una herramienta que usan los carniceros, y no es profesional. Algunas tienen dos cabezas, una cabeza ancha que se denomina “Lado Hembra”, y otra cabeza más estrecha que se llama “Lado Macho”, y sólo se corta con el “Lado Macho”. &nbsp;A TRAVÉS DE LA PUERTA. Sobre estas frutas no recae el nombre de “Muktse” porque están prohibidas al no poderse abrir dicha casa en Yom Tov, con lo cual dejó de pensar en ellas, porque esta casa de la que habla la Mishná, tiene una puerta tapida con ladrillos que no llevan cemento o barro,, sino sólo ladrillos colocados unos encima de otros, y por lo tanto, de acuerdo a la Torá no estaría prohibido abrirla, y no son Muktse, tal como decimos con relación a los alimentos no diezmados, que no son Muktse porque si transgreden la Ley y retiran los correspondientes diezmos en Yom Tov, se consideran diezmados.&nbsp; DEHACER. Siendo que no hay cemento sino, solamente, ladrillos montados unos sobre otros, no se dice que está demoliendo, y se permite deshacerlos a priori. La Halajá no concuerda con Rabí Meir.&nbsp; 4. UN CANDIL. Es decir, tomar un trozo de arcilla con forma de huevo e introducir el puño en él y dándole forma de candil, ya que estaría fabricando un utensilio.&nbsp; BRASAS. Esto también se conceptúa como crear un utensilio para los orfebres. Una mecha también se considera “utensilio” porque se requiere formarla y modelarla para que prenda.&nbsp; DIVIDIR. Porque con esto estaría reparando un utensilio, sin embargo aplastarla con la mano se permite.&nbsp; CON FUEGO. Es decir: Coloca las dos puntas de la mecha en las aberturas de sendos candiles que necesite encender a la vez, y la cortará por el centro, con lo cual se demuestra que está reparando algo, sino que sólo pretende encender. La Halajá coincide con Rabí Yehudá.&nbsp; 5. CORTAR PAPEL. El cual se empapa con aceite con lo cual aguanta el fuego todo el tiempo que dure el aceite, y no se quema.&nbsp; SALADOS. Pescado salado.&nbsp; EVACUAR. Si cayera dentro del horno un trozo de cemento o ladrillo del propio horno, no se puede evacuar o echar a un lado, porque lo estaría reparando con ello. Esto concuerda con los Sabios los que dijeron: No se permite arreglar cosas con la finalidad de cocinar.&nbsp; APLANARLO. Aplastar la ceniza o la tierra que reposa en el suelo para que quede liso. Sin embargo, si no se pudiera hornear si no se evacúa lo que cayó, se permite hacerlo.&nbsp; JUNTAR. Una con otra. En otro lugar se emplea esta expresión así: No se junta una criatura con otra.&nbsp; COLOCAR. Poner encima una olla, de forma que el fuego quede entre ambas vasijas. Se prohíbe porque se asemeja a “construir”.&nbsp; RAMA. La leña sólo se puede usar como combustible. Rama, se refiere a la leña cortada.&nbsp; LEÑA. Tampoco se puede acercar con leña, ya que la madera es Muktse si no se usa como combustible.&nbsp; PALO. Porque parece que lo está llevando al zoco para venderlo.&nbsp; 6. DELANTE. De lo que tiene dentro de la casa.&nbsp; LIMPIAR. Para quitar la carne que se queda entre los dientes. Y no precisamente si lo tiene delante, a la mano, porque para Rabí Eliézer pude cogerlo incluso si se encuentra en el patio, ya que el opina que todo lo que se halla en el patio es como si estuviese preparado de antemano. No obstante, dijo “Delante” porque el resto de los Sabios no concuerdan con él y sostienen que incluso si lo tiene delante, si lo usa para encender, vale, pero si es para otro uso, no se permite, puesto que la madera solo se permite cuando sirve como combustible.&nbsp; LOS SABIOS DICEN… Pero no si se encuentra en el patio, porque siendo que los palillos son muy finos y cuesta trabajo recogerlos, no se dice que estaban preparados desde ayer. Cuando se dijo que puede coger un mondadientes para limpiar los dientes, nosotros sostenemos que incluso lo que tiene delante sólo se puede usar cuando va a servir como combustible. Ellos difieren en dos cosas, y la Halajá es como los Sabios. Sólo se permite usar un mondadientes para limpiar los dientes si lo encuentra en el establo de los animales, pero no podrá cortarlo o arreglarlo para dicho fin, a menos que estuviese fresco y fuese apto para dárselo de comer a un animal. Toda cosa que se le puede dar a un animal para comer se puede cortar tanto en Yom Tov como en Shabat, y no se dice que está preparando un utensilio.&nbsp; 7. CREAR FUEGO. Porque es algo novedoso y se asemeja a un trabajo prohibido el hecho de crear fuego en Yom Tov.&nbsp; CON TIERRA. Hay tierra que cuando cavas en ella sale fuego.&nbsp; CON AGUA. Se coloca agua en un recipiente de vidrio blanco y lo pone bajo el sol. Cuando el sol calienta mucho y del vidrio sale una llama, se trae viruta para que con el contacto con el vidrio prenda.&nbsp;TEJAS. Son de arcilla y están huecas por dentro, y se colocan sobre los tejados para cubrirlos.&nbsp; CALENTAR. Con fuego.&nbsp; LAS TEJAS. Sólo cuando las tejas son nuevas, porque se considera que las está reparado, siendo que con el calor se fortalecen y quedan más compactas.&nbsp; OTRA COSA ENSEÑÓ. Siendo que enseñó que hay que ser transigente con el Muktse y después enseñó otra cosa, por esto ahora dice: “Y otra cosa enseñó.”&nbsp; DONDE SE SECAN. Porque se requiere que los aparte con anterioridad para que los pueda comer al día siguiente.&nbsp; AÑO SÉPTIMO. Porque en éste no hay diezmos, y sólo se requiere apartarlos con anterioridad. La misma ley se aplica con alimentos diezmados el resto de los días de la semana. No obstante, se dijo esto porque es algo corriente, ya que el Muktse se supone que no está diezmado, y los higos secos y las pasas son Muktse, y no se acostumbra a diezmarlos antes de acabar lo que hay que hacer.&nbsp; DE ESTA PARTE… con esto basta.&nbsp; QUE SEÑALE. Con una señal, ya que no se puede separar a menos que lo señale con anterioridad. La Ley concuerda con los Sabios.</span></span>
+</p>
+<p style="line-height:normal;margin:0cm;text-align:center;">
+    <span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Guemará</h3>
+                        <p>Tratado Betsá 32a</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                         <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">(Dijo la Mishná) “No se permite crear brasas”: (La Guemará comenta:) ¡Obvio!, pues, ¿para que irán a servir? Fue necesario que se comentara esto para enseñar que ni siquiera se pueden crear para calentar una casa de baño el mismo día de Yom Tov. ¿Acaso está permitido calentar agua el mismo día de Yom Tov? Sí, como dijo Rabá, que se permitía para sudar antes de que se decretara lo contrario. Aquí se habla de dicho caso, cuando aún no se decretó que se puede calentar agua para sudar. “No se permite dividir en dos una mecha”: ¿Por qué no se permite cortar la mecha con un cuchillo? Si es porque está preparando un objeto, ¡también cuando la divide con fuego lo está reparando! Enseñó Rabí Jiyá: La corta con fuego colocando los extremos en sendos candiles. Dijo Rab Natán Bar Abá en nombre de Rab: Se permite deshollinar la mecha en Yom Tov. ¿Qué significa deshollinar? Dijo Rab Janiná Bar Shelemyá en nombre de Rab: Se refiere a quitarle el carbón. Enseñó Bar Kapará: Seis cosas se dijeron con respecto a las mechas, tres intransigentes y tres transigentes: Intransigentes: A priori no se puede hilar en Yom Tov, no se puede calentar con el fuego y tampoco se puede dividir en dos. Transigentes: La puede aplanar con las manos, la puede empapar en aceite y la puede cortar en dos colocando las puntas en sendos candiles y encendiéndola por el medio. Dijo Rab Natán Bar Abá en nombre de Rab: Los ricos de Babilonia van a bajar al Guehinam, como lo demuestra el caso de Shabetai Bar Merinus. Cierta vez fue a Babilonia, les pidió mercancía para poder comerciar y no se la dieron. Pidió comida y tampoco se la dieron. Entonces dijo: Estos provienen de una mala casta, tal como versa </span><i><span lang="ES" dir="ltr">(Deuteronomio 13:18)</span></i><span lang="ES" dir="ltr">: “Y Él te concederá misericordia y será compasivo contigo, tal como les juró a tus patriarcas”: Todo aquel que se apiada de los seres humanos, con toda seguridad que es descendiente de Abraham, nuestro patriarca, pero todo aquel que no se comporta compasivamente con los seres humanos, con toda seguridad que no es descendiente de Abraham, nuestro patriarca. Dijo Rab Natán Bar Abá en nombre de Rab: Todo aquel que tiene que estar esperanzado a comer en mesas ajenas, el mundo se le oscurece, tal como versa </span><i><span lang="ES" dir="ltr">(Iyob 15:23)</span></i><span lang="ES" dir="ltr">: “El que deambula por pan sabe que en su mano tiene un día oscuro”. Rab Jisdá dijo: Incluso, su vida no es vida. Enseñaron nuestros Sabios: Hay tres que sus vidas no son vida, a saber: Aquel que está esperanzado en la mesa del prójimo, aquel cuya mujer lo domina y aquel cuyo cuerpo está castigado con enfermedades. Hay quien agrega: Aquel que sólo posee una única túnica. ¿Por qué el primer Tanaíta no nombró esta última cosa? Porque puede revisar su túnica.</span></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                           <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">CALENTAR. Se refiere a aquellos que calientan agua en las casas de baño para usarla en la festividad.&nbsp; ¿ESTÁ PERMITIDO? Calentar agua, ¿acaso no se decretó la prohibición de bañarse en el Tratado de Shabat </span><i><span lang="ES" dir="ltr">(pág. 40a)</span></i><span lang="ES" dir="ltr">? Se prohíbe incluso si se calentó la víspera, cuánto más calentar agua el mismo día de Shabat, ¡esto nunca se permitió!&nbsp; PARA SUDAR. Se introducen brasas en el baño y la gente que entra comienza a sudar. Esta Mishná se estudió antes de que se decretara también la prohibición de sudar en los baños.&nbsp; REPARANDO UN OBJETO. Porque antes había una mecha y ahora hay dos.&nbsp; DOS CANDILES. Coloca sus dos extremos en sendos candiles si necesita que se enciendan a la vez, y la prende por el centro. Con esto no se ve que desea reparar algo, sino simplemente encender.&nbsp; QUITARLE EL CARBÓN. Cuando se forma carbón en la parte superior, lo quita.&nbsp; QUITAR. Apartar.&nbsp; CARBÓN. El carbón que aminora su luz.&nbsp; LAS MECHAS. En Yom Tov.&nbsp; APLASTARLA. De forma diferente a como se suele hacer.&nbsp; GUEHINAM Porque no se apiadan y no practican la caridad.&nbsp; MERCANCÍA. Para venderla y ganar la mitad de los beneficios.&nbsp; COMIDA. Y también se la negaron.&nbsp; TE CONCEDERÁ MISERICORDIA. Para que te comportes con misericordia con las personas.&nbsp;TAL COMO LE JURÓ. Que quien tiene misericordia es descendiente de los patriarcas.&nbsp; SE LE OSCURECE. Sobre él, como en </span><i><span lang="ES" dir="ltr">(Iyob 1:10)</span></i><span lang="ES" dir="ltr">: “Lo protegiste”, o sea, todo se le oscureció.&nbsp; EN SU MANO TIENE. Listo para él.&nbsp; UNA TÚNICA. No la puede lavar y los piojos lo hacen sufrir.&nbsp; PUEDE REVISAR. Y quitar los piojos que haya en ella.</span></span>
+</p>
+<p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Zóhar</h3>
+                        <p>Vayikrá 218b</p>
+                        <p> (Comentario sobre el Zóhar)</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                          <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">¡Bienaventurados sean los justos porque saben orientar su voluntad hacia el Señor, y saben reparar el mundo en este día con el sonido del Shofar! Por eso está escrito </span><i><span lang="ES" dir="ltr">(Salmos 89:16)</span></i><span lang="ES" dir="ltr">: “Bienaventurado el pueblo que conoce el sonido”, “que conoce”, y no “que toca”. Este día el pueblo debe observar al hombre que sea totalmente completo, aquel que conoce los caminos del Rey, para que pida por ellos lo que necesitan dicho día. Para lleve el sonido del Shofar a todos los mundos con toda la concentración, con sabiduría, con buena voluntad, con perfección, para que se aleje el castigo del mundo a través de él. ¡Pobres de aquellos cuyo representante no es hallado digno, porque los pecados del mundo (del pueblo) se lo van a recordar! A eso se refiere el escrito </span><i><span lang="ES" dir="ltr">(Levítico 4:5)</span></i><span lang="ES" dir="ltr">: “Si el Cohén ungido pecase”, que es el representante de todo Israel, será culpa de todo el pueblo. Pero cuando el oficiante es digno, dichoso del pueblo, porque todas las acusaciones desaparecen por él. ¡Cuánto más el Cohén!, pues gracias a él se bendicen los mundos superiores y los inferiores. Dijo Rabí Elazar: Por eso, el Cohén y el Levita antes de subir a servir lo inspeccionan, y observan sus costumbres y sus actos. Si no son correctos, no lo dejan subir para servir. Igualmente ocurre con el Sanhedrín cuando se dispone a juzgar. Si (el Cohén y el Levita) se comportan dignamente, le dan trabajo en el Templo, y si no, no sube a trabajar. Por esto se dijo </span><i><span lang="ES" dir="ltr">(Deuteronomio 33:8)</span></i><span lang="ES" dir="ltr">: “Y sobre el Levita se dijo: Tus Oráculos son para tu hombre pío”. ¿Por qué tuvo el privilegio de portar el Oráculo y servir en el Templo? Porque: “Fue probado en Masá”. </span><i><span lang="ES" dir="ltr">(Ibíd. 9)</span></i><span lang="ES" dir="ltr">: Aquel que dijo de su padre y de su madre: No lo miro”. Siendo que se encuentra en tal categoría, entonces: “Ellos instruirán en Tus Leyes a Yaacob… colocarán el incienso ante Tu Presencia”. Porque ofrendarán el incienso con el fin de hacer olvidar la ira y traer la paz. “Y la ofrenda totalmente consumida encima de Tu Altar”. Para que todo se purifique, y las bendiciones lleguen a todos los mundos. Entonces </span><i><span lang="ES" dir="ltr">(Ibíd. 11)</span></i><span lang="ES" dir="ltr">: “Bendice, Eterno, su ejército”</span></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Halajá</h3>
+
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rambam, Leyes sobre las Bendiciones, capítulo 5</p>
+                        <p id="textMain">
+
+                            <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">(1) Tres hombres que llegan de tres grupos diferentes compuestos cada cual por otras tres personas, no se les permite dividirse. Sin embargo, si cada uno realizó el Zimún con su respectivo grupo, podrán dividirse, y ya no se les requiere recitar el Zimún de nuevo&nbsp;siendo que ya fueron incluidos en él. Tres personas que se sentaron para comer pan, aunque cada cual coma de los suyo, no se les permite disgregarse.&nbsp; (2) Dos grupos que comían a la vez en una misma casa, al tiempo que unos pocos ven a los otros, pueden sumarse para efectuar un solo Zimún. Si no, cada grupo recitará el Zimún de forma separada. No obstante, si hubiese un sirviente para ambos grupos que se alterna para servir a unos y a otros, se suman para un solo Zimún, a pesar de que no se ven en absoluto unos a otros, siempre y cuando que ambos escuchen con claridad las palabras de quien bendice. </span></span><span style="font-family:&quot;Calibri&quot;, sans-serif;font-size:20px;"><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:14.0pt;" lang="ES"></span></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <h3>Moral</h3>
+                        <p>Shaaré Teshuvá, de Rabenu Yoná, capítulo 3</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                           <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20px;"><span lang="ES" dir="ltr">El que se ríe con los labios sobre cosas o palabras, sin que los desprecie en su corazón, lo hacen porque esa es la costumbre de los que están contentos, reírse sin sentido. A veces esto lo provoca la ingestión de vino y licores, tal como versa </span><i><span lang="ES" dir="ltr">(Proverbios 20:1)</span></i><span lang="ES" dir="ltr">: “Es escarnecedor quien bebe vino, ruge quien toma licor, y todo el que yerra en ellos no será sabio”. Es decir: Es escarnecedor el hombre que bebe vino, ruge el hombre que toma licor, y todo el que yerra en ellos no será sabio”. Parecido es esto a </span><i><span lang="ES" dir="ltr">(Salmos 109:4)</span></i><span lang="ES" dir="ltr">: “Y yo soy oración”, es decir, soy un hombre de oración. Quiere esto decir: Un banquete con vino provoca tres cosas malas: Una, que se vuelve un hombre burlón. La segunda, ruge, o sea, habla demasiado. Dijeron nuestros sabios, de bendita memoria </span><i><span lang="ES" dir="ltr">(Tratado de los Principios 1,17)</span></i><span lang="ES" dir="ltr">: “Todo el que habla demasiado, peca”. Y también </span><i><span lang="ES" dir="ltr">(Eclesiastés 5:2)</span></i><span lang="ES" dir="ltr">: “La voz del insensato se produce por hablar tanto”. La tercera, “Y todo el que yerra en ellos no será sabio”. Debes saber que la costumbre de ser frívolo no es algo que perdura en el alma, hasta que se despoja del Yugo de los Cielos de encima. Por eso, será castigado con todo tipo de sufrimientos, pues le pagarán con la misma moneda a él, tal como versa </span><i><span lang="ES" dir="ltr">(Yeshayahu 28:22)</span></i><span lang="ES" dir="ltr">: “Y ahora, no os burléis, no sea que se endurezcan vuestros sufrimientos”. Dijeron nuestros Sabios, de bendita memoria </span><i><span lang="ES" dir="ltr">(T. Abodá Zará 18b)</span></i><span lang="ES" dir="ltr">: “Todo el que se burla, será castigado con sufrimientos”, como está escrito: “No sea que se endurezcan vuestros sufrimientos”. Los sabios solían advertir a sus alumnos de que no se burlasen, ni siquiera de forma casual. Sobre este tema tuvieron que advertir, porque hay mucha gente que tropieza en él de forma espontánea.</span></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <script src="../../Pdocument/scroll.js"></script>
+    </div>
+</body>
+
+</html>

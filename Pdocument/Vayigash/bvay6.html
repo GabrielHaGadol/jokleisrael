@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="google" content="notranslate">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../documentStyleSplit.css">
+    <link rel="stylesheet" href="../../Pdocument/documentStyleHebreoSplit.css">
+    <title>bvay6</title>
+
+
+
+
+    <style>
+        /* Nav superior */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 10px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        #backButton {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #backButton a {
+            color: #551A8B;
+            text-decoration: underline;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Header parasha compacto */
+        .wrapperHeader { padding: 4px 0 2px 0; text-align: center; }
+        #bookHeader p { margin: 2px 0; line-height: 1.3; }
+        /* Botones de idioma */
+        #langBar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        .langBtn {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: bold;
+            width: 56px;
+            height: 36px;
+            border: 1.5px solid #999;
+            border-radius: 6px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .langBtn.active {
+            background-color: #720026;
+            color: white;
+            border-color: #720026;
+        }
+        /* Ocultar paneles */
+        div.wrap.hide { display: none !important; }
+    </style>
+                                <script>
+        function setLang(mode) {
+            var src = document.querySelector('.splitScreen');
+            var tgt = document.querySelector('.splitScreen2');
+
+            if (mode === 'he') {
+                if (src) { src.style.height = '86vh'; src.style.minHeight = '86vh'; src.style.overflow = 'scroll'; }
+                if (tgt) { tgt.style.height = '0px'; tgt.style.minHeight = '0px'; tgt.style.overflow = 'hidden'; tgt.style.padding = '0'; tgt.style.margin = '0'; }
+            } else if (mode === 'es') {
+                if (src) { src.style.height = '0px'; src.style.minHeight = '0px'; src.style.overflow = 'hidden'; src.style.padding = '0'; src.style.margin = '0'; }
+                if (tgt) { tgt.style.height = '86vh'; tgt.style.minHeight = '86vh'; tgt.style.overflow = 'scroll'; }
+            } else {
+                if (src) { src.style.height = '49vh'; src.style.minHeight = ''; src.style.overflow = 'scroll'; src.style.padding = ''; src.style.margin = ''; }
+                if (tgt) { tgt.style.height = '49vh'; tgt.style.minHeight = ''; tgt.style.overflow = 'scroll'; tgt.style.padding = ''; tgt.style.margin = ''; }
+            }
+
+            var btns = document.querySelectorAll('.langBtn');
+            for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+            var btn = document.getElementById('btn-' + mode);
+            if (btn) btn.classList.add('active');
+            try { localStorage.setItem('jokLang', mode); } catch(e) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var saved = 'both';
+            try { saved = localStorage.getItem('jokLang') || 'both'; } catch(e) {}
+            setLang(saved);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <li id="backButton"><a href="../../days/bereshit/brDiasPageVayigash.html">DIAS</a></li>
+        <li id="backButton"><a href="../../parashot/bereshit/prPageBr.html">INICIO</a></li>
+    </div>
+    <div class="wrapperHeader">
+        <section id="bookHeader">
+            <p>Vayigash para Jueves por la noche</p>
+            <p>Pentateuco</p>
+            <p>Génesis 45:5-9</p>
+        </section>
+    </div>
+        <div id="langBar">
+        <button class="langBtn active" id="btn-es"   onclick="setLang('es')">a</button>
+        <button class="langBtn"        id="btn-both" onclick="setLang('both')">a&#x2192;&#x05D0;</button>
+        <button class="langBtn"        id="btn-he"   onclick="setLang('he')">&#x05D0;</button>
+    </div>
+
+    <div class="whiteSpaceChild">
+
+    </div>
+
+
+    <div class="wrap">
+        <div id="source" class="splitScreen">
+            <div>
+                <div>
+                    <section class="wrapperParentHe">
+
+
+                        <p></p>
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">י</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְיָֽשַׁבְתָּ֣ בְאֶֽרֶץ־גּ֗שֶׁן וְהָיִ֤יתָ קָרוֹב֙ אֵלַ֔י אַתָּ֕ה וּבָנֶ֖יךָ וּבְנֵ֣י בָנֶ֑יךָ וְצֹֽאנְךָ֥ וּבְקָֽרְךָ֖ וְכָל־אֲשֶׁר־לָֽךְ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְתֵתֵיב בְּאַרְעָא דְגֹשֶׁן וּתְהֵי קָרִיב לִי אַתְּ וּבְנָיךְ וּבְנֵי בְנָיךְ וְעָנָךְ וְתוֹרָךְ וְכָל דִּי לָךְ: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">יא</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְכִלְכַּלְתִּ֤י אֹֽתְךָ֙ שָׁ֔ם כִּי־ע֛וֹד חָמֵ֥שׁ שָׁנִ֖ים רָעָ֑ב פֶּן־תִּוָּרֵ֛שׁ אַתָּ֥ה וּבֵֽיתְךָ֖ וְכָל־אֲשֶׁר־לָֽךְ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְאֵזוּן יָתָךְ תַּמָּן אֲרֵי עוֹד חֲמֵשׁ שְׁנִין כַּפְנָא דִּלְמָא תִתְמַסְכַּן אַתְּ וֶאֱנַשׁ בֵּיתָךְ וְכָל דִּי לָךְ: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">יב</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְהִנֵּ֤ה עֵֽינֵיכֶם֙ רֹא֔וֹת וְעֵינֵ֖י אָחִ֣י בִנְיָמִ֑ין כִּי־פִ֖י הַֽמְדַבֵּ֥ר אֲלֵיכֶֽם: </span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וְהָא עֵינֵיכוֹן חֲזָן וְעֵינֵי אָחִי בִנְיָמִין אֲרֵי בְלִישָׁנְכוֹן אֲנָא</span></span><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> מְמַלֵּל עִמְּכוֹן: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">יג</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְהִגַּדְתֶּ֣ם לְאָבִ֗י אֶת־כָּל־כְּבוֹדִי֙ בְּמִצְרַ֔יִם וְאֵ֖ת כָּל־אֲשֶׁ֣ר רְאִיתֶ֑ם וּמִֽהַרְתֶּ֛ם וְהֽוֹרַדְתֶּ֥ם אֶת־אָבִ֖י הֵֽנָּה:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּתְחַוּוּן לְאַבָּא יָת כָּל יְקָרִי בְּמִצְרַיִם וְיָת כָּל דִּי חֲזֵיתוּן וְתוֹחוּן וְתַחֲתוּן יָת אַבָּא הָכָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">יד</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיִּפֹּ֛ל עַל־צַוְּארֵ֥י בִנְיָֽמִן־אָחִ֖יו וַיֵּ֑בְךְּ וּבִ֨נְיָמִ֔ן בָּכָ֖ה עַל־צַוָּארָֽיו:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּנְפַל עַל צַוְּארֵי בִנְיָמִן אֲחוּהִי וּבְכָא וּבִנְיָמִן בְּכָא עַל צַוְּארֵהּ: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">טו</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיְנַשֵּׁ֥ק לְכָל־אֶחָ֖יו וַיֵּ֣בְךְּ עֲלֵהֶ֑ם וְאַ֣חֲרֵי כֵ֔ן דִּבְּר֥וּ אֶחָ֖יו אִתּֽוֹ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּנְשַׁק לְכָל אֲחוֹהִי וּבְכָא עֲלֵיהוֹן וּבָתַר כֵּן מַלִּילוּ אֲחוֹהִי עִמֵּהּ: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">טז</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְהַקֹּ֣ל נִשְׁמַ֗ע בֵּ֤ית פַּרְעֹה֙ לֵאמֹ֔ר בָּ֖אוּ אֲחֵ֣י יוֹסֵ֑ף וַיִּיטַב֙ בְּעֵינֵ֣י פַרְעֹ֔ה וּבְעֵינֵ֖י עֲבָדָֽיו:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְקָלָא אִשְׁתְּמַע לְבֵית פַּרְעֹה לְמֵימַר עַלּוּ אֲחֵי יוֹסֵף וּשְׁפַר בְּעֵינֵי פַרְעֹה וּבְעֵינֵי עַבְדּוֹהִי: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">יז</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיֹּ֤אמֶר פַּרְעֹה֙ אֶל־יוֹסֵ֔ף אֱמֹ֥ר אֶל־אַחֶ֖יךָ זֹ֣את עֲשׂ֑וּ טַֽעֲנוּ֙ אֶת־בְּעִ֣ירְכֶ֔ם וּֽלְכוּ־בֹ֖אוּ אַ֥רְצָה כְּנָֽעַן:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַאֲמַר פַּרְעֹה לְיוֹסֵף אֱמַר לְאַחָיךְ דָּא עִיבִידוּ טְעוּנוּ יָת בְּעִירְכוֹן וֶאֱזִילוּ אוֹבִילוּ לְאַרְעָא דִכְנָעַן: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">יח</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּקְח֧וּ אֶת־אֲבִיכֶ֛ם וְאֶת־בָּֽתֵּיכֶ֖ם וּבֹ֣אוּ אֵלָ֑י וְאֶתְּנָ֣ה לָכֶ֗ם אֶת־טוּב֙ אֶ֣רֶץ מִצְרַ֔יִם וְאִכְל֖וּ אֶת־חֵ֥לֶב הָאָֽרֶץ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּדְבָרוּ יָת אֲבוּכוֹן וְיָת אֱנַשׁ בָּתֵּיכוֹן וְעוּלוּ לְוָתִי וְאֶתֵּן לְכוֹן יָת טוּב אַרְעָא דְמִצְרַיִם וְתֵיכְלוּן יָת טוּבָא דְאַרְעָא: </span></span><strong><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">רביעי</span></span></strong> <strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">יט</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְאַתָּ֥ה צֻוֵּ֖יתָה זֹ֣את עֲשׂ֑וּ קְחֽוּ־לָכֶם֩ מֵאֶ֨רֶץ מִצְרַ֜יִם עֲגָל֗וֹת לְטַפְּכֶם֙ וְלִנְשֵׁיכֶ֔ם וּנְשָׂאתֶ֥ם אֶת־אֲבִיכֶ֖ם וּבָאתֶֽם:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְאַתְּ מְפַקָּדָא דָּא עִיבִידוּ סִיבוּ לְכוֹן מֵאַרְעָא דְמִצְרַיִם עֶגְלָן לְטַפְלֵיכוֹן וְלִנְשֵׁיכוֹן וְתִטְּלוּן יָת אֲבוּכוֹן וְתֵיתוּן: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כ</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְעֵ֣ינְכֶ֔ם אַל־תָּחֹ֖ס עַל־כְּלֵיכֶ֑ם כִּי־ט֛וּב כָּל־אֶ֥רֶץ מִצְרַ֖יִם לָכֶ֥ם הֽוּא:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְעֵינְכוֹן לָא תְחוּס עַל מָנֵיכוֹן אֲרֵי טַב כָּל אַרְעָא דְמִצְרַיִם דִּלְכוֹן הוּא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כא</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיַּֽעֲשׂוּ־כֵן֙ בְּנֵ֣י יִשְׂרָאֵ֔ל וַיִּתֵּ֨ן לָהֶ֥ם יוֹסֵ֛ף עֲגָל֖וֹת עַל־פִּ֣י פַרְעֹ֑ה וַיִּתֵּ֥ן לָהֶ֛ם צֵדָ֖ה לַדָּֽרֶךְ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַעֲבָדוּ כֵן בְּנֵי יִשְׂרָאֵל וִיהַב לְהוֹן יוֹסֵף עֶגְלָן עַל מֵימַר פַּרְעֹה וִיהַב לְהוֹן זְוָדִין לְאָרְחָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כב</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> לְכֻלָּ֥ם נָתַ֛ן לָאִ֖ישׁ חֲלִפ֣וֹת שְׂמָלֹ֑ת וּלְבִנְיָמִ֤ן נָתַן֙ שְׁל֣שׁ מֵא֣וֹת כֶּ֔סֶף וְחָמֵ֖שׁ חֲלִפֹ֥ת שְׂמָלֹֽת:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> לְכָלְּהוֹן יְהַב לִגְבַר אִצְטְלַוָּן דִּלְבוּשָׁא וּלְבִנְיָמִן יְהַב תְּלָת מְאָה סִלְעִין דִּכְסַף וַחֲמֵשׁ אִצְטְלַוָּן דִּלְבוּשִׁין: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כג</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּלְאָבִ֞יו שָׁלַ֤ח כְּזֹאת֙ עֲשָׂרָ֣ה חֲמֹרִ֔ים נֹֽשְׂאִ֖ים מִטּ֣וּב מִצְרָ֑יִם וְעֶ֣שֶׂר אֲתֹנֹ֡ת נֹֽ֠שְׂאֹ֠ת בָּ֣ר וָלֶ֧חֶם וּמָז֛וֹן לְאָבִ֖יו לַדָּֽרֶךְ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְלַאֲבוּהִי שְׁלַח כְּדָא עַסְרָא חֲמָרִין טְעִינִין מִטּוּבָא דְמִצְרָיִם וַעֲסַר אַתְנָן טְעִינָן עִיבוּר וּלְחֵם וּזְוָדִין לַאֲבוּהִי לְאָרְחָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כד</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיְשַׁלַּ֥ח אֶת־אֶחָ֖יו וַיֵּלֵ֑כוּ וַיֹּ֣אמֶר אֲלֵהֶ֔ם אַֽל־תִּרְגְּז֖וּ בַּדָּֽרֶךְ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְשַׁלַּח יָת אֲחוֹהִי וַאֲזָלוּ וַאֲמַר לְהוֹן לָא תִתְנַצּוּן בְּאָרְחָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כה</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַֽיַּֽעֲל֖וּ מִמִּצְרָ֑יִם וַיָּבֹ֨אוּ֙ אֶ֣רֶץ כְּנַ֔עַן אֶֽל־יַֽעֲקֹ֖ב אֲבִיהֶֽם:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּסְלִיקוּ מִמִּצְרָיִם וַאֲתוֹ לְאַרְעָא דִכְנַעַן לְוַת יַעֲקֹב אֲבוּהוֹן: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כו</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיַּגִּ֨דוּ ל֜וֹ לֵאמֹ֗ר ע֚וֹד יוֹסֵ֣ף חַ֔י וְכִי־ה֥וּא משֵׁ֖ל בְּכָל־אֶ֣רֶץ מִצְרָ֑יִם וַיָּ֣פָג לִבּ֔וֹ כִּ֥י לֹא־הֶֽאֱמִ֖ין לָהֶֽם:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְחַוִּיאוּ לֵהּ לְמֵימַר עוֹד כְּעַן יוֹסֵף קַיָּם וַאֲרֵי הוּא שַׁלִּיט בְּכָל אַרְעָא דְמִצְרָיִם וַהֲווֹ מִלַּיָּא פָּיְגָן עַל לִבֵּהּ אֲרֵי לָא הֵימִין לְהוֹן: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כז</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיְדַבְּר֣וּ אֵלָ֗יו אֵ֣ת כָּל־דִּבְרֵ֤י יוֹסֵף֙ אֲשֶׁ֣ר דִּבֶּ֣ר אֲלֵהֶ֔ם וַיַּרְא֙ אֶת־הָ֣עֲגָל֔וֹת אֲשֶׁר־שָׁלַ֥ח יוֹסֵ֖ף לָשֵׂ֣את אֹת֑וֹ וַתְּחִ֕י ר֖וּחַ יַֽעֲקֹ֥ב אֲבִיהֶֽם:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּמַלִּילוּ עִמֵּהּ יָת כָּל פִּתְגָּמֵי יוֹסֵף דִּי מַלִּיל עִמְּהוֹן וַחֲזָא יָת עֲגַלָּתָא דִּשְׁלַח יוֹסֵף לְמִטַּל יָתֵהּ וּשְׁרַת רוּחַ נְבוּאָה לְוַת יַעֲקֹב אֲבוּהוֹן:</span></span><strong><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> חמישי </span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כח</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיֹּ֨אמֶר֙ יִשְׂרָאֵ֔ל רַ֛ב עוֹד־יוֹסֵ֥ף בְּנִ֖י חָ֑י אֵֽלְכָ֥ה וְאֶרְאֶ֖נּוּ בְּטֶ֥רֶם אָמֽוּת:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַאֲמַר יִשְׂרָאֵל סַגִּי לִי חֶדְוָא עַד כְּעַן יוֹסֵף בְּרִי קַיָּם אֱזֵיל וְאֶחֱזִנֵּהּ עַד לָא אֵמוּת:</span></span><strong> <span style="font-size:30.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">מו </span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">א</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיִּסַּ֤ע יִשְׂרָאֵל֙ וְכָל־אֲשֶׁר־ל֔וֹ וַיָּבֹ֖א בְּאֵ֣רָה שָּׁ֑בַע וַיִּזְבַּ֣ח זְבָחִ֔ים לֵֽאלֹהֵ֖י אָבִ֥יו יִצְחָֽק:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּנְטַל יִשְׂרָאֵל וְכָל דִּי לֵהּ וַאֲתָא לִבְאֵר שָׁבַע וּדְבַח דִּבְחִין לֵאלָהָא אֲבוּהִי יִצְחָק: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ב</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיֹּ֨אמֶר אֱלֹהִ֤ים | לְיִשְׂרָאֵל֙ בְּמַרְאֹ֣ת הַלַּ֔יְלָה וַיֹּ֖אמֶר יַֽעֲקֹ֣ב | יַֽעֲקֹ֑ב וַיֹּ֖אמֶר הִנֵּֽנִי:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַאֲמַר יְיָ לְיִשְׂרָאֵל בְּחֶזְוֵי דְלֵילְיָא וַאֲמַר יַעֲקֹב יַעֲקֹב וַאֲמַר הָא אֲנָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ג</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיֹּ֕אמֶר אָֽנֹכִ֥י הָאֵ֖ל אֱלֹהֵ֣י אָבִ֑יךָ אַל־תִּירָא֙ מֵֽרְדָ֣ה מִצְרַ֔יְמָה כִּֽי־לְג֥וֹי גָּד֖וֹל אֲשִֽׂימְךָ֥ שָֽׁם:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַאֲמַר אֲנָא אֵל אֱלָהָא דְאָבוּךְ לָא תִדְחַל מִלְּמֵיחַת לְמִצְרַיִם אֲרֵי לְעַם סַגִּי אֲשַׁוִּנָּךְ תַּמָּן: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ד</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> אָֽנֹכִ֗י אֵרֵ֤ד עִמְּךָ֙ מִצְרַ֔יְמָה וְאָֽנֹכִ֖י אַֽעַלְךָ֣ גַם־עָלֹ֑ה וְיוֹסֵ֕ף יָשִׁ֥ית יָד֖וֹ עַל־עֵינֶֽיךָ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> אֲנָא אֵחוֹת עִמָּךְ לְמִצְרַיִם וַאֲנָא אַסֵּקִנָּךְ אַף אַסָּקָא וְיוֹסֵף יְשַׁוֵּי יְדוֹהִי עַל עֵינָיךְ: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ה</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיָּ֥קָם יַֽעֲקֹ֖ב מִבְּאֵ֣ר שָׁ֑בַע וַיִּשְׂא֨וּ בְנֵֽי־יִשְׂרָאֵ֜ל אֶת־יַֽעֲקֹ֣ב אֲבִיהֶ֗ם וְאֶת־טַפָּם֙ וְאֶת־נְשֵׁיהֶ֔ם בָּֽעֲגָל֕וֹת אֲשֶׁר־שָׁלַ֥ח פַּרְעֹ֖ה לָשֵׂ֥את אֹתֽוֹ: </span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וְקָם יַעֲקֹב מִבְּאֵרָא דְשָׁבַע וּנְטָלוּ בְנֵי יִשְׂרָאֵל יָת יַעֲקֹב אֲבוּהוֹן וְיָת טַפְלְהוֹן וְיָת נְשֵׁיהוֹן בַּעֲגַלְתָּא דִּי שְׁלַח פַּרְעֹה לְמִטַּל יָתֵהּ: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ו</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיִּקְח֣וּ אֶת־מִקְנֵיהֶ֗ם וְאֶת־רְכוּשָׁם֙ אֲשֶׁ֤ר רָֽכְשׁוּ֙ בְּאֶ֣רֶץ כְּנַ֔עַן וַיָּבֹ֖אוּ מִצְרָ֑יְמָה יַֽעֲקֹ֖ב וְכָל־זַרְע֥וֹ אִתּֽוֹ:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּדְבָרוּ יָת גֵּיתֵיהוֹן וְיָת קִנְיָנְהוֹן דִּי קְנוֹ בְּאַרְעָא דִכְנַעַן וַאֲתוֹ לְמִצְרָיִם יַעֲקֹב וְכָל בְּנוֹהִי עִמֵּהּ: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ז </span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">בָּנָ֞יו וּבְנֵ֤י בָנָיו֙ אִתּ֔וֹ בְּנֹתָ֛יו וּבְנ֥וֹת בָּנָ֖יו וְכָל־זַרְע֑וֹ הֵבִ֥יא אִתּ֖וֹ מִצְרָֽיְמָה:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> בְּנוֹהִי וּבְנֵי בְנוֹהִי עִמֵּהּ בְּנָתֵהּ וּבְנַת בְּנוֹהִי וְכָל זַרְעֵהּ אָעֵיל עִמֵּהּ לְמִצְרָיִם</span></span><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+                            
+                           <p style="text-align:justify"><span style="color:#ecf0f1"><span style="font-size:8px"><span style="font-family:&quot;Times New Roman&quot;,serif">י</span></span></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יא) פן תורש.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> דלמא תתמסכן, לשון מוריש ומעשיר: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יב) והנה עיניכם רואות.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> בכבודי, ושאני אחיכם, שאני מהול ככם. ועוד, כי פי המדבר אליכם בלשון הקדש (בב&quot;ר שם י.): </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ועיני אחי בנימין.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> השוה את כולם יחד, לומר, שכשם שאין לי שנאה על בנימין אחי, שהרי לא היה במכירתי, כך אין בלבי שנאה עליכם: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יד) ויפל על צוארי בנימין אחיו ויבך.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> על שני מקדשות שעתידין להיות בחלקו של בנימין וסופן להחרב (מגילה טז:): </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ובנימין בכה על צואריו.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> על משכן שילה שעתיד להיות בחלקו של יוסף וסופו להחרב, (ולענ&quot;ד דיוקו של רש&quot;י דביוסף כתיב ויפול ויבך, תרתי משמע, אשני מקדשות ולכך עשה ב&#39; פעולות על זה הרמז, מה שאין כן בנימין, דלא כתיב רק ובנימין בכה, פעולה אחת, שלא רמז רק על חורבן אחד, ועיין בביאור תרגום יונתן ששם הוא בדרך דרש): </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(טו) וינשק.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הוסיף בנשיקה מנשק והולך דיבייש&quot;ר בלע&quot;ז: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ואחרי כן.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מאחר שראוהו בוכה ולבו שלם עמהם: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">דברו אחיו אתו.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> שמתחלה היו בושים ממנו: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(טז)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">והקול נשמע בית פרעה.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> כמו בבית פרעה, וזהו לשון בית ממש: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יז) טענו את בעירכם.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> תבואה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יח) את טוב ארץ מצרים.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> ארץ גושן, ניבא ואינו יודע מה ניבא, סופה לעשותה כמצולה שאין בה דגים: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">חלב הארץ.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> כל חלב לשון מיטב הוא: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יט) ואתה צויתה.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מפי לומר להם: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">זאת עשו</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">. כך אמר להם שברשותי היא: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(כג)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">שלח כזאת.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> כחשבון הזה, ומהו החשבון, עשרה חמורים וגו&#39;: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">מטוב מצרים.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מצינו בגמרא ששלח לו יין ישן, שדעת זקנים נוחה הימנו. ומדרש אגדה, גריסין של פול: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">בר ולחם.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> כתרגומו: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ומזון.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> ליפתן (כך גירסת רא&quot;ם): </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(כד) אל תרגזו בדרך.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> אל תתעסקו בדבר הלכה, שלא תרגז עליכם הדרך. דבר אחר אל תפסיעו פסיעה גסה, והכנסו בחמה לעיר. לפי פשוטו של מקרא יש לומר, לפי שהיו נכלמים, היה דואג שמא יריבו בדרך על דבר מכירתו, להתוכח זה עם זה ולומר, על ידך נמכר, אתה ספרת לשון הרע עליו, וגרמת לנו לשנאתו: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(כו)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">וכי הוא מושל.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> ואשר הוא מושל: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ויפג לבו.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> נחלף לבו והלך מלהאמין, לא היה לבו פונה אל הדברים, לשון מפיגין טעמן בלשון משנה, וכמו מאין הפוגות (איכה ג, מט.), וריחו לא נמר (ירמיה מח, יא.), מתרגמינן וריחיה לא פג: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(כז)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">את כל דברי יוסף.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> סימן מסר להם, במה היה עוסק כשפירש ממנו, בפרשת עגלה ערופה, זהו שנאמר וירא את העגלות אשר שלח יוסף, ולא נאמר אשר שלח פרעה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ותחי רוח יעקב.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> שרתה עליו שכינה שפירשה ממנו: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(כח) רב עוד.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> רב לי עוד שמחה וחדוה, הואיל ועוד יוסף בני חי: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(א)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">בארה שבע.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> כמו לבאר שבע ה&quot;א בסוף תיבה, במקום למ&quot;ד בתחלתה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">לאלהי אביו יצחק.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> חייב אדם בכבוד אביו יותר מבכבוד זקנו לפיכך תלה ביצחק ולא באברהם: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(ב)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">יעקב יעקב.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> לשון חבה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(ג) אל תירא מרדה מצרימה.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> לפי שהיה מצר על שנזקק לצאת לחוצה לארץ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(ד) ואנכי אעלך.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הבטיחו להיות נקבר בארץ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(ו)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">אשר רכשו בארץ כנען.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> אבל מה שרכש בפדן ארם נתן הכל לעשו, בשביל חלקו במערת המכפלה, אמר, נכסי חוצה לארץ אינן כדאי לי, וזהו אשר כריתי לי, העמיד לו צבורין של זהב ושל כסף כמין כרי, ואמר לו טול את אלו: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(ז)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">ובנות בניו.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> סרח בת אשר ויוכבד בת לוי:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+    <div class="whiteSpace">
+
+        </div>
+    </div>
+
+
+
+
+
+    <!---------español------------------->
+    <div class="wrap">
+        <div id="target" class="splitScreen2">
+            <div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            (10) Te asentarás en la región de Goshen y estarás cerca de mí; tú, tus hijos y los hijos de tus hijos, tu rebaño y tus reses, y todo lo que te pertenece. (11) Yo te sustentaré allí, pues todavía habrá cinco años de hambruna; no sea que te empobrezcas,
+                            tú y tu casa, y todo lo que es tuyo. (12) Y he aquí que los ojos de ustedes y los ojos de mi hermano Binyamín observan que es mi boca la que habla con ustedes. (13) Informen a mi padre de toda mi honra en Mitzráim, y todo lo
+                            que han visto. Pero dense prisa y hagan descender a mi padre aquí.” (14) Y se echó sobre el cuello de su hermano Binyamín y lloró; y Binyamín lloró sobre su cuello. (15) Luego besó a todos sus hermanos y lloró sobre ellos;
+                            después de eso sus hermanos hablaron con él. (16) Y se escuchó la voz en la casa del Faraón, diciendo: “Han venido los hermanos de Yosef.” Y [eso] fue bueno en los ojos del Faraón y en los ojos de sus siervos. (17) Y el Faraón
+                            dijo a Yosef: “Di a tus hermanos: ‘Hagan esto: carguen sus bestias y marchen a la tierra de Kenáan. (18) Tomen a su padre y a sus casas y vengan a mí; yo les daré lo mejor de la tierra de Mitzráim y comerán la grosura de la
+                            tierra. (19) Y en cuanto a ti, has sido encomendado: Hagan esto: tomen de la tierra de Mitzráim carretas para sus pequeños y para sus mujeres; y porten a su padre y vengan. (20) Que sus ojos no se apiaden por sus enseres, ya
+                            que lo mejor de toda la tierra de Mitzráim es para ustedes.” (21) Los hijos de Israel hicieron así; y Yosef les dio carretas por mandato del Faraón, y [también] les dio provisiones para el camino. (22) A cada uno entregó mudas
+                            de ropa, y a Binyamín le regaló trescientas piezas de plata y cinco mudas de ropa. (23) Y a su padre envió conforme a esto: diez asnos cargados de lo mejor de Mitzráim, y diez asnas cargadas de grano, pan y alimento para su
+                            padre para el camino. (24) [Yosef] envió a sus hermanos, y ellos se fueron. Y les dijo: “No riñan en el camino”. (25) Ellos subieron de Mitzráim y llegaron a la tierra de Kenáan, ante su padre Yaacob. (26) Y le anunciaron,
+                            diciendo: “Yosef vive aún”, y que él gobernaba en toda la tierra de Mitzráim. Pero su corazón dio un vuelco, pues no les creía. (27) Entonces le dijeron todas las palabras que Yosef había hablado a ellos, y al ver las carretas
+                            que Yosef había enviado para transportarlo, revivió el espíritu de su padre Yaacob. (28) Israel dijo: “Es mucho. Mi hijo Yosef vive aún; iré y lo veré antes de que yo muera.” 46 (1) Israel viajó con todo lo que tenía y llegó
+                            a Beer-Sheba, y degolló sacrificios al Di-s de su padre Yitzjak. (2) Y Di-s dijo a Israel en visiones de noche: “¡Yaacob! ¡Yaacob!” Y él dijo: Heme aquí.” (3) Él dijo: “Yo soy el Di-s, Di-s de tu padre. No temas descender a
+                            Mitzráim, pues allí te convertiré en un gran pueblo. (4) Yo descenderé contigo a Mitzráim, y ciertamente Yo también te haré subir [de allí, y Yosef pondrá su mano sobre tus ojos (5) Yaacob se levantó de Beer-Sheba; y los hijos
+                            de Israel transportaron a su padre Yaacob, así como a sus pequeños y a sus mujeres, en las carretas que el Faraón había enviado para transportarlo. (6) Tomaron sus ganados y las riquezas que habían amasado en la tierra de Kenáan
+                            y llegaron a Mitzráim, Yaacob y toda su descendencia con él: (7) sus hijos y sus nietos con él, sus hijas y sus nietas; a toda su progenie trajo con él a Mitzráim.
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rashí</p>
+                        <p id="textSecond">
+                            11. פֶּן תִּוָּרֵשׁ / NO SEA QUE TE EMPOBREZCAS. Esta frase debe ser entendida tal como la traduce el Targum: דִּלְמָא תִתְמַסְכַּן, no sea que empobrezcas. El verbo תִּוָּרֵשׁ está relacionado con el de la frase: “El Eterno empobrece [מורִישׁ] y enriquece.”
+                            12. עֵינֵיכֶם ראות וְהִנֵּה /Y HE AQUÍ QUE LOS OJOS DE USTEDES...OBSERVAN. Ven la gloria que me rodea en Mitzráim y también que yo soy su hermano, puesto que estoy circuncidado como ustedes. Además, “los ojos de ustedes...
+                            observan que es mi boca la que habla con ustedes” en la lengua sagrada –el hebreo. וְעֵינֵי אָחִי בִנְיָמִין / Y LOS OJOS DE MI HERMANO BINYAMÍN. Yosef equiparó a todos los hermanos por igual, queriendo decir: “Así como en
+                            mi corazón no hay odio hacia mi hermano Binyamín –pues él no estuvo implicado en mi venta–, así tampoco mi corazón siente odio alguno hacia ustedes.” 14 וַיִּפֹּל עַל צַוְּארֵי בִנְיָמִין אָחִיו וַיֵּבְךְּ / Y SE ECHÓ SOBRE
+                            EL CUELLO DE SU HERMANO BINYAMÍN Y LLORÓ. Yosef lloró proféticamente por los dos Templos que en el futuro estarían asentados en el territorio adjudicado a Binyamín, los cuales eventualmente serían destruidos וּבִנְיָמִין בָּכָה
+                            עַל צַוָּארָיו / Y BINYAMÍN LLORÓ SOBRE SU CUELLO. Proféticamente lloró por el Tabernáculo de Shiló que en el futuro estaría asentado en el territorio adjudicado a Yosef, el cual eventualmente sería destruido. 15{. וַיְנַשֵּׁק
+                            / BESÓ. Este verbo significa aquí que Yosef intensificó su beso; es decir, que lo besó prolongadamente. Significa lo mismo que debaiser en francés antiguo.} וְאַחֲרֵי כֵן / DESPUÉS DE ESO. Luego de que lo vieron llorar y constataron
+                            que su corazón era íntegro hacia ellos. דִּבְּרוּ אֶחָיו אִתּו / SUS HERMANOS HABLARON CON ÉL. Pues al principio sintieron vergüenza delante de él. 16וְהַקֹּל נִשְׁמַע בֵּית פַּרְעֹה / Y SE ESCUCHÓ LA VOZ EN LA CASA DEL FARAÓN.
+                            La expresión בֵּית פַּרְעֹה es equivalente en significado a בְּבֵית פַּרְעֹה. En este caso, este término se refiere literalmente a la casa del Faraón. 17.טַעֲנוּ אֶת בְּעִירְכֶם / CARGUEN SUS BESTIAS. Con grano. 18.אֶת טוּב
+                            אֶרֶץ מִצְרַיִם / LO MEJOR DE LA TIERRA DE MITZRÁIM. Es decir, la región de Goshen. Al decir estas palabras, sin ser consciente de ello Yosef profetizó que al final los israelitas habrían de convertirla en una región semejante
+                            a las profundidades del mar, donde no suele haber peces. חֵלֶב הָאָרֶץ/ LA GROSURA DE LA TIERRA. La expresión חֵלֶב siempre denota lo mejor de algo. 19. וְאַתָּה צֻוֵּיתָה / Y EN CUANTO A TI, HAS SIDO ENCOMENDADO. Por mi boca,
+                            para que les digas a ellos: “Hagan esto.” Quería decir: “Así diles a ellos, que es con mi autorización.” 23. שָׁלַח כְּזאת / ENVIÓ CONFORME A ESTO. Es decir, conforme a esta cantidad. ¿Y cuál era esa cantidad? “Diez asnos,
+                            etc.” מִטּוּב מִצְרָיִם / DE LO MEJOR DE MITZRÁIM. En el Talmud hallamos escrito que Yosef le envió vino añejo, en el cual las mentes de los ancianos se gratifican. Y según un midrash agádico, Yosef le envió granos partidos
+                            de frijoles. בָּר וָלֶחֶם / GRANO Y PAN. Esta frase debe ser entendida tal como la traduce el Targum. וּמָזן / Y ALIMENTO. Este término se refiere a las viandas que acompañan al pan. 24. אַל תִּרְגְּזוּ בַּדָּרֶךְ/ NO RIÑAN
+                            EN EL CAMINO. Quería decirles: No se ocupen en discusiones halájicas profundas para que el camino no sea motivo de agitación para ustedes. Según otra explicación Yosef les quiso decir: “No marchen a grandes pasos, y entren
+                            en la ciudad donde vayan a pernoctar mientras el sol todavía brille. Pero según el sentido simple, este versículo puede ser explicado así: Yosef se preocupó porque temía que ellos riñesen en el camino por haberlo vendido, peleándose
+                            y diciéndose uno al otro: “Por tu culpa fue vendido; tú dijiste calumnias de él y provocaste que lo odiáramos.” 26. וְכִי הוּא מֹשֵׁל / Y QUE ÉL GOBERNABA. Esta frase significa: Y que él gobernaba. וַיָּפָג לִבו / PERO SU CORAZÓN
+                            DIO UN VUELCO. El verbo וַיָּפַג significa aquí que su corazón sufrió un cambio y dejó de creer. Es decir, que su corazón no prestó atención a las palabras que le decían. El verbo וַיָּפָג está relacionado con la expresión:
+                            “Las especias cesan de [מַפִיגִין] tener gusto”, utilizada en el lenguaje de la Mishná. También es similar a las siguientes expresiones: “Sin interrupción [הֲפֻגת]”; “su fragancia no ha cambiado [וְרֵיחו לֹא נָמָר] ”, siendo
+                            esta última traducida por el Targum como וְרֵיחֵיהּ לָא פָג 27.אֶת כָּל דִּבְרֵי יסֵף / TODAS LAS PALABRAS QUE YOSEF. Yosef había transmitido a sus hermanos una señal sobre el tema de estudio de Torá en que se ocupaba cuando
+                            se separó de su padre, que era la sección de la Torá que trata acerca de la “becerra desnucada”. A esta señal alude el versículo cuando dice que Yaacob “vio las carretas [עֲגָלת] que envió Yosef”, pero no se dice que el Faraón
+                            los había enviado. וַתְּחִי רוּחַ יַעֲקֹב / REVIVIÓ EL ESPÍRITU DE [SU PADRE] YAACOB. En el sentido de que volvió a posarse en él la inspiración profética que se había alejado de él a causa de su pesar. 28. רַב/ ES MUCHO. Quería
+                            decir: Mucha alegría y gozo hay para mí, puesto que mi hijo Yosef vive aún. 1. בְּאֵרָה שָׁבַע / A BEER-SHEBA. Esta expresión es equivalente en significado a decir לִבְאֵר שָׁבַע, “a Beer-Sheba”. La letra ה que aparece como
+                            sufijo de la palabra בְּאֵרָה substituye a la letra ל como prefijo de dirección. לֵאלהֵי אָבִיו יִצְחָק / AL DI-S DE SU PADRE YITZJAK. Un hombre debe rendir más honor a su padre que a su abuelo, y por eso Yaacob atribuyó su
+                            ofrenda a Di-s en relación con el nombre de Yitzjak y no con el de Abraham. 2. יַעֲקב יַעֲקב/ ¡YAACOB! ¡YAACOB! Esto constituye una expresión de cariño. 3. אַל תִּירָא מֵרְדָה מִצְרַיְמָה / NO TEMAS DESCENDER A MITZRÁIM. Di-s
+                            le dijo esto porque Yaacob estaba angustiado por el hecho de verse obligado a salir fuera de la Tierra de Israel.
+                        </p>
+                    </section>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <script src="../../Pdocument/scroll.js"></script>
+    </div>
+</body>
+
+</html>

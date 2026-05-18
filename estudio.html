@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html translate="no" lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <link rel="stylesheet" href="style.css">
+  <title>Estudio Diario</title>
+  <style>
+    body { background-color: #faebd7; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+    #header2 {
+      color: antiquewhite;
+      background-color: #720026;
+      font-size: 32px;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    .linkBoxBt {
+      text-decoration: none;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: block;
+    }
+
+    .buttonBox {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      background-color: white;
+      width: 380px;
+      height: 95px;
+      box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+      border-radius: 8px;
+    }
+
+    .botones-estudio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0 20px 0;
+    }
+
+    .btn-dia {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      background-color: #720026;
+      width: 380px;
+      padding: 18px 10px;
+      box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .btn-dia:active { background-color: #9a0033; }
+
+    .btn-volver {
+      display: block;
+      text-align: center;
+      margin: 10px auto 20px auto;
+      color: #720026;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .sin-lectura {
+      text-align: center;
+      color: #888;
+      font-size: 15px;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .buttonBox { width: 220px; height: 95px; }
+      .btn-dia { width: 220px; font-size: 15px; padding: 14px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<h1 id="header2">Jok LeIsrael</h1>
+
+<!-- Caja de fecha igual que index -->
+<div style="text-align:center;">
+  <div class="linkBoxBt">
+    <a class="buttonBox" id="button" href="index.html">
+      <span id="fechaHebrea"  style="display:block;font-size:14px;font-weight:bold;padding-top:6px;color:black;text-align:center;"></span>
+      <span id="fechaGregoriana" style="display:block;font-size:13px;padding-top:2px;color:#720026;text-align:center;"></span>
+      <span id="parashaHoy"  style="display:block;font-size:16px;font-weight:bold;padding-top:3px;color:#555555;text-align:center;"></span>
+    </a>
+  </div>
+</div>
+
+<!-- Botones del día -->
+<div class="botones-estudio" id="botonesEstudio"></div>
+
+<a href="index.html" class="btn-volver">← Volver al inicio</a>
+
+<script>
+// ── Calendario hebreo ──────────────────────────────────────────
+function isHebLeap(y){return((7*y+1)%19)<7;}
+function hebElapsed(y){var m=Math.floor((235*y-234)/19),p=12084+13753*m,d=29*m+Math.floor(p/25920);if((3*(d+1))%7<3)d++;return d;}
+function hebYearStart(y){var e=hebElapsed(y),e1=hebElapsed(y+1),e0=hebElapsed(y-1),jd=e+347997,d=jd%7;if(d==2||d==4||d==6)jd++;if(d==0&&(e1-e)==356&&!isHebLeap(y))jd+=2;if(d==5&&(e-e0)==382&&isHebLeap(y-1))jd++;return jd;}
+function gToJD(y,m,d){if(m<=2){y--;m+=12;}var A=Math.floor(y/100),B=2-A+Math.floor(A/4);return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524-1;}
+function toHebDate(dt){var jd=gToJD(dt.getFullYear(),dt.getMonth()+1,dt.getDate());var hy=Math.floor((jd-347998)/365.25)+1;while(hebYearStart(hy+1)<=jd)hy++;while(hebYearStart(hy)>jd)hy--;var leap=isHebLeap(hy);var L=leap?[30,29,30,29,30,29,30,29,30,29,30,30,29]:[30,29,30,29,30,29,30,29,30,29,30,29];var NL=['Tishrei','Jeshván','Kislev','Tevet','Shvat','Adar I','Adar II','Nisan','Iyar','Siván','Tamuz','Av','Elul'];var NN=['Tishrei','Jeshván','Kislev','Tevet','Shvat','Adar','Nisan','Iyar','Siván','Tamuz','Av','Elul'];var doy=jd-hebYearStart(hy)+1,mi=0;while(doy>L[mi]){doy-=L[mi];mi++;}return doy+' '+(leap?NL[mi]:NN[mi])+' '+hy;}
+function getParasha(dt){
+  var P=['Bereshit','Noaj','Lej Lejá','Vayerá','Jayé Sará','Toldot','Vayetzé','Vayishlaj','Vayeshev','Mikets','Vayigash','Vayejí','Shemot','Vaerá','Bó','Beshalaj','Itró','Mishpatim','Terumá','Tetzavé','Ki Tisá','Vayakhel-Pekudei','Vayicrá','Tzav','Sheminí','Tazriá-Metzorá','Ajaré-Kedoshim','Emor','Behar-Bejukotai','Bamidbar','Nasó','Behaalotjá','Shlaj','Koraj','Jukat','Balak','Pinjás','Matot-Masé','Devarim','Vaetjanán','Ekev','Reé','Shoftim','Ki Tetzé','Ki Tavó','Nitzavim-Vayelej','Haazinu','Vezot Habrajá'];
+  var jd=gToJD(dt.getFullYear(),dt.getMonth()+1,dt.getDate());
+  var hy=Math.floor((jd-347998)/365.25)+1;
+  while(hebYearStart(hy+1)<=jd)hy++;
+  while(hebYearStart(hy)>jd)hy--;
+  var bsh=hebYearStart(hy)+22+1;
+  while(bsh%7!==5)bsh++;
+  var dow=jd%7;
+  var shabat=(dow===5)?jd:jd-((dow-5+7)%7);
+  var idx=Math.round((shabat-bsh)/7);
+  idx=Math.max(0,Math.min(idx,P.length-1));
+  return P[idx];
+}
+
+// ── Día de la semana → número de archivo y nombre ─────────────
+// getDay(): 0=Dom, 1=Lun, 2=Mar, 3=Mie, 4=Jue, 5=Vie, 6=Sab
+var DIA_NOMBRE = ['Domingo','Lunes','Martes','Miércoles','Jueves','Jueves noche','Viernes','Shabat'];
+function getDiaNum(dow) {
+  // 1=Dom,2=Lun,3=Mar,4=Mie,5=Jue,6=JueNoche,7=Vie
+  // Jueves tiene dos lecturas (día y noche), Shabat no tiene
+  if(dow===0) return [1];
+  if(dow===1) return [2];
+  if(dow===2) return [3];
+  if(dow===3) return [4];
+  if(dow===4) return [5,6]; // Jueves: día y noche
+  if(dow===5) return [7];
+  return []; // Sabado sin lectura
+}
+function getDiaNombre(num) {
+  var n={1:'Domingo',2:'Lunes',3:'Martes',4:'Miércoles',5:'Jueves',6:'Jueves noche',7:'Viernes'};
+  return n[num]||'';
+}
+
+// ── Mapa parasha → carpeta de archivos diarios ────────────────
+var PARASHA_FILES = {
+  'Bereshit':         {folder:'Pdocument/bereshit/', prefix:'brd'},
+  'Noaj':             {folder:'Pdocument/noaj/', prefix:'bnd'},
+  'Lej Lejá':         {folder:'Pdocument/LejLeja/', prefix:'bld'},
+  'Vayerá':           {folder:'Pdocument/vayera/', prefix:'vrd'},
+  'Jayé Sará':        {folder:'Pdocument/JaeiSara/', prefix:'jsd'},
+  'Toldot':           {folder:'Pdocument/toledot/', prefix:'tod'},
+  'Vayetzé':          {folder:'Pdocument/vayetze/', prefix:'vtd'},
+  'Vayishlaj':        {folder:'Pdocument/Vayishlaj/', prefix:'vsd'},
+  'Vayeshev':         {folder:'Pdocument/vayeshev/', prefix:'ved'},
+  'Mikets':           {folder:'Pdocument/miketz/', prefix:'mkd'},
+  'Vayigash':         {folder:'Pdocument/Vayigash/', prefix:'vgd'},
+  'Vayejí':           {folder:'Pdocument/vayeji/', prefix:'vjd'},
+  'Shemot':           {folder:'shemotBook/Pshemot/', prefix:'sh'},
+  'Vaerá':            {folder:'shemotBook/Pvaera/', prefix:'sh'},
+  'Bó':               {folder:'shemotBook/Pbo/', prefix:'sh'},
+  'Beshalaj':         {folder:'shemotBook/Pbeshalaj/', prefix:'sh'},
+  'Itró':             {folder:'shemotBook/PYitro/', prefix:'sh'},
+  'Mishpatim':        {folder:'shemotBook/Pmishpatim/', prefix:'sh'},
+  'Terumá':           {folder:'shemotBook/Pteruma/', prefix:'sh'},
+  'Tetzavé':          {folder:'shemotBook/PTezave/', prefix:'sh'},
+  'Ki Tisá':          {folder:'shemotBook/Pkitisa/', prefix:'sh'},
+  'Vayakhel-Pekudei': {folder:'shemotBook/Pvayikhel/', prefix:'sh'},
+  'Vayicrá':          {folder:'VayikraBook/PVayikra/', prefix:'va'},
+  'Tzav':             {folder:'VayikraBook/PTzav/', prefix:'va'},
+  'Sheminí':          {folder:'VayikraBook/PShemini/', prefix:'va'},
+  'Tazriá-Metzorá':   {folder:'VayikraBook/PTazria/', prefix:'va'},
+  'Ajaré-Kedoshim':   {folder:'VayikraBook/PAjareiMot/', prefix:'va'},
+  'Emor':             {folder:'VayikraBook/PEmor/', prefix:'va'},
+  'Behar-Bejukotai':  {folder:'VayikraBook/PBehar/', prefix:'va'},
+  'Bamidbar':         {folder:'BamidbarBook/PBamidbar/', prefix:'ba'},
+  'Nasó':             {folder:'BamidbarBook/PNasso/', prefix:'ba'},
+  'Behaalotjá':       {folder:'BamidbarBook/PBehaalotcha/', prefix:'ba'},
+  'Shlaj':            {folder:'BamidbarBook/PShlach/', prefix:'ba'},
+  'Koraj':            {folder:'BamidbarBook/PKorach/', prefix:'ba'},
+  'Jukat':            {folder:'BamidbarBook/PChukat/', prefix:'ba'},
+  'Balak':            {folder:'BamidbarBook/PBalak/', prefix:'ba'},
+  'Pinjás':           {folder:'BamidbarBook/PPinchas/', prefix:'ba'},
+  'Matot-Masé':       {folder:'BamidbarBook/PMatot/', prefix:'ba'},
+  'Devarim':          {folder:'DevarimBook/PDevarim/', prefix:'de'},
+  'Vaetjanán':        {folder:'DevarimBook/PVaetchanan/', prefix:'de'},
+  'Ekev':             {folder:'DevarimBook/PEikev/', prefix:'de'},
+  'Reé':              {folder:'DevarimBook/PReeh/', prefix:'de'},
+  'Shoftim':          {folder:'DevarimBook/PShoftim/', prefix:'de'},
+  'Ki Tetzé':         {folder:'DevarimBook/Pki-teitzei/', prefix:'de'},
+  'Ki Tavó':          {folder:'DevarimBook/Pki-tavo/', prefix:'de'},
+  'Nitzavim-Vayelej': {folder:'DevarimBook/Pnitzavim/', prefix:'de'},
+  'Haazinu':          {folder:'DevarimBook/PHaazinu/', prefix:'de'},
+  'Vezot Habrajá':    {folder:'DevarimBook/PVzot-HaBerachah/', prefix:'de'}
+};
+
+// ── Mostrar fechas ─────────────────────────────────────────────
+var dias  = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+var hoy = new Date();
+var dow = hoy.getDay();
+
+document.getElementById('fechaHebrea').textContent = toHebDate(hoy);
+document.getElementById('fechaGregoriana').textContent = dias[dow] + ', ' + meses[hoy.getMonth()] + ' ' + hoy.getDate() + ', ' + hoy.getFullYear();
+
+var parasha = getParasha(hoy);
+document.getElementById('parashaHoy').textContent = 'Parasha: ' + parasha;
+
+// ── Generar botones ────────────────────────────────────────────
+var contenedor = document.getElementById('botonesEstudio');
+var diasNums = getDiaNum(dow);
+var parashot = parasha.split('-');
+
+if(diasNums.length === 0) {
+  contenedor.innerHTML = '<p class="sin-lectura">Hoy es Shabat 🕯️<br>No hay lectura diaria.<br>¡Shabat Shalom!</p>';
+} else {
+  var hayBotones = false;
+  parashot.forEach(function(p) {
+    p = p.trim();
+    var info = null;
+    for(var key in PARASHA_FILES) {
+      if(key.toLowerCase() === p.toLowerCase() ||
+         key.toLowerCase().indexOf(p.toLowerCase()) !== -1 ||
+         p.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
+        info = PARASHA_FILES[key];
+        break;
+      }
+    }
+    if(info) {
+      diasNums.forEach(function(num) {
+        hayBotones = true;
+        var url = info.folder + info.prefix + num + '.html';
+        var nombreDia = getDiaNombre(num);
+        var btn = document.createElement('a');
+        btn.href = url;
+        btn.className = 'btn-dia';
+        btn.textContent = '📖 ' + p + ' — ' + nombreDia;
+        contenedor.appendChild(btn);
+      });
+    }
+  });
+  if(!hayBotones) {
+    contenedor.innerHTML = '<p class="sin-lectura">No hay lectura disponible para hoy.<br>Consultá el menú principal.</p>';
+  }
+}
+</script>
+
+</body>
+</html>

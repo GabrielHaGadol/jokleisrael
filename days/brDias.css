@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+
+/*-----------clasess section----------*/
+
+.wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    background-color: bisque;
+}
+
+.wrapperChild {
+    margin: 0 auto;
+    width: auto;
+    padding-right: 15px;
+    padding-left: 0px;
+}
+
+
+/* links design*/
+
+.navBox {
+    display: inline-block;
+    width: 170px;
+    height: 60px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+.navBoxChild {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 170px;
+    height: 60px;
+    background-color: rgb(247, 247, 238);
+}
+
+.navBoxChild:hover {
+    color: wheat;
+}
+
+
+/*--------------id section------------------*/
+
+#header {
+    display: grid;
+    padding-top: 0;
+    font-size: 50px;
+    text-align: center;
+    color: beige;
+    background-color: #720026;
+}
+
+#backBt {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#backBt a {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#backBt a:hover {
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 300px)
+/*if less of 100px do !*/
+
+{
+    #header {
+        display: block;
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google" content="notranslate">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../documentStyleSplit.css">
+    <link rel="stylesheet" href="../../Pdocument/documentStyleHebreoSplit.css">
+    <title>sh5</title>
+
+
+
+
+    <style>
+        /* Nav superior */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 10px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        #backButton {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #backButton a {
+            color: #551A8B;
+            text-decoration: underline;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Header parasha compacto */
+        .wrapperHeader { padding: 4px 0 2px 0; text-align: center; }
+        #bookHeader p { margin: 2px 0; line-height: 1.3; }
+        /* Botones de idioma */
+        #langBar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        .langBtn {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: bold;
+            width: 56px;
+            height: 36px;
+            border: 1.5px solid #999;
+            border-radius: 6px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .langBtn.active {
+            background-color: #720026;
+            color: white;
+            border-color: #720026;
+        }
+        /* Ocultar paneles */
+        div.wrap.hide { display: none !important; }
+    </style>
+                                <script>
+        function setLang(mode) {
+            var src = document.querySelector('.splitScreen');
+            var tgt = document.querySelector('.splitScreen2');
+
+            if (mode === 'he') {
+                if (src) { src.style.height = '86vh'; src.style.minHeight = '86vh'; src.style.overflow = 'scroll'; }
+                if (tgt) { tgt.style.height = '0px'; tgt.style.minHeight = '0px'; tgt.style.overflow = 'hidden'; tgt.style.padding = '0'; tgt.style.margin = '0'; }
+            } else if (mode === 'es') {
+                if (src) { src.style.height = '0px'; src.style.minHeight = '0px'; src.style.overflow = 'hidden'; src.style.padding = '0'; src.style.margin = '0'; }
+                if (tgt) { tgt.style.height = '86vh'; tgt.style.minHeight = '86vh'; tgt.style.overflow = 'scroll'; }
+            } else {
+                if (src) { src.style.height = '49vh'; src.style.minHeight = ''; src.style.overflow = 'scroll'; src.style.padding = ''; src.style.margin = ''; }
+                if (tgt) { tgt.style.height = '49vh'; tgt.style.minHeight = ''; tgt.style.overflow = 'scroll'; tgt.style.padding = ''; tgt.style.margin = ''; }
+            }
+
+            var btns = document.querySelectorAll('.langBtn');
+            for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+            var btn = document.getElementById('btn-' + mode);
+            if (btn) btn.classList.add('active');
+            try { localStorage.setItem('jokLang', mode); } catch(e) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var saved = 'both';
+            try { saved = localStorage.getItem('jokLang') || 'both'; } catch(e) {}
+            setLang(saved);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <li id="backButton"><a href="../../days/shemot/shDiasPage.html">DIAS</a></li>
+        <li id="backButton"><a href="../../index.html">INICIO</a></li>
+    </div>
+
+    <div class="wrapperHeader">
+        <section id="bookHeader">
+            <p>Shemot para el día Jueves</p>
+            <p>Pentateuco</p>
+            <p>Éxodo 1:22 y 2:1-4 </p>
+        </section>
+    </div>
+    </div>
+
+        <div id="langBar">
+        <button class="langBtn active" id="btn-es"   onclick="setLang('es')">a</button>
+        <button class="langBtn"        id="btn-both" onclick="setLang('both')">a&#x2192;&#x05D0;</button>
+        <button class="langBtn"        id="btn-he"   onclick="setLang('he')">&#x05D0;</button>
+    </div>
+
+    <div class="whiteSpaceChild">
+
+    </div>
+    <!--hebreo--------------------->
+
+    <div class="wrap">
+        <div id="source" class="splitScreen">
+            <div>
+                <div>
+                    <section class="wrapperParentHe">
+
+                        <p id="textMainHe">
+
+
+                           <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כב</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיְצַ֣ו פַּרְעֹ֔ה לְכָל־עַמּ֖וֹ לֵאמֹ֑ר כָּל־הַבֵּ֣ן הַיִּלּ֗וֹד הַיְאֹ֨רָה֙ תַּשְׁלִיכֻ֔הוּ וְכָל־הַבַּ֖ת תְּחַיּֽוּן:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וּפַקִּיד פַּרְעֹה לְכָל עַמֵּיהּ לְמֵימָר כָּל בְּרָא דְיִתְיְלִיד לִיהוּדָאֵי בְּנַהֲרָא תִּרְמֻנֵּיהּ וְכָל בְּרַתָּא תְּקַיְּמוּן:</span></span><strong> <span style="font-size:30.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ב </span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">א</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י וַיִּקַּ֖ח אֶת־בַּת־לֵוִֽי: </span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וַאֲזַל גַּבְרָא מִדְּבֵית לֵוִי וּנְסִיב יָת בַּת לֵוִי:</span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> ב</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַתַּ֥הַר הָֽאִשָּׁ֖ה וַתֵּ֣לֶד בֵּ֑ן וַתֵּ֤רֶא אֹתוֹ֙ כִּי־ט֣וֹב ה֔וּא וַֽתִּצְפְּנֵ֖הוּ שְׁלשָׁ֥ה יְרָחִֽים:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְעַדִּיאַת אִתְּתָא וִילִידַת בָּר וַחֲזַת יָתֵיהּ אֲרֵי טַב הוּא וְאַטְמַרְתֵּיהּ תְּלָתָא יַרְחִין: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ג</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְלֹא־יָֽכְלָ֣ה עוֹד֘ הַצְּפִינוֹ֒ וַתִּֽקַּֽח־לוֹ֙ תֵּ֣בַת גֹּ֔מֶא וַתַּחְמְרָ֥ה בַֽחֵמָ֖ר וּבַזָּ֑פֶת וַתָּ֤שֶׂם בָּהּ֙ אֶת־הַיֶּ֔לֶד וַתָּ֥שֶׂם בַּסּ֖וּף עַל־שְׂפַ֥ת הַיְאֹֽר:</span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וְלָא יְכֵילַת עוֹד לְאַטְמָרוּתֵיהּ וּנְסֵיבַת לֵיהּ תֵּבוּתָא דְגוֹמֶא וְחַפָּתַהּ בְּחֵמָרָא וּבְזִפְתָּא וְשַׁוִּיאַת בַּהּ יָת רַבְיָא וְשַׁוִּיתַהּ בְּיַעֲרָא עַל כֵּיף נַהֲרָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ד</span></span><span style="font-size:25.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> וַתֵּֽתַצַּ֥ב אֲחֹת֖וֹ מֵֽרָחֹ֑ק לְדֵעָ֕ה מַה־יֵּֽעָשֶׂ֖ה לֽוֹ: </span></span></strong><span style="font-size:20.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וְאִתְעַתָּדַת אֲחָתֵיהּ מֵרָחִיק לְמִידַע מָה יִתְעֲבֵד לֵיהּ</span></span><span style="font-size:22px"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+
+
+
+                            <!---bubble-->
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                            <p style="text-align:justify"><span style="color:#ecf0f1"><span style="font-size:8px"><span style="font-family:&quot;Times New Roman&quot;,serif">כ</span></span></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(כב) לכל עמו.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> אף עליהם גזר, יום שנולד משה אמרו לו אצטגניניו, היום נולד מושיען, ואין אנו יודעים אם ממצרים אם מישראל, ורואין אנו שסופו ללקות במים, לפיכך גזר אותו היום אף על המצרים, שנאמר כל הבן הילוד, ולא נאמר הילוד לעברים, והם לא היו יודעים שסופו ללקות על מי מריבה: <strong>(א)</strong> <strong>ויקח את בת לוי.</strong> פרוש היה ממנה מפני גזירת פרעה, (וחזר ולקחה, וזהו וילך, שהלך בעצת בתו שאמרה לו גזרתך קשה משל פרעה, אם פרעה גזר על הזכרים ואתה גם כן על הנקבות. ברש&quot;י ישן) והחזירה ועשה בה לקוחין שניים, ואף היא נהפכה להיות נערה. ובת ק&quot;ל שנה היתה, שנולדה בבואה למצרים בין החומות, ומאתים ועשר נשתהו שם, וכשיצאו היה משה בן שמונים שנה, אם כן כשנתעברה ממנו היתה בת מאה ושלשים, וקורא אותה בת לוי: <strong>(ב) כי טוב הוא.</strong> כשנולד נתמלא הבית כלו אורה (סוטה יב.): <strong>(ג) ולא יכלה עוד הצפינו.</strong> שמנו לה המצריים מיום שהחזירה, והיא ילדתו לששה חדשים ויום א&#39;, שהיולדת לשבעה יולדת למקוטעין, והם בדקו אחריה לסוף ט&#39;: <strong>גמא.</strong> גמי בלשון משנה ובלע&quot;ז יונ&quot;קו, ודבר רך הוא, ועומד בפני רך ובפני קשה: <strong>בחמר ובזפת.</strong> זפת מבחוץ וטיט מבפנים, כדי שלא יריח אותו צדיק ריח רע של זפת: <strong>ותשם בסוף.</strong> הוא לשון אגם רושי&quot;ל בלע&quot;ז, ודומה לו קנה וסוף קמלו (ישעי&#39; יט, ו.)</span><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+                <!----------book header--------->
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>נביאים </h3>
+                        <p>ישעיה כח</p>
+                    </section>
+                </div>
+                <!-----------------content---------------->
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">יד</span> לָכֵ֛ן שִׁמְע֥וּ דְבַר־יְהֹוָ֖ה אַנְשֵׁ֣י לָצ֑וֹן מֹֽשְׁלֵי֙ הָעָ֣ם הַזֶּ֔ה אֲשֶׁ֖ר בִּירֽוּשָׁלִָֽם: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">בְּכֵן קַבִּילוּ פִּתְגָמָא דִּיְיָ גָּבְרִין רְשִׁיעִין שִׁלְטוֹנֵי עַמָּא הָדֵין דִּי בִּירוּשְׁלֵם:</span></span> <strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">טו כִּ֣י אֲמַרְתֶּ֗ם כָּרַ֤תְנוּ בְרִית֙ אֶת־מָ֔וֶת וְעִם־שְׁא֖וֹל עָשִׂ֣ינוּ חֹזֶ֑ה שׁ֣וֹט שׁוֹטֵ֤ף כִּֽי־יַֽעֲבֹר֙ לֹ֣א יְבוֹאֵ֔נוּ כִּ֣י שַׂ֧מְנוּ כָזָ֛ב מַחְסֵ֖נוּ וּבַשֶּׁ֥קֶר נִסְתָּֽרְנוּ: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">אֲרֵי אַמַּרְתּוּן גַּזַּרְנָא קְיָם עִם קָטוֹלָא </span></span><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וְעִם מְחַבְּלָא עֲבַדְנָא שְׁלָמָא מְחָת סַנָּאָה אֲרֵי תֵּיתֵי עֲלֵיכוֹן כְּנַחַל מִגְּבָר דְּאַתּוּן אֲמָרִין לָא תֵּיתֵי עֲלָנָא אֲרֵי שַׁוִּינָא בִּכְדִיב רַחְצְנָנָא וּבְגִין שְׁקָרִין אַטְמַרְנָא:</span></span> <strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">טז</span> לָכֵ֗ן כֹּ֤ה אָמַר֙ אֲדֹנָ֣י יֱהֹוִ֔ה הִנְנִ֛י יִסַּ֥ד בְּצִיּ֖וֹן אָ֑בֶן אֶ֣בֶן בֹּ֜חַן פִּנַּ֤ת יִקְרַת֙ מוּסָ֣ד מוּסָּ֔ד הַֽמַּאֲמִ֖ין לֹ֥א יָחִֽישׁ: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">בְּכֵן כִּדְנָן אָמַר יְיָ אֱלֹהִים הָא אֲנָא מְמַנֵּי בְּצִיּוֹן מֶלֶךְ מְלָךְ תַּקִּיף גִּבּוֹר וַאֲמָתָן אַתְקַּפְנֵיהּ וְאַחֲסַנְנֵיהּ אָמַר נְבִיָּא וְצַדִּיקַיָּא דְּהֵימְנוּ בְּאִלֵּין בְּמֵיתֵי עָקָא לָא יִזְדַּעְזְעוּן:</span></span> <strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">יז</span> וְשַׂמְתִּ֤י מִשְׁפָּט֙ לְקָ֔ו וּצְדָקָ֖ה לְמִשְׁקָ֑לֶת וְיָעָ֣ה בָרָד֙ מַחְסֵ֣ה כָזָ֔ב וְסֵ֥תֶר מַ֖יִם יִשְׁטֹֽפוּ: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וַאֲשַׁוֵי דִּינָא תַּקִּיף דַּאֲטְמַרְתּוּן כְּחוּט בִּנְיָנָא וְזַכּוּתָא כְּאֶבֶן מִשְּׁקוּלְתָא וְיִדְלָק רוּגְזֵי בְּרוּחְצָן בִּדְבֵיכוֹן וְעַל דַּאֲטְמַרְתּוּן מִן קֳדָם מֵעִיקָא יָתְכוֹן עַמָּמַיָּא יִגְלוּן:</span></span> <strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">יח</span> וְכֻפַּ֤ר בְּרִֽיתְכֶם֙ אֶת־מָ֔וֶת וְחָזֽוּתְכֶ֥ם אֶת־שְׁא֖וֹל לֹ֣א תָק֑וּם שׁ֤וֹט שׁוֹטֵף֙ כִּ֣י יַֽעֲבֹ֔ר וִֽהְיִ֥יתֶם ל֖וֹ לְמִרְמָֽס: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">וִיבַטַּל קְיָמְכוֹן דְּעָם קָטוֹלָא וּשְׁלָמְכוֹן דְּעָם מְחַבְּלָא לָא יִתְקַיָּם מְחָת סַנָּאָה אֲרֵי תֵּיתֵי עֲלֵיכוֹן כְּנַחַל מִגְּבָר וּתְהוֹן לְהוֹן לְדַיִשׁ</span></span><span style="font-size:22px"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+
+                           <p style="text-align:justify"><span style="color:#ecf0f1"><span style="font-size:8px"><span style="font-family:&quot;Times New Roman&quot;,serif">י</span></span></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יד)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">אַנְשֵׁי לָצוֹן וְכוּ&#39; </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">אוֹמְרִים לָצוֹן בְּלָשׁוֹן מָשָׁל: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(טו)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">כָּרַתְנוּ בְרִית אֶת מָוֶת </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">שְׁלֹא יָבֹא עָלֵינוּ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">עָשִׂינוּ חֹזֶה </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">גְּבוּל שְׁלֹא יַעֲבֹרנְהוּ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">שׁוֹט שׁוֹטֵף </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">מַכָּה הַמִּתְהַלֶכֶת בָּאָרֶץ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">לֹא יְבוֹאֵנוּ </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">לֹא יָבוֹא עָלֵינוּ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">שַׂמְנוּ כָזָב </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">עבודה זרה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">מַחְסֵנוּ</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מַחֲסֵּה שֶׁלָנוּ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">וּבַשֶּׁקֶר</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> בעבודה זרה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">נִסְתָּרְנוּ </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">בָּטַחְנוּ לְהַסְתִּירֵנוּ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(טז)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">הִנְנִי</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הוּא אֲשֶׁר יָסַד כְבַר בְּצִיוֹן: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">אָבֶן וְכוּ&#39; </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">כְּבָר גָּזַרְתִּי וְהֶעֱמַדְתִּי הַמֶּלֶךְ הַמָּשִׁיחַ שְׁיְהֵא בְּצִיוֹן לְאֶבֶן בּוֹחֵן: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">בֹּחַן</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> לְשׁוֹן חוֹזֶק: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">פִּנַּת יִקְרַת </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">הוּא אֶבֶן שֶׁבְּמִקְצוֹעַ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">מוּסָד מוּסָּד</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> יְסוֹד הַמְּיוּסַד: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">הַמַּאֲמִין</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> דָבָר זֶה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">לֹא יָחִישׁ </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">לֹא יְמַהֵר לוֹמַר אִם אֱמֶת הוּא יְמַהֵר לָבוֹא: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יז)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">וְשַׂמְתִּי</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> לִפְנֵי בּוֹא אוֹתוֹ הַמֶּלֶךְ אָבִיא עֲלֵיכֶם גְּזֵירוֹת לְהַתָּם הַפּוֹשְׁעִים שֶׁבָּכֶם: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">וְשַׂמְתִּי מִשְׁפָּט </span></strong><span style="font-family:&quot;Times New Roman&quot;,serif">יִסוּרִין לַקָו: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">וְיָעָה</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> וַיְכַבֵּד הַבָּרָד אֶת מַחֲסֵּה הַכָזָב שֶׁאַמֲרְתֶּם: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">וְסֵתֶר</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> שֶׁאַמֲרְתֶּם וְּבַשֶׁקֶר נִסְתָּרְנוּ הַמַיִם יִשְׁטְפוּהָ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(יח)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">וְכֻפַּר</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> וְיִתְבַּטֵל</span><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>כתובים </h3>
+                        <p>משלי י"ב</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">טו</span> דֶּ֣רֶךְ&nbsp;</span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">אֱוִיל יָשָׁ֣ר בְּעֵינָ֑יו וְשֹׁמֵ֖עַ לְעֵצָ֣ה חָכָֽם: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">אָרְחֵיהּ דְּסַכְלָא תְרִיצָא בְּאַפּוֹי וּדְשָׁמֵעַ לְעֵיצְתָא חַכִּימָא הוּא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">טז</span> אֱוִ֗יל&nbsp;</span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">בַּיּוֹם יִוָּדַ֣ע כַּעְס֑וֹ וְכֹסֶ֖ה קָל֣וֹן עָרֽוּם: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">שָׁטְיָא כַּד יוֹמֵיהּ מוֹדַע רוּגְזֵיהּ וַעֲרִים מְכַסֵּי צַעֲרֵיהּ: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px"><span style="text-align:justify">יז</span></span> יָפִ֣יחַ&nbsp;</span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">אֱמוּנָה יַגִּ֣יד צֶ֑דֶק וְעֵ֖ד שְׁקָרִ֣ים מִרְמָֽה: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">מַן דְּמַסְהֵיד הֵימָנוּתָא נִתְנֵי צַדִּיקוּתָא וְסָהֵד דְּשִׁקְרָא רַמָּאָה הוּא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">יח</span> יֵ֣שׁ בּ֖וֹטֶה כְּמַדְקְר֣וֹת חָ֑רֶב וּלְשׁ֖וֹן חֲכָמִ֣ים מַרְפֵּֽא: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">אִית דְּאִמְרֵיהּ </span></span><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">סַפְסֵירָא רָגְשָׁא וְלִישָׁנָא דְחַכִּימֵי מָאסְיָא: </span></span><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:16px">יט</span> שְֹֽפַת־֖אֱמֶת תִּכּ֣וֹן לָעַ֑ד וְעַד־֜אַרְגִּ֗יעָה לְשׁ֣וֹן שָֽׁקֶר: </span></span></strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">שִׂפְתָא דְקֵשְׁטָא תִתַּקֵּן לַעֲלָם וְסַהֲדָא מִסְתַּרְהֵב כְּלִישָׁנָא דְשִׁקְרָא</span></span><span style="font-size:22px"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                            <p style="text-align:justify"><span style="color:#ecf0f1"><span style="font-size:8px"><span style="font-family:&quot;Times New Roman&quot;,serif">א</span></span></span><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(א)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">אֱוִיל.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> בְּיוֹם שֶׁהוּא כּוֹעֵס, מוֹדִּיעַ כַּעַסוֹ. אֲבַל הֶעָרוּם כוֹסֶה הַקָלוֹן וְאֵינוֹ מְמָהֶר לָָרִיב: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(ג)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">יָפִיחַ אֱמוּנָה.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מִּי שֶׁמְדַבֶּר אֱמוּנָה מַגִיד בְּדִין עֵדוּת צֶדֶק לְזָכּוֹת הָזַכָּאִי: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(ד)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">יֵשׁ בּוֹטֶה.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מְּדַבֵּר: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">כְּמַדְקְרוֹת חָרֶב.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> לַעָשׂוֹת מֵרִיבַה בֵין הָבְּרִיוֹת: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">וּלְשׁוֹן חֲכָמִים.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הֲמֵבִיא שָׁלוֹם בֵין אָדָם לַחַבֵירוֹ: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">מַרְפֵּא.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> לַמבטא הַהוּא: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">(ה)</span></strong> <strong><span style="font-family:&quot;Times New Roman&quot;,serif">תִּכּוֹן לָעַד.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> תִּתְקַיֵים: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">וְעַד אַרְגִּיעָה.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> לְמַעֵט רֶגַע הוּא כָּלֶה וְהוֹלֶךְ, שֶׁהָשֶׁקֶּר אֵין לוֹ רַגְלָיִם</span><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>משנה </h3>
+                        <p>זבחים פרק ג'</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">א</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַשּׁוֹחֵט וְהַמַּעֲלֶה בַחוּץ, חַיָּב עַל הַשְּׁחִיטָה וְחַיָּב עַל הָעֲלִיָּה. רַבִּי יוֹסֵי הַגְּלִילִי אוֹמֵר, שָׁחַט בִּפְנִים וְהֶעֱלָה בַחוּץ, חַיָּב. שָׁחַט בַּחוּץ וְהֶעֱלָה בַחוּץ, פָּטוּר, שֶׁלֹא הֶעֱלָה (בַחוּץ) אֶלָּא דָבָר פָּסוּל. אָמְרוּ לוֹ, אַף הַשּׁוֹחֵט בִּפְנִים וּמַעֲלֶה בַחוּץ, כֵּיוָן שֶׁהוֹצִיאוֹ, פְּסָלוֹ: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ב</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> טָמֵא שֶׁאָכַל, בֵּין קֹדֶשׁ טָמֵא וּבֵין קֹדֶשׁ טָהוֹר, חַיָּב. רַבִּי יוֹסֵי הַגְּלִילִי אוֹמֵר, טָמֵא שֶׁאָכַל טָהוֹר, חַיָּב. וְטָמֵא שֶׁאָכַל טָמֵא, פָּטוּר, שֶׁלֹּא אָכַל אֶלָּא דָבָר טָמֵא. אָמְרוּ לוֹ, אַף טָמֵא שֶׁאָכַל טָהוֹר, כֵּיוָן שֶׁנָּגַע בּוֹ, טִמְּאָהוּ. וְטָהוֹר שֶׁאָכַל טָמֵא, פָּטוּר, שֶׁאֵינוֹ חַיָּב </span></span><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">אֶלָּא עַל טֻמְאַת הַגּוּף: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ג</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> חֹמֶר בַּשְׁחִיטָה מִבָּעֲלִיָּה, וּבָעֲלִיָּה מִבַּשְּׁחִיטָה. חֹמֶר בַּשְּׁחִיטָה, שֶׁהַשּׁוֹחֵט לַהֶדְיוֹט, חַיָּב. וְהַמַּעֲלֶה לַהֶדְיוֹט, פָּטוּר. חֹמֶר בָּעֲלִיָּה, שְׁנַיִם שֶׁאָחֲזוּ בַסַּכִּין וְשָׁחָטוּ, פְּטוּרִים. אָחֲזוּ בְאֵבֶר וְהֶעֱלוּהוּ, חַיָּבִין. הֶעֱלָה וְחָזַר וְהֶעֱלָה וְחָזַר וְהֶעֱלָה, חַיָּב עַל כָּל עֲלִיָּה וַעֲלִיָּה, דִּבְרֵי רַבִּי שִׁמְעוֹן. רַבִּי יוֹסֵי אוֹמֵר, אֵינוֹ חַיָּב אֶלָּא אֶחָת, וְאֵינוֹ חַיָּב עַד שֶׁיַּעֲלֶה לְרֹאשׁ הַמִּזְבֵּחַ. רַבִּי שִׁמְעוֹן אוֹמֵר, אֲפִלּוּ הֶעֱלָה עַל הַסֶּלַע אוֹ עַל הָאֶבֶן, חַיָּב: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ד</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> אֶחָד קָדָשִׁים כְּשֵׁרִין וְאֶחָד קָדָשִׁים פְּסוּלִין, שֶׁהָיָה פְסוּלָן בַּקּדֶשׁ, וְהִקְרִיבָן בַּחוּץ, חַיָּב. הַמַּעֲלֶה כַזַּיִת מִן הָעוֹלָה וּמִן הָאֵמוּרִין בַּחוּץ, חַיָּב. הַקֹּמֶץ, וְהַלְּבוֹנָה, וְהַקְּטֹרֶת, וּמִנְחַת כֹּהֲנִים, וּמִנְחַת כֹּהֵן הַמָּשִׁיחַ, וּמִנְחַת נְסָכִין, שֶׁהִקְרִיב מֵאֶחָד מֵהֶן כַּזַיִת בַּחוּץ, חַיָּב. רַבִּי אֶלְעָזָר פּוֹטֵר עַד שֶׁיַּקְרִיב אֶת כֻּלּוֹ. וְכֻלָּם שֶׁהִקְרִיבָן בִּפְנִים וְשִׁיֵּר בָּהֶן כַּזַּיִת וְהִקְרִיבָן בַּחוּץ, חַיָּב. וְכֻלָּן שֶׁחָסְרוּ כָּל שֶׁהֵן וְהִקְרִיבָן בַּחוּץ, פָּטוּר: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ה</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַמַּקְרִיב קָדָשִׁים וְאֵמוּרֵיהֶם בַּחוּץ, חַיָּב. מִנְחָה שֶׁלֹּא נִקְמָצָה וְהִקְרִיבָהּ בַּחוּץ, פָּטוּר. קְמָצָהּ וְחָזַר קֻמְצָהּ לְתוֹכָהּ וְהִקְרִיבָהּ בַּחוּץ, חַיָּב: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ו</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַקֹּמֶץ וְהַלְּבוֹנָה שֶׁהִקְרִיב אֶת אֶחָד מֵהֶן בַּחוּץ, חַיָּב. רַבִּי אֶלְעָזָר פּוֹטֵר עַד שֶׁיַּקְרִיב אֶת הַשֵּׁנִי. אֶחָד בִּפְנִים וְאֶחָד בַּחוּץ, חַיָּב. שְׁנֵי בְזִיכֵי לְבוֹנָה שֶׁהִקְרִיב אֶת אֶחָד מֵהֶן בַּחוּץ, חַיָּב. רַבִּי אֶלְעָזָר פּוֹטֵר עַד שֶׁיַּקְרִיב אֶת הַשֵּׁנִי. אֶחָד בִּפְנִים וְאֶחָד בַּחוּץ, חַיָּב. הַזּוֹרֵק מִקְצָת דָּמִים בַּחוּץ, חַיָּב. רַבִּי אֶלְעָזָר אוֹמֵר, אַף הַמְנַסֵּךְ מֵי חָג בֶּחָג בַּחוּץ, חַיָּב. רַבִּי נְחֶמְיָה אוֹמֵר, שְׁיָרֵי הַדָּם שֶׁהִקְרִיבָן בַּחוּץ, חַיָּב: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ז</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַמּוֹלֵק אֶת הָעוֹף בִּפְנִים וְהֶעֱלָה בַחוּץ, חַיָּב. מָלַק בַּחוּץ וְהֶעֱלָה בַחוּץ, פָּטוּר. הַשּׁוֹחֵט אֶת הָעוֹף בִּפְנִים וְהֶעֱלָה בַחוּץ, פָּטוּר. שָׁחַט בַּחוּץ וְהֶעֱלָה בַחוּץ, חַיָּב. נִמְצָא, דֶּרֶךְ הֶכְשֵׁרוֹ מִבִּפְנִים, פְּטוּרוֹ בַחוּץ. דֶּרֶךְ הֶכְשֵׁרוֹ בַחוּץ, פְּטוּרוֹ בִפְנִים. רַבִּי שִׁמְעוֹן אוֹמֵר, כֹּל שֶׁחַיָּבִין עָלָיו בַּחוּץ, חַיָּבִין עַל כַּיּוֹצֵא בוֹ בִּפְנִים שֶׁהֶעֱלָהוּ בַחוּץ, חוּץ מִן הַשּׁוֹחֵט בִּפְנִים וּמַעֲלֶה בַחוּץ: </span></span><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">ח</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> הַחַטָּאת שֶׁקִּבֵּל דָּמָהּ בְּכוֹס אֶחָד, נָתַן בַּחוּץ וְחָזַר וְנָתַן בִּפְנִים, בִּפְנִים וְחָזַר וְנָתַן בַּחוּץ, חַיָּב, שֶׁכֻּלּוֹ רָאוּי לָבוֹא בִפְנִים. קִבֵּל דָּמָהּ בִּשְׁנֵי כוֹסוֹת, נָתַן שְׁנֵיהֶן בִּפְנִים, פָּטוּר. שְׁנֵיהֶן בַּחוּץ, חַיָּב, אֶחָד בִּפְנִים וְאֶחָד בַּחוּץ, פָּטוּר. אֶחָד בַּחוּץ וְאֶחָד בִּפְנִים, חַיָּב עַל הַחִיצוֹן, וְהַפְּנִימִי מְכַפֵּר. לְמָה הַדָּבָר דּוֹמֶה, לְמַפְרִישׁ חַטָּאתוֹ וְאָבְדָה וְהִפְרִישׁ אַחֶרֶת תַּחְתֶּיהָ וְאַחַר כָּךְ נִמְצֵאת הָרִאשׁוֹנָה, וַהֲרֵי שְׁתֵּיהֶן עוֹמְדוֹת, שָׁחַט שְׁתֵּיהֶן בִפְנִים, פָטוּר שָׁחַט שְׁתֵּיהֶן בַּחוּץ, חַיָּב. אַחַת בִּפְנִים וְאַחַת בַּחוּץ, פָּטוּר. אַחַת בַּחוּץ וְאַחַת בִּפְנִים, חַיָּב עַל הַחִיצוֹנָה, וְהַפְּנִימִית מְכַפֶּרֶת. כְּשֵׁם שֶׁדָּמָהּ פּוֹטֵר אֶת בְּשָׂרָהּ, כָּךְ הוּא פוֹטֵר אֶת בְּשַׂר חֲבֶרְתָּהּ</span></span><span style="font-size:22px"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>ר' עובדיה מברטנורא</h3>
+                        <p id="textSecondHe">
+
+
+
+                            <p style="text-align:justify"><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">א השוחט.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> קדשים בחוץ והעלן בחוץ. בהעלם אחד. חייב על השחיטה וחייב על ההעלאה. שהן שני גופי עבירה, דתרוייהו כתיבי אשר ישחט ואשר יעלה:<strong> כיון שהוציאו פסלו.</strong> ואפילו הכי חייב, והוא הדין לשוחט בחוץ ומעלה בחוץ. ור&#39; יוסי הגלילי אמר לך, מה לשוחט בפנים ומעלה בחוץ שכן היתה לו שעת הכושר, תאמר לשוחט בחוץ ומעלה בחוץ שלא היתה לו שעת הכושר. ואין הלכה כר&#39; יוסי הגלילי: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ב הטמא שאכל כו&#39;.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> משום דפליגי ר&#39; יוסי הגלילי ורבנן בתרוייהו ודמו הנך תרתי פלוגתא אהדדי, תנינהו גבי הדדי:<strong> רבי יוסי הגלילי אומר וכו&#39;.</strong> כשנטמא הגוף ואחר כך נטמא הבשר כולי עלמא לא פליגי דחייב כרת. כי פליגי, שנטמא הבשר ואחר כך נטמא הגוף, רבנן אית להו איסור כולל, דמתוך שחל עליו איסור טומאת הגוף לאסרו בבשר טהור שהיה מותר בו מתחלה, חל נמי אף על הבשר טמא ואע&quot;פ שהיה אסור ועומד, כדי שיתחייב עליו אף משום טומאת הגוף. ור&#39; יוסי הגלילי לית ליה איסור חל על איסור באיסור כולל ואין איסור של טומאת הגוף חל על איסור של טומאת בשר. ואין הלכה כר&#39; יוסי הגלילי:<strong> וטהור שאכל טמא פטור.</strong> מן הכרת. וסופג את הארבעים משום (ויקרא ז&#39;) והבשר אשר יגע בכל טמא לא יאכל:<strong> שאינו חייב אלא על טומאת הגוף.</strong> כדכתיב (שם) וטומאתו עליו ונכרתה, בטומאת הגוף הכתוב מדבר: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ג שהשוחט להדיוט כו&#39;.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> השוחט קדשים בחוץ לאכילת הדיוט חייב:<strong> המעלה בחוץ.</strong> לצורך הדיוט, פטור משום העלאת חוץ. דגבי שחיטה כתיב דם יחשב לאיש, אפילו השוחט לאיש. וגבי העלאה כתיב לעשות אותו לה&#39;, אינו חייב כשמעלהו בחוץ עד שיכוין בו לה&#39;:<strong> ושחטו פטורים.</strong> דכתיב (שם י&quot;ז) דם יחשב לאיש ההוא, אחד ולא שנים:<strong> והעלוהו חייבין.</strong> דכתיב (שם) איש איש וגו&#39; אשר יעלה כו&#39;, שאין תלמוד לומר איש איש, אלא לרבות שנים שאחזו באבר והעלוהו, שהן חייבין:<strong> העלה.</strong> ונודע לו:<strong> וחזר והעלה.</strong> מאותה בהמה עצמה, חייב על כל אחת ואחת:<strong> עד שיעלה לראש המזבח.</strong> דכתיב (בראשית ח&#39;) ויבן נח מזבח לה&#39;. אלמא אפילו במת יחיד שהיא בחוץ אינה העלאה בלא מזבח:<strong> אפילו העלה על הסלע.</strong> דכתיב (ויקרא י&quot;ז) וזרק הכהן את הדם על מזבח ה&#39; פתח אהל מועד, ולא מזבח בבמת יחיד. ובפרשת המעלה בחוץ כתיב. והלכה כר&#39; יוסי: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ד שהיה פסולן בקדש.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> כגון הלן והיוצא והנשחט חוץ לזמנו וחוץ למקומו, הואיל ובפנים אם עלו לא ירדו, מתקבל בפנים קרינן ביה וחייבין עליהן בחוץ, דכתיב (שם) לעשות אותו לה&#39;, כל הנעשה לה&#39; חייבין עליו בחוץ, וכל שאינו נעשה לה&#39; אין חייבין עליו בחוץ:<strong> המעלה כזית מן העולה ומאימורין.</strong> חצי זית מזה וחצי זית מזה: <strong>חייב.</strong> דכולה כליל:<strong> הלבונה.</strong> של מנחת נדבה:<strong> והקטורת.</strong> של כל יום פרס שחרית ופרס בין הערבים:<strong> ומנחת כהנים.</strong> שהיא כליל וראויה להעלאה כקומץ של מנחת ישראל. אבל שיירי מנחת ישראל אינו חייב על העלאתן בחוץ:<strong> מנחת כהן משיח.</strong> עשירית האיפה שהוא מביא בכל יום:<strong> כזית.</strong> דהיינו שיעור הקטרה:<strong> עד שיקריב את כולן.</strong> דקסבר כל המתירין מפסלי בחסרון, וכל זמן שלא קרבו כולן לא הויא הקטרה לצאת בעלים ידי חובתן. ולרבנן הני נמי הוי הקטרתן בכזית, היכא דכולו קיים ולא חסרו קודם הקטרה:<strong> ושייר מהן וכו&#39; חייב.</strong> שהרי בזה נגמרה הקטרה:<strong> וכולן שחסרו כל שהן.</strong> קודם הקטרה על ידי איבוד או שריפה, נפסלו בחסרונן, דכתיב (ויקרא ב&#39;) והנותרת מן המנחה, פרט לשחסרה היא או שחסר קומצה קודם הקטרה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ה המקריב קדשים ואימוריהן.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> שהקריב הבשר והאימורים מחוברים בו, חייב משום אימורים. ולא אמרינן הרי בשר חוצץ בין האימורין לאש ודכוותה בפנים לאו העלאה היא דרחמנא אמר (שם א&#39;) על העצים אשר על האש, והמעלן בחוץ נמי לא יהא חייב. לא אמרינן הכי לפי שמין במינו אינו חוצץ:<strong> מנחה שלא נקמצה.</strong> אינה ראויה לפנים. הלכך המקריבה בחוץ פטור:<strong> קמצה וחזר קומצה לתוכה.</strong> והקריבה בחוץ חייב. שכיוצא בה בפנים כשרה כדתנן בהקומץ נתערב קומצה בשיריה לא יקטיר ואם הקטיר כשרה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ו הקומץ והלבונה.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> של מנחת נדבה. שניהם מתירים את שיריה לאכילה הלכך רבי אלעזר פוטר דבעי הקטרת כל המתיר:<strong> אחד בפנים.</strong> תחלה ואחר כך השני בחוץ חייב. שזה גמר ובו הכל תלוי:<strong> שני בזיכי לבונה.</strong> מתירים לחם הפנים:<strong> מי החג.</strong> שנתמלאו לשם ניסוך המים בחג הסכות, אם ניסך אותן בחוץ חייב דסבר ניסוך המים בחג דאורייתא היא הלכך מחייב עלה בחוץ ואין הלכה כר&quot;א בכולה מתניתין ונסוך המים בחג לאו דאורייתא היא אלא הלכה למשה מסיני:<strong> שירי הדם שהקריבן בחוץ חייב.</strong> בשירי דמים הפנימים מיירי וסבר דשירי הדם מעכבים בהם הילכך עבודה היא להתחייב עליה בחוץ אבל בשירי הדם של מזבח החיצון מודה ר&#39; נחמיה שאינם אלא למצוה ולא לעכב, הילכך הזורקן בחוץ ודאי פטור. ואין הלכה כרבי נחמיה: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ז מלק בחוץ.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> נבלה היא שאין מליקה אלא בפנים לכך פטור על העלאתו בחוץ. וא&quot;ת והלא כל הנעלים בחוץ נפסלו ביציאתן, וכן השוחט בחוץ פסול הוא וחייבין על העלאתו התם רחמנא רבייה אבל לענין שאר פסולים מתקבלים בפנים בעינן:<strong> שחט בחוץ והעלה בחוץ חייב.</strong> אף על העלאה. דכל שמתחייב על שחיטתו בחוץ אם חזר והעלן הוא או אחר, חייב:<strong> נמצא דרך הכשרו בפנים.</strong> בגמרא קאמר, תני דרך חיובו בפנים פטורו בחוץ, ודרך חיובו בחוץ פטורו בפנים. כגון שחט העוף בפנים והעלה בחוץ פטור. שחט בחוץ והעלה בחוץ חייב. מלק בפנים והעלה בחוץ חייב. מלק בחוץ והעלה בחוץ פטור. נמצא, במקום שמתחייב על העלאתו אם נעשית העבודה הראשונה בפנים כגון במליקת פנים פטור על העלאתו אם נעשית המליקה בחוץ. ודרך שמתחייב על העלאה אם נעשית עבודה הראשונה בחוץ כגון בשחיטה, פטורו בפנים, אם נשחט בפנים והעלה בחוץ:<strong> רבי שמעון אומר כו&#39;.</strong> במלתיה דתנא קמא חסורי מחסרא והכי קתני, וכן השוחט בהמה בלילה בפנים והעלה בחוץ פטור, דאינה מתקבלת בפנים, דכתיב (ויקרא י&quot;ט) ביום זבחכם, ולא בלילה, ונמצא הזבח פסול ולפיכך אינו חייב על העלאתו. אבל אם שחט בלילה בחוץ והעלה בחוץ חייב, מפני שהשחיטה בחוץ בלילה כשרה היא לפיכך חייב שתים על השחיטה ועל ההעלאה. ופליג רבי שמעון בהא ואמר, כל שחייבין עליו בחוץ חייבין על כיוצא בו בפנים שהעלהו בחוץ. כלומר, כשם שהשוחט בחוץ בלילה והעלה בחוץ חייב, כך אם שחט בפנים בלילה והעלה בחוץ חייב על ההעלאה, חוץ מהשוחט עוף בפנים והעלהו בחוץ שהוא פטור אע&quot;פ שאם שחט והעלה בחוץ חייב. ואין הלכה כר&#39; שמעון: </span><strong><span style="font-family:&quot;Times New Roman&quot;,serif">ח נתן בחוץ וחזר ונתן בפנים חייב.</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> מלתא דפשיטא היא, ומשום סיפא נקט לה, נתן בפנים וחזר ונתן בחוץ שאינו נותן בחוץ אלא שיירי הדם, חייב. ומתניתין כרבי נחמיה דסבר שיריים מעכבים. ואינה הלכה:<strong> שניהן בחוץ חייב.</strong> אחת. ואם היתה לו ידיעה בינתיים, חייב שתים:<strong> אחד בפנים.</strong> ואח&quot;כ השני בחוץ, פטור. ואפילו לרבי נחמיה דסבר כוס אחד עושה את חבירו דחוי להיות נשפך לאמה, הלכך אפילו שיריים לא הוי:<strong> והפנימי מכפר.</strong> להכשיר הזבח. שהדם הנזרק תחלה בחוץ לא עשה המשויר כיוצא בו:<strong> שתיהן בחוץ חייב.</strong> על כל אחת ואחת. דבשעת שחיטה כל אחת היתה ראויה בפנים:<strong> אחת בפנים.</strong> והשניה אחר כן בחוץ, פטור. דהויא לה חטאת שנתכפרו בעליה, ולמיתה אזלה ואינה מתקבלת בפנים:<strong> חייב על החיצונה.</strong> דהא חזיא לפנים דאיזה מהן שירצה יקריבה:<strong> כשם שדמה פוטר את בשרה.</strong> מן המעילה, [דזריקת דם מוציאה בשר קודש קדשים מן המעילה דיהבה בה] שעת היתר לכהנים:<strong> כך הוא פוטר את בשר חברתה</strong>. ואע&quot;פ שפסולה [ואשחט שניהם בפנים קאי]. ואשמועינן הכא דהיכא דמונחות שתיהן וקדם וזרק את דם האחת, פטר את חברתה מן המעילה משום חטאת שנתכפרו בעליה, דקיימא לן החטאות המתות לא נהנין ולא מועלין</span><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>גמרא </h3>
+                        <p>זבחים דף קיח ע"ב</p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">כִּי</span></span></strong><span style="font-size:18.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif"> אָתָא רַב דִּימִי אָמַר רַבִּי בִּשְׁלֹשָׁה מְקוֹמוֹת שָׁרְתָה שְׁכִינָה עַל יִשְׂרָאֵל בְּשִׁילֹה וְנוֹב וְגִבְעוֹן וּבֵית עוֹלָמִים וּבְכֻלָּן לֹא שָׁרְתָה אֶלָּא בְּחֵלֶק בִּנְיָמִין שֶׁנֶּאֱמַר (דברים לג&#39;) חֹפֵף עָלָיו כָּל הַיּוֹם כָּל חֲפִיפוֹת לֹא יְהוּ אֶלָּא בְחֶלְקוֹ שֶׁל בִּנְיָמִין. כִּי אָזִיל אַבַּיֵּי אֲמָרָהּ קָמֵיהּ דְּרַב יוֹסֵף אָמַר חַד בְּרָא הֲוָה לֵיהּ לְכַיְילִיל וְלֹא מִיתְקַן וְהָכְתִיב (תהלים ע&quot;ח) וַיִּטֹּשׁ מִשְׁכַּן שִׁלֹה וּכְתִיב (שם) וַיִּמְאַס בְּאֹהֶל יוֹסֵף וּבְשֵׁבֶט אֶפְרַיִם לֹא בָחָר. אָמַר רַב אַדָּא מָאי קָא קַשְׁיָא לֵיה דִּילְמָא שְׁכִינָה בְּחֵלֶק בִּנְיָמִין וְסַנְהֵדְרֵי גְדוֹלָה בְּחֵלֶק יוֹסֵף מִדְמָצִינוּ בְּבֵית עוֹלָמִים דִּשְׁכִינָה בְּחֶלְקוֹ שֶׁל בִּנְיָמִין וְסַנְהֶדְרִין בְּחֵלֶק יְהוּדָה. אַמְרִי הֲכִי הַשְׁתָּא הָתָם מִיקַרְבָן נַחֲלוֹת גַּבֵי הֲדָדִי הָכָא מִי מִיקַרְבָן הָכָא נַמִּי מִיקַרְבָן כִּדְאָמַר רַב חָמָא בַּר חֲנִינָא רְצוּעָה הָיְתָה יוֹצֵאת מֵחֶלְקוֹ שֶׁל יְהוּדָה וְנִכְנֶסֶת לְחֶלְקוֹ שֶׁל בִּנְיָמִין וּבָהּ הָיָה מִזְבֵּחַ בָּנוּי וְהָיָה בִּנְיָמִין הַצַּדִּיק מִצְטַעֵר עָלֶיהָ לְבוֹלְעָהּ. הָכָא נַמִּי רְצוּעָה הָיְתָה יוֹצֵאת מֵחֶלְקוֹ שֶׁל יוֹסֵף לְחֶלְקוֹ שֶׁל בִּנְיָמִין וְהַיְינוּ דִכְתִיב (יהושע ט&quot;ז) תַּאֲנַת שִׁלֹה. כְּתַנָּאֵי חוֹפֵף עָלָיו זֶה מִקְדָּשׁ רִאשׁוֹן. כָּל הַיּוֹם זֶה מִקְדָּשׁ שֵׁנִי. וּבֵין כְּתֵפָיו שָׁכֵן אֵלּוּ יְמוֹת הַמָּשִׁיחַ. רַבִּי אוֹמֵר חוֹפֵף עָלָיו זֶה הָעוֹלָם הַזֶּה כָּל הַיּוֹם אֵלּוּ יְמוֹת הַמָּשִׁיחַ וּבֵין כְּתֵפָיו שָׁכֵן זֶה הָעוֹלָם הַבָּא</span></span><span style="font-size:22px"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <h3>תרגום הגמרא </h3>
+                        <p id="textSecondHe">
+                            כשבא רב דימי אמר רבי: בשלושה מקומות שרתה שכינה על ישראל: בשילה ונוב וגבעון ובית עולמים (בירושלים), ובכולן לא שרתה אלא בחלק (נחלת שבט) בנימין שנאמר (דברים ל"ג) "חופף עליו כל היום" – כל חפיפות (השראת שכינה) לא יהו אלא בחלקו של בנימין. כשהלך אביי אצל רב
+                            יוסף אמר בפניו דרשה זו. אמר רב יוסף: בן אחד היה לו לכייליל (אביו של אביי) ולא נתקן בחכמה כראוי. והרי כתוב (תהלים ע"ח) "ויטש משכן שילה", וכתוב (שם) "וימאס באהל יוסף ובשבט אפרים לא בחר"?! אמר רב אדא: מה קשה לו לרב יוסף? ושמא
+                            שכינה בחלק בנימין וסנהדרין גדולה בחלק יוסף, כשם שמצינו שהיה בבית עולמים ששכינה היתה בחלקו של בנימין וסנהדרין בחלק יהודה?! אומרים: איך אפשר להשוות ביניהם? שם קרובות שתי הנחלות – בנימין ויהודה – זו לזו. כאן וכי קרובות נחלת בנימין
+                            ונחלת יוסף זו לזו? ומיישבים: כמו שאמר רב חמא בר חנינא: רצועה היתה יוצאת מחלקו של יוסף ונכנסת לחלקו של בנימין ובה היה מזבח בנוי, והיה בנימין הצדיק מצטער עליה לבולעה (כלומר רצה שתהיה בחלקו) – כאן גם כן רצועה היתה יוצאת מחלקו
+                            של יוסף לחלקו של בנימין. וזה שכתוב (הושע ט"ז) "תאנת שילה" (על שם שהיה בנימין מתאונן עליה). והוא במחלוקת תנאים: "חופף עליו" – זה מקדש ראשון, "כל היום" – זה מקדש שני, ו"בין כתפיו שכן" – אלו ימות המשיח. רבי אומר: "חופף עליו" –
+                            זה העולם הזה (כל מקום ששרתה שכינה ואף שילה ונוב וגבעון), "כל היום" – אלו ימות המשיח, ו"בין כתפיו שכן" – זה העולם הבא.
+
+
+
+                        </p>
+                    </section>
+                </div>
+                <div>
+                    <section class="wrapperParentHe">
+
+                        <h3>רש"י</h3>
+                        <p id="textSecondHe">
+
+                           <p style="text-align:justify"><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">חד ברא הוה ליה לכייליל ולא מיתקן</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> נראה בעיני כי אביו של אביי כייליל שמו: <strong>מי מיקרבן</strong> שילה וגבול נחלת בנימין: <strong>תאנת שילה</strong> על שהיה בנימין מתאונן עליה: <strong>העולם הזה</strong> כל מקום ששרתה שכינה ואף שילה ונוב וגבעון</span><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>זוהר </h3>
+                        <p>שמות דף כ' ע"ב</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p>קטע זה נמצא בלה"ק במקורו בזוהר ואין צורך לתרגמו.</p>
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">וּמֹשֶׁה הָיָה רוֹעֶה אֶת צֹאן יִתְרוֹ חוֹתְנוֹ כֹּהֵן מִדְיָן רַבִּי חִיָּיא פָּתַח וְאָמַר (תהלים כ&quot;ג) מִזְמוֹר לְדָוִד יְיָ רוֹעִי לֹא אֶחְסָר. כְּלוֹמַר יְיָ רוֹעִי יְיָ הָרוֹעֶה שֶׁלִּי מַה הָרוֹעֶה מַנְהִיג אֶת הַצֹּאן וּמוֹלִיכָם לְמִרְעֶה טוֹב לְמִרְעֶה שָׁמֵן בִּמְקוֹם נַחֲלֵי מַיִם מְיַישֵּׁר הֲלִיכָתָן בְּצֶדֶק וּבְמִשְׁפָּט אַף הַקָּדוֹשׁ בָּרוּךְ הוּא כְּתִיב בִּנְאוֹת דֶּשֶׁא יַרְבִּיצֵנִי עַל מֵי מְנוּחוֹת יְנַהֲלֵנִי נַפְשִׁי יְשׁוֹבֵב. אָמַר רַבִּי יוֹסֵי דֶּרֶךְ הָרוֹעִים לִנְהוֹג בְּצֶדֶק אֶת צֹאנוֹ לְהַרְחִיקָם מִן הַגֶּזֶל לְהַנְהִיגָם בְּמִישׁוֹר וְהַשֵּׁבֶט בְּיָדוֹ שֶׁלֹּא יַטּוּ יָמִין וּשְׂמֹאל כָּךְ הַקָּדוֹשׁ בָּרוּךְ הוּא רוֹעֶה אֶת יִשְׂרָאֵל לְהַנְהִיגָם בְּמִישׁוֹר וּבְכָל עֵת הַשֵּׁבֶט בְּיָדוֹ שֶׁלֹּא יַטּוּ יָמִין וּשְׂמֹאל. דָּבָר אַחֵר וּמֹשֶׁה הָיָה רוֹעֶה אָמַר רַבִּי יוֹסֵי תֵּדַע לָךְ שֶׁכָּל זְמַן שֶׁהָרוֹעֶה חָכָם לְנַהֵל אֶת צֹאנוֹ הוּא מוּכָן לְקַבֵל עוֹל מַלְכוּת שָׁמַיִם וְאִם הָרוֹעֶה שׁוֹטֶה עָלָיו נִקְרָא (משלי כ&quot;ו) תִּקְוָה לִכְסִיל מִמֶּנּוּ. אָמַר רַבִּי יְהוּדָה מֹשֶׁה חָכָם הָיָה וּבָקִי לִנְהוֹג אֶת צֹאנוֹ. בֹּא וּרְאֵה מִדָּוִד שֶׁנֶּאֱמַר (שמואל א&#39; ט&quot;ז) וְהִנֵּה רוֹעֶה בַּצֹּאן לְלַמְּדָךְ שֶׁדָּוִד חָכָם גָּדוֹל הָיָה וְהָיָה רוֹעֶה צֹאנוֹ כַּדִּין וְכַשּׁוּרָה לְפִיכָךְ עָשָׂהוּ הַקָּדוֹשׁ בָּרוּךְ הוּא מֶלֶךְ עַל כָּל יִשְׂרָאֵל וְלָמָּה צֹאן וְלֹא בָקָר אָמַר רַבִּי יְהוּדָה יִשְׂרָאֵל נִקְרָאִים צֹאן שֶׁנֶּאֱמַר (יחזקאל ל&quot;ד) וְאַתֵּן צֹאנִי צֹאן מַרְעִיתִי אָדָם אַתֶּם. וּכְתִיב (שם ל&quot;ו) כְּצֹאן קָדָשִׁים כְּצֹאן יְרוּשָׁלַםִ. מַה הַצֹּאן כְּשֶׁיִּקָּרְבוּ עַל הַמִּזְבֵּחַ בִּשְׁבִילָם זוֹכֶה לְחַיֵּי הָעוֹלָם הַבָּא כָּךְ הַמַּנְהִיג לְיִשְׂרָאֵל כַּדִּין וְכַשּׁוּרָה בִּשְׁבִילָם זוֹכֶה לְחַיֵּי הָעוֹלָם הַבָּא. וְעוֹד הָרוֹעֶה אֶת הַצֹּאן כְּשֶׁהַצֹּאן יוֹלְדוֹת הָרוֹעֶה נוֹטֵל אוֹתָם טְלָאִים בְּחֵיקוֹ כְּדֵי שֶׁלֹּא יִלְאוּ וְיִגְעוּ וּמוֹלִיכָם אַחֲרֵי אִמּוֹתָם וּמְרַחֵם עֲלֵיהֶם כָּךְ הַמַּנְהִיג לְיִשְׂרָאֵל צָרִיךְ לְהַנְהִילָם בְּרַחֲמִים וְלֹא בְאַכְזָרִיּוֹת. וְכֵן אָמַר מֹשֶׁה כִּי תֹאמַר אֵלַי שָׂאֵהוּ בְחֵיקֶךָ וְגוֹמֵר. מַה הָרוֹעֶה אֶת הַצֹּאן כְּשֶׁהוּא רוֹעֶה טוֹב מַצִּיל אֶת הַצֹּאן מִן הַזְּאֵבִים וּמִן הָאֲרָיוֹת כָּךְ הַמַּנְהִיג לְיִשְׂרָאֵל אִם הוּא טוֹב מַצִּילָן מִן הָאוּמוֹת עוֹבְדֵי עֲבוֹדָה זָרָה וּמִדִּין שֶׁל מַטָּה וּמִדִּין שֶׁל מַעְלָה וּמַדְרִיכָן לְחַיֵּי הָעוֹלָם הַבָּא כָּךְ מֹשֶׁה רוֹעֶה נֶאֱמָן הָיָה וְרָאָה הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁכְּדַאי הוּא לִרְעוֹת אֶת יִשְׂרָאֵל בְּאוֹתוֹ הַדִּין מַמָּשׁ שֶׁהָיָה רוֹעֶה אֶת הַצֹּאן לַכְּשָׂבִים כְּפִי הָרָאוּי לָהֶם וְהַנְּקֵבוֹת כְּפִי הָרָאוּי לָהֶן. וּלְפִיכָךְ כְּתִיב וּמֹשֶׁה הָיָה רוֹעֶה אֶת צֹאן יִתְרוֹ חוֹתְנוֹ וְלֹא שֶׁלּוֹ</span><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">.&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>יוסף לחוק הלכה פסוקה</h3>
+
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p>הרמב"ם הלכות תשובה פרק ג</p>
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><span style="font-size:22px"><strong><span style="font-family:&quot;Times New Roman&quot;,serif">א</span></strong><span style="font-family:&quot;Times New Roman&quot;,serif"> הַפּוֹרֵשׁ מִדַּרְכֵי צִבּוּר אַף עַל פִּי שֶׁלֹּא עָבַר עֲבֵרוֹת אֶלָּא נִבְדַּל מֵעֲדַת יִשְׂרָאֵל וְאֵינוֹ עוֹשֶׂה מִצְוֹת בִּכְלָלָן וְלֹא נִכְנַס בְצָרָתָן וְלֹא מִתְעַנֶה בְּתַעֲנִיתָן אֶלָּא הוֹלֵךְ בְּדַרְכּוֹ כְּאֶחָד מֵהַנָּכְרִים וּכְאִלּוּ אֵינוֹ מֵהֶן אֵין לוֹ חֵלֶק לָעוֹלָם הַבָּא: <strong>ב</strong> הָעוֹשֶׂה עֲבֵרוֹת בְּיָד רָמָה כִּיהוֹיָקִים בֵּין שֶׁעָשָׂה קַלּוֹת בֵּין שֶׁעָשָׂה חֲמוּרוֹת אֵין לוֹ חֵלֶק לָעוֹלָם הַבָּא וְזֶה הַנִּקְרָא מְגַלֶּה פָנִים בַּתּוֹרָה מִפְּנֵי שֶׁהֵעִיז מִצְחוֹ וְגִלָּה פָנָיו וְלֹא בוֹשׁ מִדִּבְרֵי תּוֹרָה: <strong>ג</strong> שְׁנַיִם הֵם הַמּוֹסְרִים הַמּוֹסֵר חֲבֵרוֹ בְיַד נָכְרִים לְהָרְגוֹ אוֹ לְהַכּוֹתוֹ וְהַמּוֹסֵר מָמוֹן חֲבֵרוֹ בְּיַד נָכְרִים אוֹ בְּיַד אַנָּס שֶׁהוּא כְּנָכְרִי וּשְׁנֵיהֶם אֵין לָהֶם חֵלֶק לָעוֹלָם הַבָּא</span><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">:&nbsp;&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeaderHe">
+                    <section id="bookHeaderHe">
+                        <h3>מוסר</h3>
+                        <p>מספר חרדים דף ע"ב ע"א</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParentHe">
+                        <p id="textMainHe">
+
+                            <p style="text-align:justify"><span style="font-size:22px"><span style="font-family:&quot;Times New Roman&quot;,serif">הָעוֹלָם הַזֶּה יָם סוֹעֵר צָרִיךְ לְדַמּוֹת הָאָדָם בְּדַעְתּוֹ כְּאִלּוּ הוּא שָׁט בַּיָּם וְלָכֵן יָרִים רֹאשׁוֹ לְמַעְלָה לְיוֹצְרוֹ וְיִזָּהֵר פֶּן יִכָּנְסוּ בְּפִיו הַמַּיִם הַזֵּידוֹנִים וְיִשָּׁמֵר מִן הַגַּלִּים הַבָּאִים לְטוֹרְדוֹ וְאִם לָאו דָמוֹ בְרֹאשׁוֹ. בֶּן אָדָם סֻכַּת שָׁלוֹם פְּרוֹס עַל רֹאשְׁךָ וּבֵיתְךָ בְּכָל עוֹז וְתוֹקֶף וְהָלַכְתָּ בִּדְרָכָיו דִּכְתִיב (ישעיה מ&quot;ה) עוֹשֶׂה שָׁלוֹם וגו&#39; וּפֵירְשׁוּ בְּזוֹהַר מִדִּכְתִיב עוֹשֶׂה וְלֹא עָשָׂה שֶׁתָּמִיד עוֹשֶׂה לָכֵן גַּם אַתָּה תָּמִיד תַּעֲשֶׂה שָׁלוֹם. דְּמוּת הַלָּשׁוֹן חֶרֶב חַדָּה לְאַנְשֵׁי הַמִּלְחָמָה הַצַּדִּיקִים נִלְחָמִים בָּה נֶגֶד יִצְרָם הָרָע וַחֲיָילָיו. הָרְשָׁעִים נֶגֶד יִצְרָם הַטּוֹב וַחֲיָילָיו. כְּתִיב (תהלים קי&quot;ט) סֵעֲפִים שָׂנֵאתִי וְתוֹרָתְךָ אָהָבְתִּי וּכְתִיב (שם) אַשְׁרֵי תְמִימֵי דָרֶךְ הַהֹלְכִים בְּתוֹרַת ה&#39; וּכְתִיב (שם נ&quot;ה) הַשְׁלֵךְ עַל ה&#39; יְהָבְךָ הַכַּוָּנָה כִּי כַּמָּה זְמַן אָדָם מְאַבֵּד בְּיָדָיו לָרִיק בְּחָשְׁבוֹ עַל עִנְיָינֵי עוֹלָמוֹ וּפַרְנָסָתוֹ וְסוֹף אָדָם לַהֶבֶל דָמָה כְּלוֹמַר מְהַרְהֵר וּמְחַשֵּׁב וּמְבַטֵּל זְמַנּוֹ וְאֵינוֹ מַשְׁגִּיחַ כִּי יָמָיו כַּצֵּל עוֹבֵר וּבְעוֹד שֶׁהוּא מְחַשֵּׁב וּמְהַרְהֵר יַעֲשֶׂה חֲבִילוֹת שֶׁל תּוֹרָה וּמִצְוֹת לָעוֹלָם הַבָּא. וְאַתְיָא מִכְּלָלָא רַב הַשָּׁלוֹם הוּא יְסוֹד הַמַּעֲלֶה יָקוּץ מִתַּרְדֵּמָתוֹ לְתַקֵּן אֲשֶׁר עִוֵּת וְלִיסוֹד אָרֶץ</span>:<span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="color:#ffffff">ן&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </span></span></p>
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+
+
+    <!------------español------------->
+    <div class="wrap">
+        <div id="target" class="splitScreen2">
+            <div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            <p style="margin:0cm;text-align:justify;text-autospace:none;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(22)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> Entonces el Faraón orden</strong><span lang="HE" dir="RTL"><strong>ó</strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong><span dir="LTR"></span><span dir="LTR"></span> a todo su pueblo, diciendo: “A todo ni</strong><span lang="ES-TRAD" dir="ltr"><strong>ñ</strong></span><strong>o que nazca arrójenlo al r</strong><span lang="HE" dir="RTL"><strong>í</strong></span><strong>o, pero dejen vivir a toda ni</strong><span lang="HE" dir="RTL"><strong>ñ</strong></span><strong>a”.</strong><span><strong>&nbsp; </strong></span><strong>2.</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:20.0pt;"><strong>&nbsp;</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(1)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> Un var</strong><span lang="HE" dir="RTL"><strong>ó</strong></span><strong>n de la casa de Lev</strong><span lang="HE" dir="RTL"><strong>í</strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong><span dir="LTR"></span><span dir="LTR"></span> fue y tomó [como esposa] a una hija de Leví.</strong><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(2)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> La mujer concibió y dio a luz un hijo.</strong><span><strong>&nbsp; </strong></span><strong>Vio que era bueno y lo ocultó durante tres meses.</strong><span><strong>&nbsp;</strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(3)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> Pero ya no pudo ocultarlo m</strong><span lang="HE" dir="RTL"><strong>á</strong></span><strong>s, por lo que tomó para&nbsp;</strong><span lang="HE" dir="RTL"><strong>é</strong></span><strong>l un arca de junquillos y la calafate</strong><span lang="HE" dir="RTL"><strong>ó</strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><span dir="LTR"></span><span dir="LTR"></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong><span dir="LTR"></span><span dir="LTR"></span> con barro y brea; puso en su interior al ni</strong><span lang="HE" dir="RTL"><strong>ñ</strong></span><strong>o, y la colocó entre los juncos a la orilla del r</strong><span lang="HE" dir="RTL"><strong>í</strong></span><strong>o.</strong><span><strong>&nbsp; </strong></span></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:8.0pt;"><strong>(4)</strong></span><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:16.0pt;"><strong> Y su hermana se mantuvo a cierta distancia para saber qué ser</strong><span lang="HE" dir="RTL"><strong>í</strong></span><strong>a de&nbsp;</strong><span lang="HE" dir="RTL"><strong>é</strong></span><strong>l.</strong></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                            <p style="margin:0cm;text-align:justify;text-autospace:none;"><span style="color:#212121;font-family:&quot;Times New Roman&quot;, serif;font-size:12pt;"><strong>22.<span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span></strong><span dir="RTL"><strong>&nbsp;</strong></span><span lang="HE" dir="RTL"><strong>לְכָל&nbsp;עַמּוֹ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>/ A TODO SU PUEBLO.</strong> El Fara<span lang="HE" dir="RTL">ó</span>n promulg<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> el decreto de exterminación de los hijos varones incluso contra ellos, los mitzrim mismos.<span>&nbsp; </span>El d<span lang="HE" dir="RTL">í</span>a que Mosh<span lang="HE" dir="RTL">é</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> naci<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>, sus astr<span lang="HE" dir="RTL">ó</span>logos le dijeron: “Hoy naci<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> su libertador, pero no sabemos si ha surgido del pueblo mitzr<span lang="HE" dir="RTL">í</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> o del pueblo de Israel; y vislumbramos que su destino es ser castigado por medio de agua”.<span>&nbsp; </span>Por esta raz<span lang="HE" dir="RTL">ó</span>n, el Fara<span lang="HE" dir="RTL">ó</span>n promulg<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> su decreto de exterminaci<span lang="HE" dir="RTL">ó</span>n incluso contra los mitzrim, lo que se demuestra porque aqu<span lang="HE" dir="RTL">í</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> mismo se declara que dijo: “A todo hijo var<span lang="HE" dir="RTL">ó</span>n que nazca lo arrojar<span lang="HE" dir="RTL">á</span>n al r<span lang="HE" dir="RTL">í</span>o”, pero no dijo que hab<span lang="HE" dir="RTL">í</span>a que arrojar al r<span lang="HE" dir="RTL">í</span>o a todo ni<span lang="HE" dir="RTL">ñ</span>o var<span lang="HE" dir="RTL">ó</span>n espec<span lang="HE" dir="RTL">í</span>ficamente nacido a los hebreos.<span>&nbsp; </span>Pero los astr<span lang="HE" dir="RTL">ó</span>logos del Fara<span lang="HE" dir="RTL">ó</span>n no sab<span lang="HE" dir="RTL">í</span>an que en realidad Mosh<span lang="HE" dir="RTL">é</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> estaba destinado a ser castigado a causa de las aguas de Merib<span lang="HE" dir="RTL">á</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>.&nbsp;<span> </span><strong>2. 1.&nbsp;</strong><span lang="HE" dir="RTL"><strong>וַיִּקַּח&nbsp;אֶת&nbsp;בַּת&nbsp;לֵוִי</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="HE" dir="ltr">&nbsp;</span><strong>/ Y TOMÓ [COMO ESPOSA] A UNA HIJA DE LEVÍ<span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span></strong><span lang="HE" dir="RTL"><strong>.</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> É</strong>l había estado separado de ella debido al decreto del Fara<span lang="HE" dir="RTL">ó</span>n {pero ahora la tom<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> de nuevo como esposa. A esto alude la aparente menci<span lang="HE" dir="RTL">ó</span>n superflua de que “[un hombre] fue...”, lo cual indica que fue tras el consejo que le hab<span lang="HE" dir="RTL">í</span>a dado su hija al decirle: “Tu decreto –es decir, tu modo de proceder– es m<span lang="HE" dir="RTL">á</span>s duro que el del Faraón.<span>&nbsp; </span>Si el Fara<span lang="HE" dir="RTL">ó</span>n ha decretado <span lang="HE" dir="RTL">ú</span>nicamente la muerte de los hijos varones, ¿debes t<span lang="HE" dir="RTL">ú</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> tambi<span lang="HE" dir="RTL">é</span>n decretar contra las hijas, absteni<span lang="HE" dir="RTL">é</span>ndote de procrear con tu esposa?<span>&nbsp; </span>Debido a la cr<span lang="HE" dir="RTL">í</span>tica de su hija, el hombre tom<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> de nuevo a su esposa anterior e hizo segundas nupcias con ella, y ella se convirti<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> de nuevo en doncella, a pesar de que ya ten<span lang="HE" dir="RTL">í</span>a ciento treinta a<span lang="ES-MX" dir="ltr">ñ</span>os cuando concibi<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> a Mosh<span lang="HE" dir="RTL">é</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>.<span>&nbsp;</span>Pues ella –que era Yoj<span lang="HE" dir="RTL">é</span>bed– hab<span lang="HE" dir="RTL">í</span>a nacido cuando la familia de Yaacob entr<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> a Mitzr<span lang="HE" dir="RTL">á</span>im, entre las murallas de la ciudad.<span>&nbsp; </span>Que ella ten<span lang="HE" dir="RTL">í</span>a esa edad se demuestra por el hecho de que el pueblo de Israel permaneci<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> ah<span lang="HE" dir="RTL">í</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> en Mitzr<span lang="HE" dir="RTL">á</span>im doscientos diez a<span lang="HE" dir="RTL">ñ</span>os, y Mosh<span lang="HE" dir="RTL">é</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> ten<span lang="HE" dir="RTL">í</span>a ochenta a<span lang="ES-MX" dir="ltr">ñ</span>os cuando salieron de ahí.<span>&nbsp; </span>Por consiguiente, cuando Yoj<span lang="HE" dir="RTL">é</span>bed concibió<span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL">&nbsp;</span>a Moshé, ella ya ten<span lang="HE" dir="RTL">í</span>a ciento treinta a<span lang="ES-MX" dir="ltr">ñ</span>os.<span>&nbsp;</span>Aún así, la Torá<span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL">&nbsp;</span>la llama aquí<span> </span><span lang="ES-MX" dir="ltr">“</span>hija de Leví” porque se volvió<span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span>joven de nuevo.&nbsp;<span><strong> </strong></span><strong>2.<span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span></strong><span dir="RTL"><strong>&nbsp;</strong></span><span lang="HE" dir="RTL"><strong>כִּי&nbsp;טוֹב&nbsp;הוּא</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>/ QUE ERA BUENO.</strong> Esta cualidad de “bueno” se refiere a que cuando Mosh<span lang="HE" dir="RTL">é</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> naci<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>, la casa entera se llen<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> de luz.&nbsp;<span> </span><strong>3.<span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span></strong><span dir="RTL"><strong>&nbsp;</strong></span><span lang="HE" dir="RTL"><strong>וְלֹא&nbsp;יָכְלָה&nbsp;עוֹד&nbsp;הַצְּפִינוֹ</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>/ PERO YA NO PUDO OCULTARLO MÁS.</strong> Porque los mitzrim notaron su embarazo desde el d<span lang="HE" dir="RTL">í</span>a en que su marido la hab<span lang="HE" dir="RTL">í</span>a tomado por segunda vez, asumiendo que dar<span lang="HE" dir="RTL">í</span>a a luz a los nueve meses, pero ella lo pari<span lang="HE" dir="RTL">ó</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> a los seis meses y un d<span lang="HE" dir="RTL">í</span>a.<span>&nbsp; </span>Pues una mujer que vaya a dar a luz prematuramente, por ejemplo, a los siete meses, tambi<span lang="HE" dir="RTL">é</span>n puede dar a luz en “meses truncados”.<span>&nbsp; </span>Y los mitzrim la examinaron al final de nueve meses para ver si ya hab<span lang="HE" dir="RTL">í</span>a parido.<span>&nbsp; </span><span lang="HE" dir="RTL"><strong>גֹּמֶא</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="HE" dir="ltr">&nbsp;</span><strong>/ JUNQUILLOS.</strong> Esto es llamado guemi<strong> [</strong><span lang="HE" dir="RTL"><strong>גמי</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>]&nbsp;</strong>en el lenguaje de la Mishná.<span>&nbsp; </span>Significa lo mismo que la palabra <i>jonc</i> en franc<span lang="HE" dir="RTL">é</span>s antiguo. Se trata de algo flexible que se mantiene firme frente a un objeto suave o uno duro.<span>&nbsp; </span><span lang="HE" dir="RTL"><strong>בַחֵמָר&nbsp;וּבַזָּפֶת</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="HE" dir="ltr">&nbsp;</span><strong>/ CON BARRO Y BREA.</strong> Brea por fuera y barro por dentro, para que ese justo –Mosh<span lang="HE" dir="RTL">é</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>– no oliera el mal olor de la brea.<span>&nbsp; </span><span lang="HE" dir="RTL"><strong>וַתָּשֶׂם&nbsp;בַּסּוּף</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="HE" dir="ltr">&nbsp;</span><strong>/ LA COLOCÓ ENTRE LOS JUNCOS.</strong> El vocablo <span lang="HE" dir="RTL"><strong>סּוּף</strong></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span> denota una ci<span lang="HE" dir="RTL">é</span>naga llena de junquillos.<span>&nbsp; </span>Significa lo mismo que <i>roseil</i> en franc<span lang="HE" dir="RTL">é</span>s antiguo.<span>&nbsp; </span>Un ejemplo similar lo hallamos en la frase: “Ca<span lang="HE" dir="RTL">ñ</span>as y junquillos <strong>[</strong><span lang="HE" dir="RTL"><strong>סּוּף</strong></span><strong><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>]</strong> marchitos”.<span style="font-size:6.0pt;"></span></span></p>
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperParent">
+                    <section id="bookHeader">
+                        <p>Profetas</p>
+                        <p>Isaías 28:14-18</p>
+
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+                            (14) Por lo tanto escuchad la palabra del Eterno, oh escarnecedores, que habláis parábolas a este pueblo en Jerusalem. (15) Porque habéis dicho: Hemos hecho un pacto con la muerte, y con el Sheol tenemos un convenio. Cuando pase el flagelo, no nos alcanzará,
+                            pues nuestro refugio está hecho de mentiras, y nos ocultamos bajo la falsedad. (16) Por lo tanto, dice el Eterno Di-s: He aquí, he colocado una primera piedra en Tzión, una piedra fidedigna, una piedra angular preciosa, un
+                            cimiento firme. El que creyere no se apresurará. (17) Y pondré la justicia por cordel, y la rectitud por plomada, y el flagelo barrerá los refugios de mentiras, y las aguas inundarán los escondites. (18) Y vuestro pacto con
+                            la muerte será anulado, y vuestro convenio con el Sheol no prevalecerá, cuando el flagelo pase, seréis pisoteados por él.
+                        </p>
+                    </section>
+                </div>
+
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rashí</p>
+                        <p id="textSecond">
+                            ESCARNECEDORES. Que expresan su escarnio mediante parábolas. 15. HEMOS HECHO UN PACTO CON LA MUERTE. Que nos sobrevenga. Y CON EL SHEOL TENEMOS UN CONVENIO. Un límite que no puede traspasar. EL FLAGELO. Cuando pase el sufrimiento por la tierra. NO NOS
+                            ALCANZARÁ. No nos sobrevendrá. HECHO DE MENTIRAS. Idolatría. BAJO LA FALSEDAD. De los ídolos. NOS OCULTAMOS. Nos escondimos. 16. (Mirad, en tiempo pasado) Yo soy el que ha puesto la piedra en Tsión. PIEDRA. Ya he decretado
+                            y dispuesto al Rey Mashiaj que reinará en Tzión como una piedra fidedigna. Expresión de fuerza. Esta es la piedra angular (está colocada en una esquina para que su belleza pueda verse por ambos lados). Una base firme. EL QUE
+                            CREYERE. Esto. NO SE APRESURARÁ. No se apresurará para decir que esto es cierto, que se apure (a llegar pronto). 17. Y PONDRÉ. Antes de que llegue el Rey, pondré castigos para exterminar a los pecadores. Y PONDRÉ LA JUSTICIA.
+                            El juicio del castigo por la línea. BARRERÁ. El flagelo barrerá los refugios de mentiras mencionados en el versículo. LOS ESCONDITES. Se refiere a lo mencionado anteriormente: “No hemos ocultado bajo la falsedad”, las aguas
+                            los inundarán. 18. SERÁ ANULADO. Significa que será abolido.
+                        </p>
+                    </section>
+                </div>
+
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Escritos</p>
+                        <p>Mishlé 12:15-19</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+                            (15) El camino del insensato es recto ante sus ojos, pero el que escucha consejo es sabio. (16) En el mismo día que se manifiesta, es conocida la ira del necio, pero el que oculta la vergüenza es inteligente. (17) El que acostumbra a decir la verdad,
+                            administra justicia, pero testimonio falso dará aquel que profiere mentiras. (18) Hay quien sus expresiones son como estocadas de espada, mas la lengua de los sabios prodigan la curación. (19) Los labios que profieren la verdad
+                            perdurarán eternamente, pero la lengua mentirosa, sólo hasta el instante de su pronunciamiento.
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rashí</p>
+                        <p id="textSecond">
+
+                            16. NECIO. El mismo día que se encoleriza lo hace público, mientras que el que es astuto oculta la vergüenza sin apresurarse a contender contra nadie. 17. EL QUE ACOSTUMBRA. A decir la verdad, expresará ante un tribunal de justicia lo que es justo. 18.
+                            HAY QUIEN SUS EXPRESIONES. Hay quien habla. COMO ESTOCADAS DE ESPADA. Provoca pleitos entre la gente. MAS LA LENGUA DE LOS SABIOS. Que fomenta la paz entre el hombre y su prójimo. PRODIGAN LA CURACIÓN. Sus palabras. 19. PERDURARÁN
+                            ETERNAMENTE. Permanecerán. SÓLO HASTA EL INSTANTE. Desaparece rápidamente, porque la falsedad no tiene piernas (para apoyarse).
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Mishná</p>
+                        <p>Tratado Zevajim, Capítulo 13</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                            (1) Quien degüella y ofrenda afuera (de la Azará), es sancionado por el degüello y por la ofrenda. Rabí Yosé el galileo dice: Si lo degolló adentro y lo ofrendó afuera, es sancionado (por la ofrenda). Si lo degolló afuera y lo ofrendó afuera, no se le
+                            sanciona (la ofrenda, pero sí el degüello), ya que lo que ofrendó no era apto para ello. Le dijeron: Entonces, igualmente, quien degüella adentro y lo ofrenda afuera, ya que lo sacó, ¿no lo invalida? (2) Un hombre impuro que
+                            come carne de una ofrenda, tanto si ésta es impura como si es pura, se condena. Rabí Yosé el galileo dice: un hombre impuro que come de una ofrenda pura es sancionado, pero si comió de una ofrenda impura está eximido, ya que
+                            lo que comió era, a su vez, impuro. Le dijeron: Entonces, igualmente, un hombre impuro que come de una ofrenda pura, al tocarla, ¿acaso no la impurifica? Además, un hombre puro que come de una ofrenda impura no es sancionado,
+                            ya que sólo se sanciona a aquel que es impuro. (3) A veces, hay más severidad en el degüello que en la ofrenda; otras, hay más severidad en la ofrenda que en el degüello (cuando se hacen fuera de la Azará). Hay más severidad
+                            en el degüello porque, quien degüella en honor de un profano, se condena; mientras que quien ofrenda en honor de un profano, queda exento. Por otro lado, hay más severidad en la ofrenda, porque si dos personas agarran a la
+                            vez el cuchillo para degollar, quedan exculpados; mientras que si dos ofrendan a la vez un miembro de un animal, quedan condenados. Quien ofrenda (ignoradamente) una vez, y ofrenda una segunda vez, y una tercera, es condenado
+                            por cada una de las veces que ofrenda, según las palabras de Rabí Shimón. Rabí Yosé dice: Sólo es condenado una sola vez y siempre que lo haga sobre un Altar (afuera). Rabí Shimón dice: aunque lo ofrende sobre una roca o sobre
+                            una simple piedra, queda condenado. (4) Tanto los sacrificios válidos, como los que se invalidaron adentro (de la Azará), si los ofrenda en el exterior, se condena. Quien ofrenda una medida de Kazayit, o sea, mitad de un sacrificio
+                            Olá y mitad de sebo, en el exterior, es culpable. Quien ofrenda el Komets (una porción que se extrae de una Minjá, que consiste en plegar los tres dedos centrales de la mano hacia la palma), la Leboná, el Incienso, la Minjá
+                            de los Cohanim, la Minjá del Cohén ungido o la Minjá de las libaciones, en una medida de Kazayit, en el exterior, es sancionado. Rabí Elazar los exime a todos, siempre que no los ofrende enteramente. También, si cualesquiera
+                            de los mencionados anteriormente fueron ofrendados dentro de la Azará, a excepción de un Kazayit que lo ofrenda en el exterior, es asimismo sancionado. Sin embargo, si faltase de ellos cualquier porción, en caso de ofrendarlos
+                            en el exterior quedaría exculpado. (5) Quien ofrenda la carne del sacrificio junto con el sebo, en el exterior, se condena. Una ofrenda Minjá a la que no extrajeron el Komets, si se ofrenda en el exterior, queda libre de sanción.
+                            Una ofrenda de Minjá a la que extrajeron el Komets y, posteriormente, lo retornaron a su lugar, si es ofrendada en su totalidad en el exterior, es culpable. (6) El Komets y la Leboná, si fueron ofrendados en el exterior, se
+                            sancionan. Rabí Elazar lo exculpa mientras que no ofrende los dos. Uno adentro y otro afuera, culpable. Si de las dos escudillas de Leboná ofrenda una en el exterior, es sancionado. Rabí Elazar lo exime hasta que ofrende la
+                            segunda. Una adentro y otra afuera, culpable. Quien vierte un poco de sangre en el exterior, se condena. Rabí Elazar dice: También, quien liba el agua de la festividad (Sucot), en Sucot, en el exterior, es sancionado. Rabí
+                            Nejemyá dice: El sobrante de sangre que se ofrenda en el exterior, se sanciona. (7) Si se desnuca a un ave en el interior y lo ofrenda en el exterior, es condenado. Si lo desnuca en el exterior y lo ofrenda en el exterior,
+                            queda libre de culpa. Si degüella a un ave en el interior y lo ofrenda en el exterior, no es sancionado. Si lo degüella y lo ofrenda en el exterior, culpable. De aquí se desprende que el sacrificio que es apto en el interior,
+                            si lo realiza en el exterior, lo libera de sanción si también lo ofrenda allí. Asimismo, el sacrificio que es condenable si se realiza en el exterior y la ofrenda también lo es si la hace en el exterior, si es sacrificado en
+                            el interior, no condena la ofrenda en el exterior. Rabí Shimón dice: Todo lo que es condenable si se hace en el exterior, es condenable si lo hace en el interior y lo ofrenda en el exterior, excepto si es degollado en el interior
+                            y lo ofrenda en el exterior. (8) El Korbán Jatat cuya sangre es depositada en un recipiente, si vierte de ella en el exterior y posteriormente en el interior, o primeramente en el interior y después en el exterior, queda sancionado,
+                            ya que toda debe ser vertida en el exterior. Si depositó la sangre en dos recipientes y vertió el contenido de ambos en el interior, queda eximido de culpabilidad. Si vertió el contenido de los dos en el exterior, es culpable.
+                            Uno adentro y otro, después, afuera, no tiene sanción. Uno afuera y otro, más tarde, adentro, el de afuera merece sanción y el de adentro es apto para la expiación. ¿A qué se asemeja esto? A uno que designó su Korbán Jatat
+                            y lo perdió. Designó otro en su lugar y, entonces, encuentra el primero. Ahora que cuenta con los dos, si los degüella ambos en el interior, está libre de sanción. Si degüella los dos en el exterior, es culpable. Uno adentro
+                            y otro, más tarde, afuera, no es sancionado. Uno afuera y el otro, después, adentro, queda condenado por el exterior y el interior sirve como expiación. Al igual que la sangre exime a la carne, un sacrificio exime al otro.
+                        </p>
+                    </section>
+                </div>
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rabí Ovadiá de Bartenura</p>
+                        <p id="textSecond">
+
+
+
+                            1. QUIEN DEGÜELLA. Los sacrificios fuera de la Azará y los ofrenda también afuera, sin saber que estaba prohibido, queda condenado por el degüello y por la ofrenda, ya que son dos cosas diferentes. Ambos aparecen en el texto por separado: “Quien lo degüelle
+                            y quien lo ofrende” (Levítico 17:7-8). ¿NO LO INVALIDA? Y, sin embargo, vemos que, aún así, es sancionado, tal como se castiga a aquel que lo degüella y lo ofrenda en el exterior. Rabí Yosé el galileo, en cambio, opina que
+                            en el caso de quien lo degüella adentro, siendo que lo hizo legalmente, al ofrendarlo afuera queda sancionado. Sin embargo, quien lo degüella afuera, siendo que no lo hizo legalmente, no quedaría condenado por la ofrenda exterior.
+                            La Halajá no se dictaminó como Ribí Yosé el galileo. 2. UN HOMBRE IMPURO. Siendo que también en esto discute Rabí Yosé el galileo frente a los demás Sabios, comentó también este caso que es parecido al anterior. RABÍ YOSÉ EL
+                            GALILEO. Cuando se impurifica el sujeto y después la carne, nadie discute que queda condenado a Karet. La discusión aparece, no obstante, cuando se impurifica la carne y después el sujeto. Los Sabios ven aquí una prohibición
+                            generalizada: siendo que su propia impurificación le prohíbe tocar la carne pura, la cual estaba permitida “a priori”, le prohíbe también la carne impura a pesar de que ya estaba igualmente prohibida, y lo condena también por
+                            su propia impureza. Rabí Yosé el galileo opina que una prohibición no engloba a la otra y que, por tanto, la prohibición por su propia impureza no se mezcla con la de la carne. La Halajá no se dictaminó como la opinión de Rabí
+                            Yosé el galileo. EL HOMBRE PURO QUE COME DE UNA OFRENDA IMPURA. Queda exento del castigo de Karet pero recibe cuarenta azotes como consecuencia de las palabras de la Torá. “La carne que toque un impuro, no será ingerida” (Levítico
+                            7:19). A AQUEL QUE ES IMPURO. Tal como versa: “Estando impuro, será condenado a Karet” (íbid. 20). Se refiere a la impurificación personal. 3.QUIEN DEGÜELLA EN HONOR DE UN PROFANO. Quien degüella un sacrifico fuera de la Azará
+                            para que lo coma un profano, se condena. QUIEN OFRENDA. Fuera de la Azará en honor de un profano, queda eximido de condena, precisamente, porque lo hizo afuera. Con respecto al degüello está escrito: “Le será considerado como
+                            derramamiento de sangre a aquel hombre...” (Levítico 17:4). Quiere decir: aunque degüelle para otro hombre. Sin embargo, con respecto a la ofrenda se dijo: “Para ofrendarlo a Él” (íbid. 9). No es culpable si lo ofrenda afuera
+                            a menos que lo haga allí en nombre del Eterno. DOS PERSONAS AGARRAN A LA VEZ. Quedan eximidos, porque está dicho: “Le será considerado como derramamiento de sangre a aquel hombre”, o sea, a uno, no a dos. DOS OFRENDAN A LA
+                            VEZ. Se condenan, por lo que aparece en el párrafo: “Cada hombre y hombre... que ofrende”. Aparece dos veces la palabra “hombre” para enseñarnos que si dos lo ofrendan a la vez son culpables ambos. QUIEN OFRENDA (IGNORADAMENTE).
+                            Y después supo que hizo mal. Y OFRENDA UNA SEGUNDA VEZ. De aquel mismo animal, queda condenado por cada una de las veces. QUE LO HAGA SOBRE UN ALTAR. Tal como versa: “Y construyó Nóaj un altar para el Eterno” (Génesis 8:20).
+                            Vemos de aquí, que aún afuera, no se llama ofrendar a menos que lo haga sobre un altar. AUNQUE LO OFRENDE SOBRE UNA ROCA. Tal como versa: “Y derramó el Cohén la sangre sobre el Altar del Eterno, a la entrada de la Cabaña de
+                            Reunión” (Levítico 17:6). No sobre un altar particular. Aquí se refiere a quien ofrendó fuera de la Azará. La Halajá es de acuerdo con Rabí Yosé. 4. QUE SE INVALIDARON ADENTRO. Por ejemplo: El que permaneció toda la noche afuera,
+                            o el que fue degollado fuera de tiempo, o fuera de su lugar, siendo que si son subidos al Altar no se deben bajar, se considera como si hubiesen sido aceptados adentro y, por tanto, se condenan en el exterior. Así dice el párrafo:
+                            “Para ofrendarlo a Él”. Todo lo que se hace en Nombre del Eterno, se condena si lo hace afuera, mientras que si no se hace en Nombre del Eterno, no se condena si se hace afuera. UNA MEDIDA DE KAZAYIT. O sea, medio Zayit de
+                            uno y medio Zayit de otro. ES CULPABLE. Porque todo debe ser incinerado. LA LEBONÁ. De la ofrenda Minjá voluntaria. EL INCIENSO. Que se quema diariamente, una vez por la mañana y otra al atardecer. LA MINJÁ DE LOS COHANIM.
+                            Que se incineraba completamente, al igual que el Komets de la Minjá del Israel. Sin embargo, los restos de dicha Minjá no era sancionado si se ofrendaba en el exterior. LA MINJÁ DEL COHÉN UNGIDO. Era la décima parte de una
+                            Efá que traía diariamente. KAZAYIT. La medida mínima exigida para ser incinerado. QUE NO LOS OFRENDE ENTERAMENTE. Él opina que si falta algo de cualquiera de ellos, se invalida, por esto, mientras no los ofrende enteramente,
+                            los que los ofrendan no cumplen con su deber. Los Sabios opinan que quemando solo un Kazayit, se condena, siempre que no falte nada antes de quemarlo. EXCEPCIÓN DE UN KAZAYIT. Es sancionado, ya que con esto se completa la quema.
+                            SI FALTASE DE ELLOS CUALQUIER PORCIÓN. Si antes de ofrendarlo se pierde o se quema alguna porción, se invalida, tal como versa: “Y lo que resta de la Minjá” (Levítico 2:3), o sea, excepto si falta algo o si le extrajo el Komets
+                            antes de quemarlo. 5. QUIEN OFRENDA LA CARNE. Ofrendó carne junto con el sebo, es sancionado a causa del sebo. Aquí no podemos argüir que la carne actúa como división entre el fuego y el sebo. Si esta ofrenda se realiza en
+                            el interior, no se acepta, ya que el texto dice: “Sobre la leña que está sobre el fuego”. Asimismo, quien lo ofrenda en el exterior, no podemos decir que no es sancionable debido a que la carne divide entre el fuego y el sebo,
+                            porque es sabido, que una especie con su misma especie no supone una interrupción. QUE NO EXTRAJERON EL KOMETS. No se puede ofrendar en la Azará, por tanto, si lo ofrendó afuera queda exento de culpa. LO RETORNARON A SU LUGAR.
+                            Y lo ofrenda en el exterior. ES CULPABLE. Por cuanto, si así lo hace en el interior es apta, como se estudió con «el Komets»: “si se mezcló el Komets con los residuos no deberá quemarlo, pero si lo hace, es Kasher”. 6. EL KOMETS
+                            Y… Por tanto, Rabí Eliézer lo exime, porque para condenarlo se deben quemar ambos en el exterior. UNO ADENTRO. En primer término, y, seguidamente, el otro afuera, se sanciona, ya que, con el segundo, merece la sanción. Todo
+                            depende del segundo. DOS ESCUDILLAS DE LEBONÁ. Cuando son incineradas, se permite a los Cohanim comer de los Panes. EL AGUA DE LA FESTIVIDAD. El agua que estaba destinada para las libaciones de Sucot, si las derramó en el exterior,
+                            también se condena. Él opina que dicha libación está ordenada por la Torá, por esto se condena si la derrama afuera. La Ley no sigue la opinión de Rabí Elazar en toda la Mishná. La libación de las aguas en Sucot no es una Ley
+                            de la Torá, sino que es una Ley que recibió Moshé en el Sinai. EL SOBRANTE DE SANGRE. Trata aquí de aquella sangre que debía ser vertida en el interior. Él opina que dicha sangre debía ser vertida en el interior obligatoriamente,
+                            por esto, si lo hizo afuera, se condena. Sin embargo, sobre la sangre sobrante del Altar exterior, Rabí Nejemyá concuerda que no es obligado verterlas en el interior, por lo que, si las vertió afuera, no se condena. La Halajá
+                            no sigue el dictamen de Rabí Nejemyá. 7. SI LO DESNUCA EN EL EXTERIOR. Lo invalida, ya que solo está permitido descunar al ave en el interior de la Azará. Por esta misma razón, no se condena. Podrías preguntar: ¿acaso todos
+                            los que fueron sacados al exterior, no se invalidan? Y si es así, ¿por qué condenamos a la ofrenda hecha en el exterior? Además, el que degüella un animal afuera, lo invalida, entonces, ¿por qué se condena si lo ofrenda? La
+                            respuesta es que allí, con respecto a los animales que se degüellan, la Torá agregó un detalle diciendo: “los que se degüellen” (Levítico 17:3), en el exterior, son condenados, lo que excluye a los que no se degüellan, esto
+                            es, los que se desnucan. El resto de los animales invalidados deben ser ofrendados en el interior. SI LO DEGÜELLA Y LO OFRENDA EN EL EXTERIOR, CULPABLE. Incluso por la ofrenda. Pues todo el que se condena por degollar en el
+                            exterior, si, además, él u otro lo ofrenda, también se condena. DE AQUI SE DESPRENDE. En la Guemará se dijo: Se estudió: Si algo debemos obligatoriamente sacrificarlo en el interior, cuando lo ofrendamos afuera, se condena.
+                            Por tanto, si dicho sacrificio lo realizamos afuera, la ofrenda en el exterior no se condena. Asimismo, Si algo debemos obligatoriamente sacrificarlo en el exterior, si lo ofrendamos adentro, se condena. Por lo que, si dicho
+                            sacrificio lo realizamos adentro, la ofrenda hecha en el interior no se condena. Por ejemplo: si degüella a un ave en el interior y lo ofrenda en el exterior, queda eximido de castigo. Si lo degolló y lo ofrendó en el exterior,
+                            culpable. Si lo desnucó en el interior y lo ofrendó en el exterior, culpable. Si lo desnucó y lo ofrendó en el exterior, exento. O sea, en el lugar donde se le culpa por su ofrenda, si el oficio inicial lo realiza en el interior,
+                            como por ejemplo si lo desnucó adentro, no se culparía por la ofrenda si lo desnucara en el exterior. También, en el lugar que se culpa por su ofrenda, si el oficio inicial se realiza en el exterior, como el degüello, no se
+                            culparía por la ofrenda si lo desnucara en el interior, o sea, si lo degolló en el interior y lo ofrendó en el exterior. RABÍ SHIMÓN DICE. Las palabras del primer exponente de la Mishná son incompletas, esto es lo que quería
+                            decir: Quien degüella un animal durante la noche en el interior y lo ofrenda en el exterior, no se condena, ya que no la puede ofrendar en el interior, tal como versa: “El día de vuestros sacrificios” (Levítico 19:6). Día,
+                            no-noche. Por esto, el sacrificio quedó invalidado y por esto, no se condena por ofrendarlo. Sin embargo, si lo sacrificó de noche en el exterior y lo ofrendó igualmente afuera, queda condenado, ya que degollar afuera de noche
+                            está permitido. Por esta razón, la condena es doble, por el degüello y por la ofrenda. Sobre esto discutió Rabí Shimón y dijo... TODO LO QUE ES CONDENABLE... O sea, al igual que quien degüella y ofrenda en el exterior durante
+                            la noche, se condena, también, si lo sacrificó adentro durante la noche y lo ofrendó afuera, queda condenado por la ofrenda. Sin embargo, si degüella un ave en el interior y lo ofrenda en el exterior, queda exculpado, a pesar
+                            de que si lo hubiese degollado y ofrendado en el exterior hubiese estado condenado. La Ley no sigue la opinión de Rabí Shimón. 8. SI VIERTE DE ELLA EN EL EXTERIOR... Esto es algo evidente, no obstante, lo mencionó por lo que
+                            comenta al final: “Si la vertió en el interior y después en el exterior, cuando lo único que debe verter afuera es el residuo de la sangre, queda condenado”. La Mishná concuerda con la opinión de Ribí Nejemyá que manifiesta
+                            que el residuo de la sangre debe ser vertida obligatoriamente sobre la base del Altar exterior, en caso contrario, no expía. Esta no es la Ley. LOS DOS EN EL EXTERIOR, ES CULPABLE. Una sola vez. Si, por el contrario, se percató
+                            del error entre los dos vertidos, es culpable dos veces. UNO ADENTRO. Y el segundo, posteriormente, afuera, está exento. E incluso para Ribí Nejemyá que opina que al verter el primer recipiente, convierte al segundo en descartado
+                            y tiene que ser vertido en el canal. Por esta razón, no considera siquiera, residuo. APTO PARA LA EXPIACIÓN. Para validar la expiación. La sangre vertida primeramente en el exterior no anula a la otra. LOS DOS EN EL EXTERIOR,
+                            ES CULPABLE. Por cada uno de ellos, por cuanto, en el momento del degüello, los dos eran aptos para ser vertidos en el interior. UNO ADENTRO. Y el segundo, más tarde, afuera, queda eximido. Cuando el primero fue sacrificado
+                            adentro, expió a quien lo mandó degollar, por tanto, el segundo se destina a morir no a degollarlo en aras de servir de expiación, y no se acepta adentro. CONDENADO POR EL EXTERIOR. Siendo que podía degollar cualquiera de los
+                            dos adentro, y, sin embargo, el primero lo degolló afuera, por esto, queda sancionado. AL IGUAL QUE LA SANGRE EXIME A LA CARNE. De ser considerada como sacrilegio si la consumen, porque al verter la sangre, su carne puede ser
+                            ingerida por los Cohanim. El resto de las personas que no lo son, no pueden comer, pero, después de vertida la sangre, aunque no deben, si comen de ella no se considera sacrilegio. UN SACRIFICIO EXIME A OTRO. Aun sin ser apto
+                            (Tratándose de que ambos fueron degollados adentro). Aquí no enseñan que, estando los dos presentes, si vierte primeramente la sangre de uno de ellos, exime al segundo de ser susceptible de sacrilegio por cuanto el primero
+                            sirvió para expiar a sus dueños. Es sabido: Los animales que se mandan matar, quien los ingiere no tiene que aportar un sacrificio por sacrilegio.
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Guemará</p>
+                        <p>Tratado Zevajim 115b</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+                            Al llegar Rab Dimí (de Israel) dijo Ribí: En tres lugares de Israel se posó la Shejiná: Shiló, Nob y Guibón, y Bet-Olamim (Yerushalayim). Además, cuando lo hizo, fue en la heredad de Binyamín, tal como versa: “Lo cubre diariamente” (Deuteronomio 33:12).
+                            Todas las paradas las hizo en el territorio de Binyamín. Cuando se marchó Abayé, comentó esta lección ante Rab Yosef. Entonces, este le dijo: ¡Un solo hijo tuvo Jailil, el cual no se instruyó lo suficiente! Esto es un error,
+                            pues, ¿acaso no está escrito: “Y abandonó el Santuario de Shiló” (Salmos 78: 60), y también: “Despreció la cabaña de Yosef y no eligió a la Tribu de Efráim” (íbid. 16)? Dijo Rab Adá: ¿Qué dificultad encuentra Rab Yosef en ese
+                            tema? ¿No podría haber estado la Shejiná en la heredad de Binyamín y el Gran Sanhedrín en la de Yosef? De hecho, ya vimos que en Bet-Olamim, ¡la Shejiná se encontraba en la parte de Binyamín y el Sanhedrín en la parte de Yehudá!
+                            Le dijeron: ¿Qué comparación estás haciendo? En ese tema, las heredades de Binyamín y Yehudá, eran cercanas, ¿acaso en este – Binyamín y Yosef- lo están? - ¡Sí que lo están! Así se expresó Rab Jamá Bar-Janiná: Una franja partía
+                            de la heredad de Yehudá y entraba en la de Binyamín en donde se hallaba construido un altar. Binyamín, el Tzadik, se lamentaba porque no podía anexionársela. Igualmente aquí, una franja parte de la heredad de Yosef y va hacia
+                            la heredad de Binyamín, tal como versa: “La reclamación de Shiló” (Josué 16:6). Esta discusión coincide con otra entre Tanaítas: “Lo cubre” (Deuteronomio 33:12), se refiere al Primer Templo. “Diariamente”, se refiere al Segundo
+                            Templo. “Y entre sus hombros habita”, se refiere a los Tiempos Mesiánicos. Ribí, por su parte, decía: “Lo cubre”, se refiere a este mundo. “Diariamente”, se refiere a los Días Mesiánicos. “Y entre sus hombros habita”, se refiere
+                            al Mundo Venidero.
+
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rashí</p>
+
+                        <p id="textSecond">
+
+                            UN SOLO HIJO TUVO JAILIL. Creo que el padre de Abayé se llamaba Jailil. ¿ACASO EN ESTE... LO ESTÁN? ... Shiló y la heredad de Binyamín? LA RECLAMACIÓN DE SHILÓ. Binyamín la reclamaba. ESTE MUNDO. O sea, Todos los lugares donde se posó la Shejiná, incluyendo
+                            a Shiló, y Nob y Guidón.
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Zóhar</p>
+                        <p>Shemot 20b</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+                            “Y Moshé pastoreaba las ovejas de Yitró su suegro, el Sacerdote de Midyán” (Éxodo 3:1). Rabí Jiyá comenzó su comentario diciendo: “Salmo de David: El Eterno es mi Pastor, nada me faltará” (Salmos 23:1). O sea, “El Eterno es mi Pastor”, al igual que un
+                            pastor conduce al rebaño y lo lleva a lugares de buenos pastos, de hierba abundante, de corrientes de agua, conduce sus recorridos con rectitud y justicia, también sobre el Santo, Bendito Él, se dice: “Sobre agradables pastos
+                            me recuesta, junto a tranquilas corrientes de agua. Mi alma apacigua” (íbid. 2-3). – Dijo Ribí Yosé: El pastor acostumbra a guiar su ganado por el camino de la justicia, lo aparta del hurto, lo conduce por terrenos llanos mientras
+                            agarra su báculo para que no se desvíe ni a derecha ni a izquierda. Similarmente, el Santo, Bendito Él, pastorea al Pueblo de Israel conduciéndolo por caminos llanos, y, en todo momento, la vara está en Su Mano para evitar
+                            que se desvía a derecha o izquierda. – Otro tema. “Y Moshé pastoreaba”. Dijo Rabí Yosé: Debes saber, que si el pastor es sabio cuando guía a su rebaño, este acepta sobre sí el Yugo de los Cielos, mientras que si el pastor es
+                            un insensato, sobre él se dijo. “Más esperanza hay que tener en el necio que en él” (Proverbios 26:12). – Dijo Ribí Yehudá: Moshé era sabio y experto en conducir su rebaño. Ven y observa a David, sobre quien se dijo: “Era pastor
+                            del rebaño” (Samuel I 16:11). Esto te enseña que David era muy sabio y que guiaba su rebaño muy diligentemente. Por esta razón, el Eterno lo nombró rey sobre Israel. ¿Por qué pastoreaba un rebaño de ovejas y no de vacas? -Dijo
+                            Ribí Yehudá: Israel se denomina “rebaño de ovejas”, tal como versa: “Vosotros sois mi rebaño, mi rebaño de ovejas, hombres sois” (Ezequiel 34:31). También: “Como rebaño de consagraciones, como rebaño de Yerushalayim” (íbid.
+                            36:38). Al igual que los animales consagrados para el sacrificio hacen que sus dueños adquieran el Mundo Venidero, asimismo, el que conduce a Israel diligentemente, hace que ganen el Mundo Venidero. Además, el pastor de ovejas,
+                            cuando ve que el rebaño pare, toma las crías en su regazo para que no se cansen y no se agoten, y las lleva hacia sus madres y se apiada de ellas. Asimismo, el que conduce a Israel lo debe hacer con misericordia y no con crueldad.
+                            Así dijo Moshé: “Cuando me digas: Álzalo sobre tu regazo” (Números 11:12). Al igual que el pastor, cuando dirige bien a su rebaño, lo salva de los lobos y los leones, asimismo, quien conduce bien a Israel, lo salva de los pueblos
+                            idólatras, del juicio terrenal y del celestial, y, además, lo conduce hacia el Mundo Venidero. Moshé fue un pastor fiel, por esto, el Eterno le confió la misión de conducir a Israel de la misma forma correcta como pastoreaba
+                            los rebaños. A los carneros, tal como se debe, y a las ovejas, tal como se debe. Por eso está escrito: “Y Moshé pastoreaba las ovejas de Yitró su suegro”, no las suyas.
+
+
+
+
+                        </p>
+                    </section>
+                </div>
+
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Halajá</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <p>Rambam, Leyes Sobre el Arrepentimiento, Capítulo 3</p>
+
+                        <p id="textMain">
+                            (1) Quien se aparta de las costumbres del público, aunque no transgreda ningún precepto, sino que se separa de la Congregación de Israel, sin cumplir los preceptos junto a ellos y sin compartir sus sufrimientos, sin ayunar conjuntamente, sino que camina
+                            solo, como si fuera un gentil más, aparentando no pertenecer a dicho grupo, no recibirá su parte en el Mundo venidero. Quien incumple los preceptos descaradamente, como lo hizo Yehoyaquim, tanto si eran mandamientos leves como
+                            graves, no tiene parte en el Mundo venidero. A individuos similares los llama la Torá: “Descubridores de nuevas artes en la Torá”, debido a su descaro y atrevimiento, y por su falta de vergüenza hacia la Torá. (2) Dos son los
+                            denominados delatores: Quien entrega a un judío en manos de un idólatra para que lo asesine o lo golpee, y quien entrega el patrimonio de un judío en manos idólatras o de un ser cruel, que es igual que un idólatra. Ambos no
+                            tienen parte en el mundo venidero.
+
+                        </p>
+                    </section>
+                </div>
+                <div class="wrapperHeader">
+                    <section id="bookHeader">
+                        <p>Moral</p>
+                        <p>Séfer Jaredim 72a</p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+
+
+                        <p id="textMain">
+                            Este mundo se compara al mar en medio de una tempestad. El hombre debe imaginar que se encuentra nadando en dicho mar. Por esto, deberá elevar la cabeza hacia su Creador y se cuidará de que no entren aguas turbulentas en su boca. Tendrá precaución, asimismo,
+                            de las olas que arremeten contra él, de lo contrario, correrá peligro. Hijo de Adam, extiende sobre tu cabeza y sobre tu morada la cabaña de la paz con todas tus fuerzas y energías. Encamínate por Sus senderos, tal como versa:
+                            “Quien provee de paz” (Isaías 45:7). El Zóhar explica: Siendo que está escrito “Quien provee” y no “Quien proveyó”, se entiende que constantemente lo hace, por esta razón, también tú mismo y en todo momento deberás buscar la
+                            paz. La lengua se asemeja a la espada afilada utilizada por los guerreros. Los justos pelean con ella contra los malos instintos y sus huestes. Los malvados, contra los buenos instintos y sus huestes. Está escrito: “Los malos
+                            pensamientos he odiado, mas a Tu Torá he amado” (Salmos 119:113). También está escrito: “Bienaventurados los que caminan con perfección, aquellos que andan en la Torá del Eterno” (íbid. 1). También: “Arroja sobre el Eterno
+                            tu carga” (íbid. 55:23). Se refiere a todo el tiempo que la persona desperdicia con sus propias manos en balde, mientras piensa en los temas mundanos y en el sustento. Finalmente, el hombre se asemeja a su aliento, o sea, piensa,
+                            calcula, y pierde su tiempo, y no se percata de que el tiempo es como una sombra pasajera, y que, mientras piensa y calcula, podría hacer montañas de estudio de Torá y de buenas acciones para poder obtener el Mundo venidero.
+                            [Al percatarse de ello, sentirá una gran paz y comenzará a elevarse hacia la santidad. Despertará de su letargo para enmendar aquello que malogró y así pondrá bases sobre la tierra.]
+
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <script src="../../Pdocument/scroll.js"></script>
+    </div>
+</body>
+
+</html>

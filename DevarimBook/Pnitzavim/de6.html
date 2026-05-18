@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../documentStyleSplit.css">
+    <link rel="stylesheet" href="../../Pdocument/documentStyleHebreoSplit.css">
+    <title>va1</title>
+
+
+
+
+
+    <style>
+        /* Nav superior */
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 10px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        #backButton {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #backButton a {
+            color: #551A8B;
+            text-decoration: underline;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Header parasha compacto */
+        .wrapperHeader { padding: 4px 0 2px 0; text-align: center; }
+        #bookHeader p { margin: 2px 0; line-height: 1.3; }
+        /* Botones de idioma */
+        #langBar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 0 6px 0;
+            background-color: antiquewhite;
+        }
+        .langBtn {
+            font-family: 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: bold;
+            width: 56px;
+            height: 36px;
+            border: 1.5px solid #999;
+            border-radius: 6px;
+            background-color: white;
+            cursor: pointer;
+        }
+        .langBtn.active {
+            background-color: #720026;
+            color: white;
+            border-color: #720026;
+        }
+        /* Ocultar paneles */
+        div.wrap.hide { display: none !important; }
+    </style>
+                                <script>
+        function setLang(mode) {
+            var src = document.querySelector('.splitScreen');
+            var tgt = document.querySelector('.splitScreen2');
+
+            if (mode === 'he') {
+                if (src) { src.style.height = '86vh'; src.style.minHeight = '86vh'; src.style.overflow = 'scroll'; }
+                if (tgt) { tgt.style.height = '0px'; tgt.style.minHeight = '0px'; tgt.style.overflow = 'hidden'; tgt.style.padding = '0'; tgt.style.margin = '0'; }
+            } else if (mode === 'es') {
+                if (src) { src.style.height = '0px'; src.style.minHeight = '0px'; src.style.overflow = 'hidden'; src.style.padding = '0'; src.style.margin = '0'; }
+                if (tgt) { tgt.style.height = '86vh'; tgt.style.minHeight = '86vh'; tgt.style.overflow = 'scroll'; }
+            } else {
+                if (src) { src.style.height = '49vh'; src.style.minHeight = ''; src.style.overflow = 'scroll'; src.style.padding = ''; src.style.margin = ''; }
+                if (tgt) { tgt.style.height = '49vh'; tgt.style.minHeight = ''; tgt.style.overflow = 'scroll'; tgt.style.padding = ''; tgt.style.margin = ''; }
+            }
+
+            var btns = document.querySelectorAll('.langBtn');
+            for (var j = 0; j < btns.length; j++) { btns[j].classList.remove('active'); }
+            var btn = document.getElementById('btn-' + mode);
+            if (btn) btn.classList.add('active');
+            try { localStorage.setItem('jokLang', mode); } catch(e) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var saved = 'both';
+            try { saved = localStorage.getItem('jokLang') || 'both'; } catch(e) {}
+            setLang(saved);
+        });
+    </script>
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+        <li id="backButton"><a href="../../days/devarim/deDiasPageNitzavim.html">DIAS</a></li>
+        <li id="backButton"><a href="../../index.html">INICIO</a></li>
+    </div>
+    <!--------book header-------->
+    <div class="wrapperHeader">
+        <section id="bookHeader">
+            <p>Nitzavim para la Víspera del Viernes</p>
+            <p>(Jueves por la noche)</p>
+             <p>Pentateuco</p>
+            <p>Deuteronomio 30:7-20</p>
+
+    </div>
+</div>
+    </div>
+
+        <div id="langBar">
+        <button class="langBtn active" id="btn-es"   onclick="setLang('es')">a</button>
+        <button class="langBtn"        id="btn-both" onclick="setLang('both')">a&#x2192;&#x05D0;</button>
+        <button class="langBtn"        id="btn-he"   onclick="setLang('he')">&#x05D0;</button>
+    </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+    <!--------------hebreo pantalla 1--------------->
+
+    <div class="wrap">
+        <div id="source" class="splitScreen">
+            <div>
+                <div>
+                    <section class="wrapperParentHe">
+
+                        <p id="textMainHe">
+
+                           <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><strong><span style="line-height:110%;" dir="RTL"></span><span style="line-height:110%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><strong><span style="line-height:110%;" dir="RTL"></span><span style="line-height:110%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:110%;" dir="RTL"></span><span style="line-height:110%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:110%;" dir="RTL"></span><span style="line-height:110%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>חמישי - במחוברות שלישי (ז) </strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>וְנָתַן יְהוָה אֱלֹהֶיךָ אֵת כָּל הָאָלוֹת הָאֵלֶּה עַל אֹיְבֶיךָ וְעַל שֹׂנְאֶיךָ אֲשֶׁר רְדָפוּךָ:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">וְיִתֵּן יְיָ אֱלָהָךְ יָת כָּל לְוָטַיָא הָאִלֵין עַל בַּעֲלֵי דְבָבָךְ וְעַל סָנְאָךְ דִי רְדָפוּךְ:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"> <strong>(ח)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>וְאַתָּה תָשׁוּב וְשָׁמַעְתָּ בְּקוֹל יְהוָה וְעָשִׂיתָ אֶת כָּל מִצְוֹתָיו אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">וְאַתְּ תְּתוּב וּתְקַבַּל לְמֵימְרָא דַיְיָ וְתַעְבֵּד יָת כָּל פִּקוּדוֹהִי דִי אֲנָא מְפַקְדָךְ יוֹמָא דֵין:&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>(ט)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>וְהוֹתִירְךָ יְהוָה אֱלֹהֶיךָ בְּכֹל מַעֲשֵׂה יָדֶךָ בִּפְרִי בִטְנְךָ וּבִפְרִי בְהֶמְתְּךָ וּבִפְרִי אַדְמָתְךָ לְטוֹבָה כִּי יָשׁוּב יְהוָה לָשׂוּשׂ עָלֶיךָ לְטוֹב כַּאֲשֶׁר שָׂשׂ עַל אֲבֹתֶיךָ:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">וְיוֹתְרִינָךְ יְיָ אֱלָהָךְ בְּכֹל עוֹבָדֵי יְדָךְ בְּוַלְדָא דִמְעָךְ וּבְוַלְדָא דִבְעִירָךְ וּבְאִבָּא דְאַרְעָךְ לְטָּבָא אֲרֵי יְתוּב יְיָ לְמֶחֱדֵי עֲלָךְ לְטָב כְּמָא דִי חֲדִי עַל אֲבָהָתָךְ:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"> <strong>(י)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>כִּי תִשְׁמַע בְּקוֹל יְהוָה אֱלֹהֶיךָ לִשְׁמֹר מִצְוֹתָיו וְחֻקֹּתָיו הַכְּתוּבָה בְּסֵפֶר הַתּוֹרָה הַזֶּה כִּי תָשׁוּב אֶל יְהוָה אֱלֹהֶיךָ בְּכָל לְבָבְךָ וּבְכָל נַפְשֶׁךָ:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">אֲרֵי תְקַבַּל בְּמֵימְרָא דַיְיָ אֱלָהָךְ לְמִטַר פִּקוּדוֹהִי וּקְיָמוֹהִי דִכְתִיבִין בְּסִפְרָא דְאוֹרַיְתָא הָדֵין אֲרֵי תְתוּב קֳדָם יְיָ אֱלָהָךְ בְּכָל לִבָּךְ וּבְכָל נַפְשָׁךְ:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;<strong> שישי (יא)</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>כִּי הַמִּצְוָה הַזֹּאת אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם לֹא נִפְלֵאת הִוא מִמְּךָ וְלֹא רְחֹקָה הִוא:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">אֲרֵי תַּפְקֶדְתָּא הָדָא דִי אֲנָא מְפַקְדָךְ יוֹמָא דֵין לָא מַפְרְשָׁא הִיא מִנָךְ וְלָא רְחִיקָא הִיא:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong> (יב)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>לֹא בַשָּׁמַיִם הִוא לֵאמֹר מִי יַעֲלֶה לָּנוּ הַשָּׁמַיְמָה וְיִקָּחֶהָ לָּנוּ וְיַשְׁמִעֵנוּ אֹתָהּ וְנַעֲשֶׂנָּה:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">לָא בִשְׁמַיָא הִיא לְמֵימָר מָן יִסַק לָנָא לִשְׁמַיָא וְיִסְבַהּ לָנָא וְיַשְׁמְעִנָנָא יָתַהּ וְנַעְבְּדִנַהּ:&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>(יג)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>וְלֹא מֵעֵבֶר לַיָּם הִוא לֵאמֹר מִי יַעֲבָר לָנוּ אֶל עֵבֶר הַיָּם וְיִקָּחֶהָ לָּנוּ וְיַשְׁמִעֵנוּ אֹתָהּ וְנַעֲשֶׂנָּה:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">וְלָא מֵעִבְרָא לְיַמָא הִיא לְמֵימַר מָן יֵעִבַר לָנָא לְעִבְרָא דְיַמָא וְיִסְבַהּ לָנָא וְיַשְׁמְעִנָנָא יָתַהּ וְנַעְבְּדִנַהּ:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"> <strong>(יד)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>כִּי קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד בְּפִיךָ וּבִלְבָבְךָ לַעֲשֹׂתוֹ:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">אֲרֵי קָרִיב לָךְ פִּתְגָמָא לַחֲדָא בְּפוּמָךְ וּבְלִבָּךְ לְמֶעְבְּדֵהּ:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong> שביעי - במחוברות רביעי (טו)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>רְאֵה נָתַתִּי לְפָנֶיךָ הַיּוֹם אֶת הַחַיִּים וְאֶת הַטּוֹב וְאֶת הַמָּוֶת וְאֶת הָרָע:</strong>&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">חֲזֵי דִיהָבִית קֳדָמָךְ יוֹמָא דֵין יָת חַיֵי וְיָת טַבְתָא וְיָת מוֹתָא וְיָת בִּישָׁא:&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>(טז)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם לְאַהֲבָה אֶת יְהוָה אֱלֹהֶיךָ לָלֶכֶת בִּדְרָכָיו וְלִשְׁמֹר מִצְוֹתָיו וְחֻקֹּתָיו וּמִשְׁפָּטָיו וְחָיִיתָ וְרָבִיתָ וּבֵרַכְךָ יְהוָה אֱלֹהֶיךָ בָּאָרֶץ אֲשֶׁר אַתָּה בָא שָׁמָּה לְרִשְׁתָּהּ:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">דִי אֲנָא מְפַקְדָךְ יוֹמָא דֵין לְמִרְחַם יָת יְיָ אֱלָהָךְ לִמְהַךְ בְּאָרְחָן דְתָקְנָן קֳדָמוֹהִי וּלְמִטַר פִּקוּדוֹהִי וּקְיָמוֹהִי וְדִינוֹהִי וְתֵיחֵי וְתִסְגֵי וִיבָרֵכִנָךְ יְיָ אֱלָהָךְ בְּאַרְעָא דִי אַתְּ עָלֵל לְתַמָן לְמֵירְתַהּ:&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>(יז)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>וְאִם יִפְנֶה לְבָבְךָ וְלֹא תִשְׁמָע וְנִדַּחְתָּ וְהִשְׁתַּחֲוִיתָ לֵאלֹהִים אֲחֵרִים וַעֲבַדְתָּם:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">וְאִם יִפְנֵי לִבָּךְ וְלָא תְקַבֵּל וְתִטְּעֵי וְתִסְגוּד לְטַּעֲוַת עַמְמַיָא וְתִפְלְחִנוּן:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"> <strong>(יח)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>הִגַּדְתִּי לָכֶם הַיּוֹם כִּי אָבֹד תֹּאבֵדוּן לֹא תַאֲרִיכֻן יָמִים עַל הָאֲדָמָה אֲשֶׁר אַתָּה עֹבֵר אֶת הַיַּרְדֵּן לָבֹא שָׁמָּה לְרִשְׁתָּהּ:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">חַוֵיתִי לְכוֹן יוֹמָא דֵין אֲרֵי מֵיבַד תֵּיבְדוּן לָא תוֹרְכוּן יוֹמִין עַל אַרְעָא דִי אַתְּ עָבֵר יָת יַרְדְנָא לְמֵעַל לְתַמָן לְמֵירְתַהּ:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"> <strong>(יט)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>הַעִידֹתִי בָכֶם הַיּוֹם אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ הַחַיִּים וְהַמָּוֶת נָתַתִּי לְפָנֶיךָ הַבְּרָכָה וְהַקְּלָלָה וּבָחַרְתָּ בַּחַיִּים לְמַעַן תִּחְיֶה אַתָּה וְזַרְעֶךָ:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">אַסְהֵדִית בְּכוֹן יוֹמָא דֵין יָת שְׁמַיָא וְיָת אַרְעָא חַיֵי וּמוֹתָא יְהָבִית קֳדָמָךְ בִּרְכָן וּלְוָטִין וְתִתִּרְעֵי בְּחַיֵי בְּדִיל דְתֵיחֵי אַתְּ וּבְנָיךְ:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"> <strong>(כ)&nbsp;</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>לְאַהֲבָה אֶת יְהוָה אֱלֹהֶיךָ לִשְׁמֹעַ בְּקֹלוֹ וּלְדָבְקָה בוֹ כִּי הוּא חַיֶּיךָ וְאֹרֶךְ יָמֶיךָ לָשֶׁבֶת עַל הָאֲדָמָה אֲשֶׁר נִשְׁבַּע יְהוָה לַאֲבֹתֶיךָ לְאַבְרָהָם לְיִצְחָק וּלְיַעֲקֹב לָתֵת לָהֶם:</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">לְמִרְחַם יָת יְיָ אֱלָהָךְ לְקַבָּלָא לְמֵימְרֵהּ וּלְאִתְקְרָבָא לְדַחַלְתֵּהּ אֲרֵי הוּא חַיָיךְ וְאוֹרָכוּת יוֹמָיךְ לְמִתַּב עַל אַרְעָא דִי קַיִים יְיָ לַאֲבָהָתָךְ לְאַבְרָהָם לְיִצְחָק וּלְיַעֲקֹב לְמִתַּן לְהוֹן:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:25.0pt;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>פפפ</strong></span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+
+                        </p>
+
+                    </section>
+                </div>
+    
+                        <div>
+                            <section class="wrapperParentHe">
+                                <h3>רש"י</h3>
+
+                                <p id="textSecondHe">
+
+                                   <p style="text-align:justify;">
+    <span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:10px;">א</span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><strong><span style="line-height:110%;" dir="RTL"></span><span style="line-height:110%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:18.0pt;"><strong><span style="line-height:110%;" dir="RTL"></span><span style="line-height:110%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><strong><span style="line-height:110%;" dir="RTL"></span><span style="line-height:110%;" dir="RTL"></span></strong></span><span dir="RTL"></span><span dir="RTL"></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:15.0pt;"><strong><span style="line-height:110%;" dir="RTL"></span><span style="line-height:110%;" dir="RTL"></span></strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:22px;"><span style="line-height:110%;" lang="HE" dir="RTL"><strong>לא נפלאת היא ממך.</strong> לא מכסה היא ממך, כמו שנאמר&nbsp;(דברים יז, ח)&nbsp;כי יפלא, ארי יתכסי,&nbsp;(איכה א, ט)&nbsp;ותרד פלאים,&nbsp;(איוב מ, יג)&nbsp;ותרד במטמוניות. מכסה, חבוש בטמון:&nbsp;<strong>לא בשמים היא.</strong> שאלו היתה בשמים, היית צריך לעלות אחריה וללמדה: <strong>כי קרוב אליך.</strong> התורה נתנה לכם בכתב ובעל פה: <strong>את החיים ואת הטוב.</strong> זה תלוי בזה, אם תעשה טוב הרי לך חיים, ואם תעשה רע הרי לך המות. והכתוב מפרש והולך היאך:&nbsp;<strong>אשר אנכי מצוך היום לאהבה.</strong> הרי הטוב, ובו תלוי: <strong>וחיית ורבית.</strong> הרי החיים:&nbsp;<strong>ואם יפנה לבבך.</strong> הרי הרע:&nbsp;<strong>כי אבד תאבדון.</strong> הרי המות:&nbsp;<strong>העדתי בכם היום את השמים ואת הארץ.</strong> שהם קימים לעולם וכאשר תקרה אתכם הרעה יהיו עדים שאני התריתי בכם בכל זאת. דבר אחר, העידתי בכם היום את השמים וגו' , אמר להם הקדוש ברוך הוא לישראל, הסתכלו בשמים שבראתי לשמש אתכם, שמא שנו את מדתם, שמא לא עלה גלגל חמה מן המזרח והאיר לכל העולם, כענין שנאמר&nbsp;(קהלת א, ה)&nbsp;וזרח השמש ובא השמש, הסתכלו בארץ שבראתי לשמש אתכם, שמא שנתה מדתה, שמא זרעתם אותה ולא צמחה, או שמא זרעתם חטים והעלתה שעורים, ומה אלו שנעשו לא לשכר ולא להפסד אם זוכין אין מקבלין שכר ואם חוטאין אין מקבלין פרענות, לא שנו את מדתם, אתם, שאם זכיתם תקבלו שכר, ואם חטאתם תקבלו פרענות על אחת כמה וכמה: <strong>ובחרת בחיים.</strong> אני מורה לכם שתבחרו בחלק החיים, כאדם האומר לחברו בחר לך חלק יפה בנחלתי, ומעמידו על חלק היפה ואומר לו, את זה ברור לך, ועל זה נאמר&nbsp;(תהלים טז, ה)&nbsp;ה' מנת חלקי וכוסי אתה תומיך גורלי, הנחת ידי על גורל הטוב לומר את זה קח לך</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:13.0pt;"><span style="line-height:115%;" lang="HE" dir="RTL">:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong></span><span style="color:#ffffff;font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>ן&nbsp;&nbsp;&nbsp;&nbsp; </strong></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:20.0pt;"><strong>&nbsp;</strong></span>
+</p>
+
+
+                                 </p>
+
+
+                            </section>
+                        </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+    <div class="whiteSpace">
+
+    </div>
+
+
+
+
+    <!-----------español pantalla 2------------->
+    <div class="wrap">
+        <div id="target" class="splitScreen2">
+            <div>
+                <div>
+                    <section class="wrapperParent">
+                        <p id="textMain">
+
+                           <p style="line-height:normal;margin:0cm;text-align:justify;">
+    <span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(7)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">El Eterno tu Di-s impondrá todas estas maldiciones sobre tus enemigos y sobre tus aborrecedores que te persiguieron. &nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(8)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> Y tú retornarás y escucharás la voz del Eterno, y cumplirás todos estos mandamientos que yo te ordeno hoy.&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(9)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> El Eterno tu Di-s te hará abundar para bien en toda labor de tus manos, en el fruto de tu vientre, en el fruto de tus animales y en el fruto de tu tierra, pues el Eterno volverá a regocijarse en ti para bien, como se regocijó en tus ancestros,&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(10)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> si escuchas la voz del Eterno tu Di-s para guardar Sus mandamientos y Sus estatutos que están escritos en este Libro de la Torá, si retornas al Eterno, tu Di-s, con todo tu corazón y con toda tu alma.&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(11)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">Pues este mandamiento que yo te encomiendo hoy no está encubierto de ti ni es lejano.&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(12)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> No está en el cielo para que pudieras decir: “¿Quién ascenderá por nosotros al cielo y lo tomará para nosotros, para que lo escuchemos y lo hagamos?”&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(13)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> Ni está allende el mar para que pudieras decir: “¿Quién atravesará por nosotros al otro lado del mar y lo tomará para nosotros, para que lo escuchemos y lo hagamos?”&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(14)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> Sino que esta palabra está muy cercana a ti: en tu boca y en tu corazón, para llevarla a cabo.&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(15)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> Mira: he puesto hoy delante de ti la vida y lo bueno, y la muerte y lo malo,&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(16)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> lo que te encomiendo hoy: amar al Eterno tu Di-s, andar en Sus caminos y guardar Sus mandamientos, Sus estatutos y Sus Leyes, para que vivas y te multipliques y el Eterno tu Di-s te bendiga en la tierra a la cual tú te diriges allí para tomarla en posesión.&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(17)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> Pero si tu corazón se desvía y no escuchas, y te apartas y te postras ante dioses ajenos, para servirles,&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(18)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> yo les prevengo hoy que ciertamente perecerán; no prolongarán los días sobre la tierra hacia la cual cruzas el Yardén para entrar allí y tomarla en posesión.&nbsp; </span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">(19)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> Pongo hoy por testigos ante ustedes al cielo y a la tierra: he puesto delante de ti la vida y la muerte, la bendición y la maldición. Deberás escoger la vida, para que vivas tú y tu descendencia:</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:8.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr"> (20)</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:12.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">&nbsp;</span></span><span style="font-family:&quot;Times New Roman&quot;,serif;font-size:16.0pt;"><span style="line-height:115%;" lang="ES-TRAD" dir="ltr">para amar al Eterno tu D-os, escuchar Su voz y apegarte a Él, ya que Él es tu vida y la largueza de tus días, para habitar en la tierra que el Eterno juró a tus ancestros, a Abraham, a Itzjak y a Yaacob, dársela a ellos.</span></span><span style="font-family:&quot;Times New Roman&quot;, serif;font-size:20px;"><span style="font-size:14.0pt;" lang="ES-TRAD"></span></span>
+</p>
+                        </p>
+                    </section>
+                </div>
+
+                <div>
+                    <section class="wrapperParent">
+                        <h3>Rashí</h3>
+                        <p id="textSecond">
+
+                         <p style="line-height:normal;margin:0cm;text-align:justify;text-autospace:none;">
+    <span style="font-family:&quot;Times New Roman&quot;, serif;font-size:22px;"><span lang="ES-TRAD" dir="ltr">11.&nbsp;</span><span lang="HE" dir="RTL">לֹא נִפְלֵאת הִוא מִמְּךָ</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / NO ESTÁ ENCUBIERTO DE TI.</span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> Esta frase significa: no está encubierto de ti; de modo semejante a cuando la Torá dice&nbsp;</span><span style="font-weight:normal;" lang="HE" dir="RTL">כִּי יִפָּלֵא</span><span dir="LTR"></span><span dir="LTR"></span><span style="font-weight:normal;" dir="LTR"></span><span style="font-weight:normal;" dir="LTR"></span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> el Targum traduce esa frase en el sentido de&nbsp;</span><span style="font-weight:normal;" lang="HE" dir="RTL">אֲרֵי יִתִּכַסֵי</span><span dir="LTR"></span><span dir="LTR"></span><span style="font-weight:normal;" dir="LTR"></span><span style="font-weight:normal;" dir="LTR"></span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr">, si está cubierto. Y de igual modo, la frase&nbsp;</span><span style="font-weight:normal;" lang="HE" dir="RTL">וַתֵּרֶד פְּלָאִים</span><span dir="LTR"></span><span dir="LTR"></span><span style="font-weight:normal;" dir="LTR"></span><span style="font-weight:normal;" dir="LTR"></span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> significa “ella descendió a sitios ocultos”, es decir, a un lugar encubierto y escondido en lo oculto.&nbsp; 12.&nbsp;</span><span lang="HE" dir="RTL">לֹא בַשָּׁמַיִם הִוא</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / NO ESTÁ EN EL CIELO.</span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> Pues si estuviera en el cielo, tendrías que ascender tras de la Torá para estudiarla.&nbsp; 14.&nbsp;</span><span lang="HE" dir="RTL">כִּי קָרוֹב אֵלֶיךָ</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / SINO QUE... ESTÁ MUY CERCANA A TI.</span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> Esto se refiere a la Torá, la cual fue entregada a los israelitas en forma escrita y en forma oral.&nbsp; 15.&nbsp;</span><span lang="HE" dir="RTL">אֶת הַחַיִּים וְאֶת הַטּוֹב</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / LA VIDA Y LO BUENO.</span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> Una cosa depende de la otra: si haces el bien, tendrás vida; pero si haces el mal, entonces tendrás muerte. Y la Escritura explicará a continuación de qué modo se aplica esto.&nbsp; 16.&nbsp;</span><span lang="HE" dir="RTL">אֲשֶּׁר אָנֹכִי מְצַוְּךָ היּוֹם לְאַהֲבָה</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / LO QUE TE ENCOMIENDO HOY: AMAR.</span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> Eso es lo “bueno”. Y de esto depende lo que el versículo agrega: “...PARA QUE VIVAS Y TE MULTIPLIQUES”. Y eso es la “vida”.&nbsp; 17.&nbsp;</span><span lang="HE" dir="RTL">וְאִם יפְנֶה לְבָבְךָ</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / PERO SI TU CORAZÓN SE APARTA.</span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> Eso es lo “malo”.&nbsp; 18.&nbsp;</span><span lang="HE" dir="RTL">כִּי אָבֹד תֹּאבֵדוּן</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / QUE CIERTAMENTE PERECERÁN.</span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> Eso es la “muerte”.&nbsp; 19.&nbsp;</span><span lang="HE" dir="RTL">הַעִדֹתִי בָכֶם הַיּוֹם אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / PONGO HOY POR TESTIGOS CONTRA USTEDES AL CIELO Y A LA TIERRA.</span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr"> Pues ellos perduran para siempre, y cuando a ustedes les ocurra el mal, ellos serán testigos de que yo les advertí respecto a todo esto. Según otra explicación, la frase “Pongo hoy por testigos ante ustedes al cielo y a la tierra...” implica que el Santo –bendito es– dijo a Israel: “Contemplen el cielo que Yo creé para servir a ustedes; ¿acaso ha cambiado su naturaleza? ¿Acaso alguna vez el disco del sol no subió en el horizonte por el oriente para dar luz a todo el mundo? No, pues su función es como se declara: ‘El sol se levanta y el sol se pone’. Observen la tierra que Yo he creado para servir a ustedes; ¿acaso cambió su naturaleza? ¿Acaso alguna vez ustedes sembraron y ella no produjo? ¿O acaso alguna vez ustedes sembraron trigo y ella produjo cebada? Ahora bien, si esos entes físicos, que no fueron creados ni para la recompensa ni para la pérdida –es decir, que si actúan óptimamente no reciben recompensa y si fallan no reciben castigo– aun así no cambiaron su naturaleza, ustedes, que si actúan meritoriamente recibirán recompensa y si pecan recibirán castigo, con mayor razón que no se deben desviar de la finalidad para la que fueron creados”. &nbsp;</span><span lang="HE" dir="RTL">וּבָחַרְתָּ בַּחַיִּים</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span lang="ES-TRAD" dir="ltr"> / DEBERÁS ESCOGER LA VIDA. </span><span style="font-weight:normal;" lang="ES-TRAD" dir="ltr">Yo instruyo a ustedes que escojan la porción de vida. Es como un hombre que dice a su hijo: “Escoge para ti una porción buena en mi propiedad”. Y, mostrándole la mejor porción, le dice: “Escoge esto para ti”. Respecto a esto se declara: “El Eterno es la parte de mi porción y la ración de mi copa; Tú me adiestras en mi elección”. Tú colocaste mi mano sobre la mejor porción, como diciendo: “Toma esto para ti”.</span></span>
+</p>
+
+                        </p>
+                    </section>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <script src="../../Pdocument/scroll.js"></script>
+    </div>
+</body>
+
+</html>
